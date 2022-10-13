@@ -1,0 +1,10 @@
+^C:\USERS\STEPHAN\DESKTOP\VS_CODE_GAME\SFML-MASTER\SRC\SFML\NETWORK\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Stephan/Desktop/vs_code_game -BC:/Users/Stephan/Desktop/vs_code_game/build --check-stamp-file C:/Users/Stephan/Desktop/vs_code_game/build/SFML-master/src/SFML/Network/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

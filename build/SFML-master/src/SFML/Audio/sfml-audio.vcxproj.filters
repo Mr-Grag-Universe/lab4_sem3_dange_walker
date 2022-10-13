@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Stephan\Desktop\vs_code_game\SFML-master\src\SFML\Audio\ALCheck.cpp" />
+    <ClCompile Include="C:\Users\Stephan\Desktop\vs_code_game\SFML-master\src\SFML\Audio\AlResource.cpp" />
+    <ClCompile Include="C:\Users\Stephan\Desktop\vs_code_game\SFML-master\src\SFML\Audio\AudioDevice.cpp" />
+    <ClCompile Include="C:\Users\Stephan\Desktop\vs_code_game\SFML-master\src\SFML\Audio\Listener.cpp" />
+    <ClCompile Include="C:\Users\Stephan\Desktop\vs_code_game\SFML-master\src\SFML\Audio\Music.cpp" />
+    <ClCompile Include="C:\Users\Stephan\Desktop\vs_code_game\SFML-master\src\SFML\Audio\Sound.cpp" />
+    <ClCompile Include="C:\Users\Stephan\Desktop\vs_code_game\SFML-master\src\SFML\Audio\SoundBuffer.cpp" />
+    <ClCompile Include="C:\Users\Stephan\Desktop\vs_code_game\SFML-master\src\SFML\Audio\SoundBufferRecorder.cpp" />
+    <ClCompile Include="C:\Users\Stephan\Desktop\vs_code_game\SFML-master\src\SFML\Audio\InputSoundFile.cpp" />
+    <ClCompile Include="C:\Users\Stephan\Desktop\vs_code_game\SFML-master\src\SFML\Audio\OutputSoundFile.cpp" />
+    <ClCompile Include="C:\Users\Stephan\Desktop\vs_code_game\SFML-master\src\SFML\Audio\SoundRecorder.cpp" />
+    <ClCompile Include="C:\Users\Stephan\Desktop\vs_code_game\SFML-master\src\SFML\Audio\SoundSource.cpp" />
+    <ClCompile Include="C:\Users\Stephan\Desktop\vs_code_game\SFML-master\src\SFML\Audio\SoundStream.cpp" />
+    <ClCompile Include="C:\Users\Stephan\Desktop\vs_code_game\SFML-master\src\SFML\Audio\SoundFileFactory.cpp">
+      <Filter>codecs</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Stephan\Desktop\vs_code_game\SFML-master\src\SFML\Audio\SoundFileReaderFlac.cpp">
+      <Filter>codecs</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Stephan\Desktop\vs_code_game\SFML-master\src\SFML\Audio\SoundFileReaderMp3.cpp">
+      <Filter>codecs</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Stephan\Desktop\vs_code_game\SFML-master\src\SFML\Audio\SoundFileReaderOgg.cpp">
+      <Filter>codecs</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Stephan\Desktop\vs_code_game\SFML-master\src\SFML\Audio\SoundFileReaderWav.cpp">
+      <Filter>codecs</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Stephan\Desktop\vs_code_game\SFML-master\src\SFML\Audio\SoundFileWriterFlac.cpp">
+      <Filter>codecs</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Stephan\Desktop\vs_code_game\SFML-master\src\SFML\Audio\SoundFileWriterOgg.cpp">
+      <Filter>codecs</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Stephan\Desktop\vs_code_game\SFML-master\src\SFML\Audio\SoundFileWriterWav.cpp">
+      <Filter>codecs</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\Stephan\Desktop\vs_code_game\SFML-master\src\SFML\Audio\ALCheck.hpp" />
+    <ClInclude Include="C:\Users\Stephan\Desktop\vs_code_game\SFML-master\include\SFML\Audio\AlResource.hpp" />
+    <ClInclude Include="C:\Users\Stephan\Desktop\vs_code_game\SFML-master\src\SFML\Audio\AudioDevice.hpp" />
+    <ClInclude Include="C:\Users\Stephan\Desktop\vs_code_game\SFML-master\include\SFML\Audio\Export.hpp" />
+    <ClInclude Include="C:\Users\Stephan\Desktop\vs_code_game\SFML-master\include\SFML\Audio\Listener.hpp" />
+    <ClInclude Include="C:\Users\Stephan\Desktop\vs_code_game\SFML-master\include\SFML\Audio\Music.hpp" />
+    <ClInclude Include="C:\Users\Stephan\Desktop\vs_code_game\SFML-master\include\SFML\Audio\Sound.hpp" />
+    <ClInclude Include="C:\Users\Stephan\Desktop\vs_code_game\SFML-master\include\SFML\Audio\SoundBuffer.hpp" />
+    <ClInclude Include="C:\Users\Stephan\Desktop\vs_code_game\SFML-master\include\SFML\Audio\SoundBufferRecorder.hpp" />
+    <ClInclude Include="C:\Users\Stephan\Desktop\vs_code_game\SFML-master\include\SFML\Audio\InputSoundFile.hpp" />
+    <ClInclude Include="C:\Users\Stephan\Desktop\vs_code_game\SFML-master\include\SFML\Audio\OutputSoundFile.hpp" />
+    <ClInclude Include="C:\Users\Stephan\Desktop\vs_code_game\SFML-master\include\SFML\Audio\SoundRecorder.hpp" />
+    <ClInclude Include="C:\Users\Stephan\Desktop\vs_code_game\SFML-master\include\SFML\Audio\SoundSource.hpp" />
+    <ClInclude Include="C:\Users\Stephan\Desktop\vs_code_game\SFML-master\include\SFML\Audio\SoundStream.hpp" />
+    <ClInclude Include="C:\Users\Stephan\Desktop\vs_code_game\SFML-master\include\SFML\Audio\SoundFileFactory.hpp">
+      <Filter>codecs</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Stephan\Desktop\vs_code_game\SFML-master\include\SFML\Audio\SoundFileFactory.inl">
+      <Filter>codecs</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Stephan\Desktop\vs_code_game\SFML-master\include\SFML\Audio\SoundFileReader.hpp">
+      <Filter>codecs</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Stephan\Desktop\vs_code_game\SFML-master\src\SFML\Audio\SoundFileReaderFlac.hpp">
+      <Filter>codecs</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Stephan\Desktop\vs_code_game\SFML-master\src\SFML\Audio\SoundFileReaderMp3.hpp">
+      <Filter>codecs</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Stephan\Desktop\vs_code_game\SFML-master\src\SFML\Audio\SoundFileReaderOgg.hpp">
+      <Filter>codecs</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Stephan\Desktop\vs_code_game\SFML-master\src\SFML\Audio\SoundFileReaderWav.hpp">
+      <Filter>codecs</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Stephan\Desktop\vs_code_game\SFML-master\include\SFML\Audio\SoundFileWriter.hpp">
+      <Filter>codecs</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Stephan\Desktop\vs_code_game\SFML-master\src\SFML\Audio\SoundFileWriterFlac.hpp">
+      <Filter>codecs</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Stephan\Desktop\vs_code_game\SFML-master\src\SFML\Audio\SoundFileWriterOgg.hpp">
+      <Filter>codecs</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Stephan\Desktop\vs_code_game\SFML-master\src\SFML\Audio\SoundFileWriterWav.hpp">
+      <Filter>codecs</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Stephan\Desktop\vs_code_game\SFML-master\src\SFML\Audio\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="codecs">
+      <UniqueIdentifier>{8609C580-10AB-3B6A-999A-470E60991120}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

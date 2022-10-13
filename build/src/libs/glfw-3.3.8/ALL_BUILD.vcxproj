@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ResolveNugetPackages>false</ResolveNugetPackages>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|win32">
+      <Configuration>Debug</Configuration>
+      <Platform>win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|win32">
+      <Configuration>Release</Configuration>
+      <Platform>win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{835F3E21-B2EA-311E-832B-DCB789E9BB7A}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <Platform>win32</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Stephan\Desktop\vs_code_game\src;C:\Users\Stephan\Desktop\vs_code_game\src\OpenGL;C:\Users\Stephan\Desktop\vs_code_game\src\OpenGL\include;C:\Users\Stephan\Desktop\vs_code_game\src\OpenGL\lib;C:\Users\Stephan\Desktop\vs_code_game\src\libs\glfw-3.3.8\include;C:\Users\Stephan\Desktop\vs_code_game\src\libs\glfw-3.3.8\deps;C:\Users\Stephan\Desktop\vs_code_game\src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Stephan\Desktop\vs_code_game\src;C:\Users\Stephan\Desktop\vs_code_game\src\OpenGL;C:\Users\Stephan\Desktop\vs_code_game\src\OpenGL\include;C:\Users\Stephan\Desktop\vs_code_game\src\OpenGL\lib;C:\Users\Stephan\Desktop\vs_code_game\src\libs\glfw-3.3.8\include;C:\Users\Stephan\Desktop\vs_code_game\src\libs\glfw-3.3.8\deps;C:\Users\Stephan\Desktop\vs_code_game\src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Stephan\Desktop\vs_code_game\src;C:\Users\Stephan\Desktop\vs_code_game\src\OpenGL;C:\Users\Stephan\Desktop\vs_code_game\src\OpenGL\include;C:\Users\Stephan\Desktop\vs_code_game\src\OpenGL\lib;C:\Users\Stephan\Desktop\vs_code_game\src\libs\glfw-3.3.8\include;C:\Users\Stephan\Desktop\vs_code_game\src\libs\glfw-3.3.8\deps;C:\Users\Stephan\Desktop\vs_code_game\src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Stephan\Desktop\vs_code_game\src;C:\Users\Stephan\Desktop\vs_code_game\src\OpenGL;C:\Users\Stephan\Desktop\vs_code_game\src\OpenGL\include;C:\Users\Stephan\Desktop\vs_code_game\src\OpenGL\lib;C:\Users\Stephan\Desktop\vs_code_game\src\libs\glfw-3.3.8\include;C:\Users\Stephan\Desktop\vs_code_game\src\libs\glfw-3.3.8\deps;C:\Users\Stephan\Desktop\vs_code_game\src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Stephan\Desktop\vs_code_game\src\libs\glfw-3.3.8\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">Building Custom Rule C:/Users/Stephan/Desktop/vs_code_game/src/libs/glfw-3.3.8/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Stephan/Desktop/vs_code_game -BC:/Users/Stephan/Desktop/vs_code_game/build --check-stamp-file C:/Users/Stephan/Desktop/vs_code_game/build/src/libs/glfw-3.3.8/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">C:\Program Files\CMake\share\cmake-3.24\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeDependentOption.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindDoxygen.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\WriteBasicConfigVersionFile.cmake;C:\Users\Stephan\Desktop\vs_code_game\src\libs\glfw-3.3.8\cmake_uninstall.cmake.in;C:\Users\Stephan\Desktop\vs_code_game\src\libs\glfw-3.3.8\src\glfw3.pc.in;C:\Users\Stephan\Desktop\vs_code_game\src\libs\glfw-3.3.8\src\glfw3Config.cmake.in;C:\Users\Stephan\Desktop\vs_code_game\src\libs\glfw-3.3.8\src\glfw_config.h.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">C:\Users\Stephan\Desktop\vs_code_game\build\src\libs\glfw-3.3.8\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|win32'">Building Custom Rule C:/Users/Stephan/Desktop/vs_code_game/src/libs/glfw-3.3.8/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Stephan/Desktop/vs_code_game -BC:/Users/Stephan/Desktop/vs_code_game/build --check-stamp-file C:/Users/Stephan/Desktop/vs_code_game/build/src/libs/glfw-3.3.8/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|win32'">C:\Program Files\CMake\share\cmake-3.24\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeDependentOption.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindDoxygen.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\WriteBasicConfigVersionFile.cmake;C:\Users\Stephan\Desktop\vs_code_game\src\libs\glfw-3.3.8\cmake_uninstall.cmake.in;C:\Users\Stephan\Desktop\vs_code_game\src\libs\glfw-3.3.8\src\glfw3.pc.in;C:\Users\Stephan\Desktop\vs_code_game\src\libs\glfw-3.3.8\src\glfw3Config.cmake.in;C:\Users\Stephan\Desktop\vs_code_game\src\libs\glfw-3.3.8\src\glfw_config.h.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|win32'">C:\Users\Stephan\Desktop\vs_code_game\build\src\libs\glfw-3.3.8\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">Building Custom Rule C:/Users/Stephan/Desktop/vs_code_game/src/libs/glfw-3.3.8/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Stephan/Desktop/vs_code_game -BC:/Users/Stephan/Desktop/vs_code_game/build --check-stamp-file C:/Users/Stephan/Desktop/vs_code_game/build/src/libs/glfw-3.3.8/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">C:\Program Files\CMake\share\cmake-3.24\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeDependentOption.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindDoxygen.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\WriteBasicConfigVersionFile.cmake;C:\Users\Stephan\Desktop\vs_code_game\src\libs\glfw-3.3.8\cmake_uninstall.cmake.in;C:\Users\Stephan\Desktop\vs_code_game\src\libs\glfw-3.3.8\src\glfw3.pc.in;C:\Users\Stephan\Desktop\vs_code_game\src\libs\glfw-3.3.8\src\glfw3Config.cmake.in;C:\Users\Stephan\Desktop\vs_code_game\src\libs\glfw-3.3.8\src\glfw_config.h.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">C:\Users\Stephan\Desktop\vs_code_game\build\src\libs\glfw-3.3.8\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">Building Custom Rule C:/Users/Stephan/Desktop/vs_code_game/src/libs/glfw-3.3.8/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Stephan/Desktop/vs_code_game -BC:/Users/Stephan/Desktop/vs_code_game/build --check-stamp-file C:/Users/Stephan/Desktop/vs_code_game/build/src/libs/glfw-3.3.8/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">C:\Program Files\CMake\share\cmake-3.24\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeDependentOption.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindDoxygen.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\WriteBasicConfigVersionFile.cmake;C:\Users\Stephan\Desktop\vs_code_game\src\libs\glfw-3.3.8\cmake_uninstall.cmake.in;C:\Users\Stephan\Desktop\vs_code_game\src\libs\glfw-3.3.8\src\glfw3.pc.in;C:\Users\Stephan\Desktop\vs_code_game\src\libs\glfw-3.3.8\src\glfw3Config.cmake.in;C:\Users\Stephan\Desktop\vs_code_game\src\libs\glfw-3.3.8\src\glfw_config.h.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">C:\Users\Stephan\Desktop\vs_code_game\build\src\libs\glfw-3.3.8\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\Stephan\Desktop\vs_code_game\build\ZERO_CHECK.vcxproj">
+      <Project>{5928CFD7-1E60-3FE6-851B-2D7A4D3E3E65}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Stephan\Desktop\vs_code_game\build\src\libs\glfw-3.3.8\examples\boing.vcxproj">
+      <Project>{1BAC8840-DF7C-3678-B890-46D284440BF8}</Project>
+      <Name>boing</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Stephan\Desktop\vs_code_game\build\src\libs\glfw-3.3.8\tests\clipboard.vcxproj">
+      <Project>{5FB64D41-FC59-3D56-B5BC-43BA6ABDCB6E}</Project>
+      <Name>clipboard</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Stephan\Desktop\vs_code_game\build\src\libs\glfw-3.3.8\tests\cursor.vcxproj">
+      <Project>{7C93B540-0BFF-3D8C-93CF-966D19ED7D81}</Project>
+      <Name>cursor</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Stephan\Desktop\vs_code_game\build\src\libs\glfw-3.3.8\docs\docs.vcxproj">
+      <Project>{EAAFD3A6-1E1D-3C2D-8F40-4F5A6F3FC18D}</Project>
+      <Name>docs</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Stephan\Desktop\vs_code_game\build\src\libs\glfw-3.3.8\tests\empty.vcxproj">
+      <Project>{D83BC840-437F-387B-8B3B-9EC96CB1BD3F}</Project>
+      <Name>empty</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Stephan\Desktop\vs_code_game\build\src\libs\glfw-3.3.8\tests\events.vcxproj">
+      <Project>{B652E6CD-04BE-3FAD-ADC0-99AE120B0618}</Project>
+      <Name>events</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Stephan\Desktop\vs_code_game\build\src\libs\glfw-3.3.8\tests\gamma.vcxproj">
+      <Project>{DC1F0AB5-E361-3985-A8BD-878BFABDF14E}</Project>
+      <Name>gamma</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Stephan\Desktop\vs_code_game\build\src\libs\glfw-3.3.8\examples\gears.vcxproj">
+      <Project>{AA4D73FE-F131-345D-9AF4-E9B68D92BF78}</Project>
+      <Name>gears</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Stephan\Desktop\vs_code_game\build\src\libs\glfw-3.3.8\src\glfw.vcxproj">
+      <Project>{B2CBF73C-D872-3437-B948-5A3492272E1C}</Project>
+      <Name>glfw</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Stephan\Desktop\vs_code_game\build\src\libs\glfw-3.3.8\tests\glfwinfo.vcxproj">
+      <Project>{5D43B519-46F7-3831-92A7-8C0894604283}</Project>
+      <Name>glfwinfo</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Stephan\Desktop\vs_code_game\build\src\libs\glfw-3.3.8\examples\heightmap.vcxproj">
+      <Project>{71CB3638-F7BA-3BBC-861A-23A3C3BD9F09}</Project>
+      <Name>heightmap</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Stephan\Desktop\vs_code_game\build\src\libs\glfw-3.3.8\tests\icon.vcxproj">
+      <Project>{C89F80D2-516F-3FD9-ACAE-F698FCB66105}</Project>
+      <Name>icon</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Stephan\Desktop\vs_code_game\build\src\libs\glfw-3.3.8\tests\iconify.vcxproj">
+      <Project>{38C0DBED-8F09-3DB9-93DB-B96D77929BB9}</Project>
+      <Name>iconify</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Stephan\Desktop\vs_code_game\build\src\libs\glfw-3.3.8\tests\inputlag.vcxproj">
+      <Project>{B7C85662-DF73-3C0F-911A-907B897EA939}</Project>
+      <Name>inputlag</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Stephan\Desktop\vs_code_game\build\src\libs\glfw-3.3.8\tests\joysticks.vcxproj">
+      <Project>{7A732950-3E90-3234-A89F-5A0D92908B00}</Project>
+      <Name>joysticks</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Stephan\Desktop\vs_code_game\build\src\libs\glfw-3.3.8\tests\monitors.vcxproj">
+      <Project>{7BB93F46-ADBD-3FF5-89B6-CCC0CFDDE0BB}</Project>
+      <Name>monitors</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Stephan\Desktop\vs_code_game\build\src\libs\glfw-3.3.8\tests\msaa.vcxproj">
+      <Project>{4AE8775A-4FD6-3C47-AF1A-6ACDF1C9B129}</Project>
+      <Name>msaa</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Stephan\Desktop\vs_code_game\build\src\libs\glfw-3.3.8\examples\offscreen.vcxproj">
+      <Project>{7D7D6757-CB5C-3A3E-9625-C38F273A1DB6}</Project>
+      <Name>offscreen</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Stephan\Desktop\vs_code_game\build\src\libs\glfw-3.3.8\tests\opacity.vcxproj">
+      <Project>{96BEB5D6-E649-3BF5-97C3-72A5E4A92ACB}</Project>
+      <Name>opacity</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Stephan\Desktop\vs_code_game\build\src\libs\glfw-3.3.8\examples\particles.vcxproj">
+      <Project>{1DB1F374-CF73-38C6-BF70-DBA412F08BF1}</Project>
+      <Name>particles</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Stephan\Desktop\vs_code_game\build\src\libs\glfw-3.3.8\tests\reopen.vcxproj">
+      <Project>{6078A18F-A31C-3837-A2B6-744089EF77B9}</Project>
+      <Name>reopen</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Stephan\Desktop\vs_code_game\build\src\libs\glfw-3.3.8\examples\sharing.vcxproj">
+      <Project>{46205E93-2ABC-345A-BDF6-F252259FBF26}</Project>
+      <Name>sharing</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Stephan\Desktop\vs_code_game\build\src\libs\glfw-3.3.8\examples\simple.vcxproj">
+      <Project>{82BC7974-2D11-3C7A-90CE-AC314F48038C}</Project>
+      <Name>simple</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Stephan\Desktop\vs_code_game\build\src\libs\glfw-3.3.8\examples\splitview.vcxproj">
+      <Project>{763CD44E-48E8-32BB-B425-0F02A7702240}</Project>
+      <Name>splitview</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Stephan\Desktop\vs_code_game\build\src\libs\glfw-3.3.8\tests\tearing.vcxproj">
+      <Project>{EBDA0BB1-5D7F-3E25-863A-9DCEF6E1867F}</Project>
+      <Name>tearing</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Stephan\Desktop\vs_code_game\build\src\libs\glfw-3.3.8\tests\threads.vcxproj">
+      <Project>{CB9980DB-7B1C-3C66-8A7F-D19D0A68D843}</Project>
+      <Name>threads</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Stephan\Desktop\vs_code_game\build\src\libs\glfw-3.3.8\tests\timeout.vcxproj">
+      <Project>{0AFD743C-4145-3A80-A7F8-AC1BBBD00050}</Project>
+      <Name>timeout</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Stephan\Desktop\vs_code_game\build\src\libs\glfw-3.3.8\tests\title.vcxproj">
+      <Project>{59F3D3F1-E257-3434-BF0A-00AF1197A45E}</Project>
+      <Name>title</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Stephan\Desktop\vs_code_game\build\src\libs\glfw-3.3.8\tests\triangle-vulkan.vcxproj">
+      <Project>{D5DE9AEA-C3D2-3662-84E3-52353EA31330}</Project>
+      <Name>triangle-vulkan</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Stephan\Desktop\vs_code_game\build\src\libs\glfw-3.3.8\examples\wave.vcxproj">
+      <Project>{D203C065-D26A-3861-AAE5-EFD2168E13C0}</Project>
+      <Name>wave</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Stephan\Desktop\vs_code_game\build\src\libs\glfw-3.3.8\tests\windows.vcxproj">
+      <Project>{F3850A0D-AD2A-3E3B-BE93-EFB125A1A4C8}</Project>
+      <Name>windows</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
