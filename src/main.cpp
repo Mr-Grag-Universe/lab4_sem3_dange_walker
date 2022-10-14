@@ -22,6 +22,8 @@ int main(int argc, char *argv[]) {
     World world;
     Map map;
 
+    world.load_things_from_file("/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/static/first_room.txt");
+
     while (window.isOpen()) {
         // проверить все события окна, которые были вызваны с последней итерации цикла
         sf::Event event;

@@ -33,6 +33,8 @@ add_subdirectory(libs/SFML)
 include_directories(alive_obj loot physics)
 
 set(SOURCES
+   static/first_room.txt
+
     main.cpp
     Object.cpp
     World.cpp

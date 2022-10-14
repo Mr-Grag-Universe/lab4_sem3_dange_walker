@@ -12,7 +12,7 @@
 class Obj {
 public:
     Obj() = default;
-    Obj(const std::pair<unsigned char, unsigned char> & position, const sf::Sprite & sprite);
+    Obj(const std::pair<unsigned int, unsigned int> & position, const sf::Sprite & sprite);
     Obj(const Obj &);
     ~Obj() = default;
 
