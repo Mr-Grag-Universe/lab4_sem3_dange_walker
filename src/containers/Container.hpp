@@ -4,12 +4,12 @@
 #include <vector>
 #include <set>
 
-#include "../Object.hpp"
-#include "../Weapon.hpp"
+// #include "../Object.hpp"
+// #include "../Weapon.hpp"
 
 class Container {
 private:
-    std::vector <Weapon> weapons;
+    // std::vector <Weapon> weapons;
 public:
     Container(/* args */);
     ~Container();

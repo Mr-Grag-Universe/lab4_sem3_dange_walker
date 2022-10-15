@@ -73,15 +73,15 @@ test/lib/googletest-main/googletest-main/googlemock/CMakeFiles/gmock_main.dir/sr
 test/lib/googletest-main/googletest-main/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o: /media/stepan/Windows\ 10\ Compact/Users/Stephan/Desktop/vs_code_game/test/lib/googletest-main/googletest-main/googlemock/src/gmock_main.cc
 test/lib/googletest-main/googletest-main/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o: test/lib/googletest-main/googletest-main/googlemock/CMakeFiles/gmock_main.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/lib/googletest-main/googletest-main/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/test/lib/googletest-main/googletest-main/googlemock" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT test/lib/googletest-main/googletest-main/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o -MF CMakeFiles/gmock_main.dir/src/gmock_main.cc.o.d -o CMakeFiles/gmock_main.dir/src/gmock_main.cc.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/test/lib/googletest-main/googletest-main/googlemock/src/gmock_main.cc"
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/test/lib/googletest-main/googletest-main/googlemock" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT test/lib/googletest-main/googletest-main/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o -MF CMakeFiles/gmock_main.dir/src/gmock_main.cc.o.d -o CMakeFiles/gmock_main.dir/src/gmock_main.cc.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/test/lib/googletest-main/googletest-main/googlemock/src/gmock_main.cc"
 
 test/lib/googletest-main/googletest-main/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gmock_main.dir/src/gmock_main.cc.i"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/test/lib/googletest-main/googletest-main/googlemock" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/test/lib/googletest-main/googletest-main/googlemock/src/gmock_main.cc" > CMakeFiles/gmock_main.dir/src/gmock_main.cc.i
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/test/lib/googletest-main/googletest-main/googlemock" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/test/lib/googletest-main/googletest-main/googlemock/src/gmock_main.cc" > CMakeFiles/gmock_main.dir/src/gmock_main.cc.i
 
 test/lib/googletest-main/googletest-main/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gmock_main.dir/src/gmock_main.cc.s"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/test/lib/googletest-main/googletest-main/googlemock" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/test/lib/googletest-main/googletest-main/googlemock/src/gmock_main.cc" -o CMakeFiles/gmock_main.dir/src/gmock_main.cc.s
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/test/lib/googletest-main/googletest-main/googlemock" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/test/lib/googletest-main/googletest-main/googlemock/src/gmock_main.cc" -o CMakeFiles/gmock_main.dir/src/gmock_main.cc.s
 
 # Object files for target gmock_main
 gmock_main_OBJECTS = \
@@ -90,15 +90,20 @@ gmock_main_OBJECTS = \
 # External object files for target gmock_main
 gmock_main_EXTERNAL_OBJECTS =
 
-lib/libgmock_main.a: test/lib/googletest-main/googletest-main/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o
-lib/libgmock_main.a: test/lib/googletest-main/googletest-main/googlemock/CMakeFiles/gmock_main.dir/build.make
-lib/libgmock_main.a: test/lib/googletest-main/googletest-main/googlemock/CMakeFiles/gmock_main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library ../../../../../lib/libgmock_main.a"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/test/lib/googletest-main/googletest-main/googlemock" && $(CMAKE_COMMAND) -P CMakeFiles/gmock_main.dir/cmake_clean_target.cmake
+lib/libgmock_main.so.1.11.0: test/lib/googletest-main/googletest-main/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o
+lib/libgmock_main.so.1.11.0: test/lib/googletest-main/googletest-main/googlemock/CMakeFiles/gmock_main.dir/build.make
+lib/libgmock_main.so.1.11.0: lib/libgmock.so.1.11.0
+lib/libgmock_main.so.1.11.0: lib/libgtest.so.1.11.0
+lib/libgmock_main.so.1.11.0: test/lib/googletest-main/googletest-main/googlemock/CMakeFiles/gmock_main.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library ../../../../../lib/libgmock_main.so"
 	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/test/lib/googletest-main/googletest-main/googlemock" && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gmock_main.dir/link.txt --verbose=$(VERBOSE)
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/test/lib/googletest-main/googletest-main/googlemock" && $(CMAKE_COMMAND) -E cmake_symlink_library ../../../../../lib/libgmock_main.so.1.11.0 ../../../../../lib/libgmock_main.so.1.11.0 ../../../../../lib/libgmock_main.so
+
+lib/libgmock_main.so: lib/libgmock_main.so.1.11.0
+	@$(CMAKE_COMMAND) -E touch_nocreate lib/libgmock_main.so
 
 # Rule to build all files generated by this target.
-test/lib/googletest-main/googletest-main/googlemock/CMakeFiles/gmock_main.dir/build: lib/libgmock_main.a
+test/lib/googletest-main/googletest-main/googlemock/CMakeFiles/gmock_main.dir/build: lib/libgmock_main.so
 .PHONY : test/lib/googletest-main/googletest-main/googlemock/CMakeFiles/gmock_main.dir/build
 
 test/lib/googletest-main/googletest-main/googlemock/CMakeFiles/gmock_main.dir/clean:

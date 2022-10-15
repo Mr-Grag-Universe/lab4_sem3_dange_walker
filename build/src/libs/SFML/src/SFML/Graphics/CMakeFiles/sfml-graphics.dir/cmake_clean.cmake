@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
-  "../../../lib/libsfml-graphics-s-d.a"
-  "../../../lib/libsfml-graphics-s-d.pdb"
+  "../../../lib/libsfml-graphics-d.pdb"
+  "../../../lib/libsfml-graphics-d.so"
+  "../../../lib/libsfml-graphics-d.so.3.0"
+  "../../../lib/libsfml-graphics-d.so.3.0.0"
   "CMakeFiles/sfml-graphics.dir/BlendMode.cpp.o"
   "CMakeFiles/sfml-graphics.dir/BlendMode.cpp.o.d"
   "CMakeFiles/sfml-graphics.dir/CircleShape.cpp.o"

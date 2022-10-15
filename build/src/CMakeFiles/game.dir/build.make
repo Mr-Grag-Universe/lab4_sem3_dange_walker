@@ -73,85 +73,85 @@ src/CMakeFiles/game.dir/main.cpp.o: src/CMakeFiles/game.dir/flags.make
 src/CMakeFiles/game.dir/main.cpp.o: /media/stepan/Windows\ 10\ Compact/Users/Stephan/Desktop/vs_code_game/src/main.cpp
 src/CMakeFiles/game.dir/main.cpp.o: src/CMakeFiles/game.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/game.dir/main.cpp.o"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/game.dir/main.cpp.o -MF CMakeFiles/game.dir/main.cpp.o.d -o CMakeFiles/game.dir/main.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/main.cpp"
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/game.dir/main.cpp.o -MF CMakeFiles/game.dir/main.cpp.o.d -o CMakeFiles/game.dir/main.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/main.cpp"
 
 src/CMakeFiles/game.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/main.cpp.i"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/main.cpp" > CMakeFiles/game.dir/main.cpp.i
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/main.cpp" > CMakeFiles/game.dir/main.cpp.i
 
 src/CMakeFiles/game.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/main.cpp.s"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/main.cpp" -o CMakeFiles/game.dir/main.cpp.s
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/main.cpp" -o CMakeFiles/game.dir/main.cpp.s
 
 src/CMakeFiles/game.dir/Object.cpp.o: src/CMakeFiles/game.dir/flags.make
 src/CMakeFiles/game.dir/Object.cpp.o: /media/stepan/Windows\ 10\ Compact/Users/Stephan/Desktop/vs_code_game/src/Object.cpp
 src/CMakeFiles/game.dir/Object.cpp.o: src/CMakeFiles/game.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/game.dir/Object.cpp.o"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/game.dir/Object.cpp.o -MF CMakeFiles/game.dir/Object.cpp.o.d -o CMakeFiles/game.dir/Object.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/Object.cpp"
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/game.dir/Object.cpp.o -MF CMakeFiles/game.dir/Object.cpp.o.d -o CMakeFiles/game.dir/Object.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/Object.cpp"
 
 src/CMakeFiles/game.dir/Object.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/Object.cpp.i"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/Object.cpp" > CMakeFiles/game.dir/Object.cpp.i
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/Object.cpp" > CMakeFiles/game.dir/Object.cpp.i
 
 src/CMakeFiles/game.dir/Object.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/Object.cpp.s"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/Object.cpp" -o CMakeFiles/game.dir/Object.cpp.s
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/Object.cpp" -o CMakeFiles/game.dir/Object.cpp.s
 
 src/CMakeFiles/game.dir/World.cpp.o: src/CMakeFiles/game.dir/flags.make
 src/CMakeFiles/game.dir/World.cpp.o: /media/stepan/Windows\ 10\ Compact/Users/Stephan/Desktop/vs_code_game/src/World.cpp
 src/CMakeFiles/game.dir/World.cpp.o: src/CMakeFiles/game.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/game.dir/World.cpp.o"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/game.dir/World.cpp.o -MF CMakeFiles/game.dir/World.cpp.o.d -o CMakeFiles/game.dir/World.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/World.cpp"
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/game.dir/World.cpp.o -MF CMakeFiles/game.dir/World.cpp.o.d -o CMakeFiles/game.dir/World.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/World.cpp"
 
 src/CMakeFiles/game.dir/World.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/World.cpp.i"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/World.cpp" > CMakeFiles/game.dir/World.cpp.i
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/World.cpp" > CMakeFiles/game.dir/World.cpp.i
 
 src/CMakeFiles/game.dir/World.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/World.cpp.s"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/World.cpp" -o CMakeFiles/game.dir/World.cpp.s
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/World.cpp" -o CMakeFiles/game.dir/World.cpp.s
 
 src/CMakeFiles/game.dir/alive_obj/Alive.cpp.o: src/CMakeFiles/game.dir/flags.make
 src/CMakeFiles/game.dir/alive_obj/Alive.cpp.o: /media/stepan/Windows\ 10\ Compact/Users/Stephan/Desktop/vs_code_game/src/alive_obj/Alive.cpp
 src/CMakeFiles/game.dir/alive_obj/Alive.cpp.o: src/CMakeFiles/game.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/game.dir/alive_obj/Alive.cpp.o"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/game.dir/alive_obj/Alive.cpp.o -MF CMakeFiles/game.dir/alive_obj/Alive.cpp.o.d -o CMakeFiles/game.dir/alive_obj/Alive.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/alive_obj/Alive.cpp"
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/game.dir/alive_obj/Alive.cpp.o -MF CMakeFiles/game.dir/alive_obj/Alive.cpp.o.d -o CMakeFiles/game.dir/alive_obj/Alive.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/alive_obj/Alive.cpp"
 
 src/CMakeFiles/game.dir/alive_obj/Alive.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/alive_obj/Alive.cpp.i"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/alive_obj/Alive.cpp" > CMakeFiles/game.dir/alive_obj/Alive.cpp.i
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/alive_obj/Alive.cpp" > CMakeFiles/game.dir/alive_obj/Alive.cpp.i
 
 src/CMakeFiles/game.dir/alive_obj/Alive.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/alive_obj/Alive.cpp.s"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/alive_obj/Alive.cpp" -o CMakeFiles/game.dir/alive_obj/Alive.cpp.s
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/alive_obj/Alive.cpp" -o CMakeFiles/game.dir/alive_obj/Alive.cpp.s
 
 src/CMakeFiles/game.dir/physics/Hitbox.cpp.o: src/CMakeFiles/game.dir/flags.make
 src/CMakeFiles/game.dir/physics/Hitbox.cpp.o: /media/stepan/Windows\ 10\ Compact/Users/Stephan/Desktop/vs_code_game/src/physics/Hitbox.cpp
 src/CMakeFiles/game.dir/physics/Hitbox.cpp.o: src/CMakeFiles/game.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/CMakeFiles/game.dir/physics/Hitbox.cpp.o"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/game.dir/physics/Hitbox.cpp.o -MF CMakeFiles/game.dir/physics/Hitbox.cpp.o.d -o CMakeFiles/game.dir/physics/Hitbox.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/physics/Hitbox.cpp"
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/game.dir/physics/Hitbox.cpp.o -MF CMakeFiles/game.dir/physics/Hitbox.cpp.o.d -o CMakeFiles/game.dir/physics/Hitbox.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/physics/Hitbox.cpp"
 
 src/CMakeFiles/game.dir/physics/Hitbox.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/physics/Hitbox.cpp.i"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/physics/Hitbox.cpp" > CMakeFiles/game.dir/physics/Hitbox.cpp.i
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/physics/Hitbox.cpp" > CMakeFiles/game.dir/physics/Hitbox.cpp.i
 
 src/CMakeFiles/game.dir/physics/Hitbox.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/physics/Hitbox.cpp.s"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/physics/Hitbox.cpp" -o CMakeFiles/game.dir/physics/Hitbox.cpp.s
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/physics/Hitbox.cpp" -o CMakeFiles/game.dir/physics/Hitbox.cpp.s
 
 src/CMakeFiles/game.dir/draw/Draw.cpp.o: src/CMakeFiles/game.dir/flags.make
 src/CMakeFiles/game.dir/draw/Draw.cpp.o: /media/stepan/Windows\ 10\ Compact/Users/Stephan/Desktop/vs_code_game/src/draw/Draw.cpp
 src/CMakeFiles/game.dir/draw/Draw.cpp.o: src/CMakeFiles/game.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/CMakeFiles/game.dir/draw/Draw.cpp.o"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/game.dir/draw/Draw.cpp.o -MF CMakeFiles/game.dir/draw/Draw.cpp.o.d -o CMakeFiles/game.dir/draw/Draw.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/draw/Draw.cpp"
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/game.dir/draw/Draw.cpp.o -MF CMakeFiles/game.dir/draw/Draw.cpp.o.d -o CMakeFiles/game.dir/draw/Draw.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/draw/Draw.cpp"
 
 src/CMakeFiles/game.dir/draw/Draw.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/draw/Draw.cpp.i"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/draw/Draw.cpp" > CMakeFiles/game.dir/draw/Draw.cpp.i
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/draw/Draw.cpp" > CMakeFiles/game.dir/draw/Draw.cpp.i
 
 src/CMakeFiles/game.dir/draw/Draw.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/draw/Draw.cpp.s"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/draw/Draw.cpp" -o CMakeFiles/game.dir/draw/Draw.cpp.s
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/draw/Draw.cpp" -o CMakeFiles/game.dir/draw/Draw.cpp.s
 
 # Object files for target game
 game_OBJECTS = \
@@ -173,27 +173,10 @@ src/game: src/CMakeFiles/game.dir/physics/Hitbox.cpp.o
 src/game: src/CMakeFiles/game.dir/draw/Draw.cpp.o
 src/game: src/CMakeFiles/game.dir/build.make
 src/game: /usr/lib/x86_64-linux-gnu/libGL.so
-src/game: src/libs/SFML/lib/libsfml-system-s-d.a
-src/game: src/libs/SFML/lib/libsfml-window-s-d.a
-src/game: src/libs/SFML/lib/libsfml-graphics-s-d.a
-src/game: src/libs/SFML/lib/libsfml-system-s-d.a
-src/game: src/libs/SFML/lib/libsfml-window-s-d.a
-src/game: src/libs/SFML/lib/libsfml-graphics-s-d.a
-src/game: src/libs/SFML/lib/libsfml-audio-s-d.a
-src/game: src/libs/SFML/lib/libsfml-window-s-d.a
-src/game: /usr/lib/x86_64-linux-gnu/libX11.so
-src/game: /usr/lib/x86_64-linux-gnu/libXrandr.so
-src/game: /usr/lib/x86_64-linux-gnu/libXcursor.so
-src/game: /usr/lib/x86_64-linux-gnu/libGL.so
-src/game: /usr/lib/x86_64-linux-gnu/libudev.so
-src/game: /usr/lib/x86_64-linux-gnu/libfreetype.so
-src/game: src/libs/SFML/lib/libsfml-system-s-d.a
-src/game: /usr/lib/x86_64-linux-gnu/libopenal.so
-src/game: /usr/lib/x86_64-linux-gnu/libvorbisenc.so
-src/game: /usr/lib/x86_64-linux-gnu/libvorbisfile.so
-src/game: /usr/lib/x86_64-linux-gnu/libvorbis.so
-src/game: /usr/lib/x86_64-linux-gnu/libogg.so
-src/game: /usr/lib/x86_64-linux-gnu/libFLAC.so
+src/game: src/libs/SFML/lib/libsfml-graphics-d.so.3.0.0
+src/game: src/libs/SFML/lib/libsfml-audio-d.so.3.0.0
+src/game: src/libs/SFML/lib/libsfml-window-d.so.3.0.0
+src/game: src/libs/SFML/lib/libsfml-system-d.so.3.0.0
 src/game: src/CMakeFiles/game.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable game"
 	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src" && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/game.dir/link.txt --verbose=$(VERBOSE)

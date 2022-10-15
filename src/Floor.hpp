@@ -5,6 +5,12 @@
 
 class Floor : public Obj {
 public:
+    ObjectType get_type() {
+        return FLOOR;
+    }
+    ~Floor() {
+        
+    }
 protected:
 private:
 };

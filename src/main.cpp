@@ -19,10 +19,10 @@ int main(int argc, char *argv[]) {
     // window.setVerticalSyncEnabled(true);
     window.setFramerateLimit(30);
 
-    World world;
-    Map map;
 
-    world.load_things_from_file("/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/static/first_room.txt");
+    std::vector <std::unique_ptr<Obj>> things = World::load_things_from_file("/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/static/first_room.txt");
+    World world("/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/static/first_room.txt");
+    Map map;
 
     while (window.isOpen()) {
         // проверить все события окна, которые были вызваны с последней итерации цикла

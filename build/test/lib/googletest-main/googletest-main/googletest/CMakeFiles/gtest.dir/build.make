@@ -73,15 +73,15 @@ test/lib/googletest-main/googletest-main/googletest/CMakeFiles/gtest.dir/src/gte
 test/lib/googletest-main/googletest-main/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o: /media/stepan/Windows\ 10\ Compact/Users/Stephan/Desktop/vs_code_game/test/lib/googletest-main/googletest-main/googletest/src/gtest-all.cc
 test/lib/googletest-main/googletest-main/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o: test/lib/googletest-main/googletest-main/googletest/CMakeFiles/gtest.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/lib/googletest-main/googletest-main/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/test/lib/googletest-main/googletest-main/googletest" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT test/lib/googletest-main/googletest-main/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o -MF CMakeFiles/gtest.dir/src/gtest-all.cc.o.d -o CMakeFiles/gtest.dir/src/gtest-all.cc.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/test/lib/googletest-main/googletest-main/googletest/src/gtest-all.cc"
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/test/lib/googletest-main/googletest-main/googletest" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT test/lib/googletest-main/googletest-main/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o -MF CMakeFiles/gtest.dir/src/gtest-all.cc.o.d -o CMakeFiles/gtest.dir/src/gtest-all.cc.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/test/lib/googletest-main/googletest-main/googletest/src/gtest-all.cc"
 
 test/lib/googletest-main/googletest-main/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gtest.dir/src/gtest-all.cc.i"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/test/lib/googletest-main/googletest-main/googletest" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/test/lib/googletest-main/googletest-main/googletest/src/gtest-all.cc" > CMakeFiles/gtest.dir/src/gtest-all.cc.i
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/test/lib/googletest-main/googletest-main/googletest" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/test/lib/googletest-main/googletest-main/googletest/src/gtest-all.cc" > CMakeFiles/gtest.dir/src/gtest-all.cc.i
 
 test/lib/googletest-main/googletest-main/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gtest.dir/src/gtest-all.cc.s"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/test/lib/googletest-main/googletest-main/googletest" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/test/lib/googletest-main/googletest-main/googletest/src/gtest-all.cc" -o CMakeFiles/gtest.dir/src/gtest-all.cc.s
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/test/lib/googletest-main/googletest-main/googletest" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/test/lib/googletest-main/googletest-main/googletest/src/gtest-all.cc" -o CMakeFiles/gtest.dir/src/gtest-all.cc.s
 
 # Object files for target gtest
 gtest_OBJECTS = \
@@ -90,15 +90,18 @@ gtest_OBJECTS = \
 # External object files for target gtest
 gtest_EXTERNAL_OBJECTS =
 
-lib/libgtest.a: test/lib/googletest-main/googletest-main/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
-lib/libgtest.a: test/lib/googletest-main/googletest-main/googletest/CMakeFiles/gtest.dir/build.make
-lib/libgtest.a: test/lib/googletest-main/googletest-main/googletest/CMakeFiles/gtest.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library ../../../../../lib/libgtest.a"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/test/lib/googletest-main/googletest-main/googletest" && $(CMAKE_COMMAND) -P CMakeFiles/gtest.dir/cmake_clean_target.cmake
+lib/libgtest.so.1.11.0: test/lib/googletest-main/googletest-main/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
+lib/libgtest.so.1.11.0: test/lib/googletest-main/googletest-main/googletest/CMakeFiles/gtest.dir/build.make
+lib/libgtest.so.1.11.0: test/lib/googletest-main/googletest-main/googletest/CMakeFiles/gtest.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library ../../../../../lib/libgtest.so"
 	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/test/lib/googletest-main/googletest-main/googletest" && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gtest.dir/link.txt --verbose=$(VERBOSE)
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/test/lib/googletest-main/googletest-main/googletest" && $(CMAKE_COMMAND) -E cmake_symlink_library ../../../../../lib/libgtest.so.1.11.0 ../../../../../lib/libgtest.so.1.11.0 ../../../../../lib/libgtest.so
+
+lib/libgtest.so: lib/libgtest.so.1.11.0
+	@$(CMAKE_COMMAND) -E touch_nocreate lib/libgtest.so
 
 # Rule to build all files generated by this target.
-test/lib/googletest-main/googletest-main/googletest/CMakeFiles/gtest.dir/build: lib/libgtest.a
+test/lib/googletest-main/googletest-main/googletest/CMakeFiles/gtest.dir/build: lib/libgtest.so
 .PHONY : test/lib/googletest-main/googletest-main/googletest/CMakeFiles/gtest.dir/build
 
 test/lib/googletest-main/googletest-main/googletest/CMakeFiles/gtest.dir/clean:

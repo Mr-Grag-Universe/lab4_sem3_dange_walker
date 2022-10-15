@@ -73,393 +73,393 @@ src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/BlendMode.cpp.o: sr
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/BlendMode.cpp.o: /media/stepan/Windows\ 10\ Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/BlendMode.cpp
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/BlendMode.cpp.o: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/BlendMode.cpp.o"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/BlendMode.cpp.o -MF CMakeFiles/sfml-graphics.dir/BlendMode.cpp.o.d -o CMakeFiles/sfml-graphics.dir/BlendMode.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/BlendMode.cpp"
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/BlendMode.cpp.o -MF CMakeFiles/sfml-graphics.dir/BlendMode.cpp.o.d -o CMakeFiles/sfml-graphics.dir/BlendMode.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/BlendMode.cpp"
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/BlendMode.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-graphics.dir/BlendMode.cpp.i"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/BlendMode.cpp" > CMakeFiles/sfml-graphics.dir/BlendMode.cpp.i
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/BlendMode.cpp" > CMakeFiles/sfml-graphics.dir/BlendMode.cpp.i
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/BlendMode.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-graphics.dir/BlendMode.cpp.s"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/BlendMode.cpp" -o CMakeFiles/sfml-graphics.dir/BlendMode.cpp.s
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/BlendMode.cpp" -o CMakeFiles/sfml-graphics.dir/BlendMode.cpp.s
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Font.cpp.o: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/flags.make
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Font.cpp.o: /media/stepan/Windows\ 10\ Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Font.cpp
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Font.cpp.o: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Font.cpp.o"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Font.cpp.o -MF CMakeFiles/sfml-graphics.dir/Font.cpp.o.d -o CMakeFiles/sfml-graphics.dir/Font.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Font.cpp"
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Font.cpp.o -MF CMakeFiles/sfml-graphics.dir/Font.cpp.o.d -o CMakeFiles/sfml-graphics.dir/Font.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Font.cpp"
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Font.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-graphics.dir/Font.cpp.i"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Font.cpp" > CMakeFiles/sfml-graphics.dir/Font.cpp.i
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Font.cpp" > CMakeFiles/sfml-graphics.dir/Font.cpp.i
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Font.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-graphics.dir/Font.cpp.s"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Font.cpp" -o CMakeFiles/sfml-graphics.dir/Font.cpp.s
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Font.cpp" -o CMakeFiles/sfml-graphics.dir/Font.cpp.s
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Glsl.cpp.o: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/flags.make
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Glsl.cpp.o: /media/stepan/Windows\ 10\ Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Glsl.cpp
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Glsl.cpp.o: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Glsl.cpp.o"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Glsl.cpp.o -MF CMakeFiles/sfml-graphics.dir/Glsl.cpp.o.d -o CMakeFiles/sfml-graphics.dir/Glsl.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Glsl.cpp"
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Glsl.cpp.o -MF CMakeFiles/sfml-graphics.dir/Glsl.cpp.o.d -o CMakeFiles/sfml-graphics.dir/Glsl.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Glsl.cpp"
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Glsl.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-graphics.dir/Glsl.cpp.i"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Glsl.cpp" > CMakeFiles/sfml-graphics.dir/Glsl.cpp.i
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Glsl.cpp" > CMakeFiles/sfml-graphics.dir/Glsl.cpp.i
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Glsl.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-graphics.dir/Glsl.cpp.s"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Glsl.cpp" -o CMakeFiles/sfml-graphics.dir/Glsl.cpp.s
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Glsl.cpp" -o CMakeFiles/sfml-graphics.dir/Glsl.cpp.s
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/GLCheck.cpp.o: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/flags.make
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/GLCheck.cpp.o: /media/stepan/Windows\ 10\ Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/GLCheck.cpp
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/GLCheck.cpp.o: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/GLCheck.cpp.o"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/GLCheck.cpp.o -MF CMakeFiles/sfml-graphics.dir/GLCheck.cpp.o.d -o CMakeFiles/sfml-graphics.dir/GLCheck.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/GLCheck.cpp"
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/GLCheck.cpp.o -MF CMakeFiles/sfml-graphics.dir/GLCheck.cpp.o.d -o CMakeFiles/sfml-graphics.dir/GLCheck.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/GLCheck.cpp"
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/GLCheck.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-graphics.dir/GLCheck.cpp.i"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/GLCheck.cpp" > CMakeFiles/sfml-graphics.dir/GLCheck.cpp.i
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/GLCheck.cpp" > CMakeFiles/sfml-graphics.dir/GLCheck.cpp.i
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/GLCheck.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-graphics.dir/GLCheck.cpp.s"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/GLCheck.cpp" -o CMakeFiles/sfml-graphics.dir/GLCheck.cpp.s
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/GLCheck.cpp" -o CMakeFiles/sfml-graphics.dir/GLCheck.cpp.s
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/GLExtensions.cpp.o: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/flags.make
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/GLExtensions.cpp.o: /media/stepan/Windows\ 10\ Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/GLExtensions.cpp
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/GLExtensions.cpp.o: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/GLExtensions.cpp.o"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/GLExtensions.cpp.o -MF CMakeFiles/sfml-graphics.dir/GLExtensions.cpp.o.d -o CMakeFiles/sfml-graphics.dir/GLExtensions.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/GLExtensions.cpp"
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/GLExtensions.cpp.o -MF CMakeFiles/sfml-graphics.dir/GLExtensions.cpp.o.d -o CMakeFiles/sfml-graphics.dir/GLExtensions.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/GLExtensions.cpp"
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/GLExtensions.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-graphics.dir/GLExtensions.cpp.i"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/GLExtensions.cpp" > CMakeFiles/sfml-graphics.dir/GLExtensions.cpp.i
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/GLExtensions.cpp" > CMakeFiles/sfml-graphics.dir/GLExtensions.cpp.i
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/GLExtensions.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-graphics.dir/GLExtensions.cpp.s"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/GLExtensions.cpp" -o CMakeFiles/sfml-graphics.dir/GLExtensions.cpp.s
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/GLExtensions.cpp" -o CMakeFiles/sfml-graphics.dir/GLExtensions.cpp.s
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Image.cpp.o: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/flags.make
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Image.cpp.o: /media/stepan/Windows\ 10\ Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Image.cpp
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Image.cpp.o: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Image.cpp.o"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Image.cpp.o -MF CMakeFiles/sfml-graphics.dir/Image.cpp.o.d -o CMakeFiles/sfml-graphics.dir/Image.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Image.cpp"
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Image.cpp.o -MF CMakeFiles/sfml-graphics.dir/Image.cpp.o.d -o CMakeFiles/sfml-graphics.dir/Image.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Image.cpp"
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Image.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-graphics.dir/Image.cpp.i"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Image.cpp" > CMakeFiles/sfml-graphics.dir/Image.cpp.i
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Image.cpp" > CMakeFiles/sfml-graphics.dir/Image.cpp.i
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Image.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-graphics.dir/Image.cpp.s"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Image.cpp" -o CMakeFiles/sfml-graphics.dir/Image.cpp.s
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Image.cpp" -o CMakeFiles/sfml-graphics.dir/Image.cpp.s
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/ImageLoader.cpp.o: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/flags.make
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/ImageLoader.cpp.o: /media/stepan/Windows\ 10\ Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/ImageLoader.cpp
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/ImageLoader.cpp.o: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/ImageLoader.cpp.o"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -fno-strict-aliasing -MD -MT src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/ImageLoader.cpp.o -MF CMakeFiles/sfml-graphics.dir/ImageLoader.cpp.o.d -o CMakeFiles/sfml-graphics.dir/ImageLoader.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/ImageLoader.cpp"
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/ImageLoader.cpp.o -MF CMakeFiles/sfml-graphics.dir/ImageLoader.cpp.o.d -o CMakeFiles/sfml-graphics.dir/ImageLoader.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/ImageLoader.cpp"
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/ImageLoader.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-graphics.dir/ImageLoader.cpp.i"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -fno-strict-aliasing -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/ImageLoader.cpp" > CMakeFiles/sfml-graphics.dir/ImageLoader.cpp.i
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/ImageLoader.cpp" > CMakeFiles/sfml-graphics.dir/ImageLoader.cpp.i
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/ImageLoader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-graphics.dir/ImageLoader.cpp.s"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -fno-strict-aliasing -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/ImageLoader.cpp" -o CMakeFiles/sfml-graphics.dir/ImageLoader.cpp.s
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/ImageLoader.cpp" -o CMakeFiles/sfml-graphics.dir/ImageLoader.cpp.s
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderStates.cpp.o: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/flags.make
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderStates.cpp.o: /media/stepan/Windows\ 10\ Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/RenderStates.cpp
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderStates.cpp.o: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderStates.cpp.o"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderStates.cpp.o -MF CMakeFiles/sfml-graphics.dir/RenderStates.cpp.o.d -o CMakeFiles/sfml-graphics.dir/RenderStates.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/RenderStates.cpp"
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderStates.cpp.o -MF CMakeFiles/sfml-graphics.dir/RenderStates.cpp.o.d -o CMakeFiles/sfml-graphics.dir/RenderStates.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/RenderStates.cpp"
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderStates.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-graphics.dir/RenderStates.cpp.i"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/RenderStates.cpp" > CMakeFiles/sfml-graphics.dir/RenderStates.cpp.i
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/RenderStates.cpp" > CMakeFiles/sfml-graphics.dir/RenderStates.cpp.i
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderStates.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-graphics.dir/RenderStates.cpp.s"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/RenderStates.cpp" -o CMakeFiles/sfml-graphics.dir/RenderStates.cpp.s
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/RenderStates.cpp" -o CMakeFiles/sfml-graphics.dir/RenderStates.cpp.s
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTexture.cpp.o: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/flags.make
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTexture.cpp.o: /media/stepan/Windows\ 10\ Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/RenderTexture.cpp
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTexture.cpp.o: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTexture.cpp.o"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTexture.cpp.o -MF CMakeFiles/sfml-graphics.dir/RenderTexture.cpp.o.d -o CMakeFiles/sfml-graphics.dir/RenderTexture.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/RenderTexture.cpp"
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTexture.cpp.o -MF CMakeFiles/sfml-graphics.dir/RenderTexture.cpp.o.d -o CMakeFiles/sfml-graphics.dir/RenderTexture.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/RenderTexture.cpp"
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTexture.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-graphics.dir/RenderTexture.cpp.i"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/RenderTexture.cpp" > CMakeFiles/sfml-graphics.dir/RenderTexture.cpp.i
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/RenderTexture.cpp" > CMakeFiles/sfml-graphics.dir/RenderTexture.cpp.i
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTexture.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-graphics.dir/RenderTexture.cpp.s"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/RenderTexture.cpp" -o CMakeFiles/sfml-graphics.dir/RenderTexture.cpp.s
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/RenderTexture.cpp" -o CMakeFiles/sfml-graphics.dir/RenderTexture.cpp.s
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTarget.cpp.o: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/flags.make
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTarget.cpp.o: /media/stepan/Windows\ 10\ Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/RenderTarget.cpp
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTarget.cpp.o: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTarget.cpp.o"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTarget.cpp.o -MF CMakeFiles/sfml-graphics.dir/RenderTarget.cpp.o.d -o CMakeFiles/sfml-graphics.dir/RenderTarget.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/RenderTarget.cpp"
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTarget.cpp.o -MF CMakeFiles/sfml-graphics.dir/RenderTarget.cpp.o.d -o CMakeFiles/sfml-graphics.dir/RenderTarget.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/RenderTarget.cpp"
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTarget.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-graphics.dir/RenderTarget.cpp.i"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/RenderTarget.cpp" > CMakeFiles/sfml-graphics.dir/RenderTarget.cpp.i
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/RenderTarget.cpp" > CMakeFiles/sfml-graphics.dir/RenderTarget.cpp.i
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTarget.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-graphics.dir/RenderTarget.cpp.s"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/RenderTarget.cpp" -o CMakeFiles/sfml-graphics.dir/RenderTarget.cpp.s
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/RenderTarget.cpp" -o CMakeFiles/sfml-graphics.dir/RenderTarget.cpp.s
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.o: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/flags.make
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.o: /media/stepan/Windows\ 10\ Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/RenderWindow.cpp
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.o: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.o"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.o -MF CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.o.d -o CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/RenderWindow.cpp"
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.o -MF CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.o.d -o CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/RenderWindow.cpp"
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.i"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/RenderWindow.cpp" > CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.i
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/RenderWindow.cpp" > CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.i
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.s"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/RenderWindow.cpp" -o CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.s
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/RenderWindow.cpp" -o CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.s
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Shader.cpp.o: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/flags.make
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Shader.cpp.o: /media/stepan/Windows\ 10\ Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Shader.cpp
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Shader.cpp.o: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Shader.cpp.o"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Shader.cpp.o -MF CMakeFiles/sfml-graphics.dir/Shader.cpp.o.d -o CMakeFiles/sfml-graphics.dir/Shader.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Shader.cpp"
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Shader.cpp.o -MF CMakeFiles/sfml-graphics.dir/Shader.cpp.o.d -o CMakeFiles/sfml-graphics.dir/Shader.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Shader.cpp"
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Shader.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-graphics.dir/Shader.cpp.i"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Shader.cpp" > CMakeFiles/sfml-graphics.dir/Shader.cpp.i
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Shader.cpp" > CMakeFiles/sfml-graphics.dir/Shader.cpp.i
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Shader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-graphics.dir/Shader.cpp.s"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Shader.cpp" -o CMakeFiles/sfml-graphics.dir/Shader.cpp.s
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Shader.cpp" -o CMakeFiles/sfml-graphics.dir/Shader.cpp.s
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Texture.cpp.o: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/flags.make
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Texture.cpp.o: /media/stepan/Windows\ 10\ Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Texture.cpp
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Texture.cpp.o: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Texture.cpp.o"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Texture.cpp.o -MF CMakeFiles/sfml-graphics.dir/Texture.cpp.o.d -o CMakeFiles/sfml-graphics.dir/Texture.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Texture.cpp"
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Texture.cpp.o -MF CMakeFiles/sfml-graphics.dir/Texture.cpp.o.d -o CMakeFiles/sfml-graphics.dir/Texture.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Texture.cpp"
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Texture.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-graphics.dir/Texture.cpp.i"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Texture.cpp" > CMakeFiles/sfml-graphics.dir/Texture.cpp.i
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Texture.cpp" > CMakeFiles/sfml-graphics.dir/Texture.cpp.i
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Texture.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-graphics.dir/Texture.cpp.s"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Texture.cpp" -o CMakeFiles/sfml-graphics.dir/Texture.cpp.s
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Texture.cpp" -o CMakeFiles/sfml-graphics.dir/Texture.cpp.s
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/TextureSaver.cpp.o: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/flags.make
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/TextureSaver.cpp.o: /media/stepan/Windows\ 10\ Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/TextureSaver.cpp
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/TextureSaver.cpp.o: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/TextureSaver.cpp.o"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/TextureSaver.cpp.o -MF CMakeFiles/sfml-graphics.dir/TextureSaver.cpp.o.d -o CMakeFiles/sfml-graphics.dir/TextureSaver.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/TextureSaver.cpp"
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/TextureSaver.cpp.o -MF CMakeFiles/sfml-graphics.dir/TextureSaver.cpp.o.d -o CMakeFiles/sfml-graphics.dir/TextureSaver.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/TextureSaver.cpp"
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/TextureSaver.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-graphics.dir/TextureSaver.cpp.i"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/TextureSaver.cpp" > CMakeFiles/sfml-graphics.dir/TextureSaver.cpp.i
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/TextureSaver.cpp" > CMakeFiles/sfml-graphics.dir/TextureSaver.cpp.i
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/TextureSaver.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-graphics.dir/TextureSaver.cpp.s"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/TextureSaver.cpp" -o CMakeFiles/sfml-graphics.dir/TextureSaver.cpp.s
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/TextureSaver.cpp" -o CMakeFiles/sfml-graphics.dir/TextureSaver.cpp.s
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Transform.cpp.o: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/flags.make
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Transform.cpp.o: /media/stepan/Windows\ 10\ Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Transform.cpp
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Transform.cpp.o: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Transform.cpp.o"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Transform.cpp.o -MF CMakeFiles/sfml-graphics.dir/Transform.cpp.o.d -o CMakeFiles/sfml-graphics.dir/Transform.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Transform.cpp"
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Transform.cpp.o -MF CMakeFiles/sfml-graphics.dir/Transform.cpp.o.d -o CMakeFiles/sfml-graphics.dir/Transform.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Transform.cpp"
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Transform.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-graphics.dir/Transform.cpp.i"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Transform.cpp" > CMakeFiles/sfml-graphics.dir/Transform.cpp.i
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Transform.cpp" > CMakeFiles/sfml-graphics.dir/Transform.cpp.i
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Transform.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-graphics.dir/Transform.cpp.s"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Transform.cpp" -o CMakeFiles/sfml-graphics.dir/Transform.cpp.s
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Transform.cpp" -o CMakeFiles/sfml-graphics.dir/Transform.cpp.s
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Transformable.cpp.o: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/flags.make
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Transformable.cpp.o: /media/stepan/Windows\ 10\ Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Transformable.cpp
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Transformable.cpp.o: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Transformable.cpp.o"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Transformable.cpp.o -MF CMakeFiles/sfml-graphics.dir/Transformable.cpp.o.d -o CMakeFiles/sfml-graphics.dir/Transformable.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Transformable.cpp"
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Transformable.cpp.o -MF CMakeFiles/sfml-graphics.dir/Transformable.cpp.o.d -o CMakeFiles/sfml-graphics.dir/Transformable.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Transformable.cpp"
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Transformable.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-graphics.dir/Transformable.cpp.i"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Transformable.cpp" > CMakeFiles/sfml-graphics.dir/Transformable.cpp.i
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Transformable.cpp" > CMakeFiles/sfml-graphics.dir/Transformable.cpp.i
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Transformable.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-graphics.dir/Transformable.cpp.s"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Transformable.cpp" -o CMakeFiles/sfml-graphics.dir/Transformable.cpp.s
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Transformable.cpp" -o CMakeFiles/sfml-graphics.dir/Transformable.cpp.s
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/View.cpp.o: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/flags.make
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/View.cpp.o: /media/stepan/Windows\ 10\ Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/View.cpp
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/View.cpp.o: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/View.cpp.o"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/View.cpp.o -MF CMakeFiles/sfml-graphics.dir/View.cpp.o.d -o CMakeFiles/sfml-graphics.dir/View.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/View.cpp"
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/View.cpp.o -MF CMakeFiles/sfml-graphics.dir/View.cpp.o.d -o CMakeFiles/sfml-graphics.dir/View.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/View.cpp"
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/View.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-graphics.dir/View.cpp.i"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/View.cpp" > CMakeFiles/sfml-graphics.dir/View.cpp.i
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/View.cpp" > CMakeFiles/sfml-graphics.dir/View.cpp.i
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/View.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-graphics.dir/View.cpp.s"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/View.cpp" -o CMakeFiles/sfml-graphics.dir/View.cpp.s
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/View.cpp" -o CMakeFiles/sfml-graphics.dir/View.cpp.s
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Shape.cpp.o: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/flags.make
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Shape.cpp.o: /media/stepan/Windows\ 10\ Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Shape.cpp
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Shape.cpp.o: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Shape.cpp.o"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Shape.cpp.o -MF CMakeFiles/sfml-graphics.dir/Shape.cpp.o.d -o CMakeFiles/sfml-graphics.dir/Shape.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Shape.cpp"
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Shape.cpp.o -MF CMakeFiles/sfml-graphics.dir/Shape.cpp.o.d -o CMakeFiles/sfml-graphics.dir/Shape.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Shape.cpp"
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Shape.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-graphics.dir/Shape.cpp.i"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Shape.cpp" > CMakeFiles/sfml-graphics.dir/Shape.cpp.i
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Shape.cpp" > CMakeFiles/sfml-graphics.dir/Shape.cpp.i
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Shape.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-graphics.dir/Shape.cpp.s"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Shape.cpp" -o CMakeFiles/sfml-graphics.dir/Shape.cpp.s
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Shape.cpp" -o CMakeFiles/sfml-graphics.dir/Shape.cpp.s
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/CircleShape.cpp.o: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/flags.make
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/CircleShape.cpp.o: /media/stepan/Windows\ 10\ Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/CircleShape.cpp
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/CircleShape.cpp.o: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/CircleShape.cpp.o"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/CircleShape.cpp.o -MF CMakeFiles/sfml-graphics.dir/CircleShape.cpp.o.d -o CMakeFiles/sfml-graphics.dir/CircleShape.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/CircleShape.cpp"
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/CircleShape.cpp.o -MF CMakeFiles/sfml-graphics.dir/CircleShape.cpp.o.d -o CMakeFiles/sfml-graphics.dir/CircleShape.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/CircleShape.cpp"
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/CircleShape.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-graphics.dir/CircleShape.cpp.i"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/CircleShape.cpp" > CMakeFiles/sfml-graphics.dir/CircleShape.cpp.i
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/CircleShape.cpp" > CMakeFiles/sfml-graphics.dir/CircleShape.cpp.i
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/CircleShape.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-graphics.dir/CircleShape.cpp.s"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/CircleShape.cpp" -o CMakeFiles/sfml-graphics.dir/CircleShape.cpp.s
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/CircleShape.cpp" -o CMakeFiles/sfml-graphics.dir/CircleShape.cpp.s
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RectangleShape.cpp.o: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/flags.make
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RectangleShape.cpp.o: /media/stepan/Windows\ 10\ Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/RectangleShape.cpp
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RectangleShape.cpp.o: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RectangleShape.cpp.o"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RectangleShape.cpp.o -MF CMakeFiles/sfml-graphics.dir/RectangleShape.cpp.o.d -o CMakeFiles/sfml-graphics.dir/RectangleShape.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/RectangleShape.cpp"
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RectangleShape.cpp.o -MF CMakeFiles/sfml-graphics.dir/RectangleShape.cpp.o.d -o CMakeFiles/sfml-graphics.dir/RectangleShape.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/RectangleShape.cpp"
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RectangleShape.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-graphics.dir/RectangleShape.cpp.i"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/RectangleShape.cpp" > CMakeFiles/sfml-graphics.dir/RectangleShape.cpp.i
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/RectangleShape.cpp" > CMakeFiles/sfml-graphics.dir/RectangleShape.cpp.i
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RectangleShape.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-graphics.dir/RectangleShape.cpp.s"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/RectangleShape.cpp" -o CMakeFiles/sfml-graphics.dir/RectangleShape.cpp.s
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/RectangleShape.cpp" -o CMakeFiles/sfml-graphics.dir/RectangleShape.cpp.s
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/ConvexShape.cpp.o: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/flags.make
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/ConvexShape.cpp.o: /media/stepan/Windows\ 10\ Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/ConvexShape.cpp
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/ConvexShape.cpp.o: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/ConvexShape.cpp.o"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/ConvexShape.cpp.o -MF CMakeFiles/sfml-graphics.dir/ConvexShape.cpp.o.d -o CMakeFiles/sfml-graphics.dir/ConvexShape.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/ConvexShape.cpp"
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/ConvexShape.cpp.o -MF CMakeFiles/sfml-graphics.dir/ConvexShape.cpp.o.d -o CMakeFiles/sfml-graphics.dir/ConvexShape.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/ConvexShape.cpp"
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/ConvexShape.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-graphics.dir/ConvexShape.cpp.i"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/ConvexShape.cpp" > CMakeFiles/sfml-graphics.dir/ConvexShape.cpp.i
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/ConvexShape.cpp" > CMakeFiles/sfml-graphics.dir/ConvexShape.cpp.i
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/ConvexShape.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-graphics.dir/ConvexShape.cpp.s"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/ConvexShape.cpp" -o CMakeFiles/sfml-graphics.dir/ConvexShape.cpp.s
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/ConvexShape.cpp" -o CMakeFiles/sfml-graphics.dir/ConvexShape.cpp.s
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Sprite.cpp.o: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/flags.make
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Sprite.cpp.o: /media/stepan/Windows\ 10\ Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Sprite.cpp
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Sprite.cpp.o: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Sprite.cpp.o"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Sprite.cpp.o -MF CMakeFiles/sfml-graphics.dir/Sprite.cpp.o.d -o CMakeFiles/sfml-graphics.dir/Sprite.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Sprite.cpp"
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Sprite.cpp.o -MF CMakeFiles/sfml-graphics.dir/Sprite.cpp.o.d -o CMakeFiles/sfml-graphics.dir/Sprite.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Sprite.cpp"
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Sprite.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-graphics.dir/Sprite.cpp.i"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Sprite.cpp" > CMakeFiles/sfml-graphics.dir/Sprite.cpp.i
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Sprite.cpp" > CMakeFiles/sfml-graphics.dir/Sprite.cpp.i
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Sprite.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-graphics.dir/Sprite.cpp.s"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Sprite.cpp" -o CMakeFiles/sfml-graphics.dir/Sprite.cpp.s
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Sprite.cpp" -o CMakeFiles/sfml-graphics.dir/Sprite.cpp.s
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Text.cpp.o: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/flags.make
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Text.cpp.o: /media/stepan/Windows\ 10\ Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Text.cpp
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Text.cpp.o: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Text.cpp.o"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Text.cpp.o -MF CMakeFiles/sfml-graphics.dir/Text.cpp.o.d -o CMakeFiles/sfml-graphics.dir/Text.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Text.cpp"
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Text.cpp.o -MF CMakeFiles/sfml-graphics.dir/Text.cpp.o.d -o CMakeFiles/sfml-graphics.dir/Text.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Text.cpp"
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Text.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-graphics.dir/Text.cpp.i"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Text.cpp" > CMakeFiles/sfml-graphics.dir/Text.cpp.i
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Text.cpp" > CMakeFiles/sfml-graphics.dir/Text.cpp.i
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Text.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-graphics.dir/Text.cpp.s"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Text.cpp" -o CMakeFiles/sfml-graphics.dir/Text.cpp.s
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/Text.cpp" -o CMakeFiles/sfml-graphics.dir/Text.cpp.s
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexArray.cpp.o: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/flags.make
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexArray.cpp.o: /media/stepan/Windows\ 10\ Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/VertexArray.cpp
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexArray.cpp.o: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexArray.cpp.o"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexArray.cpp.o -MF CMakeFiles/sfml-graphics.dir/VertexArray.cpp.o.d -o CMakeFiles/sfml-graphics.dir/VertexArray.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/VertexArray.cpp"
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexArray.cpp.o -MF CMakeFiles/sfml-graphics.dir/VertexArray.cpp.o.d -o CMakeFiles/sfml-graphics.dir/VertexArray.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/VertexArray.cpp"
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexArray.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-graphics.dir/VertexArray.cpp.i"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/VertexArray.cpp" > CMakeFiles/sfml-graphics.dir/VertexArray.cpp.i
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/VertexArray.cpp" > CMakeFiles/sfml-graphics.dir/VertexArray.cpp.i
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexArray.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-graphics.dir/VertexArray.cpp.s"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/VertexArray.cpp" -o CMakeFiles/sfml-graphics.dir/VertexArray.cpp.s
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/VertexArray.cpp" -o CMakeFiles/sfml-graphics.dir/VertexArray.cpp.s
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.o: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/flags.make
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.o: /media/stepan/Windows\ 10\ Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/VertexBuffer.cpp
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.o: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.o"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.o -MF CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.o.d -o CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/VertexBuffer.cpp"
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.o -MF CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.o.d -o CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/VertexBuffer.cpp"
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.i"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/VertexBuffer.cpp" > CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.i
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/VertexBuffer.cpp" > CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.i
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.s"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/VertexBuffer.cpp" -o CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.s
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/VertexBuffer.cpp" -o CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.s
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImpl.cpp.o: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/flags.make
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImpl.cpp.o: /media/stepan/Windows\ 10\ Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/RenderTextureImpl.cpp
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImpl.cpp.o: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImpl.cpp.o"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImpl.cpp.o -MF CMakeFiles/sfml-graphics.dir/RenderTextureImpl.cpp.o.d -o CMakeFiles/sfml-graphics.dir/RenderTextureImpl.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/RenderTextureImpl.cpp"
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImpl.cpp.o -MF CMakeFiles/sfml-graphics.dir/RenderTextureImpl.cpp.o.d -o CMakeFiles/sfml-graphics.dir/RenderTextureImpl.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/RenderTextureImpl.cpp"
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImpl.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-graphics.dir/RenderTextureImpl.cpp.i"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/RenderTextureImpl.cpp" > CMakeFiles/sfml-graphics.dir/RenderTextureImpl.cpp.i
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/RenderTextureImpl.cpp" > CMakeFiles/sfml-graphics.dir/RenderTextureImpl.cpp.i
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImpl.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-graphics.dir/RenderTextureImpl.cpp.s"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/RenderTextureImpl.cpp" -o CMakeFiles/sfml-graphics.dir/RenderTextureImpl.cpp.s
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/RenderTextureImpl.cpp" -o CMakeFiles/sfml-graphics.dir/RenderTextureImpl.cpp.s
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImplFBO.cpp.o: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/flags.make
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImplFBO.cpp.o: /media/stepan/Windows\ 10\ Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/RenderTextureImplFBO.cpp
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImplFBO.cpp.o: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImplFBO.cpp.o"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImplFBO.cpp.o -MF CMakeFiles/sfml-graphics.dir/RenderTextureImplFBO.cpp.o.d -o CMakeFiles/sfml-graphics.dir/RenderTextureImplFBO.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/RenderTextureImplFBO.cpp"
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImplFBO.cpp.o -MF CMakeFiles/sfml-graphics.dir/RenderTextureImplFBO.cpp.o.d -o CMakeFiles/sfml-graphics.dir/RenderTextureImplFBO.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/RenderTextureImplFBO.cpp"
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImplFBO.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-graphics.dir/RenderTextureImplFBO.cpp.i"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/RenderTextureImplFBO.cpp" > CMakeFiles/sfml-graphics.dir/RenderTextureImplFBO.cpp.i
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/RenderTextureImplFBO.cpp" > CMakeFiles/sfml-graphics.dir/RenderTextureImplFBO.cpp.i
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImplFBO.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-graphics.dir/RenderTextureImplFBO.cpp.s"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/RenderTextureImplFBO.cpp" -o CMakeFiles/sfml-graphics.dir/RenderTextureImplFBO.cpp.s
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/RenderTextureImplFBO.cpp" -o CMakeFiles/sfml-graphics.dir/RenderTextureImplFBO.cpp.s
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImplDefault.cpp.o: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/flags.make
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImplDefault.cpp.o: /media/stepan/Windows\ 10\ Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/RenderTextureImplDefault.cpp
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImplDefault.cpp.o: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImplDefault.cpp.o"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImplDefault.cpp.o -MF CMakeFiles/sfml-graphics.dir/RenderTextureImplDefault.cpp.o.d -o CMakeFiles/sfml-graphics.dir/RenderTextureImplDefault.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/RenderTextureImplDefault.cpp"
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImplDefault.cpp.o -MF CMakeFiles/sfml-graphics.dir/RenderTextureImplDefault.cpp.o.d -o CMakeFiles/sfml-graphics.dir/RenderTextureImplDefault.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/RenderTextureImplDefault.cpp"
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImplDefault.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-graphics.dir/RenderTextureImplDefault.cpp.i"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/RenderTextureImplDefault.cpp" > CMakeFiles/sfml-graphics.dir/RenderTextureImplDefault.cpp.i
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/RenderTextureImplDefault.cpp" > CMakeFiles/sfml-graphics.dir/RenderTextureImplDefault.cpp.i
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImplDefault.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-graphics.dir/RenderTextureImplDefault.cpp.s"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/RenderTextureImplDefault.cpp" -o CMakeFiles/sfml-graphics.dir/RenderTextureImplDefault.cpp.s
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Graphics/RenderTextureImplDefault.cpp" -o CMakeFiles/sfml-graphics.dir/RenderTextureImplDefault.cpp.s
 
 # Object files for target sfml-graphics
 sfml__graphics_OBJECTS = \
@@ -495,42 +495,51 @@ sfml__graphics_OBJECTS = \
 # External object files for target sfml-graphics
 sfml__graphics_EXTERNAL_OBJECTS =
 
-src/libs/SFML/lib/libsfml-graphics-s-d.a: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/BlendMode.cpp.o
-src/libs/SFML/lib/libsfml-graphics-s-d.a: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Font.cpp.o
-src/libs/SFML/lib/libsfml-graphics-s-d.a: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Glsl.cpp.o
-src/libs/SFML/lib/libsfml-graphics-s-d.a: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/GLCheck.cpp.o
-src/libs/SFML/lib/libsfml-graphics-s-d.a: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/GLExtensions.cpp.o
-src/libs/SFML/lib/libsfml-graphics-s-d.a: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Image.cpp.o
-src/libs/SFML/lib/libsfml-graphics-s-d.a: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/ImageLoader.cpp.o
-src/libs/SFML/lib/libsfml-graphics-s-d.a: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderStates.cpp.o
-src/libs/SFML/lib/libsfml-graphics-s-d.a: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTexture.cpp.o
-src/libs/SFML/lib/libsfml-graphics-s-d.a: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTarget.cpp.o
-src/libs/SFML/lib/libsfml-graphics-s-d.a: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.o
-src/libs/SFML/lib/libsfml-graphics-s-d.a: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Shader.cpp.o
-src/libs/SFML/lib/libsfml-graphics-s-d.a: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Texture.cpp.o
-src/libs/SFML/lib/libsfml-graphics-s-d.a: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/TextureSaver.cpp.o
-src/libs/SFML/lib/libsfml-graphics-s-d.a: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Transform.cpp.o
-src/libs/SFML/lib/libsfml-graphics-s-d.a: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Transformable.cpp.o
-src/libs/SFML/lib/libsfml-graphics-s-d.a: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/View.cpp.o
-src/libs/SFML/lib/libsfml-graphics-s-d.a: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Shape.cpp.o
-src/libs/SFML/lib/libsfml-graphics-s-d.a: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/CircleShape.cpp.o
-src/libs/SFML/lib/libsfml-graphics-s-d.a: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RectangleShape.cpp.o
-src/libs/SFML/lib/libsfml-graphics-s-d.a: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/ConvexShape.cpp.o
-src/libs/SFML/lib/libsfml-graphics-s-d.a: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Sprite.cpp.o
-src/libs/SFML/lib/libsfml-graphics-s-d.a: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Text.cpp.o
-src/libs/SFML/lib/libsfml-graphics-s-d.a: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexArray.cpp.o
-src/libs/SFML/lib/libsfml-graphics-s-d.a: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.o
-src/libs/SFML/lib/libsfml-graphics-s-d.a: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImpl.cpp.o
-src/libs/SFML/lib/libsfml-graphics-s-d.a: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImplFBO.cpp.o
-src/libs/SFML/lib/libsfml-graphics-s-d.a: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImplDefault.cpp.o
-src/libs/SFML/lib/libsfml-graphics-s-d.a: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/build.make
-src/libs/SFML/lib/libsfml-graphics-s-d.a: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_29) "Linking CXX static library ../../../lib/libsfml-graphics-s-d.a"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && $(CMAKE_COMMAND) -P CMakeFiles/sfml-graphics.dir/cmake_clean_target.cmake
+src/libs/SFML/lib/libsfml-graphics-d.so.3.0.0: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/BlendMode.cpp.o
+src/libs/SFML/lib/libsfml-graphics-d.so.3.0.0: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Font.cpp.o
+src/libs/SFML/lib/libsfml-graphics-d.so.3.0.0: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Glsl.cpp.o
+src/libs/SFML/lib/libsfml-graphics-d.so.3.0.0: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/GLCheck.cpp.o
+src/libs/SFML/lib/libsfml-graphics-d.so.3.0.0: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/GLExtensions.cpp.o
+src/libs/SFML/lib/libsfml-graphics-d.so.3.0.0: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Image.cpp.o
+src/libs/SFML/lib/libsfml-graphics-d.so.3.0.0: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/ImageLoader.cpp.o
+src/libs/SFML/lib/libsfml-graphics-d.so.3.0.0: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderStates.cpp.o
+src/libs/SFML/lib/libsfml-graphics-d.so.3.0.0: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTexture.cpp.o
+src/libs/SFML/lib/libsfml-graphics-d.so.3.0.0: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTarget.cpp.o
+src/libs/SFML/lib/libsfml-graphics-d.so.3.0.0: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.o
+src/libs/SFML/lib/libsfml-graphics-d.so.3.0.0: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Shader.cpp.o
+src/libs/SFML/lib/libsfml-graphics-d.so.3.0.0: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Texture.cpp.o
+src/libs/SFML/lib/libsfml-graphics-d.so.3.0.0: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/TextureSaver.cpp.o
+src/libs/SFML/lib/libsfml-graphics-d.so.3.0.0: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Transform.cpp.o
+src/libs/SFML/lib/libsfml-graphics-d.so.3.0.0: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Transformable.cpp.o
+src/libs/SFML/lib/libsfml-graphics-d.so.3.0.0: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/View.cpp.o
+src/libs/SFML/lib/libsfml-graphics-d.so.3.0.0: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Shape.cpp.o
+src/libs/SFML/lib/libsfml-graphics-d.so.3.0.0: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/CircleShape.cpp.o
+src/libs/SFML/lib/libsfml-graphics-d.so.3.0.0: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RectangleShape.cpp.o
+src/libs/SFML/lib/libsfml-graphics-d.so.3.0.0: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/ConvexShape.cpp.o
+src/libs/SFML/lib/libsfml-graphics-d.so.3.0.0: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Sprite.cpp.o
+src/libs/SFML/lib/libsfml-graphics-d.so.3.0.0: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Text.cpp.o
+src/libs/SFML/lib/libsfml-graphics-d.so.3.0.0: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexArray.cpp.o
+src/libs/SFML/lib/libsfml-graphics-d.so.3.0.0: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.o
+src/libs/SFML/lib/libsfml-graphics-d.so.3.0.0: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImpl.cpp.o
+src/libs/SFML/lib/libsfml-graphics-d.so.3.0.0: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImplFBO.cpp.o
+src/libs/SFML/lib/libsfml-graphics-d.so.3.0.0: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImplDefault.cpp.o
+src/libs/SFML/lib/libsfml-graphics-d.so.3.0.0: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/build.make
+src/libs/SFML/lib/libsfml-graphics-d.so.3.0.0: src/libs/SFML/lib/libsfml-window-d.so.3.0.0
+src/libs/SFML/lib/libsfml-graphics-d.so.3.0.0: src/libs/SFML/lib/libsfml-system-d.so.3.0.0
+src/libs/SFML/lib/libsfml-graphics-d.so.3.0.0: /usr/lib/x86_64-linux-gnu/libfreetype.so
+src/libs/SFML/lib/libsfml-graphics-d.so.3.0.0: src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_29) "Linking CXX shared library ../../../lib/libsfml-graphics-d.so"
 	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sfml-graphics.dir/link.txt --verbose=$(VERBOSE)
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Graphics" && $(CMAKE_COMMAND) -E cmake_symlink_library ../../../lib/libsfml-graphics-d.so.3.0.0 ../../../lib/libsfml-graphics-d.so.3.0 ../../../lib/libsfml-graphics-d.so
+
+src/libs/SFML/lib/libsfml-graphics-d.so.3.0: src/libs/SFML/lib/libsfml-graphics-d.so.3.0.0
+	@$(CMAKE_COMMAND) -E touch_nocreate src/libs/SFML/lib/libsfml-graphics-d.so.3.0
+
+src/libs/SFML/lib/libsfml-graphics-d.so: src/libs/SFML/lib/libsfml-graphics-d.so.3.0.0
+	@$(CMAKE_COMMAND) -E touch_nocreate src/libs/SFML/lib/libsfml-graphics-d.so
 
 # Rule to build all files generated by this target.
-src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/build: src/libs/SFML/lib/libsfml-graphics-s-d.a
+src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/build: src/libs/SFML/lib/libsfml-graphics-d.so
 .PHONY : src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/build
 
 src/libs/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/clean:

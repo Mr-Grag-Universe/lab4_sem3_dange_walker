@@ -5,8 +5,12 @@
 
 class Door : public Obj {
 public:
-protected:
-private:
+    ObjectType get_type() {
+        return DOOR;
+    }
+    ~Door() {
+        
+    }
 };
 
 #endif

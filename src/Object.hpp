@@ -10,11 +10,20 @@
 #include "constants.hpp"
 
 class Obj {
+protected:
 public:
+    enum ObjectType {
+        WALL,
+        FLOOR,
+        DOOR,
+    };
+
     Obj() = default;
     Obj(const std::pair<unsigned int, unsigned int> & position, const sf::Sprite & sprite);
     Obj(const Obj &);
-    ~Obj() = default;
+    virtual ~Obj() {
+        
+    }
 
     // methods
 
@@ -23,13 +32,16 @@ public:
     /// @return on which layer current object is staying
     unsigned char get_layer();
 
-    virtual void f() = 0;
+    virtual ObjectType get_type() = 0;
+    // virtual void f() = 0;
 protected:
+
     Collider collider;
     sf::Sprite sprite;
     std::pair<unsigned int, unsigned int> position = std::make_pair(HEIGHT/2, WIDTH/2);
     unsigned char layer = 0;
 private:
+    ObjectType type;
 };
 
 #endif

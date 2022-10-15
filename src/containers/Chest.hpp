@@ -1,5 +1,5 @@
 #ifndef CHEST_CLASS
-#define CHEAT_CLASS
+#define CHEST_CLASS
 
 class Chest {
 private:

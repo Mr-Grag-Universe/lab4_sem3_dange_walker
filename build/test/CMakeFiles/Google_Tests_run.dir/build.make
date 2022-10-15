@@ -73,15 +73,15 @@ test/CMakeFiles/Google_Tests_run.dir/main_test.cpp.o: test/CMakeFiles/Google_Tes
 test/CMakeFiles/Google_Tests_run.dir/main_test.cpp.o: /media/stepan/Windows\ 10\ Compact/Users/Stephan/Desktop/vs_code_game/test/main_test.cpp
 test/CMakeFiles/Google_Tests_run.dir/main_test.cpp.o: test/CMakeFiles/Google_Tests_run.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/CMakeFiles/Google_Tests_run.dir/main_test.cpp.o"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/test" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT test/CMakeFiles/Google_Tests_run.dir/main_test.cpp.o -MF CMakeFiles/Google_Tests_run.dir/main_test.cpp.o.d -o CMakeFiles/Google_Tests_run.dir/main_test.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/test/main_test.cpp"
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/test" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT test/CMakeFiles/Google_Tests_run.dir/main_test.cpp.o -MF CMakeFiles/Google_Tests_run.dir/main_test.cpp.o.d -o CMakeFiles/Google_Tests_run.dir/main_test.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/test/main_test.cpp"
 
 test/CMakeFiles/Google_Tests_run.dir/main_test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Google_Tests_run.dir/main_test.cpp.i"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/test" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/test/main_test.cpp" > CMakeFiles/Google_Tests_run.dir/main_test.cpp.i
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/test" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/test/main_test.cpp" > CMakeFiles/Google_Tests_run.dir/main_test.cpp.i
 
 test/CMakeFiles/Google_Tests_run.dir/main_test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Google_Tests_run.dir/main_test.cpp.s"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/test" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/test/main_test.cpp" -o CMakeFiles/Google_Tests_run.dir/main_test.cpp.s
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/test" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/test/main_test.cpp" -o CMakeFiles/Google_Tests_run.dir/main_test.cpp.s
 
 # Object files for target Google_Tests_run
 Google_Tests_run_OBJECTS = \

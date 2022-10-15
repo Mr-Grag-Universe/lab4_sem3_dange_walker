@@ -73,295 +73,295 @@ src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/ALCheck.cpp.o: src/libs/S
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/ALCheck.cpp.o: /media/stepan/Windows\ 10\ Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/ALCheck.cpp
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/ALCheck.cpp.o: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/ALCheck.cpp.o"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/ALCheck.cpp.o -MF CMakeFiles/sfml-audio.dir/ALCheck.cpp.o.d -o CMakeFiles/sfml-audio.dir/ALCheck.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/ALCheck.cpp"
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/ALCheck.cpp.o -MF CMakeFiles/sfml-audio.dir/ALCheck.cpp.o.d -o CMakeFiles/sfml-audio.dir/ALCheck.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/ALCheck.cpp"
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/ALCheck.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-audio.dir/ALCheck.cpp.i"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/ALCheck.cpp" > CMakeFiles/sfml-audio.dir/ALCheck.cpp.i
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/ALCheck.cpp" > CMakeFiles/sfml-audio.dir/ALCheck.cpp.i
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/ALCheck.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-audio.dir/ALCheck.cpp.s"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/ALCheck.cpp" -o CMakeFiles/sfml-audio.dir/ALCheck.cpp.s
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/ALCheck.cpp" -o CMakeFiles/sfml-audio.dir/ALCheck.cpp.s
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AlResource.cpp.o: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/flags.make
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AlResource.cpp.o: /media/stepan/Windows\ 10\ Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/AlResource.cpp
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AlResource.cpp.o: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AlResource.cpp.o"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AlResource.cpp.o -MF CMakeFiles/sfml-audio.dir/AlResource.cpp.o.d -o CMakeFiles/sfml-audio.dir/AlResource.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/AlResource.cpp"
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AlResource.cpp.o -MF CMakeFiles/sfml-audio.dir/AlResource.cpp.o.d -o CMakeFiles/sfml-audio.dir/AlResource.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/AlResource.cpp"
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AlResource.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-audio.dir/AlResource.cpp.i"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/AlResource.cpp" > CMakeFiles/sfml-audio.dir/AlResource.cpp.i
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/AlResource.cpp" > CMakeFiles/sfml-audio.dir/AlResource.cpp.i
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AlResource.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-audio.dir/AlResource.cpp.s"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/AlResource.cpp" -o CMakeFiles/sfml-audio.dir/AlResource.cpp.s
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/AlResource.cpp" -o CMakeFiles/sfml-audio.dir/AlResource.cpp.s
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AudioDevice.cpp.o: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/flags.make
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AudioDevice.cpp.o: /media/stepan/Windows\ 10\ Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/AudioDevice.cpp
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AudioDevice.cpp.o: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AudioDevice.cpp.o"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AudioDevice.cpp.o -MF CMakeFiles/sfml-audio.dir/AudioDevice.cpp.o.d -o CMakeFiles/sfml-audio.dir/AudioDevice.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/AudioDevice.cpp"
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AudioDevice.cpp.o -MF CMakeFiles/sfml-audio.dir/AudioDevice.cpp.o.d -o CMakeFiles/sfml-audio.dir/AudioDevice.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/AudioDevice.cpp"
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AudioDevice.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-audio.dir/AudioDevice.cpp.i"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/AudioDevice.cpp" > CMakeFiles/sfml-audio.dir/AudioDevice.cpp.i
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/AudioDevice.cpp" > CMakeFiles/sfml-audio.dir/AudioDevice.cpp.i
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AudioDevice.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-audio.dir/AudioDevice.cpp.s"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/AudioDevice.cpp" -o CMakeFiles/sfml-audio.dir/AudioDevice.cpp.s
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/AudioDevice.cpp" -o CMakeFiles/sfml-audio.dir/AudioDevice.cpp.s
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Listener.cpp.o: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/flags.make
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Listener.cpp.o: /media/stepan/Windows\ 10\ Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/Listener.cpp
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Listener.cpp.o: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Listener.cpp.o"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Listener.cpp.o -MF CMakeFiles/sfml-audio.dir/Listener.cpp.o.d -o CMakeFiles/sfml-audio.dir/Listener.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/Listener.cpp"
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Listener.cpp.o -MF CMakeFiles/sfml-audio.dir/Listener.cpp.o.d -o CMakeFiles/sfml-audio.dir/Listener.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/Listener.cpp"
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Listener.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-audio.dir/Listener.cpp.i"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/Listener.cpp" > CMakeFiles/sfml-audio.dir/Listener.cpp.i
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/Listener.cpp" > CMakeFiles/sfml-audio.dir/Listener.cpp.i
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Listener.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-audio.dir/Listener.cpp.s"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/Listener.cpp" -o CMakeFiles/sfml-audio.dir/Listener.cpp.s
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/Listener.cpp" -o CMakeFiles/sfml-audio.dir/Listener.cpp.s
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Music.cpp.o: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/flags.make
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Music.cpp.o: /media/stepan/Windows\ 10\ Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/Music.cpp
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Music.cpp.o: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Music.cpp.o"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Music.cpp.o -MF CMakeFiles/sfml-audio.dir/Music.cpp.o.d -o CMakeFiles/sfml-audio.dir/Music.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/Music.cpp"
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Music.cpp.o -MF CMakeFiles/sfml-audio.dir/Music.cpp.o.d -o CMakeFiles/sfml-audio.dir/Music.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/Music.cpp"
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Music.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-audio.dir/Music.cpp.i"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/Music.cpp" > CMakeFiles/sfml-audio.dir/Music.cpp.i
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/Music.cpp" > CMakeFiles/sfml-audio.dir/Music.cpp.i
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Music.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-audio.dir/Music.cpp.s"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/Music.cpp" -o CMakeFiles/sfml-audio.dir/Music.cpp.s
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/Music.cpp" -o CMakeFiles/sfml-audio.dir/Music.cpp.s
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Sound.cpp.o: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/flags.make
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Sound.cpp.o: /media/stepan/Windows\ 10\ Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/Sound.cpp
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Sound.cpp.o: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Sound.cpp.o"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Sound.cpp.o -MF CMakeFiles/sfml-audio.dir/Sound.cpp.o.d -o CMakeFiles/sfml-audio.dir/Sound.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/Sound.cpp"
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Sound.cpp.o -MF CMakeFiles/sfml-audio.dir/Sound.cpp.o.d -o CMakeFiles/sfml-audio.dir/Sound.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/Sound.cpp"
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Sound.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-audio.dir/Sound.cpp.i"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/Sound.cpp" > CMakeFiles/sfml-audio.dir/Sound.cpp.i
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/Sound.cpp" > CMakeFiles/sfml-audio.dir/Sound.cpp.i
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Sound.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-audio.dir/Sound.cpp.s"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/Sound.cpp" -o CMakeFiles/sfml-audio.dir/Sound.cpp.s
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/Sound.cpp" -o CMakeFiles/sfml-audio.dir/Sound.cpp.s
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBuffer.cpp.o: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/flags.make
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBuffer.cpp.o: /media/stepan/Windows\ 10\ Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundBuffer.cpp
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBuffer.cpp.o: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBuffer.cpp.o"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBuffer.cpp.o -MF CMakeFiles/sfml-audio.dir/SoundBuffer.cpp.o.d -o CMakeFiles/sfml-audio.dir/SoundBuffer.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundBuffer.cpp"
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBuffer.cpp.o -MF CMakeFiles/sfml-audio.dir/SoundBuffer.cpp.o.d -o CMakeFiles/sfml-audio.dir/SoundBuffer.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundBuffer.cpp"
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBuffer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-audio.dir/SoundBuffer.cpp.i"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundBuffer.cpp" > CMakeFiles/sfml-audio.dir/SoundBuffer.cpp.i
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundBuffer.cpp" > CMakeFiles/sfml-audio.dir/SoundBuffer.cpp.i
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBuffer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-audio.dir/SoundBuffer.cpp.s"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundBuffer.cpp" -o CMakeFiles/sfml-audio.dir/SoundBuffer.cpp.s
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundBuffer.cpp" -o CMakeFiles/sfml-audio.dir/SoundBuffer.cpp.s
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBufferRecorder.cpp.o: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/flags.make
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBufferRecorder.cpp.o: /media/stepan/Windows\ 10\ Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundBufferRecorder.cpp
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBufferRecorder.cpp.o: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBufferRecorder.cpp.o"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBufferRecorder.cpp.o -MF CMakeFiles/sfml-audio.dir/SoundBufferRecorder.cpp.o.d -o CMakeFiles/sfml-audio.dir/SoundBufferRecorder.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundBufferRecorder.cpp"
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBufferRecorder.cpp.o -MF CMakeFiles/sfml-audio.dir/SoundBufferRecorder.cpp.o.d -o CMakeFiles/sfml-audio.dir/SoundBufferRecorder.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundBufferRecorder.cpp"
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBufferRecorder.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-audio.dir/SoundBufferRecorder.cpp.i"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundBufferRecorder.cpp" > CMakeFiles/sfml-audio.dir/SoundBufferRecorder.cpp.i
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundBufferRecorder.cpp" > CMakeFiles/sfml-audio.dir/SoundBufferRecorder.cpp.i
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBufferRecorder.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-audio.dir/SoundBufferRecorder.cpp.s"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundBufferRecorder.cpp" -o CMakeFiles/sfml-audio.dir/SoundBufferRecorder.cpp.s
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundBufferRecorder.cpp" -o CMakeFiles/sfml-audio.dir/SoundBufferRecorder.cpp.s
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/InputSoundFile.cpp.o: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/flags.make
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/InputSoundFile.cpp.o: /media/stepan/Windows\ 10\ Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/InputSoundFile.cpp
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/InputSoundFile.cpp.o: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/InputSoundFile.cpp.o"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/InputSoundFile.cpp.o -MF CMakeFiles/sfml-audio.dir/InputSoundFile.cpp.o.d -o CMakeFiles/sfml-audio.dir/InputSoundFile.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/InputSoundFile.cpp"
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/InputSoundFile.cpp.o -MF CMakeFiles/sfml-audio.dir/InputSoundFile.cpp.o.d -o CMakeFiles/sfml-audio.dir/InputSoundFile.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/InputSoundFile.cpp"
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/InputSoundFile.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-audio.dir/InputSoundFile.cpp.i"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/InputSoundFile.cpp" > CMakeFiles/sfml-audio.dir/InputSoundFile.cpp.i
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/InputSoundFile.cpp" > CMakeFiles/sfml-audio.dir/InputSoundFile.cpp.i
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/InputSoundFile.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-audio.dir/InputSoundFile.cpp.s"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/InputSoundFile.cpp" -o CMakeFiles/sfml-audio.dir/InputSoundFile.cpp.s
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/InputSoundFile.cpp" -o CMakeFiles/sfml-audio.dir/InputSoundFile.cpp.s
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/OutputSoundFile.cpp.o: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/flags.make
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/OutputSoundFile.cpp.o: /media/stepan/Windows\ 10\ Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/OutputSoundFile.cpp
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/OutputSoundFile.cpp.o: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/OutputSoundFile.cpp.o"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/OutputSoundFile.cpp.o -MF CMakeFiles/sfml-audio.dir/OutputSoundFile.cpp.o.d -o CMakeFiles/sfml-audio.dir/OutputSoundFile.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/OutputSoundFile.cpp"
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/OutputSoundFile.cpp.o -MF CMakeFiles/sfml-audio.dir/OutputSoundFile.cpp.o.d -o CMakeFiles/sfml-audio.dir/OutputSoundFile.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/OutputSoundFile.cpp"
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/OutputSoundFile.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-audio.dir/OutputSoundFile.cpp.i"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/OutputSoundFile.cpp" > CMakeFiles/sfml-audio.dir/OutputSoundFile.cpp.i
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/OutputSoundFile.cpp" > CMakeFiles/sfml-audio.dir/OutputSoundFile.cpp.i
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/OutputSoundFile.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-audio.dir/OutputSoundFile.cpp.s"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/OutputSoundFile.cpp" -o CMakeFiles/sfml-audio.dir/OutputSoundFile.cpp.s
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/OutputSoundFile.cpp" -o CMakeFiles/sfml-audio.dir/OutputSoundFile.cpp.s
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundRecorder.cpp.o: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/flags.make
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundRecorder.cpp.o: /media/stepan/Windows\ 10\ Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundRecorder.cpp
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundRecorder.cpp.o: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundRecorder.cpp.o"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundRecorder.cpp.o -MF CMakeFiles/sfml-audio.dir/SoundRecorder.cpp.o.d -o CMakeFiles/sfml-audio.dir/SoundRecorder.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundRecorder.cpp"
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundRecorder.cpp.o -MF CMakeFiles/sfml-audio.dir/SoundRecorder.cpp.o.d -o CMakeFiles/sfml-audio.dir/SoundRecorder.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundRecorder.cpp"
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundRecorder.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-audio.dir/SoundRecorder.cpp.i"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundRecorder.cpp" > CMakeFiles/sfml-audio.dir/SoundRecorder.cpp.i
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundRecorder.cpp" > CMakeFiles/sfml-audio.dir/SoundRecorder.cpp.i
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundRecorder.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-audio.dir/SoundRecorder.cpp.s"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundRecorder.cpp" -o CMakeFiles/sfml-audio.dir/SoundRecorder.cpp.s
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundRecorder.cpp" -o CMakeFiles/sfml-audio.dir/SoundRecorder.cpp.s
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundSource.cpp.o: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/flags.make
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundSource.cpp.o: /media/stepan/Windows\ 10\ Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundSource.cpp
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundSource.cpp.o: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundSource.cpp.o"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundSource.cpp.o -MF CMakeFiles/sfml-audio.dir/SoundSource.cpp.o.d -o CMakeFiles/sfml-audio.dir/SoundSource.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundSource.cpp"
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundSource.cpp.o -MF CMakeFiles/sfml-audio.dir/SoundSource.cpp.o.d -o CMakeFiles/sfml-audio.dir/SoundSource.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundSource.cpp"
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundSource.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-audio.dir/SoundSource.cpp.i"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundSource.cpp" > CMakeFiles/sfml-audio.dir/SoundSource.cpp.i
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundSource.cpp" > CMakeFiles/sfml-audio.dir/SoundSource.cpp.i
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundSource.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-audio.dir/SoundSource.cpp.s"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundSource.cpp" -o CMakeFiles/sfml-audio.dir/SoundSource.cpp.s
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundSource.cpp" -o CMakeFiles/sfml-audio.dir/SoundSource.cpp.s
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundStream.cpp.o: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/flags.make
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundStream.cpp.o: /media/stepan/Windows\ 10\ Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundStream.cpp
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundStream.cpp.o: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundStream.cpp.o"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundStream.cpp.o -MF CMakeFiles/sfml-audio.dir/SoundStream.cpp.o.d -o CMakeFiles/sfml-audio.dir/SoundStream.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundStream.cpp"
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundStream.cpp.o -MF CMakeFiles/sfml-audio.dir/SoundStream.cpp.o.d -o CMakeFiles/sfml-audio.dir/SoundStream.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundStream.cpp"
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundStream.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-audio.dir/SoundStream.cpp.i"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundStream.cpp" > CMakeFiles/sfml-audio.dir/SoundStream.cpp.i
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundStream.cpp" > CMakeFiles/sfml-audio.dir/SoundStream.cpp.i
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundStream.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-audio.dir/SoundStream.cpp.s"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundStream.cpp" -o CMakeFiles/sfml-audio.dir/SoundStream.cpp.s
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundStream.cpp" -o CMakeFiles/sfml-audio.dir/SoundStream.cpp.s
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileFactory.cpp.o: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/flags.make
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileFactory.cpp.o: /media/stepan/Windows\ 10\ Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundFileFactory.cpp
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileFactory.cpp.o: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileFactory.cpp.o"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileFactory.cpp.o -MF CMakeFiles/sfml-audio.dir/SoundFileFactory.cpp.o.d -o CMakeFiles/sfml-audio.dir/SoundFileFactory.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundFileFactory.cpp"
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileFactory.cpp.o -MF CMakeFiles/sfml-audio.dir/SoundFileFactory.cpp.o.d -o CMakeFiles/sfml-audio.dir/SoundFileFactory.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundFileFactory.cpp"
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileFactory.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-audio.dir/SoundFileFactory.cpp.i"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundFileFactory.cpp" > CMakeFiles/sfml-audio.dir/SoundFileFactory.cpp.i
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundFileFactory.cpp" > CMakeFiles/sfml-audio.dir/SoundFileFactory.cpp.i
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileFactory.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-audio.dir/SoundFileFactory.cpp.s"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundFileFactory.cpp" -o CMakeFiles/sfml-audio.dir/SoundFileFactory.cpp.s
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundFileFactory.cpp" -o CMakeFiles/sfml-audio.dir/SoundFileFactory.cpp.s
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderFlac.cpp.o: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/flags.make
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderFlac.cpp.o: /media/stepan/Windows\ 10\ Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundFileReaderFlac.cpp
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderFlac.cpp.o: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderFlac.cpp.o"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderFlac.cpp.o -MF CMakeFiles/sfml-audio.dir/SoundFileReaderFlac.cpp.o.d -o CMakeFiles/sfml-audio.dir/SoundFileReaderFlac.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundFileReaderFlac.cpp"
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderFlac.cpp.o -MF CMakeFiles/sfml-audio.dir/SoundFileReaderFlac.cpp.o.d -o CMakeFiles/sfml-audio.dir/SoundFileReaderFlac.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundFileReaderFlac.cpp"
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderFlac.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-audio.dir/SoundFileReaderFlac.cpp.i"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundFileReaderFlac.cpp" > CMakeFiles/sfml-audio.dir/SoundFileReaderFlac.cpp.i
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundFileReaderFlac.cpp" > CMakeFiles/sfml-audio.dir/SoundFileReaderFlac.cpp.i
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderFlac.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-audio.dir/SoundFileReaderFlac.cpp.s"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundFileReaderFlac.cpp" -o CMakeFiles/sfml-audio.dir/SoundFileReaderFlac.cpp.s
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundFileReaderFlac.cpp" -o CMakeFiles/sfml-audio.dir/SoundFileReaderFlac.cpp.s
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderMp3.cpp.o: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/flags.make
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderMp3.cpp.o: /media/stepan/Windows\ 10\ Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundFileReaderMp3.cpp
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderMp3.cpp.o: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderMp3.cpp.o"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderMp3.cpp.o -MF CMakeFiles/sfml-audio.dir/SoundFileReaderMp3.cpp.o.d -o CMakeFiles/sfml-audio.dir/SoundFileReaderMp3.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundFileReaderMp3.cpp"
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderMp3.cpp.o -MF CMakeFiles/sfml-audio.dir/SoundFileReaderMp3.cpp.o.d -o CMakeFiles/sfml-audio.dir/SoundFileReaderMp3.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundFileReaderMp3.cpp"
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderMp3.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-audio.dir/SoundFileReaderMp3.cpp.i"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundFileReaderMp3.cpp" > CMakeFiles/sfml-audio.dir/SoundFileReaderMp3.cpp.i
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundFileReaderMp3.cpp" > CMakeFiles/sfml-audio.dir/SoundFileReaderMp3.cpp.i
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderMp3.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-audio.dir/SoundFileReaderMp3.cpp.s"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundFileReaderMp3.cpp" -o CMakeFiles/sfml-audio.dir/SoundFileReaderMp3.cpp.s
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundFileReaderMp3.cpp" -o CMakeFiles/sfml-audio.dir/SoundFileReaderMp3.cpp.s
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderOgg.cpp.o: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/flags.make
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderOgg.cpp.o: /media/stepan/Windows\ 10\ Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundFileReaderOgg.cpp
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderOgg.cpp.o: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderOgg.cpp.o"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderOgg.cpp.o -MF CMakeFiles/sfml-audio.dir/SoundFileReaderOgg.cpp.o.d -o CMakeFiles/sfml-audio.dir/SoundFileReaderOgg.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundFileReaderOgg.cpp"
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderOgg.cpp.o -MF CMakeFiles/sfml-audio.dir/SoundFileReaderOgg.cpp.o.d -o CMakeFiles/sfml-audio.dir/SoundFileReaderOgg.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundFileReaderOgg.cpp"
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderOgg.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-audio.dir/SoundFileReaderOgg.cpp.i"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundFileReaderOgg.cpp" > CMakeFiles/sfml-audio.dir/SoundFileReaderOgg.cpp.i
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundFileReaderOgg.cpp" > CMakeFiles/sfml-audio.dir/SoundFileReaderOgg.cpp.i
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderOgg.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-audio.dir/SoundFileReaderOgg.cpp.s"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundFileReaderOgg.cpp" -o CMakeFiles/sfml-audio.dir/SoundFileReaderOgg.cpp.s
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundFileReaderOgg.cpp" -o CMakeFiles/sfml-audio.dir/SoundFileReaderOgg.cpp.s
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderWav.cpp.o: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/flags.make
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderWav.cpp.o: /media/stepan/Windows\ 10\ Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundFileReaderWav.cpp
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderWav.cpp.o: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderWav.cpp.o"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderWav.cpp.o -MF CMakeFiles/sfml-audio.dir/SoundFileReaderWav.cpp.o.d -o CMakeFiles/sfml-audio.dir/SoundFileReaderWav.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundFileReaderWav.cpp"
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderWav.cpp.o -MF CMakeFiles/sfml-audio.dir/SoundFileReaderWav.cpp.o.d -o CMakeFiles/sfml-audio.dir/SoundFileReaderWav.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundFileReaderWav.cpp"
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderWav.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-audio.dir/SoundFileReaderWav.cpp.i"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundFileReaderWav.cpp" > CMakeFiles/sfml-audio.dir/SoundFileReaderWav.cpp.i
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundFileReaderWav.cpp" > CMakeFiles/sfml-audio.dir/SoundFileReaderWav.cpp.i
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderWav.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-audio.dir/SoundFileReaderWav.cpp.s"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundFileReaderWav.cpp" -o CMakeFiles/sfml-audio.dir/SoundFileReaderWav.cpp.s
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundFileReaderWav.cpp" -o CMakeFiles/sfml-audio.dir/SoundFileReaderWav.cpp.s
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterFlac.cpp.o: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/flags.make
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterFlac.cpp.o: /media/stepan/Windows\ 10\ Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundFileWriterFlac.cpp
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterFlac.cpp.o: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterFlac.cpp.o"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterFlac.cpp.o -MF CMakeFiles/sfml-audio.dir/SoundFileWriterFlac.cpp.o.d -o CMakeFiles/sfml-audio.dir/SoundFileWriterFlac.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundFileWriterFlac.cpp"
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterFlac.cpp.o -MF CMakeFiles/sfml-audio.dir/SoundFileWriterFlac.cpp.o.d -o CMakeFiles/sfml-audio.dir/SoundFileWriterFlac.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundFileWriterFlac.cpp"
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterFlac.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-audio.dir/SoundFileWriterFlac.cpp.i"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundFileWriterFlac.cpp" > CMakeFiles/sfml-audio.dir/SoundFileWriterFlac.cpp.i
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundFileWriterFlac.cpp" > CMakeFiles/sfml-audio.dir/SoundFileWriterFlac.cpp.i
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterFlac.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-audio.dir/SoundFileWriterFlac.cpp.s"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundFileWriterFlac.cpp" -o CMakeFiles/sfml-audio.dir/SoundFileWriterFlac.cpp.s
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundFileWriterFlac.cpp" -o CMakeFiles/sfml-audio.dir/SoundFileWriterFlac.cpp.s
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterOgg.cpp.o: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/flags.make
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterOgg.cpp.o: /media/stepan/Windows\ 10\ Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundFileWriterOgg.cpp
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterOgg.cpp.o: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterOgg.cpp.o"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterOgg.cpp.o -MF CMakeFiles/sfml-audio.dir/SoundFileWriterOgg.cpp.o.d -o CMakeFiles/sfml-audio.dir/SoundFileWriterOgg.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundFileWriterOgg.cpp"
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterOgg.cpp.o -MF CMakeFiles/sfml-audio.dir/SoundFileWriterOgg.cpp.o.d -o CMakeFiles/sfml-audio.dir/SoundFileWriterOgg.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundFileWriterOgg.cpp"
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterOgg.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-audio.dir/SoundFileWriterOgg.cpp.i"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundFileWriterOgg.cpp" > CMakeFiles/sfml-audio.dir/SoundFileWriterOgg.cpp.i
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundFileWriterOgg.cpp" > CMakeFiles/sfml-audio.dir/SoundFileWriterOgg.cpp.i
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterOgg.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-audio.dir/SoundFileWriterOgg.cpp.s"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundFileWriterOgg.cpp" -o CMakeFiles/sfml-audio.dir/SoundFileWriterOgg.cpp.s
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundFileWriterOgg.cpp" -o CMakeFiles/sfml-audio.dir/SoundFileWriterOgg.cpp.s
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterWav.cpp.o: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/flags.make
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterWav.cpp.o: /media/stepan/Windows\ 10\ Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundFileWriterWav.cpp
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterWav.cpp.o: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterWav.cpp.o"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterWav.cpp.o -MF CMakeFiles/sfml-audio.dir/SoundFileWriterWav.cpp.o.d -o CMakeFiles/sfml-audio.dir/SoundFileWriterWav.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundFileWriterWav.cpp"
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterWav.cpp.o -MF CMakeFiles/sfml-audio.dir/SoundFileWriterWav.cpp.o.d -o CMakeFiles/sfml-audio.dir/SoundFileWriterWav.cpp.o -c "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundFileWriterWav.cpp"
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterWav.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sfml-audio.dir/SoundFileWriterWav.cpp.i"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundFileWriterWav.cpp" > CMakeFiles/sfml-audio.dir/SoundFileWriterWav.cpp.i
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundFileWriterWav.cpp" > CMakeFiles/sfml-audio.dir/SoundFileWriterWav.cpp.i
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterWav.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sfml-audio.dir/SoundFileWriterWav.cpp.s"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundFileWriterWav.cpp" -o CMakeFiles/sfml-audio.dir/SoundFileWriterWav.cpp.s
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && /usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/libs/SFML/src/SFML/Audio/SoundFileWriterWav.cpp" -o CMakeFiles/sfml-audio.dir/SoundFileWriterWav.cpp.s
 
 # Object files for target sfml-audio
 sfml__audio_OBJECTS = \
@@ -390,35 +390,48 @@ sfml__audio_OBJECTS = \
 # External object files for target sfml-audio
 sfml__audio_EXTERNAL_OBJECTS =
 
-src/libs/SFML/lib/libsfml-audio-s-d.a: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/ALCheck.cpp.o
-src/libs/SFML/lib/libsfml-audio-s-d.a: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AlResource.cpp.o
-src/libs/SFML/lib/libsfml-audio-s-d.a: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AudioDevice.cpp.o
-src/libs/SFML/lib/libsfml-audio-s-d.a: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Listener.cpp.o
-src/libs/SFML/lib/libsfml-audio-s-d.a: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Music.cpp.o
-src/libs/SFML/lib/libsfml-audio-s-d.a: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Sound.cpp.o
-src/libs/SFML/lib/libsfml-audio-s-d.a: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBuffer.cpp.o
-src/libs/SFML/lib/libsfml-audio-s-d.a: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBufferRecorder.cpp.o
-src/libs/SFML/lib/libsfml-audio-s-d.a: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/InputSoundFile.cpp.o
-src/libs/SFML/lib/libsfml-audio-s-d.a: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/OutputSoundFile.cpp.o
-src/libs/SFML/lib/libsfml-audio-s-d.a: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundRecorder.cpp.o
-src/libs/SFML/lib/libsfml-audio-s-d.a: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundSource.cpp.o
-src/libs/SFML/lib/libsfml-audio-s-d.a: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundStream.cpp.o
-src/libs/SFML/lib/libsfml-audio-s-d.a: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileFactory.cpp.o
-src/libs/SFML/lib/libsfml-audio-s-d.a: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderFlac.cpp.o
-src/libs/SFML/lib/libsfml-audio-s-d.a: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderMp3.cpp.o
-src/libs/SFML/lib/libsfml-audio-s-d.a: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderOgg.cpp.o
-src/libs/SFML/lib/libsfml-audio-s-d.a: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderWav.cpp.o
-src/libs/SFML/lib/libsfml-audio-s-d.a: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterFlac.cpp.o
-src/libs/SFML/lib/libsfml-audio-s-d.a: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterOgg.cpp.o
-src/libs/SFML/lib/libsfml-audio-s-d.a: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterWav.cpp.o
-src/libs/SFML/lib/libsfml-audio-s-d.a: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/build.make
-src/libs/SFML/lib/libsfml-audio-s-d.a: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_22) "Linking CXX static library ../../../lib/libsfml-audio-s-d.a"
-	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && $(CMAKE_COMMAND) -P CMakeFiles/sfml-audio.dir/cmake_clean_target.cmake
+src/libs/SFML/lib/libsfml-audio-d.so.3.0.0: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/ALCheck.cpp.o
+src/libs/SFML/lib/libsfml-audio-d.so.3.0.0: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AlResource.cpp.o
+src/libs/SFML/lib/libsfml-audio-d.so.3.0.0: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AudioDevice.cpp.o
+src/libs/SFML/lib/libsfml-audio-d.so.3.0.0: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Listener.cpp.o
+src/libs/SFML/lib/libsfml-audio-d.so.3.0.0: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Music.cpp.o
+src/libs/SFML/lib/libsfml-audio-d.so.3.0.0: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Sound.cpp.o
+src/libs/SFML/lib/libsfml-audio-d.so.3.0.0: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBuffer.cpp.o
+src/libs/SFML/lib/libsfml-audio-d.so.3.0.0: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBufferRecorder.cpp.o
+src/libs/SFML/lib/libsfml-audio-d.so.3.0.0: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/InputSoundFile.cpp.o
+src/libs/SFML/lib/libsfml-audio-d.so.3.0.0: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/OutputSoundFile.cpp.o
+src/libs/SFML/lib/libsfml-audio-d.so.3.0.0: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundRecorder.cpp.o
+src/libs/SFML/lib/libsfml-audio-d.so.3.0.0: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundSource.cpp.o
+src/libs/SFML/lib/libsfml-audio-d.so.3.0.0: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundStream.cpp.o
+src/libs/SFML/lib/libsfml-audio-d.so.3.0.0: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileFactory.cpp.o
+src/libs/SFML/lib/libsfml-audio-d.so.3.0.0: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderFlac.cpp.o
+src/libs/SFML/lib/libsfml-audio-d.so.3.0.0: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderMp3.cpp.o
+src/libs/SFML/lib/libsfml-audio-d.so.3.0.0: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderOgg.cpp.o
+src/libs/SFML/lib/libsfml-audio-d.so.3.0.0: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderWav.cpp.o
+src/libs/SFML/lib/libsfml-audio-d.so.3.0.0: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterFlac.cpp.o
+src/libs/SFML/lib/libsfml-audio-d.so.3.0.0: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterOgg.cpp.o
+src/libs/SFML/lib/libsfml-audio-d.so.3.0.0: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterWav.cpp.o
+src/libs/SFML/lib/libsfml-audio-d.so.3.0.0: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/build.make
+src/libs/SFML/lib/libsfml-audio-d.so.3.0.0: src/libs/SFML/lib/libsfml-system-d.so.3.0.0
+src/libs/SFML/lib/libsfml-audio-d.so.3.0.0: /usr/lib/x86_64-linux-gnu/libopenal.so
+src/libs/SFML/lib/libsfml-audio-d.so.3.0.0: /usr/lib/x86_64-linux-gnu/libvorbisenc.so
+src/libs/SFML/lib/libsfml-audio-d.so.3.0.0: /usr/lib/x86_64-linux-gnu/libvorbisfile.so
+src/libs/SFML/lib/libsfml-audio-d.so.3.0.0: /usr/lib/x86_64-linux-gnu/libvorbis.so
+src/libs/SFML/lib/libsfml-audio-d.so.3.0.0: /usr/lib/x86_64-linux-gnu/libogg.so
+src/libs/SFML/lib/libsfml-audio-d.so.3.0.0: /usr/lib/x86_64-linux-gnu/libFLAC.so
+src/libs/SFML/lib/libsfml-audio-d.so.3.0.0: src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_22) "Linking CXX shared library ../../../lib/libsfml-audio-d.so"
 	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sfml-audio.dir/link.txt --verbose=$(VERBOSE)
+	cd "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/src/libs/SFML/src/SFML/Audio" && $(CMAKE_COMMAND) -E cmake_symlink_library ../../../lib/libsfml-audio-d.so.3.0.0 ../../../lib/libsfml-audio-d.so.3.0 ../../../lib/libsfml-audio-d.so
+
+src/libs/SFML/lib/libsfml-audio-d.so.3.0: src/libs/SFML/lib/libsfml-audio-d.so.3.0.0
+	@$(CMAKE_COMMAND) -E touch_nocreate src/libs/SFML/lib/libsfml-audio-d.so.3.0
+
+src/libs/SFML/lib/libsfml-audio-d.so: src/libs/SFML/lib/libsfml-audio-d.so.3.0.0
+	@$(CMAKE_COMMAND) -E touch_nocreate src/libs/SFML/lib/libsfml-audio-d.so
 
 # Rule to build all files generated by this target.
-src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/build: src/libs/SFML/lib/libsfml-audio-s-d.a
+src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/build: src/libs/SFML/lib/libsfml-audio-d.so
 .PHONY : src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/build
 
 src/libs/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/clean:

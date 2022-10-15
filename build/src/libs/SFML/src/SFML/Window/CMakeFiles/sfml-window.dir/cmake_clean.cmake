@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
-  "../../../lib/libsfml-window-s-d.a"
-  "../../../lib/libsfml-window-s-d.pdb"
+  "../../../lib/libsfml-window-d.pdb"
+  "../../../lib/libsfml-window-d.so"
+  "../../../lib/libsfml-window-d.so.3.0"
+  "../../../lib/libsfml-window-d.so.3.0.0"
   "CMakeFiles/sfml-window.dir/Clipboard.cpp.o"
   "CMakeFiles/sfml-window.dir/Clipboard.cpp.o.d"
   "CMakeFiles/sfml-window.dir/Context.cpp.o"
