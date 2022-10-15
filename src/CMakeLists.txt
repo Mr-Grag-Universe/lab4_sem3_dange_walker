@@ -35,9 +35,14 @@ include_directories(alive_obj loot physics)
 set(SOURCES
    static/first_room.txt
 
-    main.cpp
-    Object.cpp
-    World.cpp
+   main.cpp
+   Object.cpp
+   World.cpp
+
+   Floor.cpp
+   Door.cpp
+   Wall.cpp
+   
     alive_obj/Alive.cpp
     physics/Hitbox.cpp
     draw/Draw.cpp

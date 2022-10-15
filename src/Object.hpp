@@ -33,6 +33,7 @@ public:
     unsigned char get_layer();
 
     virtual ObjectType get_type() = 0;
+    void set_texture(std::string , std::pair<unsigned int, unsigned int> scale, std::pair<unsigned int, unsigned int> p);
     // virtual void f() = 0;
 protected:
 
@@ -40,6 +41,7 @@ protected:
     sf::Sprite sprite;
     std::pair<unsigned int, unsigned int> position = std::make_pair(HEIGHT/2, WIDTH/2);
     unsigned char layer = 0;
+    std::string name;
 private:
     ObjectType type;
 };

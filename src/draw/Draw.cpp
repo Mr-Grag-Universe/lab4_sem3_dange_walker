@@ -9,5 +9,4 @@
 #include "../Map.hpp"
 
 void Draw::draw_map(sf::RenderWindow & window, const Map & map) {
-    
 }

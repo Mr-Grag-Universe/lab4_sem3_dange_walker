@@ -21,11 +21,11 @@ std::map <std::string, Obj::ObjectType> types = {
 std::unique_ptr<Obj> World::use_constructor(std::string name, std::pair<unsigned int, unsigned int> position) {
     switch (types[name]) {
     case Obj::FLOOR:
-        return std::make_unique<Floor>();
+        return std::make_unique<Floor>(name, position);
     case Obj::DOOR:
-        return std::make_unique<Door>();
+        return std::make_unique<Door>(name, position);
     case Obj::WALL:
-        return std::make_unique<Wall>();
+        return std::make_unique<Wall>(name, position);
     default:
         break;
     }
@@ -42,13 +42,24 @@ std::vector <std::unique_ptr<Obj>> World::load_things_from_file(const std::strin
     }
 
     std::string name;
-    std::pair<unsigned int, unsigned int> position;
+    // data format: type | x | y | position_in_file_x | position_in_file_y | width | height | sprite_dir/sprite_file_name.txt
     while (file >> name) {
         std::cout << name << " ";
         unsigned int x{}, y{};
+        unsigned int x_in{}, y_in{};
+        unsigned int width{}, height{};
+        std::string source_file_name;
         file >> x >> y;
-        position = std::make_pair(x, y);
-        v.push_back(use_constructor(name, position));
+        file >> x_in >> y_in;
+        file >> width >> height;
+        file >> source_file_name;
+        std::pair<unsigned int, unsigned int> position = std::make_pair(x, y);
+        std::pair <unsigned int, unsigned int> position_in = std::make_pair(x_in, y_in);
+        std::pair <unsigned int, unsigned int> scale = std::make_pair(width, height);
+
+        std::unique_ptr<Obj> obj = use_constructor(name, position);
+        obj->set_texture(source_file_name, position_in, scale);
+        v.push_back(std::move(obj));
     }
 
     file.close();
