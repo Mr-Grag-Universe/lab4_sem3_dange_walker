@@ -1,1 +1,0 @@
-/usr/bin/clang++ -fPIC -g -shared -Wl,-soname,libgmock.so.1.11.0 -o ../../../../../lib/libgmock.so.1.11.0 "CMakeFiles/gmock.dir/src/gmock-all.cc.o"  -Wl,-rpath,"/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/build/lib:" ../../../../../lib/libgtest.so.1.11.0 

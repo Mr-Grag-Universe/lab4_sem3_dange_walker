@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC -g -shared -Wl,-soname,libgmock_main.so.1.11.0 -o CMakeFiles/CMakeRelink.dir/libgmock_main.so.1.11.0 CMakeFiles/gmock_main.dir/src/gmock_main.cc.o  ../../../../../lib/libgmock.so.1.11.0 ../../../../../lib/libgtest.so.1.11.0 -lpthread 
