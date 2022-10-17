@@ -10,7 +10,8 @@
 #include "Object.hpp"
 
 void Obj::set_texture(std::string src_file_name, std::pair<unsigned int, unsigned int> p, std::pair<unsigned int, unsigned int> p_in, std::pair<unsigned int, unsigned int> scale) {
-    sf::Texture * texture = new sf::Texture;
+    // sf::Texture * texture = new sf::Texture;
+    texture = std::make_unique<sf::Texture>();
     *texture = sf::Texture();
     sf::Vector2 position((float) p.first, (float) p.second);
     sf::Vector2 position_in((int) p_in.first, (int) p_in.second);
@@ -21,12 +22,17 @@ void Obj::set_texture(std::string src_file_name, std::pair<unsigned int, unsigne
         throw std::invalid_argument("there is not such file with texture");
     }
 
+    // sprite.setOrigin(sf::Vector2f(100.0f, 100.0f));
     sprite.setPosition(position);
-    sprite.setScale(size_f);
-    // sprite.setColor(sf::Color::Green);
     sprite.setTexture(*texture);
+    // sprite.setPosition(sf::Vector2((float) WIDTH/2, (float) HEIGHT/2));
+    // sprite.setScale(size_f);
+    // sf::VideoMode mode = sf::VideoMode::getDesktopMode();
+    // sf::Vector2 size((float) WIDTH/mode.size.x, (float) HEIGHT/mode.size.y);
+    // sprite.scale(size);
+    // sprite.setColor(sf::Color::Green);
     // sprite.setTextureRect();
-    std::cout << "scale_init: " << scale.first << scale.second << "\nscale: " << sprite.getScale().x << sprite.getScale().y << ";\n";
+    // std::cout << "scale_init: " << scale.first << scale.second << "\nscale: " << sprite.getScale().x << sprite.getScale().y << ";\n";
     
     // sprite.setTexture(texture);
 }

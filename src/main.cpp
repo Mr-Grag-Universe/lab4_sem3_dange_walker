@@ -14,10 +14,17 @@
 #include "Map.hpp"
 
 int main(int argc, char *argv[]) {
-    sf::RenderWindow window(sf::VideoMode(sf::Vector2u(WIDTH, HEIGHT)), "Walker Game");
+    sf::VideoMode mode = sf::VideoMode::getDesktopMode();
+    std::cout << "desktop: (" << mode.size.x << "; " << mode.size.y << ")\n";
+    // sf::Vector2u size((int) mode.size.x, (int) mode.size.y);
+    // sf::RenderWindow window(sf::VideoMode(sf::Vector2u(WIDTH, HEIGHT)), "Walker Game");
+    sf::RenderWindow window(mode, "Walker Game");
 
     // window.setVerticalSyncEnabled(true);
     window.setFramerateLimit(30);
+    // window.setPosition(size);
+    // window.setSize(size);
+
 
     sf::Texture texture;
     if (!texture.loadFromFile("/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/static/cobbles2.png")) {
@@ -27,19 +34,19 @@ int main(int argc, char *argv[]) {
 
     sf::Sprite sprite;
     sprite.setTexture(texture);
-    sf::Vector2 position(0, 0);
-    sf::Vector2 size((int) 10, (int) 10);
-    sprite.setTextureRect(sf::IntRect(position, size));
+    // sf::Vector2 position(0, 0);
+    // sf::Vector2 size((int) 10, (int) 10);
+    // sprite.setTextureRect(sf::IntRect(position, size));
     sprite.setPosition(sf::Vector2((float) WIDTH/2, (float) HEIGHT/2));
     window.clear(sf::Color::Black);
-    window.draw(sprite);
-    window.display();
+    // window.draw(sprite);
+    // window.display();
 
     // int a = 0;
     // std::cin >> a;
 
 
-    std::vector <std::unique_ptr<Obj>> things = World::load_things_from_file("/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/static/first_room.txt");
+    // std::vector <std::unique_ptr<Obj>> things = World::load_things_from_file("/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/static/first_room.txt");
     World world("/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/static/first_room.txt");
     world.add_character("/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/static/hero.txt");
     Map map(world);
@@ -64,14 +71,11 @@ int main(int argc, char *argv[]) {
         // отрисовываем карту
         Draw::draw_map(window, map);
 
-        // рисуем что-нибудь здесь
-        // window.draw(...);
-
         // конец текущего кадра - отображаем
         window.display();
 
-        int a = 0;
-        std::cin >> a;
+        // int a = 0;
+        // std::cin >> a;
     }
 
     return 0;

@@ -20,12 +20,15 @@ public:
     const std::vector <std::unique_ptr<Obj> *> & get_all_things() const {
         return all_things;
     }
+    const Character & get_hero() const {
+        return hero;
+    }
     // Map(const World & w);
     Map(const World & w) : hero(w.get_hero()) {
         const std::vector <std::unique_ptr<Obj>> & at = w.get_all_things();
         for (size_t i = 0, l = at.size(); i < l; ++i) {
             std::pair <unsigned int, unsigned int> p = at[i]->get_position();
-            if (distance(p, hero.get_position()) <= WIDTH) {
+            if (distance(p, hero.get_position()) <= 1900) {
                 all_things.push_back((std::unique_ptr<Obj> *) &at[i]);
                 switch (at[i]->get_type()) {
                     case Obj::FLOOR:
