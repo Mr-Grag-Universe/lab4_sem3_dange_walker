@@ -39,11 +39,13 @@ set(SOURCES
    Object.cpp
    World.cpp
 
-   Floor.cpp
-   Door.cpp
-   Wall.cpp
+   environment/Floor.cpp
+   environment/Door.cpp
+   environment/Wall.cpp
    
-    alive_obj/Alive.cpp
+   alive_obj/Alive.cpp
+   alive_obj/Character.cpp
+
     physics/Hitbox.cpp
     draw/Draw.cpp
     )

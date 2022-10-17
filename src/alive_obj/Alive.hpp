@@ -2,22 +2,24 @@
 #define ALIVE_CLASS
 
 #include <string>
+#include <iostream>
 
-class Alive {
+#include "../Object.hpp"
+
+class Alive : public Obj {
 private:
     std::string name;
-    double health = 0;
-    
+    // double health = 0;
+    // size_t visibility_radius = WIDTH;
 public:
-    Alive(/* args */);
-    ~Alive();
+    ObjectType get_type();
+    Alive() {
+
+    }
+    ~Alive() {
+
+    }
 };
-
-Alive::Alive(/* args */) {
-}
-
-Alive::~Alive() {
-}
 
 
 #endif
