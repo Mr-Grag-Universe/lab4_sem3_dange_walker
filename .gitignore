@@ -1,4 +1,4 @@
 .vscode
 build
-test/lib/googletest-main
+test/lib/
 password
