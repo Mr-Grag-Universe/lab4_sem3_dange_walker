@@ -16,57 +16,43 @@
 int main(int argc, char *argv[]) {
     sf::VideoMode mode = sf::VideoMode::getDesktopMode();
     std::cout << "desktop: (" << mode.size.x << "; " << mode.size.y << ")\n";
-    // sf::Vector2u size((int) mode.size.x, (int) mode.size.y);
+    sf::Vector2u size((int) mode.size.x, (int) mode.size.y);
     // sf::RenderWindow window(sf::VideoMode(sf::Vector2u(WIDTH, HEIGHT)), "Walker Game");
-    sf::RenderWindow window(mode, "Walker Game");
+    sf::RenderWindow window(sf::VideoMode(size), "Walker Game");
 
     // window.setVerticalSyncEnabled(true);
-    window.setFramerateLimit(30);
-    // window.setPosition(size);
-    // window.setSize(size);
-
-
-    sf::Texture texture;
-    if (!texture.loadFromFile("/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/static/cobbles2.png")) {
-        std::cout << "cannot read texture from file : " << std::endl;
-        throw std::invalid_argument("there is not such file with texture");
-    }
-
-    sf::Sprite sprite;
-    sprite.setTexture(texture);
-    // sf::Vector2 position(0, 0);
-    // sf::Vector2 size((int) 10, (int) 10);
-    // sprite.setTextureRect(sf::IntRect(position, size));
-    sprite.setPosition(sf::Vector2((float) WIDTH/2, (float) HEIGHT/2));
-    window.clear(sf::Color::Black);
-    // window.draw(sprite);
-    // window.display();
-
-    // int a = 0;
-    // std::cin >> a;
+    window.setFramerateLimit(60);
 
 
     // std::vector <std::unique_ptr<Obj>> things = World::load_things_from_file("/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/static/first_room.txt");
     World world("/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/static/first_room.txt");
     world.add_character("/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/static/hero.txt");
-    Map map(world);
 
     while (window.isOpen()) {
+        Map map(world);
         // проверить все события окна, которые были вызваны с последней итерации цикла
         sf::Event event;
-        while (window.pollEvent(event)) {
+        if (window.pollEvent(event)) {
             // "запрос закрытия" событие: мы закрываем окно
             if (event.type == sf::Event::Closed)
                 window.close();
+
+            // обработываем полученное действие и движения всех объектов
+            world.interraction(event);
+            if (event.type == sf::Event::Resized) {
+                // update the view to the new size of the window
+                sf::FloatRect visibleArea(sf::Vector2f(0.f, 0.f), sf::Vector2f((float)event.size.width, (float)event.size.height));
+                window.setView(sf::View(visibleArea));
+            }
         }
 
         // очищаем окно и заливаем черным цветом
         window.clear(sf::Color::Black);
 
-        // обработываем полученное действие и движения всех объектов
-        world.interraction(event);
         // создаём карту объектов, которые видны герою
-        // map = world.create_map();
+        // map = Map(world);
+
+        // std::cout << "hero position: (" << map.get_hero().get_sprite().getPosition().x << ", " << map.get_hero().get_position().second << ")\n";
 
         // отрисовываем карту
         Draw::draw_map(window, map);

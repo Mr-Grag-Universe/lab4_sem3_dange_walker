@@ -67,6 +67,7 @@ public:
     void iterate();
 
     const Character & get_hero() const {
+        // std::cout << "hero position: (" << hero.get_sprite().getPosition().x << ", " << hero.get_position().second << ")\n";
         return hero;
     }
     const std::vector <std::unique_ptr<Obj>> & get_all_things() const {

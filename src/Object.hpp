@@ -43,7 +43,8 @@ public:
     unsigned char get_layer();
 
     virtual ObjectType get_type() = 0;
-    void set_texture(std::string , std::pair<unsigned int, unsigned int> p, std::pair<unsigned int, unsigned int> p_in, std::pair<unsigned int, unsigned int> scale);
+    void set_texture(std::string, std::pair<unsigned int, unsigned int> p_in, std::pair<unsigned int, unsigned int> scale);
+    void set_sprite_position(std::pair<unsigned int, unsigned int> p);
     // virtual void f() = 0;
 
 protected:
@@ -63,6 +64,7 @@ public:
     }
     const std::unique_ptr<sf::Texture> & get_texture() const { return texture; }
     const std::string & get_name() const { return name; }
+    void move(int x, int y);
 private:
     ObjectType type;
 };

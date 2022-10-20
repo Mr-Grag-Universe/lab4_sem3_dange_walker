@@ -61,7 +61,7 @@ std::vector <std::unique_ptr<Obj>> World::load_things_from_file(const std::strin
         std::pair <unsigned int, unsigned int> scale = std::make_pair(width, height);
 
         std::unique_ptr<Obj> obj = use_constructor(name, position);
-        obj->set_texture(source_file_name, position, position_in, scale);
+        obj->set_texture(source_file_name, position_in, scale);
         obj->set_position(position);
         v.push_back(std::move(obj));
     }
@@ -92,15 +92,44 @@ void World::add_character(const std::string & file_name) {
         throw std::runtime_error("file reading error");
     }
 
-    hero.set_position(std::make_pair(WIDTH/2, HEIGHT/2));
+    hero.set_position(std::make_pair(W/2, H/2));
     std::pair <unsigned int, unsigned int> position_in = std::make_pair(x_in, y_in);
     std::pair <unsigned int, unsigned int> scale = std::make_pair(width, height);
     
-    hero.set_texture(src_file_name, std::make_pair(WIDTH/2, HEIGHT/2), position_in, scale);
+    hero.set_texture(src_file_name, position_in, scale);
+    hero.set_sprite_position(std::make_pair(W/2, H/2));
+    std::cout << "initial hero position: (" << hero.get_position().first << ", " << hero.get_position().second << ")\n";
     // hero.tesetOutlineThickness(10);
 }
 
 void World::interraction(sf::Event & event) {
+    switch (event.type) {
+    case sf::Event::KeyPressed: {
+        std::cout << "moving" << std::endl;
+        if (event.key.code == sf::Keyboard::A) {
+            std::cout << "move left" << std::endl;
+            hero.move(-10, 0);
+            std::cout << "new_hero_position: (" << hero.get_position().first << ", " << hero.get_position().second << ")\n";
+        } else if (event.key.code == sf::Keyboard::D) {
+            hero.move(10, 0);
+        } else if (event.key.code == sf::Keyboard::W) {
+            hero.move(0, -10);
+        } else if (event.key.code == sf::Keyboard::S) {
+            hero.move(0, 10);
+        }
+        // std::cout << "new hero position: (" << hero.get_position().first << ", " << hero.get_position().second << ")\n";
+        break;
+    }
+    case sf::Event::Resized: {
+        W = event.size.width;
+        H = event.size.height;
+        std::cout << "new width: " << event.size.width << std::endl;
+        std::cout << "new height: " << event.size.height << std::endl;
+        break;
+    }
+    default:
+        break;
+    }
     return;
 }
 

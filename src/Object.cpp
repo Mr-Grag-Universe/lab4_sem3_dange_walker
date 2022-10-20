@@ -9,7 +9,7 @@
 
 #include "Object.hpp"
 
-void Obj::set_texture(std::string src_file_name, std::pair<unsigned int, unsigned int> p, std::pair<unsigned int, unsigned int> p_in, std::pair<unsigned int, unsigned int> scale) {
+void Obj::set_texture(std::string src_file_name, std::pair<unsigned int, unsigned int> p_in, std::pair<unsigned int, unsigned int> scale) {
     texture = std::make_unique<sf::Texture>();
     *texture = sf::Texture();
     sf::Vector2 position_in((int) p_in.first, (int) p_in.second);
@@ -26,5 +26,14 @@ void Obj::set_texture(std::string src_file_name, std::pair<unsigned int, unsigne
 void Obj::set_position(const std::pair<unsigned int, unsigned int> & p) {
     position = p;
     // sf::Vector2 p_v((float) p.first, (float) p.second);
-    // sprite.setPosition(p_v);
+}
+
+void Obj::set_sprite_position(std::pair<unsigned int, unsigned int> p) {
+    sf::Vector2 p_v((float) p.first, (float) p.second);
+    sprite.setPosition(p_v);
+}
+
+void Obj::move(int x, int y) {
+    position.first += x;
+    position.second += y;
 }
