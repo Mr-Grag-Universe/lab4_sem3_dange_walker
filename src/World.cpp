@@ -62,6 +62,7 @@ std::vector <std::unique_ptr<Obj>> World::load_things_from_file(const std::strin
 
         std::unique_ptr<Obj> obj = use_constructor(name, position);
         obj->set_texture(source_file_name, position, position_in, scale);
+        obj->set_position(position);
         v.push_back(std::move(obj));
     }
 
@@ -96,17 +97,12 @@ void World::add_character(const std::string & file_name) {
     std::pair <unsigned int, unsigned int> scale = std::make_pair(width, height);
     
     hero.set_texture(src_file_name, std::make_pair(WIDTH/2, HEIGHT/2), position_in, scale);
+    // hero.tesetOutlineThickness(10);
 }
 
 void World::interraction(sf::Event & event) {
     return;
 }
-
-//Map create_map() const {
-    // Map map(*this);
-
-//    return map;
-//}
 
 void World::iterate() {
     return;

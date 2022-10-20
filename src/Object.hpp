@@ -13,6 +13,9 @@ class Obj {
 protected:
     std::pair<unsigned int, unsigned int> position = std::make_pair(HEIGHT/2, WIDTH/2);
 public:
+    std::pair<unsigned int, unsigned int> w_position = std::make_pair(0, 0);
+    /// @brief устанавливает глобальную координату объекта и для его спрайта (в World)
+    /// @param p 
     void set_position(const std::pair<unsigned int, unsigned int> & p);
     // const std::pair<unsigned int, unsigned int> & get_position() const {
     //     return position;
@@ -36,8 +39,6 @@ public:
         
     }
 
-    // methods
-
     /// @return on which layer current object is staying
     unsigned char get_layer();
 
@@ -52,12 +53,16 @@ protected:
     unsigned char layer = 0;
     std::string name;
 public:
-    const sf::Sprite & get_sprite() const {
+    const sf::Sprite & get_sprite() const { return sprite; }
+    sf::Sprite & get_sprite() { return sprite; }
+    sf::Sprite get_sprite_copy() {
+        sf::Sprite res = sprite;
+        sf::Texture t = *texture;
+        
         return sprite;
     }
-    const std::string & get_name() const {
-        return name;
-    }
+    const std::unique_ptr<sf::Texture> & get_texture() const { return texture; }
+    const std::string & get_name() const { return name; }
 private:
     ObjectType type;
 };

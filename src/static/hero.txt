@@ -1,4 +1,4 @@
 Stefan
 static/char.png
-80 96
-16 16
+32 64
+32 32

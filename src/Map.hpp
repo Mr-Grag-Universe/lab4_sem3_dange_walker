@@ -15,8 +15,11 @@
 class Map {
 private:
     const Character & hero;
+    const size_t W, H;
     std::vector <std::unique_ptr<Obj> *> all_things;
 public:
+    size_t get_W() const { return W; }
+    size_t get_H() const { return H; }
     const std::vector <std::unique_ptr<Obj> *> & get_all_things() const {
         return all_things;
     }
@@ -24,7 +27,7 @@ public:
         return hero;
     }
     // Map(const World & w);
-    Map(const World & w) : hero(w.get_hero()) {
+    Map(const World & w) : hero(w.get_hero()), W(w.get_W()), H(w.get_H()) {
         const std::vector <std::unique_ptr<Obj>> & at = w.get_all_things();
         for (size_t i = 0, l = at.size(); i < l; ++i) {
             std::pair <unsigned int, unsigned int> p = at[i]->get_position();

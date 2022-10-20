@@ -28,16 +28,21 @@ private:
     Character hero;
     Env env;
 
+    size_t W, H;
+
     std::vector <std::unique_ptr<Obj>> all_things;
     static std::unique_ptr<Obj> use_constructor(std::string name, std::pair<unsigned int, unsigned int> position);
 
 public:
-    World(/* args */) = default;
-    World(std::vector <std::unique_ptr<Obj>> things) {
+    size_t get_W() const { return W; }
+    size_t get_H() const { return H; }
+    World() : W(sf::VideoMode::getDesktopMode().size.x), H(sf::VideoMode::getDesktopMode().size.y) {
+    }
+    World(std::vector <std::unique_ptr<Obj>> things) : World() {
         // this->all_things = things;
     }
     static std::vector <std::unique_ptr<Obj>> load_things_from_file(const std::string & file_name);
-    World(const std::string & file_name) {
+    World(const std::string & file_name) : World() {
         this->all_things = load_things_from_file(file_name);
         for (size_t i = 0, l = all_things.size(); i < l; ++i) {
             switch (all_things[i]->get_type()) {
