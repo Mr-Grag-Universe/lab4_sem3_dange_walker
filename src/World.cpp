@@ -100,9 +100,10 @@ std::vector <std::unique_ptr<Obj>> World::load_things_from_file(const std::strin
                 file >> weapon_type;
                 int damage{};
                 file >> damage;
+                continue;
 
                 std::unique_ptr<Obj> obj = use_constructor(name, position);
-                obj->set_texture(source_file_name, position_in, scale);
+                // static_cast<Obj>(obj)->set_texture(source_file_name, position_in, scale);
                 obj->set_position(position);
                 store.push_back(std::move(obj));
             }

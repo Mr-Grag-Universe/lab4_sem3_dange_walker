@@ -12,7 +12,7 @@ private:
     // ObjectType type = CHEST;
 public:
     ObjectType get_type() {
-        return DOOR;
+        return CHEST;
     }
     Chest(std::string name, std::pair<unsigned int, unsigned int> p, size_t id, size_t m_w);
     ~Chest() {

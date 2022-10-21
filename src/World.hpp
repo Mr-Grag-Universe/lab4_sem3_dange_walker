@@ -71,7 +71,7 @@ public:
         );
 
         for (size_t i = 0, l = things.size(); i < l; ++i) {
-            switch (things[i]->get_type()) {
+            switch (all_things[old_len+i]->get_type()) {
             case Obj::FLOOR:
                 env.floor.push_back((std::unique_ptr<Floor> *) &all_things[old_len+i]);
                 break;
