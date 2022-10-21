@@ -46,9 +46,11 @@ set(SOURCES
    alive_obj/Alive.cpp
    alive_obj/Character.cpp
 
-    physics/Hitbox.cpp
-    draw/Draw.cpp
-    )
+   physics/Hitbox.cpp
+   draw/Draw.cpp
+
+   containers/Chest.cpp
+   )
 
 add_executable(game ${SOURCES})
 # # target_include_directories(sfml_game PUBLIC SFML-2.5.1/include)

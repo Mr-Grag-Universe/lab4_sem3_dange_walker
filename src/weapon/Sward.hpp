@@ -1,15 +1,24 @@
-#ifndef SWARD
-#define SWARD
+#ifndef SWARD_CLASS
+#define SWARD_CLASS
 
-class Sward {
+#include <iostream>
+#include <string>
+#include <algorithm>
+
+#include "Weapon.hpp"
+
+class Sward : public Weapon {
 private:
     /* data */
 public:
-    Sward(/* args */);
+    ObjectType get_type() { return SWARD; }
+    Sward(std::string name, std::pair<unsigned int, unsigned int> position);
     ~Sward();
 };
 
-Sward::Sward() {
+Sward::Sward(std::string n, std::pair<unsigned int, unsigned int> p) {
+    name = n;
+    position = p;
 }
 
 Sward::~Sward() {

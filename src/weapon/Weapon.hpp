@@ -3,11 +3,11 @@
 
 #include "../Object.hpp"
 
-class weapon : public Obj {
+class Weapon : public Obj {
 private:
     
 public:
-    weapon() = default;
+    Weapon() = default;
 };
 
 #endif // WEAPON

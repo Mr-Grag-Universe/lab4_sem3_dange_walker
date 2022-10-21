@@ -6,22 +6,18 @@
 #include <vector>
 #include <set>
 
-// #include "../Object.hpp"
-// #include "../Weapon.hpp"
+#include "../Object.hpp"\
 
 class Container {
-private:
-    mutable size_t max_weight = 0;
+protected:
+    size_t max_weight = 0;
     std::vector <std::unique_ptr<Obj>> store;
     size_t id = 0;
 public:
-    Container();
-    virtual ~Container() = 0;
+    Container() {}
+    Container(size_t _id, size_t m_w) : max_weight(m_w), id(_id) {}
+    // ~Container() = default;
+    virtual void fill(std::vector <std::unique_ptr<Obj>> store) = 0;
 };
-
-Container::Container() {
-}
-
-#include "Chest.hpp"
 
 #endif

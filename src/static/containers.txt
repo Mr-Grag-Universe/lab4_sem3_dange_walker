@@ -1,5 +1,5 @@
-// data format:
-// container container_type id
-//     weapon_name damage
-container chest 0 
+//data__format:
+//container__container_type__id__max_weight
+//____weapon_name__damage
+container 300 300 0 0 16 16 static/chest_and_key.png 50 chest 10 0
     knife 1

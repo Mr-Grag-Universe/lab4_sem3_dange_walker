@@ -29,11 +29,14 @@ public:
         FLOOR,
         DOOR,
         ALIVE,
+        CHEST,
         CHARACTER,
+        SWARD,
     };
 
     Obj() = default;
     Obj(const std::pair<unsigned int, unsigned int> & position, const sf::Sprite & sprite);
+    Obj(std::string name, std::pair<unsigned int, unsigned int> position);
     Obj(const Obj &);
     virtual ~Obj() {
         

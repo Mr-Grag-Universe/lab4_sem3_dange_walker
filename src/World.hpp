@@ -60,6 +60,32 @@ public:
             }
         }
     }
+    void add_things_from_file(const std::string & file_name) {
+        std::vector <std::unique_ptr<Obj>> things = load_things_from_file(file_name);
+
+        size_t old_len = all_things.size();
+        all_things.insert(
+            all_things.end(),
+            std::make_move_iterator(things.begin()),
+            std::make_move_iterator(things.end())
+        );
+
+        for (size_t i = 0, l = things.size(); i < l; ++i) {
+            switch (things[i]->get_type()) {
+            case Obj::FLOOR:
+                env.floor.push_back((std::unique_ptr<Floor> *) &all_things[old_len+i]);
+                break;
+            case Obj::DOOR:
+                env.doors.push_back((std::unique_ptr<Door>  *) &all_things[old_len+i]);
+                break;
+            case Obj::WALL:
+                env.walls.push_back((std::unique_ptr<Wall>  *) &all_things[old_len+i]);
+                break;
+            default:
+                break;
+            }
+        }
+    }
     ~World() = default;
 
     void add_character(const std::string & file_name);
