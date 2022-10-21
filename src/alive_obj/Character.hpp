@@ -7,15 +7,10 @@ class Character : public Alive {
 private:
     /* data */
 public:
-    ObjectType get_type() {
-        return CHARACTER;
-    }
-    Character() {
-
-    }
-    ~Character() {
-
-    }
+    ObjectType get_type() override
+    { return CHARACTER; }
+    Character() {}
+    ~Character() {}
 };
 
 #endif

@@ -10,6 +10,7 @@
 #include "World.hpp"
 #include "Map.hpp"
 #include "Object.hpp"
+#include "constants.hpp"
 #include "environment/Floor.hpp"
 #include "environment/Door.hpp"
 #include "environment/Wall.hpp"
@@ -26,6 +27,28 @@ std::map <std::string, Obj::ObjectType> types = {
     { "sward",  Obj::SWARD },
 };
 
+World::World(const std::string & file_name) : World() {
+    this->all_things = load_things_from_file(file_name);
+    for (size_t i = 0, l = all_things.size(); i < l; ++i) {
+        switch (all_things[i]->get_type()) {
+        case Obj::FLOOR:
+            env.floor.push_back((std::unique_ptr<Floor> *) &all_things[i]);
+            break;
+        case Obj::DOOR:
+            env.doors.push_back((std::unique_ptr<Door> *) &all_things[i]);
+            break;
+        case Obj::WALL:
+            env.walls.push_back((std::unique_ptr<Wall> *) &all_things[i]);
+            break;
+        default:
+            break;
+        }
+    }
+}
+World::World(std::vector <std::unique_ptr<Obj>> things) : World() {
+    all_things = std::move(things);
+}
+
 std::unique_ptr<Obj> World::use_constructor(std::string name, std::pair<unsigned int, unsigned int> position) {
     switch (types[name]) {
     case Obj::FLOOR:
@@ -35,7 +58,7 @@ std::unique_ptr<Obj> World::use_constructor(std::string name, std::pair<unsigned
     case Obj::WALL:
         return std::make_unique<Wall>(name, position);
     case Obj::SWARD:
-        return std::make_unique<Sward>(name, position);
+        return std::make_unique<Sward>(name, 1);
     default:
         break;
     }
@@ -51,6 +74,16 @@ std::unique_ptr<Box> create_box(std::string type, std::string name, std::pair<un
         return std::make_unique<Chest>(name, p, id, max_weight);
     }
     return std::make_unique<Chest>(name, p, id, max_weight);
+}
+
+std::unique_ptr<Weapon> create_weapon(std::string weapon_type, int damage) {
+    switch (types[weapon_type]) {
+    case Obj::SWARD:
+        return std::make_unique<Sward>(weapon_type, damage);
+    default:
+        return std::make_unique<Sward>(weapon_type, damage);
+    }
+    return std::make_unique<Sward>(weapon_type, damage);
 }
 
 std::vector <std::unique_ptr<Obj>> World::load_things_from_file(const std::string & file_name) {
@@ -100,10 +133,9 @@ std::vector <std::unique_ptr<Obj>> World::load_things_from_file(const std::strin
                 file >> weapon_type;
                 int damage{};
                 file >> damage;
-                continue;
 
-                std::unique_ptr<Obj> obj = use_constructor(name, position);
-                // static_cast<Obj>(obj)->set_texture(source_file_name, position_in, scale);
+                std::unique_ptr<Obj> obj = create_weapon(weapon_type, damage);
+                obj->set_texture(source_file_name, position_in, scale);
                 obj->set_position(position);
                 store.push_back(std::move(obj));
             }
@@ -162,6 +194,7 @@ void World::add_character(const std::string & file_name) {
     hero.set_sprite_position(std::make_pair(W/2, H/2));
     std::cout << "initial hero position: (" << hero.get_position().first << ", " << hero.get_position().second << ")\n";
     // hero.tesetOutlineThickness(10);
+    file.close();
 }
 
 void World::interraction(sf::Event & event) {
@@ -198,4 +231,31 @@ void World::interraction(sf::Event & event) {
 
 void World::iterate() {
     return;
+}
+
+void World::add_things_from_file(const std::string & file_name) {
+    std::vector <std::unique_ptr<Obj>> things = load_things_from_file(file_name);
+
+    size_t old_len = all_things.size();
+    all_things.insert(
+        all_things.end(),
+        std::make_move_iterator(things.begin()),
+        std::make_move_iterator(things.end())
+    );
+
+    for (size_t i = 0, l = things.size(); i < l; ++i) {
+        switch (all_things[old_len+i]->get_type()) {
+        case Obj::FLOOR:
+            env.floor.push_back((std::unique_ptr<Floor> *) &all_things[old_len+i]);
+            break;
+        case Obj::DOOR:
+            env.doors.push_back((std::unique_ptr<Door>  *) &all_things[old_len+i]);
+            break;
+        case Obj::WALL:
+            env.walls.push_back((std::unique_ptr<Wall>  *) &all_things[old_len+i]);
+            break;
+        default:
+            break;
+        }
+    }
 }

@@ -5,20 +5,20 @@
 #include <string>
 #include <algorithm>
 
-#include "Weapon.hpp"
+#include "MeleeWeapon.hpp"
 
-class Sward : public Weapon {
+class Sward : public MeleeWeapon {
 private:
     /* data */
 public:
     ObjectType get_type() { return SWARD; }
-    Sward(std::string name, std::pair<unsigned int, unsigned int> position);
+    Sward(std::string n, int d);
     ~Sward();
 };
 
-Sward::Sward(std::string n, std::pair<unsigned int, unsigned int> p) {
+Sward::Sward(std::string n, int d) {
     name = n;
-    position = p;
+    damage = d;
 }
 
 Sward::~Sward() {

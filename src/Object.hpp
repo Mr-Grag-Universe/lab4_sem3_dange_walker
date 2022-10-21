@@ -14,16 +14,13 @@ protected:
     std::pair<unsigned int, unsigned int> position = std::make_pair(HEIGHT/2, WIDTH/2);
 public:
     std::pair<unsigned int, unsigned int> w_position = std::make_pair(0, 0);
-    /// @brief устанавливает глобальную координату объекта и для его спрайта (в World)
-    /// @param p 
     void set_position(const std::pair<unsigned int, unsigned int> & p);
     // const std::pair<unsigned int, unsigned int> & get_position() const {
     //     return position;
     // }
-    /// @return current position of an object 
-    std::pair<unsigned int, unsigned int> get_position() const {
-        return position;
-    }
+    std::pair<unsigned int, unsigned int> get_position() const
+    { return position; }
+
     enum ObjectType {
         WALL,
         FLOOR,
@@ -38,17 +35,13 @@ public:
     Obj(const std::pair<unsigned int, unsigned int> & position, const sf::Sprite & sprite);
     Obj(std::string name, std::pair<unsigned int, unsigned int> position);
     Obj(const Obj &);
-    virtual ~Obj() {
-        
-    }
+    virtual ~Obj() {}
 
-    /// @return on which layer current object is staying
     unsigned char get_layer();
 
     virtual ObjectType get_type() = 0;
     void set_texture(std::string, std::pair<unsigned int, unsigned int> p_in, std::pair<unsigned int, unsigned int> scale);
     void set_sprite_position(std::pair<unsigned int, unsigned int> p);
-    // virtual void f() = 0;
 
 protected:
     Collider collider;
@@ -57,16 +50,16 @@ protected:
     unsigned char layer = 0;
     std::string name;
 public:
-    const sf::Sprite & get_sprite() const { return sprite; }
-    sf::Sprite & get_sprite() { return sprite; }
-    sf::Sprite get_sprite_copy() {
-        sf::Sprite res = sprite;
-        sf::Texture t = *texture;
-        
-        return sprite;
-    }
-    const std::unique_ptr<sf::Texture> & get_texture() const { return texture; }
-    const std::string & get_name() const { return name; }
+    const sf::Sprite & get_sprite() const
+    { return sprite; }
+    sf::Sprite & get_sprite()
+    { return sprite; }
+    sf::Sprite get_sprite_copy() const
+    { return sprite; }
+    const std::unique_ptr<sf::Texture> & get_texture() const
+    { return texture; }
+    const std::string & get_name() const
+    { return name; }
     void move(int x, int y);
 private:
     ObjectType type;

@@ -1,13 +1,13 @@
 #ifndef MELEE_WEAPON
 #define MELEE_WEAPON
 
-#include "weapon.hpp"
+#include "Weapon.hpp"
 
-class MeleeWeapon {
-private:
-    /* data */
+class MeleeWeapon : public Weapon{
+protected:
+    int damage = 0;
 public:
-    MeleeWeapon(/* args */);
+    MeleeWeapon() {}
 };
 
 

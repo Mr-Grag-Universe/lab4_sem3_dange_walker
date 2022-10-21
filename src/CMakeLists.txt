@@ -38,6 +38,7 @@ set(SOURCES
    main.cpp
    Object.cpp
    World.cpp
+   Map.cpp
 
    environment/Floor.cpp
    environment/Door.cpp

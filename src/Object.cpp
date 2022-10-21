@@ -10,7 +10,7 @@
 #include "Object.hpp"
 
 void Obj::set_texture(std::string src_file_name, std::pair<unsigned int, unsigned int> p_in, std::pair<unsigned int, unsigned int> scale) {
-    texture = std::move(std::make_unique<sf::Texture>());
+    texture = std::make_unique<sf::Texture>();
     *texture = sf::Texture();
     sf::Vector2 position_in((int) p_in.first, (int) p_in.second);
     sf::Vector2 size_f((float) scale.first, (float) scale.second);

@@ -9,17 +9,14 @@
 
 class Chest : public Box {
 private:
-    // ObjectType type = CHEST;
 public:
-    ObjectType get_type() {
-        return CHEST;
-    }
-    Chest(std::string name, std::pair<unsigned int, unsigned int> p, size_t id, size_t m_w);
-    ~Chest() {
-        
-    }
+    ObjectType get_type() override
+    { return CHEST; }
 
-    void fill(std::vector <std::unique_ptr<Obj>> store);
+    Chest(std::string name, std::pair<unsigned int, unsigned int> p, size_t id, size_t m_w);
+    ~Chest() {}
+
+    void fill(std::vector <std::unique_ptr<Obj>> store) override;
 };
 
 #endif
