@@ -1,0 +1,5 @@
+// data format:
+// container container_type id
+//     weapon_name damage
+container chest 0 
+    knife 1

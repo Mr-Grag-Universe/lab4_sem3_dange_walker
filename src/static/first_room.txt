@@ -1,5 +1,5 @@
-floor 100 100 0 0 16 16 static/cobbles2.png
-floor 116 100 0 0 16 16 static/cobbles2.png
-floor 132 100 0 0 16 16 static/cobbles2.png
-floor 148 100 0 0 16 16 static/cobbles2.png
-floor 164 100 0 0 16 16 static/cobbles2.png
+floor 300 300 0 0 16 16 static/cobbles2.png 50
+floor 300 316 0 0 16 16 static/cobbles2.png 50
+floor 300 332 0 0 16 16 static/cobbles2.png 50
+floor 300 348 0 0 16 16 static/cobbles2.png 50
+floor 300 364 0 0 16 16 static/cobbles2.png 50

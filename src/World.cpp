@@ -14,6 +14,7 @@
 #include "environment/Door.hpp"
 #include "environment/Wall.hpp"
 #include "alive_obj/Character.hpp"
+#include "containers/Chest.hpp"
 
 std::map <std::string, Obj::ObjectType> types = {
     { "floor",  Obj::FLOOR },
@@ -48,22 +49,37 @@ std::vector <std::unique_ptr<Obj>> World::load_things_from_file(const std::strin
     // data format: type | x | y | position_in_file_x | position_in_file_y | width | height | sprite_dir/sprite_file_name.txt
     while (file >> name) {
         std::cout << name << " ";
+        if (name == "//") continue;
+        if (name == "container") {
+            file >> name;
+            size_t id{};
+            file >> id;
+            std::string weapon_type;
+            file >> weapon_type;
+            int damage{};
+            file >> damage;
+            continue;
+        }
         unsigned int x{}, y{};
         unsigned int x_in{}, y_in{};
         unsigned int width{}, height{};
+        unsigned int number{};
         std::string source_file_name;
         file >> x >> y;
         file >> x_in >> y_in;
         file >> width >> height;
         file >> source_file_name;
-        std::pair<unsigned int, unsigned int> position = std::make_pair(x, y);
-        std::pair <unsigned int, unsigned int> position_in = std::make_pair(x_in, y_in);
-        std::pair <unsigned int, unsigned int> scale = std::make_pair(width, height);
+        file >> number;
+        for (size_t i = 0; i < number; ++i) {
+            std::pair<unsigned int, unsigned int> position = std::make_pair(x+i*width, y);
+            std::pair <unsigned int, unsigned int> position_in = std::make_pair(x_in, y_in);
+            std::pair <unsigned int, unsigned int> scale = std::make_pair(width, height);
 
-        std::unique_ptr<Obj> obj = use_constructor(name, position);
-        obj->set_texture(source_file_name, position_in, scale);
-        obj->set_position(position);
-        v.push_back(std::move(obj));
+            std::unique_ptr<Obj> obj = use_constructor(name, position);
+            obj->set_texture(source_file_name, position_in, scale);
+            obj->set_position(position);
+            v.push_back(std::move(obj));
+        }
     }
 
     file.close();
@@ -123,6 +139,7 @@ void World::interraction(sf::Event & event) {
     case sf::Event::Resized: {
         W = event.size.width;
         H = event.size.height;
+        hero.set_sprite_position(std::make_pair(W/2, H/2));
         std::cout << "new width: " << event.size.width << std::endl;
         std::cout << "new height: " << event.size.height << std::endl;
         break;

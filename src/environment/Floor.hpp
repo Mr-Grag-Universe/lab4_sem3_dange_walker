@@ -13,6 +13,7 @@ public:
     Floor(std::string n, std::pair<unsigned int, unsigned int> p) {
         position = p;
         name = n;
+        layer = 0;
     }
     ~Floor() {
         

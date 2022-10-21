@@ -28,7 +28,7 @@ public:
     }
     Map(const World & w) : hero(w.get_hero()), W(w.get_W()), H(w.get_H()) {
         const std::vector <std::unique_ptr<Obj>> & at = w.get_all_things();
-        std::cout << "map_hero_position: (" << hero.get_position().first << ", " << hero.get_position().second << ")\n";
+        // std::cout << "map_hero_position: (" << hero.get_position().first << ", " << hero.get_position().second << ")\n";
         for (size_t i = 0, l = at.size(); i < l; ++i) {
             std::pair <unsigned int, unsigned int> p = at[i]->get_position();
             if (distance(p, hero.get_position()) <= 1900) {
@@ -40,9 +40,9 @@ public:
                 s_window_pos.y = H/2 - (hero_pos.y - s_window_pos.y);
                 at[i]->set_sprite_position(std::make_pair(s_window_pos.x, s_window_pos.y));
 
-                std::cout << "hero: (" << hero_pos.x << "; " << hero_pos.y << "); ";
-                std::cout << "map: (" << W << "; " << H << "); ";
-                std::cout << "s_w: (" << s_window_pos.x << "; " << s_window_pos.y << ");\n";
+                // std::cout << "hero: (" << hero_pos.x << "; " << hero_pos.y << "); ";
+                // std::cout << "map: (" << W << "; " << H << "); ";
+                // std::cout << "s_w: (" << s_window_pos.x << "; " << s_window_pos.y << ");\n";
                 
                 switch (at[i]->get_type()) {
                     case Obj::FLOOR:
