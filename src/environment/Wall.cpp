@@ -27,3 +27,7 @@ void Wall::set_texture(std::string src_file_name, std::pair<unsigned int, unsign
     sprite.setTexture(texture);
 }
 */
+
+std::unique_ptr<Obj> Wall::read(std::ifstream & file) {
+    
+}
