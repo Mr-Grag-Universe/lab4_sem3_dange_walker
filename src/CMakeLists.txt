@@ -51,6 +51,8 @@ set(SOURCES
    draw/Draw.cpp
 
    containers/Chest.cpp
+
+   weapon/Sward.cpp
    )
 
 add_executable(game ${SOURCES})

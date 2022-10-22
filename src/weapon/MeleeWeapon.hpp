@@ -6,6 +6,7 @@
 class MeleeWeapon : public Weapon{
 protected:
     int damage = 0;
+    size_t radius = 0;
 public:
     MeleeWeapon() {}
 };

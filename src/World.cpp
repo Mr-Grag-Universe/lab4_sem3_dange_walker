@@ -58,7 +58,7 @@ std::unique_ptr<Obj> World::use_constructor(std::string name, std::pair<unsigned
     case Obj::WALL:
         return std::make_unique<Wall>(name, position);
     case Obj::SWARD:
-        return std::make_unique<Sward>(name, 1);
+        return std::make_unique<Sward>(name, position);
     default:
         break;
     }
@@ -200,7 +200,7 @@ void World::add_character(const std::string & file_name) {
 void World::interraction(sf::Event & event) {
     switch (event.type) {
     case sf::Event::KeyPressed: {
-        std::cout << "moving" << std::endl;
+        // std::cout << "moving" << std::endl;
         if (event.key.code == sf::Keyboard::A) {
             std::cout << "move left" << std::endl;
             hero.move(-10, 0);
@@ -212,7 +212,6 @@ void World::interraction(sf::Event & event) {
         } else if (event.key.code == sf::Keyboard::S) {
             hero.move(0, 10);
         }
-        // std::cout << "new hero position: (" << hero.get_position().first << ", " << hero.get_position().second << ")\n";
         break;
     }
     case sf::Event::Resized: {

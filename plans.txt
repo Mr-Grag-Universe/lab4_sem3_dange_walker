@@ -1,0 +1,8 @@
+думаю над форматом json и boost
+надо написать функцию ввода для всех предметов из файлика
+полезные ссылочки:
+    https://www.mapeditor.org/
+    https://en.cppreference.com/w/cpp/language/typeid
+    https://github.com/open-source-parsers/jsoncpp
+    https://www.boost.org/doc/libs/1_80_0/libs/json/doc/html/index.html
+    

@@ -9,16 +9,16 @@ public:
         return WALL;
     }
 
-    // void set_texture(std::string , std::pair<unsigned int, unsigned int> , std::pair<unsigned int, unsigned int> p);
-
+    Wall() {}
     Wall(std::string n, std::pair<unsigned int, unsigned int> p) {
         position = p;
         name = n;
     }
+    ~Wall() {}
 
-    ~Wall() {
-        
-    }
+    // void set_texture(std::string , std::pair<unsigned int, unsigned int> , std::pair<unsigned int, unsigned int> p);
+
+    std::unique_ptr<Obj> read(std::ifstream & file);
 protected:
 private:
 };
