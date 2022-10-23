@@ -26,7 +26,25 @@ void Floor::set_texture(std::string src_file_name, std::pair<unsigned int, unsig
 }
 */
 
-std::shared_ptr<Obj> Floor::read(std::ifstream & file) {
-    std::shared_ptr<Obj> res = std::make_shared<Floor>();
-    return res;
+void Floor::read(std::ifstream & file) {
+    unsigned int x{}, y{};
+    unsigned int x_in{}, y_in{};
+    unsigned int width{}, height{};
+    unsigned int number{};
+    std::string source_file_name;
+
+    file >> x >> y;
+    file >> x_in >> y_in;
+    file >> width >> height;
+    file >> source_file_name;
+    file >> number;
+
+    std::pair <unsigned int, unsigned int> p_in = std::make_pair(x_in, y_in);
+    std::pair <unsigned int, unsigned int> scale = std::make_pair(width, height);
+
+    // std::shared_ptr<Obj> res = std::make_shared<Floor>();
+    this->set_texture(source_file_name, p_in, scale);
+    position = std::make_pair(x, y);
+
+    // return res;
 }

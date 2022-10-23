@@ -49,9 +49,9 @@ World::World(std::vector <std::shared_ptr<Obj>> things) : World() {
     all_things = std::move(things);
 }
 
-std::shared_ptr<Obj> World::load_object(std::string name, std::ifstream & file) {
+std::shared_ptr<Obj> World::load_object(std::string type, std::ifstream & file) {
     std::shared_ptr<Obj> obj;
-    switch (types[name]) {
+    switch (types[type]) {
         case Obj::FLOOR: {
             obj = std::make_shared<Floor>();
             break;
@@ -74,28 +74,7 @@ std::shared_ptr<Obj> World::load_object(std::string name, std::ifstream & file) 
             break;
     }
     obj->read(file);
-    return nullptr;
-}
-
-std::shared_ptr<Box> create_box(std::string type, std::string name, std::pair<unsigned int, unsigned int> p, size_t id, size_t max_weight) {
-    switch (types[type]) {
-    case Obj::CHEST:
-        return std::make_unique<Chest>(name, p, id, max_weight);
-    
-    default:
-        return std::make_unique<Chest>(name, p, id, max_weight);
-    }
-    return std::make_unique<Chest>(name, p, id, max_weight);
-}
-
-std::shared_ptr<Weapon> create_weapon(std::string weapon_type, int damage) {
-    switch (types[weapon_type]) {
-    case Obj::SWARD:
-        return std::make_shared<Sward>(weapon_type, damage);
-    default:
-        return std::make_shared<Sward>(weapon_type, damage);
-    }
-    return std::make_shared<Sward>(weapon_type, damage);
+    return obj;
 }
 
 std::vector <std::shared_ptr<Obj>> World::load_things_from_file(const std::string & file_name) {
@@ -105,62 +84,16 @@ std::vector <std::shared_ptr<Obj>> World::load_things_from_file(const std::strin
         std::cout << "cannot find this file: " << file_name << std::endl;
         throw std::invalid_argument("cannot find stream file");
     }
-    unsigned int x{}, y{};
-    unsigned int x_in{}, y_in{};
-    unsigned int width{}, height{};
-    unsigned int number{};
-    std::string source_file_name;
 
-    std::string name;
+    std::string type;
     std::vector <std::shared_ptr<Obj>> v;
-    // data format: type | x | y | position_in_file_x | position_in_file_y | width | height | sprite_dir/sprite_file_name.txt
-    while (file >> name) {
-
-        if (name.substr(0, 2) == "//") {
-            std::cout << name << "\n";
-            // file >> name;
+    while (file >> type) {
+        if (type.substr(0, 2) == "//") {
+            std::cout << type << "\n";
             continue;
         }
-        std::cout << "object name: " << name << "\n";
-        file >> x >> y;
-        file >> x_in >> y_in;
-        file >> width >> height;
-        file >> source_file_name;
-        file >> number;
-        if (name == "container") {
-            file >> name;
-            size_t max_weight{};
-            file >> max_weight;
-            size_t id{};
-            file >> id;
-
-            std::pair<unsigned int, unsigned int> position = std::make_pair(x, y);
-            std::pair <unsigned int, unsigned int> position_in = std::make_pair(x_in, y_in);
-            std::pair <unsigned int, unsigned int> scale = std::make_pair(width, height);
-
-            std::vector <std::shared_ptr<Obj>> store;
-            
-            for (size_t i = 0; i < number; ++i) {
-                std::string weapon_type;
-                file >> weapon_type;
-                int damage{};
-                file >> damage;
-
-                std::shared_ptr<Obj> obj = create_weapon(weapon_type, damage);
-                obj->set_texture(source_file_name, position_in, scale);
-                obj->set_position(position);
-                store.push_back(std::move(obj));
-            }
-
-            std::shared_ptr<Box> b = create_box(name, name, position, id, max_weight);
-            b->fill(std::move(store));
-            b->set_texture(source_file_name, position_in, scale);
-            b->set_position(position);
-            v.push_back(std::move(b));
-
-            continue;
-        }
-        for (size_t i = 0; i < number; ++i) {
+        std::cout << "object type: " << type << "\n";
+        /*for (size_t i = 0; i < number; ++i) {
             std::pair<unsigned int, unsigned int> position = std::make_pair(x+i*width, y);
             std::pair <unsigned int, unsigned int> position_in = std::make_pair(x_in, y_in);
             std::pair <unsigned int, unsigned int> scale = std::make_pair(width, height);
@@ -169,7 +102,8 @@ std::vector <std::shared_ptr<Obj>> World::load_things_from_file(const std::strin
             obj->set_texture(source_file_name, position_in, scale);
             obj->set_position(position);
             v.push_back(std::move(obj));
-        }
+        }*/
+        v.push_back(load_object(type, file));
     }
 
     file.close();

@@ -41,7 +41,7 @@ public:
     unsigned char get_layer();
 
     virtual ObjectType get_type() = 0;
-    virtual std::shared_ptr<Obj> read(std::ifstream & ) = 0;
+    virtual void read(std::ifstream & ) = 0;
     void set_texture(std::string, std::pair<unsigned int, unsigned int> p_in, std::pair<unsigned int, unsigned int> scale);
     void set_sprite_position(std::pair<unsigned int, unsigned int> p);
 

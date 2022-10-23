@@ -28,7 +28,7 @@ void Wall::set_texture(std::string src_file_name, std::pair<unsigned int, unsign
 }
 */
 
-std::shared_ptr<Obj> Wall::read(std::ifstream & file) {
+void Wall::read(std::ifstream & file) {
     unsigned int x{}, y{};
     unsigned int x_in{}, y_in{};
     unsigned int width{}, height{};
@@ -44,9 +44,9 @@ std::shared_ptr<Obj> Wall::read(std::ifstream & file) {
     std::pair <unsigned int, unsigned int> p_in = std::make_pair(x_in, y_in);
     std::pair <unsigned int, unsigned int> scale = std::make_pair(width, height);
 
-    std::shared_ptr<Obj> res = std::make_shared<Wall>();
-    res->set_texture(source_file_name, p_in, scale);
+    // std::shared_ptr<Obj> res = std::make_shared<Wall>();
+    this->set_texture(source_file_name, p_in, scale);
     position = std::make_pair(x, y);
 
-    return res;
+    // return res;
 }

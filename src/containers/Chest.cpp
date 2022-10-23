@@ -5,6 +5,7 @@
 
 #include "../Object.hpp"
 #include "Chest.hpp"
+#include "../World.hpp"
 
 Chest::Chest(std::string n, std::pair<unsigned int, unsigned int> p, size_t _id, size_t m_w) : Box(n, p, _id, m_w) {}
 Chest::Chest(std::string n, std::pair<unsigned int, unsigned int> p) {
@@ -17,7 +18,7 @@ void Chest::fill(std::vector <std::shared_ptr<Obj>> _store) {
     store = std::move(_store);
 }
 
-std::shared_ptr<Obj> Chest::read(std::ifstream & file) {
+void Chest::read(std::ifstream & file) {
     unsigned int x{}, y{};
     unsigned int x_in{}, y_in{};
     unsigned int width{}, height{};
@@ -27,19 +28,33 @@ std::shared_ptr<Obj> Chest::read(std::ifstream & file) {
     size_t id{};
     size_t max_weight{};
 
+    file >> name;
+    file >> id;
+    file >> max_weight;
     file >> x >> y;
     file >> x_in >> y_in;
     file >> width >> height;
     file >> source_file_name;
     file >> number;
-    file >> name;
-    file >> max_weight;
-    file >> id;
 
-    std::pair<unsigned int, unsigned int> position = std::make_pair(x, y);
-    std::pair <unsigned int, unsigned int> position_in = std::make_pair(x_in, y_in);
+    std::pair<unsigned int, unsigned int> p = std::make_pair(x, y);
+    std::pair <unsigned int, unsigned int> p_in = std::make_pair(x_in, y_in);
     std::pair <unsigned int, unsigned int> scale = std::make_pair(width, height);
 
-    std::shared_ptr<Obj> res = std::make_shared<Chest>();
-    return res;
+    std::vector <std::shared_ptr<Obj>> store;
+    
+    for (size_t i = 0; i < number; ++i) {
+        std::string type;
+        file >> type;
+        // file >> n;
+
+        std::shared_ptr<Obj> obj = World::load_object(type, file);
+        store.push_back(std::move(obj));
+    }
+
+    this->fill(std::move(store));
+    this->set_texture(source_file_name, p_in, scale);
+    position = p;
+    // std::shared_ptr<Obj> res = std::make_shared<Chest>();
+    // return res;
 }

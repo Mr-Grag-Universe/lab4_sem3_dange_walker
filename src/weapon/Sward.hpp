@@ -15,11 +15,11 @@ public:
     { return SWARD; }
     // constructors
     Sward() {}
-    Sward(std::string n, int d);
+    Sward(std::string n, int d=0, size_t r=0);
     Sward(std::string n, std::pair<unsigned int, unsigned int> p);
     ~Sward() {}
 
-    std::shared_ptr<Obj> read(std::ifstream &);
+    void read(std::ifstream &);
 };
 
 

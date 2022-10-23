@@ -31,9 +31,9 @@ private:
     size_t W, H;
 
     std::vector <std::shared_ptr<Obj>> all_things;
+public:
     static std::shared_ptr<Obj> load_object(std::string name, std::ifstream & file);
 
-public:
     size_t get_W() const { return W; }
     size_t get_H() const { return H; }
     const Character & get_hero() const { return hero; }

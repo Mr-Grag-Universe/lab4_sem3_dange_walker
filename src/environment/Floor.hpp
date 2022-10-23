@@ -18,7 +18,7 @@ public:
         layer = 0;
     }
     ~Floor() {}
-    std::shared_ptr<Obj> read(std::ifstream & file);
+    void read(std::ifstream & file);
 protected:
 private:
 };

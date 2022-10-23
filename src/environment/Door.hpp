@@ -18,7 +18,7 @@ public:
     
     // void set_texture(std::string , std::pair<unsigned int, unsigned int> , std::pair<unsigned int, unsigned int> p);
 
-    std::shared_ptr<Obj> read(std::ifstream & file);
+    void read(std::ifstream & file);
 };
 
 #endif
