@@ -25,3 +25,8 @@ void Floor::set_texture(std::string src_file_name, std::pair<unsigned int, unsig
     sprite.setTexture(texture);
 }
 */
+
+std::shared_ptr<Obj> Floor::read(std::ifstream & file) {
+    std::shared_ptr<Obj> res = std::make_shared<Floor>();
+    return res;
+}

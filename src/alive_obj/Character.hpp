@@ -11,6 +11,8 @@ public:
     { return CHARACTER; }
     Character() {}
     ~Character() {}
+
+    std::shared_ptr<Obj> read(std::ifstream & file) override;
 };
 
 #endif

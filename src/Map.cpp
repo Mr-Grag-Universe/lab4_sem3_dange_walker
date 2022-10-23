@@ -1,12 +1,12 @@
 #include "Map.hpp"
 
 Map::Map(const World & w) : hero(w.get_hero()), W(w.get_W()), H(w.get_H()) {
-    const std::vector <std::unique_ptr<Obj>> & at = w.get_all_things();
+    const std::vector <std::shared_ptr<Obj>> & at = w.get_all_things();
     // std::cout << "map_hero_position: (" << hero.get_position().first << ", " << hero.get_position().second << ")\n";
     for (size_t i = 0, l = at.size(); i < l; ++i) {
         std::pair <unsigned int, unsigned int> p = at[i]->get_position();
         if (distance(p, hero.get_position()) <= 1900) {
-            all_things.push_back((std::unique_ptr<Obj> *) &at[i]);
+            all_things.push_back((std::shared_ptr<Obj> *) &at[i]);
             // const sf::Sprite & hero_s = hero.get_sprite();
             const sf::Vector2f hero_pos = sf::Vector2f((float) hero.get_position().first, (float) hero.get_position().second);
             sf::Vector2f s_window_pos = sf::Vector2f((float)at[i]->get_position().first, (float)at[i]->get_position().second);
@@ -20,13 +20,13 @@ Map::Map(const World & w) : hero(w.get_hero()), W(w.get_W()), H(w.get_H()) {
             
             switch (at[i]->get_type()) {
                 case Obj::FLOOR:
-                    env.floor.push_back((std::unique_ptr<Floor> *) &at[i]);
+                    env.floor.push_back((std::shared_ptr<Floor> *) &at[i]);
                     break;
                 case Obj::DOOR:
-                    env.doors.push_back((std::unique_ptr<Door> *) &at[i]);
+                    env.doors.push_back((std::shared_ptr<Door> *) &at[i]);
                     break;
                 case Obj::WALL:
-                    env.walls.push_back((std::unique_ptr<Wall> *) &at[i]);
+                    env.walls.push_back((std::shared_ptr<Wall> *) &at[i]);
                     break;
                 default:
                     break;

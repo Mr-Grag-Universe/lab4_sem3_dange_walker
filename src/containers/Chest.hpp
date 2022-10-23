@@ -13,11 +13,14 @@ public:
     ObjectType get_type() override
     { return CHEST; }
 
-    Chest(std::string name, std::pair<unsigned int, unsigned int> p, size_t id, size_t m_w);
+    Chest() {}
+    Chest(std::string n, std::pair<unsigned int, unsigned int> p, size_t id, size_t m_w);
     Chest(std::string n, std::pair<unsigned int, unsigned int> p);
     ~Chest() {}
 
-    void fill(std::vector <std::unique_ptr<Obj>> store) override;
+    void fill(std::vector <std::shared_ptr<Obj>> store) override;
+
+    std::shared_ptr<Obj> read(std::ifstream & file) override;
 };
 
 #endif

@@ -41,14 +41,14 @@ public:
     unsigned char get_layer();
 
     virtual ObjectType get_type() = 0;
-    virtual std::unique_ptr<Obj> read(std::ifstream & ) = 0;
+    virtual std::shared_ptr<Obj> read(std::ifstream & ) = 0;
     void set_texture(std::string, std::pair<unsigned int, unsigned int> p_in, std::pair<unsigned int, unsigned int> scale);
     void set_sprite_position(std::pair<unsigned int, unsigned int> p);
 
 protected:
     Collider collider;
     sf::Sprite sprite;
-    std::unique_ptr<sf::Texture> texture = nullptr;
+    std::shared_ptr<sf::Texture> texture = nullptr;
     unsigned char layer = 0;
     std::string name;
 public:
@@ -58,7 +58,7 @@ public:
     { return sprite; }
     sf::Sprite get_sprite_copy() const
     { return sprite; }
-    const std::unique_ptr<sf::Texture> & get_texture() const
+    const std::shared_ptr<sf::Texture> & get_texture() const
     { return texture; }
     const std::string & get_name() const
     { return name; }

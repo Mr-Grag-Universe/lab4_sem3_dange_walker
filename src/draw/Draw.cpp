@@ -7,7 +7,7 @@
 #include "../Map.hpp"
 
 void Draw::draw_map(sf::RenderWindow & window, const Map & map) {
-    const std::vector <std::unique_ptr<Obj> *> & at = map.get_all_things();
+    const std::vector <std::shared_ptr<Obj> *> & at = map.get_all_things();
     const sf::Sprite & hero_s = map.get_hero().get_sprite();
     //const sf::Vector2f hero_pos = hero_s.getPosition();
     //std::cout << "hero: (" << hero_pos.x << "; " << hero_pos.y << "); ";

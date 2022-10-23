@@ -16,11 +16,11 @@ class Map {
 private:
     const Character & hero;
     const size_t W, H;
-    std::vector <std::unique_ptr<Obj> *> all_things;
+    std::vector <std::shared_ptr<Obj> *> all_things;
 public:
     size_t get_W() const { return W; }
     size_t get_H() const { return H; }
-    const std::vector <std::unique_ptr<Obj> *> & get_all_things() const 
+    const std::vector <std::shared_ptr<Obj> *> & get_all_things() const 
     { return all_things; }
     const Character & get_hero() const
     { return hero; }
@@ -30,9 +30,9 @@ public:
     ~Map() = default;
 protected:
     struct Env {
-        std::vector <std::unique_ptr<Wall> *> walls;
-        std::vector <std::unique_ptr<Floor> *> floor;
-        std::vector <std::unique_ptr<Door> * > doors;
+        std::vector <std::shared_ptr<Wall> *> walls;
+        std::vector <std::shared_ptr<Floor> *> floor;
+        std::vector <std::shared_ptr<Door> * > doors;
     };    
 
 private:

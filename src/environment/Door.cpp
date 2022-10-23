@@ -23,3 +23,8 @@ void Door::set_texture(std::string src_file_name, std::pair<unsigned int, unsign
     sprite.setTextureRect(sf::IntRect(position, size));
 }
 */
+
+std::shared_ptr<Obj> Door::read(std::ifstream & file) {
+    std::shared_ptr<Obj> res = std::make_shared<Door>();
+    return res;
+}

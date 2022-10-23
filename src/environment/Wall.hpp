@@ -2,8 +2,9 @@
 #define WALL_CLASS
 
 #include "Object.hpp"
+#include "Env.hpp"
 
-class Wall : public Obj {
+class Wall : public Environment {
 public:
     ObjectType get_type() {
         return WALL;
@@ -18,7 +19,7 @@ public:
 
     // void set_texture(std::string , std::pair<unsigned int, unsigned int> , std::pair<unsigned int, unsigned int> p);
 
-    std::unique_ptr<Obj> read(std::ifstream & file);
+    std::shared_ptr<Obj> read(std::ifstream & file);
 protected:
 private:
 };
