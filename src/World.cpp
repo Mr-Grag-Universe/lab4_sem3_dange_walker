@@ -136,7 +136,7 @@ void World::add_character(const std::string & file_name) {
     std::pair <unsigned int, unsigned int> position_in = std::make_pair(x_in, y_in);
     std::pair <unsigned int, unsigned int> scale = std::make_pair(width, height);
     
-    hero.set_texture(src_file_name, position_in, scale);
+    hero.set_texture(src_file_name, position_in, scale, std::make_pair(1, 1));
     hero.set_sprite_position(std::make_pair(W/2, H/2));
     std::cout << "initial hero position: (" << hero.get_position().first << ", " << hero.get_position().second << ")\n";
     // hero.tesetOutlineThickness(10);

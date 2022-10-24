@@ -9,6 +9,7 @@ private:
 public:
     Environment() {}
     ~Environment() {}
+    void read(std::ifstream & file);
 };
 
 

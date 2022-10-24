@@ -1,6 +1,8 @@
 #ifndef BOX_CLASS
 #define BOX_CLASS
 
+#include <iostream>
+
 #include "../Object.hpp"
 #include "Container.hpp"
 
@@ -15,6 +17,7 @@ public:
         position = p;
     }
     // virtual ~Box() = 0;
+    void push(std::shared_ptr<Obj> obj);
 };
 
 #endif

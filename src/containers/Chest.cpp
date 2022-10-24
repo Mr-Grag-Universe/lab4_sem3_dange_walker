@@ -53,7 +53,7 @@ void Chest::read(std::ifstream & file) {
     }
 
     this->fill(std::move(store));
-    this->set_texture(source_file_name, p_in, scale);
+    this->set_texture(source_file_name, p_in, scale, std::make_pair(1, 1));
     position = p;
     // std::shared_ptr<Obj> res = std::make_shared<Chest>();
     // return res;

@@ -18,7 +18,6 @@ public:
         layer = 0;
     }
     ~Floor() {}
-    void read(std::ifstream & file);
 protected:
 private:
 };

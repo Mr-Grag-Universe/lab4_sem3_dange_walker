@@ -15,10 +15,6 @@ public:
         this->name = n;
     }
     ~Door() {}
-    
-    // void set_texture(std::string , std::pair<unsigned int, unsigned int> , std::pair<unsigned int, unsigned int> p);
-
-    void read(std::ifstream & file);
 };
 
 #endif

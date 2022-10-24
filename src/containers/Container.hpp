@@ -18,6 +18,7 @@ public:
     Container(size_t _id, size_t m_w) : max_weight(m_w), id(_id) {}
     // ~Container() = default;
     virtual void fill(std::vector <std::shared_ptr<Obj>> store) = 0;
+    virtual void push(std::shared_ptr<Obj>) = 0;
 };
 
 #endif

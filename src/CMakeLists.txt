@@ -40,6 +40,7 @@ set(SOURCES
    World.cpp
    Map.cpp
 
+   environment/Env.cpp
    environment/Floor.cpp
    environment/Door.cpp
    environment/Wall.cpp
@@ -50,6 +51,7 @@ set(SOURCES
    physics/Hitbox.cpp
    draw/Draw.cpp
 
+   containers/Box.cpp
    containers/Chest.cpp
 
    weapon/Sward.cpp
