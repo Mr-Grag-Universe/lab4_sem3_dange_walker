@@ -11,7 +11,6 @@
 
 // #include "Map.hpp"
 #include "containers/Chest.hpp"
-#include "Object.hpp"
 #include "environment/Wall.hpp"
 #include "environment/Door.hpp"
 #include "environment/Floor.hpp"

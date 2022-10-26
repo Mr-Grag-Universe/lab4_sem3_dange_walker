@@ -37,6 +37,7 @@ set(SOURCES
 
    main.cpp
    Object.cpp
+   Object.hpp
    World.cpp
    Map.cpp
 
@@ -53,6 +54,7 @@ set(SOURCES
 
    containers/Box.cpp
    containers/Chest.cpp
+   containers/BackPack.cpp
 
    weapon/Sward.cpp
    )

@@ -19,25 +19,17 @@
 #include "containers/Chest.hpp"
 #include "weapon/Sward.hpp"
 
-std::map <std::string, Obj::ObjectType> types = {
-    { "floor",  Obj::FLOOR },
-    { "door" ,  Obj::DOOR  },
-    { "wall" ,  Obj::WALL  },
-    { "chest",  Obj::CHEST },
-    { "sward",  Obj::SWARD },
-};
-
 World::World(const std::string & file_name) : World() {
     this->all_things = load_things_from_file(file_name);
     for (size_t i = 0, l = all_things.size(); i < l; ++i) {
         switch (all_things[i]->get_type()) {
-        case Obj::FLOOR:
+        case FLOOR:
             env.floor.push_back((std::shared_ptr<Floor> *) &all_things[i]);
             break;
-        case Obj::DOOR:
+        case DOOR:
             env.doors.push_back((std::shared_ptr<Door> *) &all_things[i]);
             break;
-        case Obj::WALL:
+        case WALL:
             env.walls.push_back((std::shared_ptr<Wall> *) &all_things[i]);
             break;
         default:
@@ -52,22 +44,22 @@ World::World(std::vector <std::shared_ptr<Obj>> things) : World() {
 std::shared_ptr<Obj> World::load_object(std::string type, std::ifstream & file) {
     std::shared_ptr<Obj> obj;
     switch (types[type]) {
-        case Obj::FLOOR: {
+        case FLOOR: {
             obj = std::make_shared<Floor>();
             break;
         }
-        case Obj::DOOR: {
+        case DOOR: {
             obj = std::make_shared<Door>();
             break;
         }
-        case Obj::WALL:
+        case WALL:
             obj = std::make_shared<Wall>();
             break;
-        case Obj::CHEST: {
+        case CHEST: {
             obj = std::make_shared<Chest>();
             break;
         }
-        case Obj::SWARD:
+        case SWARD:
             obj = std::make_shared<Sward>();
             break;
         default:
@@ -190,13 +182,13 @@ void World::add_things_from_file(const std::string & file_name) {
 
     for (size_t i = 0, l = things.size(); i < l; ++i) {
         switch (all_things[old_len+i]->get_type()) {
-        case Obj::FLOOR:
+        case FLOOR:
             env.floor.push_back((std::shared_ptr<Floor> *) &all_things[old_len+i]);
             break;
-        case Obj::DOOR:
+        case DOOR:
             env.doors.push_back((std::shared_ptr<Door>  *) &all_things[old_len+i]);
             break;
-        case Obj::WALL:
+        case WALL:
             env.walls.push_back((std::shared_ptr<Wall>  *) &all_things[old_len+i]);
             break;
         default:

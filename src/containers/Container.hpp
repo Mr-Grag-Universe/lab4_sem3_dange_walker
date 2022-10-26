@@ -6,7 +6,7 @@
 #include <vector>
 #include <set>
 
-#include "../Object.hpp"\
+#include "../Object.hpp"
 
 class Container {
 protected:

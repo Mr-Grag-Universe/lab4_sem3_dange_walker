@@ -1,7 +1,6 @@
 #ifndef WALL_CLASS
 #define WALL_CLASS
 
-#include "Object.hpp"
 #include "Env.hpp"
 
 class Wall : public Environment {

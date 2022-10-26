@@ -8,6 +8,16 @@
 
 #include <algorithm>
 #include <cmath>
+#include <map>
+#include <string>
+#include <vector>
+#include <iostream>
+#include <fstream>
+
+
+#include "World.hpp"
+#include "Map.hpp"
+#include "Object.hpp"
 
 template <typename T>
 double distance(const std::pair <T, T> & p1, const std::pair <T, T> & p2) {

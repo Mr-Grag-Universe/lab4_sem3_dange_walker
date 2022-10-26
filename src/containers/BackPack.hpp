@@ -5,10 +5,17 @@
 
 class BackPack : public Box {
 private:
-    /* data */
+protected:
 public:
-    BackPack();
-    ~BackPack();
+    BackPack() {}
+    BackPack(std::string n, std::pair<unsigned int, unsigned int> p, size_t id, size_t m_w);
+    BackPack(std::string n, std::pair<unsigned int, unsigned int> p);
+    ~BackPack() {}
+
+    void fill(std::vector <std::shared_ptr<Obj>> store) override;
+    void read(std::ifstream & file) override;
+    ObjectType get_type() override
+    { return BACKPACK; }
 };
 
 #endif

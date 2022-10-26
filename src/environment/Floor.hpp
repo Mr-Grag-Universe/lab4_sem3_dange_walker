@@ -1,7 +1,6 @@
 #ifndef FLOOR_CLASS
 #define FLOOR_CLASS
 
-#include "Object.hpp"
 #include "Env.hpp"
 
 class Floor : public Environment {

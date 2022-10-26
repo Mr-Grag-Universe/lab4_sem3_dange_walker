@@ -1,7 +1,6 @@
 #ifndef DOOR_CLASS
 #define DOOR_CLASS
 
-#include "Object.hpp"
 #include "Env.hpp"
 
 class Door : public Environment {

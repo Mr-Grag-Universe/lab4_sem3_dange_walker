@@ -4,15 +4,44 @@
 #include <algorithm>
 #include <vector>
 #include <fstream>
+#include <map>
+#include <string>
 
 #include <SFML/Graphics.hpp>
 
 #include "Collider.hpp"
-#include "constants.hpp"
 
+enum ObjectType {
+    WALL,
+    FLOOR,
+    DOOR,
+    ALIVE,
+    CHEST,
+    BACKPACK,
+    CHARACTER,
+    SWARD,
+
+    WEAPON,
+};
+
+#ifndef MY_TYPES
+#define MY_TYPES
+inline std::map <std::string, enum ObjectType> types = {
+    { "floor",      FLOOR    },
+    { "door" ,      DOOR     },
+    { "wall" ,      WALL     },
+    { "chest",      CHEST    },
+    { "sward",      SWARD    },
+    { "backpack",   BACKPACK },
+
+    { "weapon",     WEAPON   },
+};
+#endif
+
+class Obj;
 class Obj {
 protected:
-    std::pair<unsigned int, unsigned int> position = std::make_pair(HEIGHT/2, WIDTH/2);
+    std::pair<unsigned int, unsigned int> position = std::make_pair(0, 0);
 public:
     std::pair<unsigned int, unsigned int> w_position = std::make_pair(0, 0);
     void set_position(const std::pair<unsigned int, unsigned int> & p);
@@ -22,20 +51,11 @@ public:
     std::pair<unsigned int, unsigned int> get_position() const
     { return position; }
 
-    enum ObjectType {
-        WALL,
-        FLOOR,
-        DOOR,
-        ALIVE,
-        CHEST,
-        CHARACTER,
-        SWARD,
-    };
 
     Obj() = default;
     Obj(const std::pair<unsigned int, unsigned int> & position, const sf::Sprite & sprite);
     Obj(std::string name, std::pair<unsigned int, unsigned int> position);
-    Obj(const Obj &);
+    Obj(const Obj &) = default;
     virtual ~Obj() {}
 
     unsigned char get_layer();

@@ -19,13 +19,13 @@ Map::Map(const World & w) : hero(w.get_hero()), W(w.get_W()), H(w.get_H()) {
             // std::cout << "s_w: (" << s_window_pos.x << "; " << s_window_pos.y << ");\n";
             
             switch (at[i]->get_type()) {
-                case Obj::FLOOR:
+                case FLOOR:
                     env.floor.push_back((std::shared_ptr<Floor> *) &at[i]);
                     break;
-                case Obj::DOOR:
+                case DOOR:
                     env.doors.push_back((std::shared_ptr<Door> *) &at[i]);
                     break;
-                case Obj::WALL:
+                case WALL:
                     env.walls.push_back((std::shared_ptr<Wall> *) &at[i]);
                     break;
                 default:

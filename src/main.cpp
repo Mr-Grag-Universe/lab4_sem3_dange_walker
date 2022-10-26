@@ -9,9 +9,7 @@
 #include <SFML/System.hpp>
 #include <SFML/Graphics.hpp>
 
-#include "draw/Draw.hpp"
-#include "World.hpp"
-#include "Map.hpp"
+#include "all_headers.hpp"
 
 int main(int argc, char *argv[]) {
     sf::VideoMode mode = sf::VideoMode::getDesktopMode();

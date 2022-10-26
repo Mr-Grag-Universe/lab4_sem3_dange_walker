@@ -7,7 +7,7 @@
 #include "../Object.hpp"
 
 class Alive : public Obj {
-private:
+protected:
     std::string name;
     // double health = 0;
     // size_t visibility_radius = WIDTH;

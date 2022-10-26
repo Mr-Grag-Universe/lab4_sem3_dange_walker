@@ -2,3 +2,18 @@ Stefan
 static/char.png
 32 64
 32 32
+
+backpack
+    backpack_1
+    1
+    100
+    1
+        sward
+            sward_2
+            200
+            10
+weapon
+    sward
+        sward_3
+        300
+        10

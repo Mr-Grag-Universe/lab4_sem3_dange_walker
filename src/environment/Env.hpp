@@ -3,6 +3,8 @@
 
 #include "../Object.hpp"
 
+class Environment;
+
 class Environment : public Obj {
 private:
     /* data */
