@@ -1,6 +1,8 @@
 #ifndef CHARACTER_CLASS
 #define CHARACTER_CLASS
 
+#include <SFML/Graphics.hpp>
+
 #include <iostream>
 
 #include "Alive.hpp"
@@ -18,6 +20,8 @@ public:
     ~Character() {}
 
     void read(std::ifstream & file) override;
+    void draw(sf::RenderWindow & window);
+    void draw_backpack_menu(sf::RenderWindow & window);
 };
 
 #endif

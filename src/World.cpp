@@ -7,6 +7,7 @@
 #include <SFML/System.hpp>
 #include <SFML/Window.hpp>
 
+#include "backpack_menu.hpp"
 #include "World.hpp"
 #include "Map.hpp"
 #include "Object.hpp"
@@ -135,21 +136,15 @@ void World::add_character(const std::string & file_name) {
     file.close();
 }
 
-void World::interraction(sf::Event & event) {
+void World::interraction(sf::Event & event, sf::RenderWindow & window) {
     switch (event.type) {
     case sf::Event::KeyPressed: {
-        // std::cout << "moving" << std::endl;
-        if (event.key.code == sf::Keyboard::A) {
-            std::cout << "move left" << std::endl;
-            hero.move(-10, 0);
-            std::cout << "new_hero_position: (" << hero.get_position().first << ", " << hero.get_position().second << ")\n";
-        } else if (event.key.code == sf::Keyboard::D) {
-            hero.move(10, 0);
-        } else if (event.key.code == sf::Keyboard::W) {
-            hero.move(0, -10);
-        } else if (event.key.code == sf::Keyboard::S) {
-            hero.move(0, 10);
+        if (this->mode == RUN) {
+            game_interraction(event, window);
+        } else if (this->mode == MENU) {
+            menu_interraction(event, window);
         }
+
         break;
     }
     case sf::Event::Resized: {

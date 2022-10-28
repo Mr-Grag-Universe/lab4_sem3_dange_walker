@@ -1,3 +1,5 @@
+#include <SFML/Graphics.hpp>
+
 #include "../weapon/Sward.hpp"
 
 #include "../Object.hpp"
@@ -51,4 +53,12 @@ void Character::read(std::ifstream & file) {
             break;
         }
     }
+}
+
+void Character::draw(sf::RenderWindow & window) {
+    window.draw(sprite);
+}
+
+void draw_backpack_menu(sf::RenderWindow & window) {
+    
 }

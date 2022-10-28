@@ -36,6 +36,8 @@ set(SOURCES
    static/first_room.txt
 
    main.cpp
+   backpack_menu.cpp
+   interraction.cpp
    Object.cpp
    Object.hpp
    World.cpp

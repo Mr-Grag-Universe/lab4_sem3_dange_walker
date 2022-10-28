@@ -11,25 +11,10 @@
 
 #include "all_headers.hpp"
 
-int main(int argc, char *argv[]) {
-    sf::VideoMode mode = sf::VideoMode::getDesktopMode();
-    std::cout << "desktop: (" << mode.size.x << "; " << mode.size.y << ")\n";
-    sf::Vector2u size((int) mode.size.x, (int) mode.size.y);
-    // sf::RenderWindow window(sf::VideoMode(sf::Vector2u(WIDTH, HEIGHT)), "Walker Game");
-    sf::RenderWindow window(sf::VideoMode(size), "Walker Game");
 
-    // window.setVerticalSyncEnabled(true);
-    window.setFramerateLimit(60);
-
-
-    // std::vector <std::unique_ptr<Obj>> things = World::load_things_from_file("/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/static/first_room.txt");
-    World world("/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/static/first_room.txt");
-    world.add_things_from_file("/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/static/containers.txt");
-    world.add_character("/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/static/hero.txt");
-
-
-    while (window.isOpen()) {
-        Map map(world);
+void menu(sf::RenderWindow & window, World & world) {
+    while (window.isOpen() && world.get_game_mode() == World::MENU) {
+        // Map map(world);
         // проверить все события окна, которые были вызваны с последней итерации цикла
         sf::Event event;
         if (window.pollEvent(event)) {
@@ -49,7 +34,7 @@ int main(int argc, char *argv[]) {
 
 
         // очищаем окно и заливаем черным цветом
-        window.clear(sf::Color::Black);
+        window.clear(sf::Color::Cyan);
 
         // создаём карту объектов, которые видны герою
         // map = Map(world);
@@ -57,7 +42,7 @@ int main(int argc, char *argv[]) {
         // std::cout << "hero position: (" << map.get_hero().get_sprite().getPosition().x << ", " << map.get_hero().get_position().second << ")\n";
 
         // отрисовываем карту
-        Draw::draw_map(window, map);
+        Draw::draw_backpack_menu(window, world);
 
         // конец текущего кадра - отображаем
         window.display();
@@ -65,6 +50,4 @@ int main(int argc, char *argv[]) {
         // int a = 0;
         // std::cin >> a;
     }
-
-    return 0;
 }

@@ -18,3 +18,7 @@ void Draw::draw_map(sf::RenderWindow & window, const Map & map) {
     }
     window.draw(hero_s);
 }
+
+void Draw::draw_backpack_menu(sf::RenderWindow & window, const World & world) {
+    std::cout << "hi";
+}

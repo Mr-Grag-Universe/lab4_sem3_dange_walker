@@ -17,6 +17,13 @@
 #include "alive_obj/Character.hpp"
 
 class World {
+public:
+    enum GameMode {
+        RUN,
+        STOP,
+        MENU,
+        BACKPACK_MENU,
+    };
 private:
     struct Env {
         std::vector <std::shared_ptr<Wall>*>  walls;
@@ -30,6 +37,8 @@ private:
     size_t W, H;
 
     std::vector <std::shared_ptr<Obj>> all_things;
+
+    GameMode mode = RUN;
 public:
     static std::shared_ptr<Obj> load_object(std::string name, std::ifstream & file);
 
@@ -48,8 +57,13 @@ public:
     ~World() = default;
 
     void add_character(const std::string & file_name);
-    void interraction(sf::Event & event);
+    void interraction(sf::Event & event, sf::RenderWindow & window);
     void iterate();
+    GameMode get_game_mode()
+    { return mode; }
+
+    void game_interraction(sf::Event & event, sf::RenderWindow & window);
+    void menu_interraction(sf::Event & event, sf::RenderWindow & window);
 };
 
 #endif
