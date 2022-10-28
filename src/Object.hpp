@@ -5,6 +5,7 @@
 #include <vector>
 #include <fstream>
 #include <map>
+#include <set>
 #include <string>
 
 #include <SFML/Graphics.hpp>

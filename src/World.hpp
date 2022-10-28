@@ -6,6 +6,7 @@
 #include <vector>
 #include <string>
 #include <map>
+#include <set>
 
 #include <SFML/System.hpp>
 
@@ -15,7 +16,9 @@
 #include "environment/Door.hpp"
 #include "environment/Floor.hpp"
 #include "alive_obj/Character.hpp"
+#include "alive_obj/NPC.hpp"
 
+static const std::set<ObjectType> alive_types = { CHARACTER, SLIME };
 class World {
 public:
     enum GameMode {
@@ -30,6 +33,7 @@ private:
         std::vector <std::shared_ptr<Floor>*> floor;
         std::vector <std::shared_ptr<Door>*>  doors;
     };
+    
 
     Character hero;
     Env env;
@@ -37,6 +41,7 @@ private:
     size_t W, H;
 
     std::vector <std::shared_ptr<Obj>> all_things;
+    std::vector <std::shared_ptr<NPC>> all_npc;
 
     GameMode mode = RUN;
 public:
