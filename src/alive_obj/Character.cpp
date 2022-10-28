@@ -59,6 +59,6 @@ void Character::draw(sf::RenderWindow & window) {
     window.draw(sprite);
 }
 
-void draw_backpack_menu(sf::RenderWindow & window) {
+void Character::draw_backpack_menu(sf::RenderWindow & window) {
     
 }

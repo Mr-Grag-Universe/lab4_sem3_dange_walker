@@ -18,8 +18,10 @@ enum ObjectType {
     ALIVE,
     CHEST,
     BACKPACK,
-    CHARACTER,
     SWARD,
+
+    CHARACTER,
+    SLIME,
 
     WEAPON,
 };
@@ -27,12 +29,16 @@ enum ObjectType {
 #ifndef MY_TYPES
 #define MY_TYPES
 inline std::map <std::string, enum ObjectType> types = {
-    { "floor",      FLOOR    },
-    { "door" ,      DOOR     },
-    { "wall" ,      WALL     },
-    { "chest",      CHEST    },
-    { "sward",      SWARD    },
-    { "backpack",   BACKPACK },
+    { "floor",      FLOOR     },
+    { "door" ,      DOOR      },
+    { "wall" ,      WALL      },
+    { "chest",      CHEST     },
+    { "sward",      SWARD     },
+    { "backpack",   BACKPACK  },
+
+    { "hero",       CHARACTER },
+    { "slime",      SLIME     },
+
 
     { "weapon",     WEAPON   },
 };

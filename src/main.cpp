@@ -25,6 +25,7 @@ int main(int argc, char *argv[]) {
     // std::vector <std::unique_ptr<Obj>> things = World::load_things_from_file("/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/static/first_room.txt");
     World world("/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/static/first_room.txt");
     world.add_things_from_file("/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/static/containers.txt");
+    world.add_things_from_file("/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/static/npc.txt");
     world.add_character("/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/static/hero.txt");
 
 

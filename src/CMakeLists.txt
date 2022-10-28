@@ -50,6 +50,7 @@ set(SOURCES
    
    alive_obj/Alive.cpp
    alive_obj/Character.cpp
+   alive_obj/Slime.cpp
 
    physics/Hitbox.cpp
    draw/Draw.cpp

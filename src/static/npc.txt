@@ -1,0 +1,9 @@
+slime
+    350 300
+    0 4
+    32 32
+    static/slime.png
+    1 1
+
+    10
+    100

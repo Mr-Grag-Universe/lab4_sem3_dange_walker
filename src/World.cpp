@@ -16,6 +16,7 @@
 #include "environment/Door.hpp"
 #include "environment/Wall.hpp"
 #include "alive_obj/Character.hpp"
+#include "alive_obj/Slime.hpp"
 #include "containers/Box.hpp"
 #include "containers/Chest.hpp"
 #include "weapon/Sward.hpp"
@@ -63,6 +64,8 @@ std::shared_ptr<Obj> World::load_object(std::string type, std::ifstream & file) 
         case SWARD:
             obj = std::make_shared<Sward>();
             break;
+        case SLIME:
+            obj = std::make_shared<Slime>();
         default:
             break;
     }
