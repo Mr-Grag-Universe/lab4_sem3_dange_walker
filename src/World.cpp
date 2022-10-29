@@ -2,6 +2,7 @@
 #include <iostream>
 #include <fstream>
 #include <map>
+#include <cmath>
 
 #include <SFML/Graphics.hpp>
 #include <SFML/System.hpp>
@@ -194,6 +195,31 @@ void World::interraction(sf::Event & event, sf::RenderWindow & window) {
 }
 
 void World::iterate() {
+    std::pair <unsigned int, unsigned int> p_h = hero.get_position();
+    for (size_t i = 0; i < all_npc.size(); ++i) {
+        if (all_npc[i]->get_attitude() == NPC::BAD)
+            if (distance(all_npc[i]->get_position(), p_h) < all_npc[i]->get_visability_radius()) {
+                all_npc[i]->set_velocity(3);
+                std::pair <unsigned int, unsigned int> p_o = all_npc[i]->get_position();
+                double d_x = (double) p_h.first - (double) p_o.first;
+                double d_y = (double) p_h.second - (double) p_o.second;
+                double a = atan(d_y/d_x);
+                all_npc[i]->set_v_angle(a);
+            }
+    }
+
+    for (size_t i = 0; i < all_npc.size(); ++i) {
+        if (all_npc[i]->is_mobile()) {
+            double v = all_npc[i]->get_velocity();
+            if (v == 0)
+                continue;
+            double a = all_npc[i]->get_v_angle();
+            int v_x = v * cos(a);
+            int v_y = v * sin(a);
+            all_npc[i]->move(v_x, v_y);
+        }
+    }
+    
     return;
 }
 

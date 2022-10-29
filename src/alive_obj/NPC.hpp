@@ -14,6 +14,8 @@ public:
 protected:
     Attitude attitude = GOOD;
 public:
+    Attitude get_attitude()
+    { return attitude; }
     NPC() {}
     ~NPC() {}
 };

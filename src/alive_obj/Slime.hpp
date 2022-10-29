@@ -10,6 +10,7 @@ public:
     Slime() {
         health = 10;
         attitude = BAD;
+        collider.mobility = true;
     }
     ~Slime() {}
 

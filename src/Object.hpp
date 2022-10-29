@@ -90,6 +90,17 @@ public:
     const std::string & get_name() const
     { return name; }
     void move(int x, int y);
+
+    double get_velocity() const
+    { return collider.velocity; }
+    double get_v_angle() const
+    { return collider.moving_angle; }
+    bool is_mobile()
+    { return collider.mobility; }
+    void set_velocity(double v) 
+    { collider.velocity = v; }
+    void set_v_angle(double a)
+    { collider.moving_angle = a; }
 private:
     ObjectType type;
 };
