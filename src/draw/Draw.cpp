@@ -16,6 +16,12 @@ void Draw::draw_map(sf::RenderWindow & window, const Map & map) {
         const sf::Sprite & s = (*at[i])->get_sprite();
         window.draw(s);
     }
+
+    const std::vector <std::shared_ptr<NPC>> & npc = map.get_all_npcs();
+    for (size_t i = 0, l = npc.size(); i < l; ++i) {
+        const sf::Sprite & s = npc[i]->get_sprite();
+        window.draw(s);
+    }
     window.draw(hero_s);
 }
 

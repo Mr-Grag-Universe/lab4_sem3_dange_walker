@@ -73,6 +73,18 @@ std::shared_ptr<Obj> World::load_object(std::string type, std::ifstream & file) 
     return obj;
 }
 
+std::shared_ptr<NPC> World::load_npc(std::string type, std::ifstream & file) {
+    std::shared_ptr<NPC> obj;
+    switch (types[type]) {
+        case SLIME:
+            obj = std::make_shared<Slime>();
+        default:
+            break;
+    }
+    obj->read(file);
+    return obj;
+}
+
 std::vector <std::shared_ptr<Obj>> World::load_things_from_file(const std::string & file_name) {
     std::cout << "#=#=#=#=# opening fstream with \"" << file_name << "\" file..." << std::endl;
     std::ifstream file(file_name);
@@ -89,17 +101,34 @@ std::vector <std::shared_ptr<Obj>> World::load_things_from_file(const std::strin
             continue;
         }
         std::cout << "object type: " << type << "\n";
-        /*for (size_t i = 0; i < number; ++i) {
-            std::pair<unsigned int, unsigned int> position = std::make_pair(x+i*width, y);
-            std::pair <unsigned int, unsigned int> position_in = std::make_pair(x_in, y_in);
-            std::pair <unsigned int, unsigned int> scale = std::make_pair(width, height);
-
-            std::shared_ptr<Obj> obj = load_object(name, file);
-            obj->set_texture(source_file_name, position_in, scale);
-            obj->set_position(position);
-            v.push_back(std::move(obj));
-        }*/
         v.push_back(load_object(type, file));
+    }
+
+    file.close();
+
+    return v;
+}
+
+std::vector <std::shared_ptr<NPC>> World::load_npcs_from_file(const std::string & file_name) {
+    std::cout << "#=#=#=#=# opening fstream with \"" << file_name << "\" file..." << std::endl;
+    std::ifstream file(file_name);
+    if (!file) {
+        std::cout << "cannot find this file: " << file_name << std::endl;
+        throw std::invalid_argument("cannot find stream file");
+    }
+
+    std::string type;
+    std::vector <std::shared_ptr<NPC>> v;
+    while (file >> type) {
+        if (type.substr(0, 2) == "//") {
+            std::cout << type << "\n";
+            continue;
+        }
+        std::cout << "npc type: " << type << "\n";
+        if (alive_types.find(types[type]) != alive_types.end())
+            v.push_back(load_npc(type, file));
+        else
+            throw std::runtime_error("this is not npc in file: " + file_name);
     }
 
     file.close();
@@ -193,4 +222,14 @@ void World::add_things_from_file(const std::string & file_name) {
             break;
         }
     }
+}
+
+void World::add_npcs_from_file(const std::string & file_name) {
+    std::vector <std::shared_ptr<NPC>> npcs = load_npcs_from_file(file_name);
+
+    all_npc.insert(
+        all_npc.end(),
+        std::make_move_iterator(npcs.begin()),
+        std::make_move_iterator(npcs.end())
+    );
 }
