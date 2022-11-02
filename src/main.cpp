@@ -11,6 +11,7 @@
 
 #include "all_headers.hpp"
 
+
 int main(int argc, char *argv[]) {
     sf::VideoMode mode = sf::VideoMode::getDesktopMode();
     std::cout << "desktop: (" << mode.size.x << "; " << mode.size.y << ")\n";
@@ -21,12 +22,12 @@ int main(int argc, char *argv[]) {
     // window.setVerticalSyncEnabled(true);
     window.setFramerateLimit(60);
 
-
     // std::vector <std::unique_ptr<Obj>> things = World::load_things_from_file("/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/static/first_room.txt");
-    World world("/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/static/first_room.txt");
-    world.add_things_from_file("/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/static/containers.txt");
-    world.add_npcs_from_file("/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/static/npc.txt");
-    world.add_character("/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/static/hero.txt");
+    // std::cout << static_path;
+    World world(static_path / first_room);
+    world.add_things_from_file(static_path / containers);
+    world.add_npcs_from_file(static_path / npc_file);
+    world.add_character(static_path / hero_file);
 
 
     while (window.isOpen()) {

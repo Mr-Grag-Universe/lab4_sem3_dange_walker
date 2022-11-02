@@ -2,29 +2,29 @@ floor
     300 300
     0 0
     16 16 
-    static/cobbles2.png 
+    cobbles2.png 
     50 1
 floor
     300 316
     0 0
     16 16
-    static/cobbles2.png
+    cobbles2.png
     50 1
 floor
     300 332
     0 0
     16 16
-    static/cobbles2.png
+    cobbles2.png
     50 1
 floor
     300 348
     0 0
     16 16
-    static/cobbles2.png
+    cobbles2.png
     50 1
 floor
     300 364
     0 0
     16 16
-    static/cobbles2.png
+    cobbles2.png
     50 50

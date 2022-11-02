@@ -4,6 +4,7 @@ project(game)
 set(CMAKE_CXX_STANDARD 20)
 # set(CMAKE_PREFIX_PATH C:/Users/Stephan/Desktop/vs_code_game/SFML-2.5.1)
 
+set(STATIC_FILES_SRC_PATH "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/static/")
 # Detect and add SFML
 set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake_modules" ${CMAKE_MODULE_PATH})
 # # set(SFML_DIR C:/Users/Stephan/Desktop/vs_code_game/SFML-2.5.1/lib/cmake/SFML)

@@ -13,31 +13,37 @@
 
 void World::game_interraction(sf::Event & event, sf::RenderWindow & window) {
     std::cout << "game interraction" << std::endl;
-    switch (event.key.code) {
-    case sf::Keyboard::A : {
-        hero.move(-10, 0);
-        break;
-    }
-    case sf::Keyboard::D : {
-        hero.move(10, 0);
-        break;
-    }
-    case sf::Keyboard::W : {
-        hero.move(0, -10);
-        break;
-    }
-    case sf::Keyboard::S : {
-        hero.move(0, 10);
-        break;
-    }
-    case sf::Keyboard::Tab: {
-        this->mode = MENU;
-        std::cout << "menu has been opened" << std::endl;
-        menu(window, *this);
-        break;
-    }    
-    default:
-        break;
+    if (event.type == sf::Event::KeyPressed) {
+        switch (event.key.code) {
+        case sf::Keyboard::A : {
+            hero.move(-10, 0);
+            break;
+        }
+        case sf::Keyboard::D : {
+            hero.move(10, 0);
+            break;
+        }
+        case sf::Keyboard::W : {
+            hero.move(0, -10);
+            break;
+        }
+        case sf::Keyboard::S : {
+            hero.move(0, 10);
+            break;
+        }
+        case sf::Keyboard::Tab: {
+            this->mode = MENU;
+            std::cout << "menu has been opened" << std::endl;
+            menu(window, *this);
+            break;
+        }
+        default:
+            break;
+        }
+    } else if (event.type == sf::Event::MouseButtonPressed) {
+        if (event.mouseButton.button == sf::Mouse::Left) {
+            std::cout << "LBM pressed" << std::endl;
+        }
     }
 }
 void World::menu_interraction(sf::Event & event, sf::RenderWindow & window) {

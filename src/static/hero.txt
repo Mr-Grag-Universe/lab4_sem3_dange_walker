@@ -1,5 +1,5 @@
 Stefan
-static/char.png
+char.png
 32 64
 32 32
 

@@ -19,3 +19,8 @@ void Sward::read(std::ifstream & file) {
     // std::shared_ptr<Obj> res = std::make_shared<Sward>(name, damage, radius);
     // return res;
 }
+
+MW_Wave Sward::wave() {
+    MW_Wave wave;
+    return wave;
+}

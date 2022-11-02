@@ -7,6 +7,8 @@
 #include <map>
 #include <set>
 #include <string>
+#include <filesystem>
+namespace fs = std::filesystem;
 
 #include <SFML/Graphics.hpp>
 
@@ -25,6 +27,8 @@ enum ObjectType {
     SLIME,
 
     WEAPON,
+
+    MW_WAVE,
 };
 
 #ifndef MY_TYPES
@@ -41,7 +45,9 @@ inline std::map <std::string, enum ObjectType> types = {
     { "slime",      SLIME     },
 
 
-    { "weapon",     WEAPON   },
+    { "weapon",     WEAPON    },
+
+    { "mw_wave",    MW_WAVE   },
 };
 #endif
 
@@ -69,7 +75,7 @@ public:
 
     virtual ObjectType get_type() = 0;
     virtual void read(std::ifstream & ) = 0;
-    void set_texture(std::string, std::pair<unsigned int, unsigned int> p_in, std::pair<unsigned int, unsigned int> scale, std::pair<unsigned int, unsigned int> n_repeat);
+    void set_texture(fs::path file_path, std::pair<unsigned int, unsigned int> p_in, std::pair<unsigned int, unsigned int> scale, std::pair<unsigned int, unsigned int> n_repeat);
     void set_sprite_position(std::pair<unsigned int, unsigned int> p);
 
 protected:

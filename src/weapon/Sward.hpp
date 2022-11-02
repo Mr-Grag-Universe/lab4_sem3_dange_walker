@@ -20,6 +20,7 @@ public:
     ~Sward() {}
 
     void read(std::ifstream &);
+    MW_Wave wave();
 };
 
 

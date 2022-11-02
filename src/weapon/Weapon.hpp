@@ -4,10 +4,11 @@
 #include "../Object.hpp"
 
 class Weapon : public Obj {
-private:
-    
+protected:
+    size_t recharge_time = 0;
 public:
-    Weapon() = default;
+    Weapon() {}
+    ~Weapon() {}
 };
 
 #endif // WEAPON

@@ -9,7 +9,7 @@ chest
     300 300                     
     0 0                         
     56 64                       
-    static/chest_and_key.png    
+    chest_and_key.png    
     1                           
         sward
             sward_1
