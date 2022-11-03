@@ -27,6 +27,7 @@ int main(int argc, char *argv[]) {
     World world(static_path / first_room);
     world.add_things_from_file(static_path / containers);
     world.add_npcs_from_file(static_path / npc_file);
+    world.add_effects_from_file(static_path / effect_file);
     world.add_character(static_path / hero_file);
 
 

@@ -20,7 +20,7 @@ void Sward::read(std::ifstream & file) {
     // return res;
 }
 
-MW_Wave Sward::wave() {
-    MW_Wave wave;
+MW_Wave Sward::wave(double r, std::shared_ptr<Alive> o) {
+    MW_Wave wave(r, o);
     return wave;
 }

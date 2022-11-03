@@ -29,5 +29,6 @@ static fs::path first_room("first_room.txt");
 static fs::path containers("containers.txt");
 static fs::path npc_file("npc.txt");
 static fs::path hero_file("hero.txt");
+static fs::path effect_file("effects_src.txt");
 
 #endif

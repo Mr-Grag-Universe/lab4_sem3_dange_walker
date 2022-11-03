@@ -137,6 +137,51 @@ std::vector <std::shared_ptr<NPC>> World::load_npcs_from_file(const std::string 
     return v;
 }
 
+std::map<ObjectType, std::shared_ptr<sf::Texture>> World::load_effects_from_file(const std::string & file_name) {
+    std::cout << "#=#=#=#=# opening fstream with \"" << file_name << "\" file..." << std::endl;
+    std::ifstream file(file_name);
+    if (!file) {
+        std::cout << "cannot find this file: " << file_name << std::endl;
+        throw std::invalid_argument("cannot find stream file");
+    }
+
+    std::string type;
+    std::map<ObjectType, std::shared_ptr<sf::Texture>> effects;
+    fs::path file_path;
+    size_t x_in{}, y_in{};
+    size_t width{}, height{};
+    double n_repeat_x{}, n_repeat_y;
+    while (file >> type) {
+        if (type.substr(0, 2) == "//") {
+            std::cout << type << "\n";
+            continue;
+        }
+        file >> x_in >> y_in;
+        file >> width >> height;
+        file >> n_repeat_x >> n_repeat_y;
+        //std::(file, file_path);
+        file >> file_path;
+        std::cout << "effect type: " << type << "\n";
+        if (effect_types.find(types[type]) != effect_types.end()) {
+            effects[types[type]] = std::make_shared<sf::Texture>();
+            sf::Vector2 position_in((int) x_in, (int) y_in);
+            sf::Vector2 size_f((float) (width * n_repeat_x), (float) (height * n_repeat_y));
+            sf::Vector2 size_i((int) (width), (int) (height));
+            sf::Vector2 size_r((int) (width * n_repeat_x), (int) (height * n_repeat_y));
+            if (!effects[types[type]]->loadFromFile(static_path / file_path, sf::IntRect(position_in, size_i))) {
+                std::cout << "cannot read texture from file : " << file_path << std::endl;
+                throw std::invalid_argument("there is not such file with texture");
+            }
+        }
+        else
+            throw std::runtime_error("this is not effect in file: " + file_name);
+    }
+
+    file.close();
+
+    return effects;
+}
+
 void World::add_character(const std::string & file_name) {
     if (file_name.empty()) {
         std::cout << "empty name of file with char sprite" << std::endl;
@@ -261,4 +306,14 @@ void World::add_npcs_from_file(const std::string & file_name) {
         std::make_move_iterator(npcs.begin()),
         std::make_move_iterator(npcs.end())
     );
+}
+
+
+void World::add_effects_from_file(const std::string & file_name) {
+    try {
+        effects_textures = load_effects_from_file(file_name);
+    } catch (...) {
+        std::cout << "cannot read effects from " << file_name << std::endl;
+        throw std::runtime_error("cannot read effects from this file");
+    }
 }

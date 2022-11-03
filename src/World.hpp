@@ -17,8 +17,10 @@
 #include "environment/Floor.hpp"
 #include "alive_obj/Character.hpp"
 #include "alive_obj/NPC.hpp"
+#include "Effect.hpp"
 
 static const std::set<ObjectType> alive_types = { CHARACTER, SLIME };
+static const std::set<ObjectType> effect_types = { MW_WAVE };
 class World {
 public:
     enum GameMode {
@@ -42,6 +44,8 @@ private:
 
     std::vector <std::shared_ptr<Obj>> all_things;
     std::vector <std::shared_ptr<NPC>> all_npc;
+    std::vector <std::shared_ptr<Effect>> all_effects;
+    std::map<ObjectType, std::shared_ptr<sf::Texture>> effects_textures;
 
     GameMode mode = RUN;
 public:
@@ -58,6 +62,7 @@ public:
 
     static std::vector <std::shared_ptr<Obj>> load_things_from_file(const std::string & file_name);
     static std::vector <std::shared_ptr<NPC>> load_npcs_from_file(const std::string & file_name);
+    static std::map<ObjectType, std::shared_ptr<sf::Texture>> load_effects_from_file(const std::string & file_name);
 
     World() : W(sf::VideoMode::getDesktopMode().size.x), H(sf::VideoMode::getDesktopMode().size.y) {}
     World(std::vector <std::shared_ptr<Obj>> things);
@@ -66,6 +71,7 @@ public:
 
     void add_things_from_file(const std::string & file_name);
     void add_npcs_from_file(const std::string & file_name);
+    void add_effects_from_file(const std::string & file_name);
     void add_character(const std::string & file_name);
     void interraction(sf::Event & event, sf::RenderWindow & window);
     void iterate();

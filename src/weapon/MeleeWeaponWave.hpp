@@ -8,8 +8,9 @@
 
 #include "../alive_obj/Alive.hpp"
 #include "../Object.hpp"
+#include "../Effect.hpp"
 
-class MW_Wave : public Obj {
+class MW_Wave : public Obj, public Effect {
 protected:
     double radius = 0;
     std::shared_ptr<Alive> originator;

@@ -31,6 +31,10 @@ enum ObjectType {
     MW_WAVE,
 };
 
+enum EffectType {
+    MW_Wawe_effect,
+};
+
 #ifndef MY_TYPES
 #define MY_TYPES
 inline std::map <std::string, enum ObjectType> types = {
