@@ -20,6 +20,8 @@ protected:
 public:
     bool makes_damage() const
     { return true; }
+    const Alive & get_originator_ptr() const
+    { return originator; }
     ObjectType get_type()
     { return MW_WAVE; }
     void read(std::ifstream & file) {

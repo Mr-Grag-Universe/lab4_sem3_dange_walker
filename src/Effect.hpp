@@ -9,6 +9,7 @@ private:
     sf::Clock clock;
 public:
     virtual bool makes_damage() const = 0;
+    virtual const Alive & get_originator_ptr() const = 0;
     Effect() {};
     ~Effect() {};
     Effect(const Effect &) = default;
