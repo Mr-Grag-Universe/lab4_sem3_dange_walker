@@ -8,12 +8,14 @@
 #include "Alive.hpp"
 #include "../containers/BackPack.hpp"
 #include "../weapon/Weapon.hpp"
+#include "../world.hpp"
 
 class Character : public Alive {
 protected:
     BackPack backpack;
     std::shared_ptr<Weapon> weapon;
 public:
+    void fill_backpack();
     ObjectType get_type() override
     { return CHARACTER; }
     Character() {}
@@ -22,6 +24,7 @@ public:
     void read(std::ifstream & file) override;
     void draw(sf::RenderWindow & window);
     void draw_backpack_menu(sf::RenderWindow & window);
+    void use_weapon(World & w);
 };
 
 #endif

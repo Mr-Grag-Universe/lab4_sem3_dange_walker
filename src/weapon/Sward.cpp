@@ -20,7 +20,16 @@ void Sward::read(std::ifstream & file) {
     // return res;
 }
 
-MW_Wave Sward::wave(double r, std::shared_ptr<Alive> o) {
-    MW_Wave wave(r, o);
+MW_Wave Sward::wave(World & w, double r, Alive & o) {
+    MW_Wave wave(w, r, o);
+    wave.set_position(o.get_position());
+    wave.set_texture(w.get_effect_texture(MW_WAVE));
+    sf::Vector2 p_v((float) 1910/2, (float) 1080/2);
+    sprite.setPosition(p_v);
+    w.add_effect(std::make_shared<MW_Wave>(wave));
     return wave;
+}
+
+void Sward::use(World & w, Alive & o) {
+    wave(w, radius, o);
 }

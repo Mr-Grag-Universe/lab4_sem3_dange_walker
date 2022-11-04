@@ -30,6 +30,26 @@ int main(int argc, char *argv[]) {
     world.add_effects_from_file(static_path / effect_file);
     world.add_character(static_path / hero_file);
 
+    window.clear(sf::Color::Black);
+    std::shared_ptr<sf::Texture> texture = world.get_effect_texture(MW_WAVE);
+    sf::Vector2 position_in((int) 0, (int) 0);
+    std::pair <unsigned int, unsigned int> scale(100, 100);
+    fs::path file_path("weapon_effects_sprites/Big_Preview.png");
+    sf::Vector2 size_f((float) (scale.first), (float) (scale.second));
+    sf::Vector2 size_i((int) (scale.first), (int) (scale.second));
+    sf::Vector2 size_r((int) (scale.first), (int) (scale.second));
+    // if (!texture->loadFromFile(static_path / file_path, sf::IntRect(position_in, size_i))) {
+    //     std::cout << "cannot read texture from file : " << file_path << std::endl;
+    //    throw std::invalid_argument("there is not such file with texture");
+    //}
+
+    sf::Sprite sprite;
+    sprite.setTexture(*texture);
+    sf::Vector2 p_v((float) 1910/2, (float) 1080/2);
+    sprite.setPosition(p_v);
+    window.draw(sprite);
+    window.display();
+    window.draw(sprite);
 
     while (window.isOpen()) {
         Map map(world);

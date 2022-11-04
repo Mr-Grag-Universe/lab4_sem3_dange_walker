@@ -1,8 +1,10 @@
 #include <SFML/Graphics.hpp>
 
 #include "../weapon/Sward.hpp"
+#include "../constants.hpp"
 
 #include "../Object.hpp"
+#include "../world.hpp"
 #include "Character.hpp"
 
 void Character::read(std::ifstream & file) {
@@ -19,12 +21,12 @@ void Character::read(std::ifstream & file) {
         throw std::runtime_error("file reading error");
     }
 
-    // hero.set_position(std::make_pair(W/2, H/2));
+    this->set_position(std::make_pair(WIDTH, HEIGHT));
     std::pair <unsigned int, unsigned int> position_in = std::make_pair(x_in, y_in);
     std::pair <unsigned int, unsigned int> scale = std::make_pair(width, height);
     
     this->set_texture(src, position_in, scale, std::make_pair(1, 1));
-    // this->set_sprite_position(std::make_pair(W/2, H/2));
+    this->set_sprite_position(std::make_pair(WIDTH, HEIGHT));
     
     std::string type;
     while (file >> type) {
@@ -61,4 +63,13 @@ void Character::draw(sf::RenderWindow & window) {
 
 void Character::draw_backpack_menu(sf::RenderWindow & window) {
     
+}
+
+void Character::use_weapon(World & w) {
+    weapon->use(w, *this);
+    std::cout << "character used weapon" << std::endl;
+}
+
+void fill_backpack() {
+    // backpack.read();
 }

@@ -189,6 +189,13 @@ void World::add_character(const std::string & file_name) {
     }
     std::ifstream file;
     file.open(file_name);
+    hero.read(file);
+    hero.set_position(std::make_pair(W/2, H/2));
+    hero.set_sprite_position(std::make_pair(W/2, H/2));
+    std::cout << "initial hero position: (" << hero.get_position().first << ", " << hero.get_position().second << ")\n";
+    file.close();
+    return;
+
     std::string name;
     std::string src_file_name;
     unsigned int x_in{}, y_in{};
@@ -211,6 +218,20 @@ void World::add_character(const std::string & file_name) {
     hero.set_sprite_position(std::make_pair(W/2, H/2));
     std::cout << "initial hero position: (" << hero.get_position().first << ", " << hero.get_position().second << ")\n";
     // hero.tesetOutlineThickness(10);
+
+    std::string type;
+    while (file >> type) {
+        switch (types[type]) {
+        case BACKPACK: {
+            //hero.
+            break;
+        }
+        
+        default:
+            break;
+        }
+    }
+
     file.close();
 }
 
@@ -231,6 +252,15 @@ void World::interraction(sf::Event & event, sf::RenderWindow & window) {
         hero.set_sprite_position(std::make_pair(W/2, H/2));
         std::cout << "new width: " << event.size.width << std::endl;
         std::cout << "new height: " << event.size.height << std::endl;
+        break;
+    }
+    case sf::Event::MouseButtonPressed: {
+        if (this->mode == RUN) {
+            game_interraction(event, window);
+        } else if (this->mode == MENU) {
+            menu_interraction(event, window);
+        }
+
         break;
     }
     default:
@@ -268,6 +298,13 @@ void World::iterate() {
         }
     }
     
+    for (size_t i = 0; i < all_effects.size(); ++i) {
+        if (all_effects[i]->get_time() > sf::seconds(1)) {
+            all_effects.erase(all_effects.begin() + i);
+            i--;
+        }
+    }
+
     return;
 }
 

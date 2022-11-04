@@ -38,12 +38,18 @@ void World::game_interraction(sf::Event & event, sf::RenderWindow & window) {
             break;
         }
         default:
+            std::cout << "other event" << std::endl;
             break;
         }
     } else if (event.type == sf::Event::MouseButtonPressed) {
         if (event.mouseButton.button == sf::Mouse::Left) {
             std::cout << "LBM pressed" << std::endl;
+            hero.use_weapon(*this);
         }
+    }
+    if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
+        std::cout << "LBM pressed" << std::endl;
+        hero.use_weapon(*this);
     }
 }
 void World::menu_interraction(sf::Event & event, sf::RenderWindow & window) {

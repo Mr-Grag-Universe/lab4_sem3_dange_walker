@@ -1,6 +1,5 @@
 mw_wave
     0 0
-    16 16
+    100 100
     1 1
-    weapon_effects_sprites/Alternative_1/1/Alternative_1_01.png
-    
+    weapon_effects_sprites/Big_Preview.png

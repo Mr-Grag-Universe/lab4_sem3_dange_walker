@@ -22,6 +22,13 @@ void Draw::draw_map(sf::RenderWindow & window, const Map & map) {
         const sf::Sprite & s = npc[i]->get_sprite();
         window.draw(s);
     }
+
+    const std::vector <std::shared_ptr<Effect>> & eff = map.get_all_effects();
+    for (size_t i = 0, l = eff.size(); i < l; ++i) {
+        const sf::Sprite & s = eff[i]->get_sprite();
+        window.draw(s);
+    }
+
     window.draw(hero_s);
 }
 

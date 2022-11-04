@@ -7,6 +7,10 @@ backpack
     backpack_1
     1
     100
+    0 0
+    0 0
+    16 16
+    backpack.png
     1
         sward
             sward_2

@@ -12,7 +12,7 @@ protected:
 public:
     MeleeWeapon() {}
     ~MeleeWeapon() {}
-    virtual MW_Wave wave(double r, std::shared_ptr<Alive> o) = 0;
+    virtual MW_Wave wave(World & w, double r, Alive& o) = 0;
 };
 
 

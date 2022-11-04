@@ -17,10 +17,12 @@ public:
     Sward() {}
     Sward(std::string n, int d=0, size_t r=0);
     Sward(std::string n, std::pair<unsigned int, unsigned int> p);
+    Sward(const Sward & s) = default;
     ~Sward() {}
 
     void read(std::ifstream &);
-    MW_Wave wave(double r, std::shared_ptr<Alive> o);
+    void use(World & w, Alive & o);
+    MW_Wave wave(World & w, double r, Alive & o);
 };
 
 

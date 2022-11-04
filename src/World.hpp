@@ -51,12 +51,15 @@ private:
 public:
     static std::shared_ptr<Obj> load_object(std::string name, std::ifstream & file);
     static std::shared_ptr<NPC> load_npc(std::string type, std::ifstream & file);
+    std::shared_ptr<sf::Texture> get_effect_texture(ObjectType type)
+    { return effects_textures[type]; }
 
     size_t get_W() const { return W; }
     size_t get_H() const { return H; }
     const Character & get_hero() const { return hero; }
     const std::vector <std::shared_ptr<Obj>> & get_all_things() const { return all_things; }
     const std::vector <std::shared_ptr<NPC>> & get_all_npcs() const { return all_npc; }
+    const std::vector <std::shared_ptr<Effect>> & get_all_effects() const { return all_effects; }
     
     const Env & get_env() const { return env; }
 
@@ -73,6 +76,10 @@ public:
     void add_npcs_from_file(const std::string & file_name);
     void add_effects_from_file(const std::string & file_name);
     void add_character(const std::string & file_name);
+    void add_effect(std::shared_ptr<Effect> effect) {
+        all_effects.push_back(effect);
+    }
+
     void interraction(sf::Event & event, sf::RenderWindow & window);
     void iterate();
     GameMode get_game_mode()
