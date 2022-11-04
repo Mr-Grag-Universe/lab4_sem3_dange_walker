@@ -299,6 +299,16 @@ void World::iterate() {
     }
     
     for (size_t i = 0; i < all_effects.size(); ++i) {
+        if (all_effects[i]->makes_damage()) {
+            for (size_t j = 0; j < all_npc.size(); ++j) {
+                all_effects[i]->make_damage(*(all_npc[j]));
+                if (all_npc[j]->get_helth() == 0) {
+                    std::cout << all_npc[j]->get_name() << "has been killed" << std::endl;
+                    all_npc.erase(all_npc.begin() + j);
+                    j--;
+                }
+            }
+        }
         if (all_effects[i]->get_time() > sf::seconds(1)) {
             all_effects.erase(all_effects.begin() + i);
             i--;

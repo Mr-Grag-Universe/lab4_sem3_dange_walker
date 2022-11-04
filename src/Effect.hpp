@@ -7,8 +7,8 @@
 class Effect : public Obj {
 private:
     sf::Clock clock;
-    /* data */
 public:
+    virtual bool makes_damage() const = 0;
     Effect() {};
     ~Effect() {};
     Effect(const Effect &) = default;
@@ -16,6 +16,8 @@ public:
     void set_texture(std::shared_ptr<sf::Texture> t) {
         sprite.setTexture(*t);
     }
+
+    virtual void make_damage(Alive &) = 0;
 
     sf::Clock & get_clock()
     { return clock; }

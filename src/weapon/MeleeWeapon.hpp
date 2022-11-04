@@ -7,9 +7,11 @@
 
 class MeleeWeapon : public Weapon {
 protected:
-    int damage = 0;
+    double damage = 0;
     size_t radius = 0;
 public:
+    double get_damage()
+    { return damage; }
     MeleeWeapon() {}
     ~MeleeWeapon() {}
     virtual MW_Wave wave(World & w, double r, Alive& o) = 0;

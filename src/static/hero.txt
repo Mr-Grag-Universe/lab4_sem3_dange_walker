@@ -20,4 +20,4 @@ weapon
     sward
         sward_3
         300
-        10
+        100

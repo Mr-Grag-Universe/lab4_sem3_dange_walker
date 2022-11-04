@@ -17,6 +17,9 @@ public:
     { return health; }
     size_t get_visability_radius()
     { return visibility_radius; }
+
+    void set_health(double new_h) { health = new_h; }
+
     Alive() {
 
     }

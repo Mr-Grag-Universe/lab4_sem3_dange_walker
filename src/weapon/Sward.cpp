@@ -21,7 +21,7 @@ void Sward::read(std::ifstream & file) {
 }
 
 MW_Wave Sward::wave(World & w, double r, Alive & o) {
-    MW_Wave wave(w, r, o);
+    MW_Wave wave(w, r, o, damage);
     wave.set_position(o.get_position());
     wave.set_texture(w.get_effect_texture(MW_WAVE));
     sf::Vector2 p_v((float) 1910/2, (float) 1080/2);
