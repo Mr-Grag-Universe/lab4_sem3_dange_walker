@@ -4,6 +4,7 @@
 #include "../Object.hpp"
 #include "../world.hpp"
 #include "../alive_obj/Alive.hpp"
+#include "../Effect.hpp"
 
 class Weapon : public Obj {
 protected:
@@ -12,7 +13,7 @@ public:
     Weapon() {}
     ~Weapon() {}
 
-    virtual void use(World & w, Alive & o) = 0;
+    virtual std::shared_ptr<Effect> use(World & w, Alive & o) = 0;
 };
 
 #endif // WEAPON

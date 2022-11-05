@@ -65,9 +65,9 @@ void Character::draw_backpack_menu(sf::RenderWindow & window) {
     
 }
 
-void Character::use_weapon(World & w) {
-    weapon->use(w, *this);
+std::shared_ptr<Effect> Character::use_weapon() {
     std::cout << "character used weapon" << std::endl;
+    return weapon->use(world, *this);
 }
 
 void fill_backpack() {

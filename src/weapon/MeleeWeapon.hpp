@@ -14,7 +14,7 @@ public:
     { return damage; }
     MeleeWeapon() {}
     ~MeleeWeapon() {}
-    virtual MW_Wave wave(World & w, double r, Alive& o) = 0;
+    virtual std::shared_ptr<MW_Wave> wave(World & w, double r, Alive& o) = 0;
 };
 
 

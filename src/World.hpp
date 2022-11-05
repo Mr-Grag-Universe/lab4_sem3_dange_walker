@@ -37,7 +37,7 @@ private:
     };
     
 
-    Character hero;
+    Character hero = Character(*this);
     Env env;
 
     size_t W, H;
