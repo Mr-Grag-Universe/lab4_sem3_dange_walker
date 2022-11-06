@@ -64,6 +64,9 @@ set(SOURCES
    )
 
 add_executable(game ${SOURCES})
+
+add_subdirectory(my_stl_containers)
+# target_link_libraries(game my_stl)
 # # target_include_directories(sfml_game PUBLIC SFML-2.5.1/include)
 
 # # target_compile_definitions(sfml_game PRIVATE SFML_STATIC)
