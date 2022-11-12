@@ -4,7 +4,6 @@
 #include "../Object.hpp"
 #include "../world.hpp"
 #include "../alive_obj/Alive.hpp"
-#include "../Effect.hpp"
 
 class Weapon : public Obj {
 protected:

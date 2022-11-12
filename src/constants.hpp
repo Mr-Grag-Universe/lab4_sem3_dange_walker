@@ -31,4 +31,10 @@ static fs::path npc_file("npc.txt");
 static fs::path hero_file("hero.txt");
 static fs::path effect_file("effects_src.txt");
 
+
+struct TextureStore {
+    std::vector <std::shared_ptr<sf::Texture>> textures;
+    std::pair <double, double> scale;
+};
+
 #endif

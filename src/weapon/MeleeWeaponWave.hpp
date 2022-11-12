@@ -25,7 +25,6 @@ public:
     ObjectType get_type()
     { return MW_WAVE; }
     void read(std::ifstream & file) {
-        
     }
     void make_damage(Alive & a) {
         if (distance(a.get_position(), position) <= radius) {
@@ -39,9 +38,11 @@ public:
             }
         }
     }
+    void update_texture() {
+    }
 
-    MW_Wave(World & w, double r, Alive & o, double d) : radius(r), originator(o), damage(d) {
-        texture = w.get_effect_texture(MW_WAVE);
+    MW_Wave(World & w, double r, Alive & o, double d) : Effect(w.get_effect_texture(MW_WAVE)), radius(r), originator(o), damage(d) {
+        texture = w.get_effect_texture(MW_WAVE).textures[0];
     }
     MW_Wave(const MW_Wave & w) = default;
     ~MW_Wave() {}

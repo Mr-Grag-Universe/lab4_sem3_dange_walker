@@ -1,5 +1,12 @@
-mw_wave
+mw_wave 2
     0 0
-    100 100
+    144 144
     1 1
-    weapon_effects_sprites/Big_Preview.png
+    0.5 0.5
+    weapon_effects_sprites/Alternative_1/1/Alternative_1_01.png
+    
+    0 0
+    144 144
+    1 1
+    0.5 0.5
+    weapon_effects_sprites/Alternative_1/1/Alternative_1_02.png

@@ -31,8 +31,8 @@ int main(int argc, char *argv[]) {
     world.add_character(static_path / hero_file);
 
     window.clear(sf::Color::Black);
-    std::shared_ptr<sf::Texture> texture = world.get_effect_texture(MW_WAVE);
-    sf::Vector2 position_in((int) 0, (int) 0);
+    std::shared_ptr<sf::Texture> texture = (world.get_effect_texture(MW_WAVE)).textures[0];
+    // sf::Vector2 position_in((int) 0, (int) 0);
     std::pair <unsigned int, unsigned int> scale(100, 100);
     fs::path file_path("weapon_effects_sprites/Big_Preview.png");
     sf::Vector2 size_f((float) (scale.first), (float) (scale.second));

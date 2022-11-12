@@ -1,5 +1,5 @@
 #ifndef SLIME_CLASS_HPP
-#define SLiMA_CLASS_HPP
+#define SLIME_CLASS_HPP
 
 #include "NPC.hpp"
 
