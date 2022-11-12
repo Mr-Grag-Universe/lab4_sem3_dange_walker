@@ -76,7 +76,11 @@ target_link_libraries(game ${OPENGL_gl_LIBRARY})
 
 # # find_package(SFML COMPONENTS graphics REQUIRED)
 find_package(OpenGL REQUIRED)
-target_link_libraries(game sfml-system sfml-window sfml-graphics ${SFML_DEPENDENCIES})
+target_link_libraries(game sfml-system sfml-window sfml-graphics ${SFML_DEPENDENCIES} vector)
+target_include_directories(game
+   PRIVATE
+   my_stl_containers/include
+)
 
 # target_link_libraries(sfml_game ${GLFW})
 # target_link_libraries(sfml_game ${SFML_LIBRARIES} ${SFML_DEPENDENCIES})

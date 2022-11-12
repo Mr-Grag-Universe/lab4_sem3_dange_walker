@@ -329,6 +329,8 @@ void World::add_things_from_file(const std::string & file_name) {
         std::make_move_iterator(things.begin()),
         std::make_move_iterator(things.end())
     );
+    [[maybe_unused]] size_t new_len = all_things.size();
+    [[maybe_unused]] size_t th_len = things.size();
 
     for (size_t i = 0, l = things.size(); i < l; ++i) {
         switch (all_things[old_len+i]->get_type()) {

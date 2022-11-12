@@ -19,6 +19,8 @@
 #include "alive_obj/NPC.hpp"
 #include "Effect.hpp"
 
+#include "vector.hpp"
+
 static const std::set<ObjectType> alive_types = { CHARACTER, SLIME };
 static const std::set<ObjectType> effect_types = { MW_WAVE };
 class World {
@@ -33,7 +35,7 @@ private:
     struct Env {
         std::vector <std::shared_ptr<Wall>*>  walls;
         std::vector <std::shared_ptr<Floor>*> floor;
-        std::vector <std::shared_ptr<Door>*>  doors;
+        my_stl::vector <std::shared_ptr<Door>*>  doors;
     };
     
 

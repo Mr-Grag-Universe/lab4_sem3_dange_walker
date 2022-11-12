@@ -5,6 +5,7 @@
 #include <cstring>
 #include <string>
 #include <iterator>
+#include <vector>
 
 namespace my_stl {
     template <typename Type>
@@ -23,6 +24,29 @@ namespace my_stl {
             return c;
         }
 
+        template <bool IsConst>
+        struct Iterator {
+        private:
+            std::conditional_t<IsConst, const Type, Type> * ptr;
+        public:
+            Iterator(Type * p) : ptr(p) {}
+
+            Type& operator*()
+            { return *ptr; }
+            Type* operator->()
+            { return ptr; }
+            Iterator& operator++() {
+                ++ptr;
+                return *this;
+            }
+            Iterator operator++(int)
+            { return *this++; }
+            
+            bool operator==(const Iterator & i)
+            { return this->ptr == i.ptr; }
+            bool operator!=(const Iterator & i)
+            { return this->ptr != i.ptr; }
+        };
     public:
         [[maybe_unused]] size_t size() const
         { return v_size; }
@@ -53,12 +77,20 @@ namespace my_stl {
             arr = reinterpret_cast<Type *>(new char[v_capacity * sizeof(Type)]);
             std::memmove(arr, v.arr, v_size*sizeof(Type));
         }
+        vector(const std::vector<Type> & v) : v_size(v.size()), v_capacity(v.capacity()) {
+            arr = reinterpret_cast<Type *>(new char[v_capacity * sizeof(Type)]);
+            std::copy(v.begin(), v.end(), iterator(arr));
+        }
         vector(vector && v) : v_size(v.v_size), v_capacity(v.v_capacity) {
             arr = v.arr;
             
             v.arr = nullptr;
             v.v_size = 0;
             v.v_capacity = 0;
+        }
+        vector(std::vector<Type> && v) : v_size(v.size()), v_capacity(v.capacity()) {
+            std::copy(v.begin(), v.end(), iterator(arr));
+            v.clear();
         }
 
         ~vector() {
@@ -122,9 +154,36 @@ namespace my_stl {
             return *this;
         }
 
-        // vector <Type> :: iterator begin() {
-        //     vector <Type> :: iterator iter = 
-        // }
+        // итераторы
+        using iterator = Iterator<false>;
+        using const_iterator = Iterator<true>;
+
+        iterator begin() const
+        { return iterator(arr); }
+        iterator end() const
+        { return iterator(arr+v_size); }
+
+        /// @brief  aggregate function
+        /// @tparam T 
+        /// @param seed 
+        /// @param f 
+        /// @return 
+        template <typename T>
+        T aggregate(T seed, T (*f)(T, Type&)) {
+            T res = seed;
+            for (auto el: *this)
+                res = f(res, el);
+            return res;
+        }
+
+        iterator insert(iterator position, std::move_iterator<iterator> first, std::move_iterator<iterator> last) {
+            iterator p = position;
+            for (; first != last; ++first) {
+                *position = *first;
+                ++position;
+            }
+            return p;
+        }
     };
 }
 

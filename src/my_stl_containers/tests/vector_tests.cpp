@@ -85,7 +85,20 @@ TEST(operators, assignment) {
     ASSERT_EQ(v[1], 8);
 }
 
+TEST(iterators, for_auto) {
+    my_stl::vector <int> v = {1, 2, 3, 6};
+    for (auto el: v) {
+        std::cout << el;
+    }
+}
 
+int f(int x, int & y) { return x * y; }
+
+TEST(iterators, aggregate) {
+    my_stl::vector <int> v = {1, 2, 3, 4};
+    ASSERT_EQ(v.aggregate(0, f), 0);
+    ASSERT_EQ(v.aggregate(1, f), 24);
+}
 
 int main(int argc, char **argv) {
     ::testing::InitGoogleTest(&argc, argv);
