@@ -7,6 +7,7 @@
 #include <SFML/System.hpp>
 #include <SFML/Window.hpp>
 
+#include "menu.hpp"
 #include "backpack_menu.hpp"
 #include "World.hpp"
 #include "Map.hpp"
@@ -31,10 +32,16 @@ void World::game_interraction(sf::Event & event, sf::RenderWindow & window) {
             hero.move(0, 10);
             break;
         }
-        case sf::Keyboard::Tab: {
+        case sf::Keyboard::Escape: {
             this->mode = MENU;
             std::cout << "menu has been opened" << std::endl;
             menu(window, *this);
+            break;
+        }
+        case sf::Keyboard::Tab: {
+            this->mode = BACKPACK_MENU;
+            std::cout << "backpack menu has been opened" << std::endl;
+            backpack_menu(window, *this);
             break;
         }
         default:
@@ -56,9 +63,21 @@ void World::game_interraction(sf::Event & event, sf::RenderWindow & window) {
 }
 void World::menu_interraction(sf::Event & event, sf::RenderWindow & window) {
     switch (event.key.code) {
-    case sf::Keyboard::Tab: {
+    case sf::Keyboard::Escape: {
         this->mode = RUN;
         std::cout << "menu has been closed" << std::endl;
+        break;
+    }
+    
+    default:
+        break;
+    }
+}
+void World::backpack_menu_interraction(sf::Event & event, sf::RenderWindow & window) {
+    switch (event.key.code) {
+    case sf::Keyboard::Tab: {
+        this->mode = RUN;
+        std::cout << "backpack menu has been closed" << std::endl;
         break;
     }
     

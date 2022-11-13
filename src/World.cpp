@@ -8,6 +8,7 @@
 #include <SFML/System.hpp>
 #include <SFML/Window.hpp>
 
+#include "menu.hpp"
 #include "backpack_menu.hpp"
 #include "World.hpp"
 #include "Map.hpp"
@@ -220,47 +221,6 @@ void World::add_character(const std::string & file_name) {
     std::cout << "initial hero sprite position: (" << hero.get_sprite().getPosition().x << ", " << hero.get_sprite().getPosition().y << ")\n";
 
     file.close();
-    return;
-
-    /*
-    std::string name;
-    std::string src_file_name;
-    unsigned int x_in{}, y_in{};
-    unsigned int width{}, height{};
-    try {
-        file >> name;
-        file >> src_file_name;
-        file >> x_in >> y_in;
-        file >> width >> height;
-    } catch (...) {
-        std::cout << "cannot read data about char" << std::endl;
-        throw std::runtime_error("file reading error");
-    }
-
-    hero.set_position(std::make_pair(W/2, H/2));
-    std::pair <unsigned int, unsigned int> position_in = std::make_pair(x_in, y_in);
-    std::pair <unsigned int, unsigned int> scale = std::make_pair(width, height);
-    
-    hero.set_texture(src_file_name, position_in, scale, std::make_pair(1, 1));
-    hero.set_sprite_position(std::make_pair((W - width)/2, (H - height)/2));
-    std::cout << "initial hero position: (" << hero.get_position().first << ", " << hero.get_position().second << ")\n";
-    // hero.tesetOutlineThickness(10);
-
-    std::string type;
-    while (file >> type) {
-        switch (types[type]) {
-        case BACKPACK: {
-            //hero.
-            break;
-        }
-        
-        default:
-            break;
-        }
-    }
-
-    file.close();
-    */
 }
 
 void World::interraction(sf::Event & event, sf::RenderWindow & window) {
@@ -270,6 +230,8 @@ void World::interraction(sf::Event & event, sf::RenderWindow & window) {
             game_interraction(event, window);
         } else if (this->mode == MENU) {
             menu_interraction(event, window);
+        } else if (this->mode == BACKPACK_MENU) {
+            backpack_menu_interraction(event, window);
         }
 
         break;
@@ -287,6 +249,8 @@ void World::interraction(sf::Event & event, sf::RenderWindow & window) {
             game_interraction(event, window);
         } else if (this->mode == MENU) {
             menu_interraction(event, window);
+        } else if (this->mode == BACKPACK_MENU) {
+            backpack_menu_interraction(event, window);
         }
 
         break;
