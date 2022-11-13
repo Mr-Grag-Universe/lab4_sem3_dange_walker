@@ -26,7 +26,7 @@ void Character::read(std::ifstream & file) {
     std::pair <unsigned int, unsigned int> scale = std::make_pair(width, height);
     
     this->set_texture(src, position_in, scale, std::make_pair(1, 1));
-    this->set_sprite_position(std::make_pair(WIDTH, HEIGHT));
+    // this->set_sprite_position(std::make_pair(WIDTH, HEIGHT));
     
     std::string type;
     while (file >> type) {

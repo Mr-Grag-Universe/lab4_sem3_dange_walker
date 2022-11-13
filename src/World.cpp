@@ -213,11 +213,16 @@ void World::add_character(const std::string & file_name) {
     file.open(file_name);
     hero.read(file);
     hero.set_position(std::make_pair(W/2, H/2));
-    hero.set_sprite_position(std::make_pair(W/2, H/2));
+    size_t width = hero.get_texture()->getSize().x;
+    size_t height = hero.get_texture()->getSize().y;
+    hero.set_sprite_position(std::make_pair((W - width)/2, (H - height)/2));
     std::cout << "initial hero position: (" << hero.get_position().first << ", " << hero.get_position().second << ")\n";
+    std::cout << "initial hero sprite position: (" << hero.get_sprite().getPosition().x << ", " << hero.get_sprite().getPosition().y << ")\n";
+
     file.close();
     return;
 
+    /*
     std::string name;
     std::string src_file_name;
     unsigned int x_in{}, y_in{};
@@ -237,7 +242,7 @@ void World::add_character(const std::string & file_name) {
     std::pair <unsigned int, unsigned int> scale = std::make_pair(width, height);
     
     hero.set_texture(src_file_name, position_in, scale, std::make_pair(1, 1));
-    hero.set_sprite_position(std::make_pair(W/2, H/2));
+    hero.set_sprite_position(std::make_pair((W - width)/2, (H - height)/2));
     std::cout << "initial hero position: (" << hero.get_position().first << ", " << hero.get_position().second << ")\n";
     // hero.tesetOutlineThickness(10);
 
@@ -255,6 +260,7 @@ void World::add_character(const std::string & file_name) {
     }
 
     file.close();
+    */
 }
 
 void World::interraction(sf::Event & event, sf::RenderWindow & window) {
@@ -271,7 +277,7 @@ void World::interraction(sf::Event & event, sf::RenderWindow & window) {
     case sf::Event::Resized: {
         W = event.size.width;
         H = event.size.height;
-        hero.set_sprite_position(std::make_pair(W/2, H/2));
+        hero.set_sprite_position(std::make_pair((W-hero.get_texture()->getSize().x)/2, (H-hero.get_texture()->getSize().y)/2));
         std::cout << "new width: " << event.size.width << std::endl;
         std::cout << "new height: " << event.size.height << std::endl;
         break;

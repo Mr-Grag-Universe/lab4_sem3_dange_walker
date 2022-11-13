@@ -55,9 +55,11 @@ Map::Map(const World & w) : hero(w.get_hero()), W(w.get_W()), H(w.get_H()) {
         if (distance(p, h_p) <= 1900) {
             // const sf::Vector2f hero_pos = sf::Vector2f((float) h_p.first, (float) h_p.second);
             sf::Vector2 s_window_pos = sf::Vector2(p.first, p.second);
-            s_window_pos.x = W/2; // - (hero_pos.x - s_window_pos.x);
-            s_window_pos.y = H/2; // - (hero_pos.y - s_window_pos.y);
+            s_window_pos.x = (W - eff[i]->get_texture()->getSize().x)/2; // - (hero_pos.x - s_window_pos.x);
+            s_window_pos.y = (H - eff[i]->get_texture()->getSize().y)/2; // - (hero_pos.y - s_window_pos.y);
             eff[i]->set_sprite_position(std::make_pair(s_window_pos.x, s_window_pos.y));
+            // std::cout << "effect sprite position: (" << eff[i]->get_sprite().getPosition().x << ", " << eff[i]->get_sprite().getPosition().y << ")\n";
+    
             all_effects.push_back(eff[i]);
 
             // std::cout << "map hero position: (" << hero.get_sprite().getPosition().x << ", " << hero.get_position().second << ")\n";
