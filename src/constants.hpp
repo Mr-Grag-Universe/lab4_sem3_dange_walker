@@ -14,6 +14,9 @@
 #include <iostream>
 #include <fstream>
 #include <filesystem>
+
+#include <SFML/System.hpp>
+
 namespace fs = std::filesystem;
 
 template <typename T>
@@ -31,10 +34,55 @@ static fs::path npc_file("npc.txt");
 static fs::path hero_file("hero.txt");
 static fs::path effect_file("effects_src.txt");
 
-
+static bool is_number(const std::string& s) {
+    std::string::const_iterator it = s.begin();
+    while (it != s.end() && std::isdigit(*it)) ++it;
+    return !s.empty() && it == s.end();
+}
 struct TextureStore {
     std::vector <std::shared_ptr<sf::Texture>> textures;
     std::pair <double, double> scale;
+    sf::Time period;
+    sf::Time life_time;
 };
+
+/// @brief convert string like ..._xxx_xxx_xxx_._xxx_xxx_... to time in sfml format
+/// @param s 
+/// @return  time in sfml format
+[[maybe_unused]] static sf::Time stotime(std::string s) {
+    if (s.empty())
+        throw std::invalid_argument("cannot convert empty string");
+
+    std::vector <std::string> parts;
+    std::stringstream  data(s);
+
+    std::string line;
+    while(std::getline(data,line,'_'))
+        parts.push_back(line);
+
+    double time_d = 0;
+    bool flag = false;
+    int digits = 0;
+    for (auto p: parts) {
+        if (p == ".") {
+            flag = true;
+            continue;
+        } else if (!is_number(p))
+            continue;
+        
+        if (flag) {
+            digits += (int) p.size();
+            time_d += std::stof(p) / pow(10, digits);
+        } else {
+            time_d = time_d * 10*p.size() + std::stof(p);
+        }
+    }
+
+    if (parts.back() == "ms") {
+        return sf::Time(sf::milliseconds(time_d));
+    } else {
+        throw std::invalid_argument("we don't know this unit of time measurement");
+    }
+}
 
 #endif

@@ -1,4 +1,4 @@
-mw_wave 2
+mw_wave 6 200_ms 200_ms
     0 0
     144 144
     1 1
@@ -10,3 +10,27 @@ mw_wave 2
     1 1
     0.5 0.5
     weapon_effects_sprites/Alternative_1/1/Alternative_1_02.png
+
+    0 0
+    144 144
+    1 1
+    0.5 0.5
+    weapon_effects_sprites/Alternative_1/1/Alternative_1_03.png
+
+    0 0
+    144 144
+    1 1
+    0.5 0.5
+    weapon_effects_sprites/Alternative_1/1/Alternative_1_04.png
+
+    0 0
+    144 144
+    1 1
+    0.5 0.5
+    weapon_effects_sprites/Alternative_1/1/Alternative_1_05.png
+    
+    0 0
+    144 144
+    1 1
+    0.5 0.5
+    weapon_effects_sprites/Alternative_1/1/Alternative_1_06.png

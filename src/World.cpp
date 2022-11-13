@@ -149,6 +149,7 @@ std::map<ObjectType, TextureStore> World::load_effects_from_file(const std::stri
     std::map<ObjectType, TextureStore> effects;
     fs::path file_path;
     size_t number{};
+    std::string period_s, life_time_s;
     size_t x_in{}, y_in{};
     size_t width{}, height{};
     double n_repeat_x{}, n_repeat_y;
@@ -159,6 +160,19 @@ std::map<ObjectType, TextureStore> World::load_effects_from_file(const std::stri
             continue;
         }
         file >> number;
+        file >> period_s >> life_time_s;
+        sf::Time period;
+        sf::Time life_time;
+        try {
+            period = stotime(period_s);
+            life_time = stotime(life_time_s);
+        } catch(std::invalid_argument & ia) {
+            std::cout << ia.what();
+            throw;
+        } catch(...) {
+            std::cout << "invalid time format may be occured";
+            throw std::runtime_error("invalid time format may be occured");
+        }
         std::cout << "effect type: " << type << "\n";
         if (effect_types.find(types[type]) != effect_types.end()) {
             for (size_t i = 0; i < number; ++i) {
@@ -177,6 +191,8 @@ std::map<ObjectType, TextureStore> World::load_effects_from_file(const std::stri
                     std::cout << "cannot read texture from file : " << file_path << std::endl;
                     throw std::invalid_argument("there is not such file with texture");
                 }
+                effects[types[type]].life_time = life_time;
+                effects[types[type]].period = period;
             }
         }
         else
@@ -317,11 +333,11 @@ void World::iterate() {
                 }
             }
         }
-        if (all_effects[i]->get_time() > sf::seconds(1)) {
+        if (all_effects[i]->get_time() > all_effects[i]->get_life_time()) {
             all_effects.erase(all_effects.begin() + i);
             i--;
-        }
-        all_effects[i]->update_texture();
+        } else
+            all_effects[i]->update_texture();
     }
 
     return;
