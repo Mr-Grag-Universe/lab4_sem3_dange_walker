@@ -85,4 +85,47 @@ struct TextureStore {
     }
 }
 
+static sf::Color MyDarkSlateGray = sf::Color(47, 79, 79);
+static sf::Color MyGrey11 = sf::Color(28, 28, 28);
+
+enum MyRGBColors {
+    DarkSlateGray,
+    DarkSlateBlue,
+};
+
+static std::map <MyRGBColors, std::tuple<uint8_t, uint8_t, uint8_t>> color_collection = {
+    { DarkSlateGray, std::make_tuple(47, 79, 79) },
+    { DarkSlateBlue, std::make_tuple(72, 61, 139) },
+};
+
+// static std::pair <size_t, size_t> calculate_sprite_position(const sf::Texture & t, std::pair<size_t, size_t> p) {
+//     return std::make_pair((p.first-t.getSize().x)/2, (p.second-t.getSize().y)/2);
+//}
+
+class MyObjectTypes {
+    [[maybe_unused]] enum GameObjectType {
+        WALL,
+        FLOOR,
+        DOOR,
+        ALIVE,
+        CHEST,
+        BACKPACK,
+        SWARD,
+
+        CHARACTER,
+        SLIME,
+
+        WEAPON,
+
+        MW_WAVE,
+    } GameType;
+
+    [[maybe_unused]] enum BPMenuObjectType {
+        SKIN,
+        WEAPON_IN_ARMS,
+    } BPMenuType;
+
+
+};
+
 #endif

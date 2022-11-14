@@ -37,8 +37,10 @@ set(SOURCES
    static/first_room.txt
 
    main.cpp
+   game.cpp
    menu.cpp
-   backpack_menu.cpp
+   backpack_menu/backpack_menu.cpp
+   backpack_menu/draw_backpack_menu.cpp
    interraction.cpp
    Object.cpp
    Object.hpp
@@ -81,6 +83,7 @@ target_link_libraries(game sfml-system sfml-window sfml-graphics ${SFML_DEPENDEN
 target_include_directories(game
    PRIVATE
    my_stl_containers/include
+   backpack_menu
 )
 
 # target_link_libraries(sfml_game ${GLFW})

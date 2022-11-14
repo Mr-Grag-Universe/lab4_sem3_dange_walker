@@ -10,11 +10,12 @@
 #include <SFML/Graphics.hpp>
 
 #include "all_headers.hpp"
+#include "game.hpp"
 
 
-void backpack_menu(sf::RenderWindow & window, World & world) {
-    while (window.isOpen() && world.get_game_mode() == World::BACKPACK_MENU) {
-        // Map map(world);
+void game(sf::RenderWindow & window, World & world) {
+    while (window.isOpen() && world.get_game_mode() == World::RUN) {
+        Map map(world);
         // проверить все события окна, которые были вызваны с последней итерации цикла
         sf::Event event;
         if (window.pollEvent(event)) {
@@ -34,7 +35,7 @@ void backpack_menu(sf::RenderWindow & window, World & world) {
 
 
         // очищаем окно и заливаем черным цветом
-        window.clear(sf::Color::Cyan);
+        window.clear(sf::Color::Black);
 
         // создаём карту объектов, которые видны герою
         // map = Map(world);
@@ -42,12 +43,13 @@ void backpack_menu(sf::RenderWindow & window, World & world) {
         // std::cout << "hero position: (" << map.get_hero().get_sprite().getPosition().x << ", " << map.get_hero().get_position().second << ")\n";
 
         // отрисовываем карту
-        Draw::draw_backpack_menu(window, world);
+        Draw::draw_map(window, map);
 
         // конец текущего кадра - отображаем
         window.display();
 
         // int a = 0;
         // std::cin >> a;
+        world.iterate();
     }
 }

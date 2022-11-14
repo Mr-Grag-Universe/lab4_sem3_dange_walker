@@ -35,13 +35,13 @@ void World::game_interraction(sf::Event & event, sf::RenderWindow & window) {
         case sf::Keyboard::Escape: {
             this->mode = MENU;
             std::cout << "menu has been opened" << std::endl;
-            menu(window, *this);
+            // menu(window, *this);
             break;
         }
         case sf::Keyboard::Tab: {
             this->mode = BACKPACK_MENU;
             std::cout << "backpack menu has been opened" << std::endl;
-            backpack_menu(window, *this);
+            // backpack_menu(window, *this);
             break;
         }
         default:
