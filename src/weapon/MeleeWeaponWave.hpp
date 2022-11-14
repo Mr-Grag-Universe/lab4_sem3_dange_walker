@@ -9,7 +9,7 @@
 #include "../alive_obj/Alive.hpp"
 #include "../Object.hpp"
 #include "../Effect.hpp"
-#include "../GameWorld.hpp"
+#include "../World.hpp"
 #include "../constants.hpp"
 
 class MW_Wave : public Effect {
@@ -41,7 +41,7 @@ public:
     void update_texture() {
     }
 
-    MW_Wave(World<GameTypeSystem> & w, double r, Alive & o, double d) : Effect(w.get_effect_texture(MW_WAVE)), radius(r), originator(o), damage(d) {
+    MW_Wave(World & w, double r, Alive & o, double d) : Effect(w.get_effect_texture(MW_WAVE)), radius(r), originator(o), damage(d) {
         texture = w.get_effect_texture(MW_WAVE).textures[0];
     }
     MW_Wave(const MW_Wave & w) = default;

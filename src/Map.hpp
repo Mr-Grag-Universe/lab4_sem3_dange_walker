@@ -8,7 +8,7 @@
 #include "environment/Wall.hpp"
 #include "environment/Floor.hpp"
 #include "environment/Door.hpp"
-#include "GameWorld.hpp"
+#include "World.hpp"
 #include "constants.hpp"
 #include "alive_obj/Character.hpp"
 
@@ -31,7 +31,7 @@ public:
     const Character & get_hero() const
     { return hero; }
 
-    Map(const World<GameTypeSystem> & w);
+    Map(const World & w);
     Map(const Map & m) = default;
     ~Map() = default;
 protected:

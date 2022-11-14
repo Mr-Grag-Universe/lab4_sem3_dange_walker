@@ -48,7 +48,7 @@ void Chest::read(std::ifstream & file) {
         file >> type;
         // file >> n;
 
-        std::shared_ptr<Obj<GameTypeSystem>> obj = World<GameTypeSystem>::load_object(type, file);
+        std::shared_ptr<Obj<GameTypeSystem>> obj = World::load_object(type, file);
         store.push_back(std::move(obj));
     }
 

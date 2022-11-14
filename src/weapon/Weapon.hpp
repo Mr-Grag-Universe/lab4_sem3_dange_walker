@@ -13,7 +13,7 @@ public:
     Weapon() {}
     ~Weapon() {}
 
-    virtual std::shared_ptr<Effect> use(World<GameTypeSystem> & w, Alive & o) = 0;
+    virtual std::shared_ptr<Effect> use(World & w, Alive & o) = 0;
 };
 
 #endif // WEAPON

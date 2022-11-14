@@ -9,11 +9,10 @@
 
 #include "menu.hpp"
 #include "backpack_menu.hpp"
-#include "GameWorld.hpp"
+#include "World.hpp"
 #include "Map.hpp"
 
-template<>
-void World<GameTypeSystem>::game_interraction(sf::Event & event, sf::RenderWindow & window) {
+void World::game_interraction(sf::Event & event, sf::RenderWindow & window) {
     std::cout << "game interraction" << std::endl;
     if (event.type == sf::Event::KeyPressed) {
         switch (event.key.code) {
@@ -62,8 +61,7 @@ void World<GameTypeSystem>::game_interraction(sf::Event & event, sf::RenderWindo
         all_effects.push_back(eff);
     }
 }
-template<>
-void World<GameTypeSystem>::menu_interraction(sf::Event & event, sf::RenderWindow & window) {
+void World::menu_interraction(sf::Event & event, sf::RenderWindow & window) {
     switch (event.key.code) {
     case sf::Keyboard::Escape: {
         this->mode = RUN;
@@ -75,8 +73,7 @@ void World<GameTypeSystem>::menu_interraction(sf::Event & event, sf::RenderWindo
         break;
     }
 }
-template<>
-void World<GameTypeSystem>::backpack_menu_interraction(sf::Event & event, sf::RenderWindow & window) {
+void World::backpack_menu_interraction(sf::Event & event, sf::RenderWindow & window) {
     switch (event.key.code) {
     case sf::Keyboard::Tab: {
         this->mode = RUN;

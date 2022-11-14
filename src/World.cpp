@@ -10,7 +10,6 @@
 
 #include "menu.hpp"
 #include "backpack_menu.hpp"
-#include "GameWorld.hpp"
 #include "Map.hpp"
 #include "Object.hpp"
 #include "constants.hpp"
@@ -22,12 +21,9 @@
 #include "containers/Box.hpp"
 #include "containers/Chest.hpp"
 #include "weapon/Sward.hpp"
+#include "World.hpp"
 
-template<>
-std::vector <std::shared_ptr<Obj<GameTypeSystem>>> World<GameTypeSystem>::load_things_from_file(const std::string & file_name);
-
-template<>
-World<GameTypeSystem>::World(const std::string & file_name) : World() {
+World::World(const std::string & file_name) : World() {
     this->all_things = load_things_from_file(file_name);
     for (size_t i = 0, l = all_things.size(); i < l; ++i) {
         switch (all_things[i]->get_type()) {
@@ -45,13 +41,13 @@ World<GameTypeSystem>::World(const std::string & file_name) : World() {
         }
     }
 }
-template<>
-World<GameTypeSystem>::World(std::vector <std::shared_ptr<Obj<GameTypeSystem>>> things) : World() {
+
+World::World(std::vector <std::shared_ptr<Obj<GameTypeSystem>>> things) : World() {
     all_things = std::move(things);
 }
 
-template<>
-std::shared_ptr<Obj<GameTypeSystem>> World<GameTypeSystem>::load_object(std::string type, std::ifstream & file) {
+
+std::shared_ptr<Obj<GameTypeSystem>> World::load_object(std::string type, std::ifstream & file) {
     std::shared_ptr<Obj<GameTypeSystem>> obj;
     switch (types[type]) {
         case FLOOR: {
@@ -81,8 +77,8 @@ std::shared_ptr<Obj<GameTypeSystem>> World<GameTypeSystem>::load_object(std::str
     return obj;
 }
 
-template<>
-std::shared_ptr<NPC> World<GameTypeSystem>::load_npc(std::string type, std::ifstream & file) {
+
+std::shared_ptr<NPC> World::load_npc(std::string type, std::ifstream & file) {
     std::shared_ptr<NPC> obj;
     switch (types[type]) {
         case SLIME:
@@ -94,8 +90,8 @@ std::shared_ptr<NPC> World<GameTypeSystem>::load_npc(std::string type, std::ifst
     return obj;
 }
 
-template<>
-std::vector <std::shared_ptr<Obj<GameTypeSystem>>> World<GameTypeSystem>::load_things_from_file(const std::string & file_name) {
+
+std::vector <std::shared_ptr<Obj<GameTypeSystem>>> World::load_things_from_file(const std::string & file_name) {
     std::cout << "#=#=#=#=# opening fstream with \"" << file_name << "\" file..." << std::endl;
     std::ifstream file(file_name);
     if (!file) {
@@ -119,8 +115,8 @@ std::vector <std::shared_ptr<Obj<GameTypeSystem>>> World<GameTypeSystem>::load_t
     return v;
 }
 
-template<>
-std::vector <std::shared_ptr<NPC>> World<GameTypeSystem>::load_npcs_from_file(const std::string & file_name) {
+
+std::vector <std::shared_ptr<NPC>> World::load_npcs_from_file(const std::string & file_name) {
     std::cout << "#=#=#=#=# opening fstream with \"" << file_name << "\" file..." << std::endl;
     std::ifstream file(file_name);
     if (!file) {
@@ -147,8 +143,8 @@ std::vector <std::shared_ptr<NPC>> World<GameTypeSystem>::load_npcs_from_file(co
     return v;
 }
 
-template<>
-std::map<GameTypeSystem, TextureStore> World<GameTypeSystem>::load_effects_from_file(const std::string & file_name) {
+
+std::map<GameTypeSystem, TextureStore> World::load_effects_from_file(const std::string & file_name) {
     std::cout << "#=#=#=#=# opening fstream with \"" << file_name << "\" file..." << std::endl;
     std::ifstream file(file_name);
     if (!file) {
@@ -215,8 +211,8 @@ std::map<GameTypeSystem, TextureStore> World<GameTypeSystem>::load_effects_from_
     return effects;
 }
 
-template<>
-void World<GameTypeSystem>::add_character(const std::string & file_name) {
+
+void World::add_character(const std::string & file_name) {
     if (file_name.empty()) {
         std::cout << "empty name of file with char sprite" << std::endl;
         throw std::invalid_argument("file does not exist");
@@ -234,8 +230,8 @@ void World<GameTypeSystem>::add_character(const std::string & file_name) {
     file.close();
 }
 
-template<>
-void World<GameTypeSystem>::interraction(sf::Event & event, sf::RenderWindow & window) {
+
+void World::interraction(sf::Event & event, sf::RenderWindow & window) {
     switch (event.type) {
     case sf::Event::KeyPressed: {
         if (this->mode == RUN) {
@@ -273,8 +269,8 @@ void World<GameTypeSystem>::interraction(sf::Event & event, sf::RenderWindow & w
     return;
 }
 
-template<>
-void World<GameTypeSystem>::iterate() {
+
+void World::iterate() {
     std::pair <unsigned int, unsigned int> p_h = hero.get_position();
     for (size_t i = 0; i < all_npc.size(); ++i) {
         if (all_npc[i]->get_attitude() == NPC::BAD) {
@@ -326,8 +322,8 @@ void World<GameTypeSystem>::iterate() {
     return;
 }
 
-template<>
-void World<GameTypeSystem>::add_things_from_file(const std::string & file_name) {
+
+void World::add_things_from_file(const std::string & file_name) {
     std::vector <std::shared_ptr<Obj<GameTypeSystem>>> things = load_things_from_file(file_name);
 
     size_t old_len = all_things.size();
@@ -356,8 +352,8 @@ void World<GameTypeSystem>::add_things_from_file(const std::string & file_name) 
     }
 }
 
-template<>
-void World<GameTypeSystem>::add_npcs_from_file(const std::string & file_name) {
+
+void World::add_npcs_from_file(const std::string & file_name) {
     std::vector <std::shared_ptr<NPC>> npcs = load_npcs_from_file(file_name);
 
     all_npc.insert(
@@ -368,8 +364,8 @@ void World<GameTypeSystem>::add_npcs_from_file(const std::string & file_name) {
 }
 
 
-template<>
-void World<GameTypeSystem>::add_effects_from_file(const std::string & file_name) {
+
+void World::add_effects_from_file(const std::string & file_name) {
     try {
         effects_textures = load_effects_from_file(file_name);
     } catch (...) {

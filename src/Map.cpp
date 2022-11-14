@@ -1,6 +1,6 @@
 #include "Map.hpp"
 
-Map::Map(const World<GameTypeSystem> & w) : hero(w.get_hero()), W(w.get_W()), H(w.get_H()) {
+Map::Map(const World & w) : hero(w.get_hero()), W(w.get_W()), H(w.get_H()) {
     const std::vector <std::shared_ptr<Obj<GameTypeSystem>>> & at = w.get_all_things();
     // std::cout << "map_hero_position: (" << hero.get_position().first << ", " << hero.get_position().second << ")\n";
     const pair_ui64_t h_p = hero.get_position();

@@ -2,7 +2,7 @@
 #define EFFECT_CLASS
 
 #include "Object.hpp"
-#include "GameWorld.hpp"
+#include "World.hpp"
 #include "constants.hpp"
 
 // интерфейс эффекта

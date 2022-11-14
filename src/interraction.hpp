@@ -10,7 +10,7 @@
 #include <SFML/Window.hpp>
 
 #include "menu.hpp"
-#include "GameWorld.hpp"
+#include "World.hpp"
 #include "Map.hpp"
 
 void game_interraction(sf::Event & event, sf::RenderWindow & window);

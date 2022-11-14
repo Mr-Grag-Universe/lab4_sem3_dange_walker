@@ -21,8 +21,8 @@ public:
     ~Sward() {}
 
     void read(std::ifstream &);
-    std::shared_ptr<Effect> use(World<GameTypeSystem> & w, Alive & o);
-    std::shared_ptr<MW_Wave> wave(World<GameTypeSystem> & w, double r, Alive & o);
+    std::shared_ptr<Effect> use(World & w, Alive & o);
+    std::shared_ptr<MW_Wave> wave(World & w, double r, Alive & o);
 };
 
 

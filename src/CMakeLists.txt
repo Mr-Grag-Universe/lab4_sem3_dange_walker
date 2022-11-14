@@ -41,7 +41,6 @@ set(SOURCES
    menu.cpp
    backpack_menu/backpack_menu.cpp
    backpack_menu/draw_backpack_menu.cpp
-   backpack_menu/World_func_spec.cpp
    interraction.cpp
    Object.cpp
    Object.hpp

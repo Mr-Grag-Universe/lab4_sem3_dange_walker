@@ -27,7 +27,7 @@ int main(int argc, char *argv[]) {
 
     // std::vector <std::unique_ptr<Obj>> things = World::load_things_from_file("/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/static/first_room.txt");
     // std::cout << static_path;
-    World<GameTypeSystem> world(static_path / first_room);
+    World world(static_path / first_room);
     world.add_things_from_file(static_path / containers);
     world.add_npcs_from_file(static_path / npc_file);
     world.add_effects_from_file(static_path / effect_file);
@@ -57,13 +57,13 @@ int main(int argc, char *argv[]) {
     while (window.isOpen()) {
         switch (world.get_game_mode())
         {
-        case World<GameTypeSystem>::RUN:
+        case World::RUN:
             game(window, world);
             break;
-        case World<GameTypeSystem>::MENU:
+        case World::MENU:
             menu(window, world);
             break;
-        case World<GameTypeSystem>::BACKPACK_MENU:
+        case World::BACKPACK_MENU:
             backpack_menu(window, world);
             break;
         default:

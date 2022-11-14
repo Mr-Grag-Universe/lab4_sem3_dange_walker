@@ -10,20 +10,20 @@
 #include "../Effect.hpp"
 #include "../containers/BackPack.hpp"
 #include "../weapon/Weapon.hpp"
-#include "../World_old.hpp"
+#include "../World.hpp"
 
 class Character : public Alive {
 protected:
     BackPack backpack;
     std::shared_ptr<Weapon> weapon;
-    World<GameTypeSystem> & world;
+    World & world;
 public:
     void fill_backpack();
     GameTypeSystem get_type() override
     { return CHARACTER; }
-    const World<GameTypeSystem> & get_world()
+    const World & get_world()
     { return world; }
-    Character(World<GameTypeSystem> & w) : world(w) {}
+    Character(World & w) : world(w) {}
     ~Character() {}
 
     void read(std::ifstream & file) override;
