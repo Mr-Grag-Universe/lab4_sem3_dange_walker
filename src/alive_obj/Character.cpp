@@ -21,7 +21,7 @@ void Character::read(std::ifstream & file) {
         throw std::runtime_error("file reading error");
     }
 
-    this->set_position(std::make_pair(WIDTH, HEIGHT));
+    this->set_position((pair_ui64_t) std::make_pair(WIDTH, HEIGHT));
     std::pair <unsigned int, unsigned int> position_in = std::make_pair(x_in, y_in);
     std::pair <unsigned int, unsigned int> scale = std::make_pair(width, height);
     

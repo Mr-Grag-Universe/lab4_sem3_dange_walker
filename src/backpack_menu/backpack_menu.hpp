@@ -5,10 +5,8 @@
 #include <SFML/System.hpp>
 #include <SFML/Graphics.hpp>
 
-#include "World.hpp"
-#include "MenuObj.hpp"
+#include "World_old.hpp"
 
-void backpack_menu(sf::RenderWindow & window, World & world);
-std::vector <MenuObj> load_menu_objects();
+void backpack_menu(sf::RenderWindow & window, World<GameTypeSystem> & world);
 
 #endif // BACK_PACK_MENU_MODE_HPP

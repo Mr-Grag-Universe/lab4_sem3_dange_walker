@@ -6,7 +6,7 @@
 #include "../Object.hpp"
 #include "Container.hpp"
 
-class Box : public Obj, public Container {
+class Box : public Obj<GameTypeSystem>, public Container {
 private:
 public:
     Box() {}
@@ -17,7 +17,7 @@ public:
         position = p;
     }
     // virtual ~Box() = 0;
-    void push(std::shared_ptr<Obj> obj);
+    void push(std::shared_ptr<Obj<GameTypeSystem>> obj);
 };
 
 #endif

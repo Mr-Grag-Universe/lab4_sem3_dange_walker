@@ -20,7 +20,7 @@ void Sward::read(std::ifstream & file) {
     // return res;
 }
 
-std::shared_ptr<MW_Wave> Sward::wave(World & w, double r, Alive & o) {
+std::shared_ptr<MW_Wave> Sward::wave(World<GameTypeSystem> & w, double r, Alive & o) {
     MW_Wave wave(w, r, o, damage);
     TextureStore & ts = w.get_effect_texture(MW_WAVE);
     wave.set_position(o.get_position());
@@ -33,6 +33,6 @@ std::shared_ptr<MW_Wave> Sward::wave(World & w, double r, Alive & o) {
     return std::make_shared<MW_Wave>(wave);
 }
 
-std::shared_ptr<Effect> Sward::use(World & w, Alive & o) {
+std::shared_ptr<Effect> Sward::use(World<GameTypeSystem> & w, Alive & o) {
     return wave(w, radius, o);
 }

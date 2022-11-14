@@ -5,8 +5,9 @@
 #include <SFML/System.hpp>
 #include <SFML/Graphics.hpp>
 
-#include "World.hpp"
+#include "GameWorld.hpp"
+#include "constants.hpp"
 
-void menu(sf::RenderWindow & window, World & world);
+void menu(sf::RenderWindow & window, World<GameTypeSystem> & world);
 
 #endif

@@ -5,7 +5,7 @@
 
 class Door : public Environment {
 public:
-    ObjectType get_type()
+    GameTypeSystem get_type()
     { return DOOR; }
 
     Door() {}

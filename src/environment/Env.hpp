@@ -5,7 +5,7 @@
 
 class Environment;
 
-class Environment : public Obj {
+class Environment : public Obj<GameTypeSystem> {
 private:
     /* data */
 public:

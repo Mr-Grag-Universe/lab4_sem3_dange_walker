@@ -5,8 +5,8 @@
 #include <SFML/System.hpp>
 #include <SFML/Graphics.hpp>
 
-#include "World.hpp"
+#include "GameWorld.hpp"
 
-void game(sf::RenderWindow & window, World & world);
+void game(sf::RenderWindow & window, World<GameTypeSystem> & world);
 
 #endif

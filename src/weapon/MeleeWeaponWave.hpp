@@ -9,7 +9,7 @@
 #include "../alive_obj/Alive.hpp"
 #include "../Object.hpp"
 #include "../Effect.hpp"
-#include "../World.hpp"
+#include "../GameWorld.hpp"
 #include "../constants.hpp"
 
 class MW_Wave : public Effect {
@@ -22,12 +22,12 @@ public:
     { return true; }
     const Alive & get_originator_ptr() const
     { return originator; }
-    ObjectType get_type()
+    GameTypeSystem get_type()
     { return MW_WAVE; }
     void read(std::ifstream & file) {
     }
     void make_damage(Alive & a) {
-        if (distance(a.get_position(), position) <= radius) {
+        if (distance((pair_ui64_t) a.get_position(), (pair_ui64_t) position) <= radius) {
             if (a.get_helth() <= damage) {
                 a.set_health(0);
                 std::cout << "killed" << std::endl;
@@ -41,7 +41,7 @@ public:
     void update_texture() {
     }
 
-    MW_Wave(World & w, double r, Alive & o, double d) : Effect(w.get_effect_texture(MW_WAVE)), radius(r), originator(o), damage(d) {
+    MW_Wave(World<GameTypeSystem> & w, double r, Alive & o, double d) : Effect(w.get_effect_texture(MW_WAVE)), radius(r), originator(o), damage(d) {
         texture = w.get_effect_texture(MW_WAVE).textures[0];
     }
     MW_Wave(const MW_Wave & w) = default;

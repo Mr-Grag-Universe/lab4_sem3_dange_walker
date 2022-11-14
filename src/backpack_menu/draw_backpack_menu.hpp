@@ -3,7 +3,7 @@
 
 #include <SFML/Window.hpp>
 
-#include "../World.hpp"
+#include "../World_old.hpp"
 
 namespace Draw {
     void draw_char_backpack(sf::RenderWindow & window, const Character & );

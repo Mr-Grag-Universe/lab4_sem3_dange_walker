@@ -12,8 +12,8 @@
 #include "all_headers.hpp"
 
 
-void menu(sf::RenderWindow & window, World & world) {
-    while (window.isOpen() && world.get_game_mode() == World::MENU) {
+void menu(sf::RenderWindow & window, World<GameTypeSystem> & world) {
+    while (window.isOpen() && world.get_game_mode() == World<GameTypeSystem>::MENU) {
         // Map map(world);
         // проверить все события окна, которые были вызваны с последней итерации цикла
         sf::Event event;

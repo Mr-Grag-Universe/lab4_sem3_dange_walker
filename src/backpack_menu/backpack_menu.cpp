@@ -11,10 +11,12 @@
 
 #include "all_headers.hpp"
 #include "draw_backpack_menu.hpp"
+#include "../GameWorld.hpp"
 
 
-void backpack_menu(sf::RenderWindow & window, World & world) {
-    while (window.isOpen() && world.get_game_mode() == World::BACKPACK_MENU) {
+void backpack_menu(sf::RenderWindow & window, World<GameTypeSystem> & world) {
+    World<BackPackTypeSystem> w;
+    while (window.isOpen() && world.get_game_mode() == World<GameTypeSystem>::BACKPACK_MENU) {
         // Map map(world);
         // проверить все события окна, которые были вызваны с последней итерации цикла
         sf::Event event;

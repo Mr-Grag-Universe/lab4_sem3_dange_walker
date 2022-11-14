@@ -15,7 +15,7 @@ public:
     ~Slime() {}
 
     void read(std::ifstream & file) override;
-    ObjectType get_type() override
+    GameTypeSystem get_type() override
     { return SLIME; }
     void draw(sf::RenderWindow & window);
 };

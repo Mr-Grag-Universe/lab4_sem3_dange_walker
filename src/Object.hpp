@@ -1,5 +1,5 @@
-#ifndef OBJ_CLASS
-#define OBJ_CLASS
+#ifndef SFML_OBJ_CLASS
+#define SFML_OBJ_CLASS
 
 #include <algorithm>
 #include <vector>
@@ -13,74 +13,33 @@ namespace fs = std::filesystem;
 #include <SFML/Graphics.hpp>
 
 #include "Collider.hpp"
+#include "constants.hpp"
 
-enum ObjectType {
-    WALL,
-    FLOOR,
-    DOOR,
-    ALIVE,
-    CHEST,
-    BACKPACK,
-    SWARD,
-
-    CHARACTER,
-    SLIME,
-
-    WEAPON,
-
-    MW_WAVE,
-};
-
-enum EffectType {
-    MW_Wawe_effect,
-};
-
-#ifndef MY_TYPES
-#define MY_TYPES
-inline std::map <std::string, enum ObjectType> types = {
-    { "floor",      FLOOR     },
-    { "door" ,      DOOR      },
-    { "wall" ,      WALL      },
-    { "chest",      CHEST     },
-    { "sward",      SWARD     },
-    { "backpack",   BACKPACK  },
-
-    { "hero",       CHARACTER },
-    { "slime",      SLIME     },
-
-
-    { "weapon",     WEAPON    },
-
-    { "mw_wave",    MW_WAVE   },
-};
-#endif
-
-class Obj;
+template <typename TypeSystem>
 class Obj {
-protected:
-    std::pair<unsigned int, unsigned int> position = std::make_pair(0, 0);
 public:
-    std::pair<unsigned int, unsigned int> w_position = std::make_pair(0, 0);
-    void set_position(const std::pair<unsigned int, unsigned int> & p);
-    // const std::pair<unsigned int, unsigned int> & get_position() const {
-    //     return position;
-    // }
-    std::pair<unsigned int, unsigned int> get_position() const
+    using pair_ui64_t = std::pair<uint64_t, uint64_t>;
+protected:
+    pair_ui64_t position = std::make_pair(0, 0);
+public:
+    pair_ui64_t w_position = std::make_pair(0, 0);
+    // void set_position(const pair_ui64_t & p);
+    pair_ui64_t get_position() const
     { return position; }
 
 
     Obj() = default;
-    Obj(const std::pair<unsigned int, unsigned int> & position, const sf::Sprite & sprite);
-    Obj(std::string name, std::pair<unsigned int, unsigned int> position);
+    Obj(const pair_ui64_t & position, const sf::Sprite & sprite);
+    Obj(std::string name, pair_ui64_t position);
     Obj(const Obj &) = default;
     virtual ~Obj() {}
 
     unsigned char get_layer();
 
-    virtual ObjectType get_type() = 0;
+    virtual TypeSystem get_type() = 0;
     virtual void read(std::ifstream & ) = 0;
-    void set_texture(fs::path file_path, std::pair<unsigned int, unsigned int> p_in, std::pair<unsigned int, unsigned int> scale, std::pair<unsigned int, unsigned int> n_repeat);
-    void set_sprite_position(std::pair<unsigned int, unsigned int> p);
+    void set_texture(fs::path file_path, pair_ui64_t p_in, pair_ui64_t scale, pair_ui64_t n_repeat);
+    // void set_sprite_position(pair_ui64_t p);
 
 protected:
     Collider collider;
@@ -99,7 +58,7 @@ public:
     { return texture; }
     const std::string & get_name() const
     { return name; }
-    void move(int x, int y);
+    // void move(int x, int y);
 
     double get_velocity() const
     { return collider.velocity; }
@@ -111,8 +70,46 @@ public:
     { collider.velocity = v; }
     void set_v_angle(double a)
     { collider.moving_angle = a; }
+
+public:
+    void set_texture(fs::path file_path, std::pair<unsigned int, unsigned int> p_in, std::pair<unsigned int, unsigned int> scale, std::pair<unsigned int, unsigned int> n_repeat) {
+        texture = std::make_unique<sf::Texture>();
+        *texture = sf::Texture();
+        if (n_repeat.first || n_repeat.second) {
+            texture->setRepeated(true);
+        }
+        sf::Vector2 position_in((int) p_in.first, (int) p_in.second);
+        sf::Vector2 size_f((float) (scale.first * n_repeat.first), (float) (scale.second * n_repeat.second));
+        sf::Vector2 size_i((int) (scale.first), (int) (scale.second));
+        sf::Vector2 size_r((int) (scale.first * n_repeat.first), (int) (scale.second * n_repeat.second));
+        if (!texture->loadFromFile(static_path / file_path, sf::IntRect(position_in, size_i))) {
+            std::cout << "cannot read texture from file : " << file_path << std::endl;
+            throw std::invalid_argument("there is not such file with texture");
+        }
+
+        sprite.setTexture(*texture);
+        if (n_repeat.first || n_repeat.second) {
+            sprite.setTextureRect(sf::IntRect(sf::Vector2(0, 0), size_r));
+        }
+    }
+
+    void set_position(const pair_ui64_t & p) {
+        position = p;
+        // sf::Vector2 p_v((float) p.first, (float) p.second);
+    }
+
+    void set_sprite_position(pair_ui64_t p) {
+        sf::Vector2 p_v((float) p.first, (float) p.second);
+        sprite.setPosition(p_v);
+    }
+
+    void move(int x, int y) {
+        position.first += x;
+        position.second += y;
+    }
+
 private:
-    ObjectType type;
+    TypeSystem type;
 };
 
 #endif

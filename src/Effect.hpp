@@ -2,12 +2,12 @@
 #define EFFECT_CLASS
 
 #include "Object.hpp"
-#include "World.hpp"
+#include "GameWorld.hpp"
 #include "constants.hpp"
 
 // интерфейс эффекта
 class Effect;
-class Effect : public Obj {
+class Effect : public Obj<GameTypeSystem> {
 protected:
     sf::Clock clock;
     sf::Time period;

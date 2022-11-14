@@ -6,7 +6,7 @@
 #include <SFML/Graphics.hpp>
 
 #include "../Map.hpp"
-#include "../World.hpp"
+#include "../GameWorld.hpp"
 
 namespace Draw {
 

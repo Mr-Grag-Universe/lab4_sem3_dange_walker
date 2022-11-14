@@ -12,7 +12,7 @@ Chest::Chest(std::string n, std::pair<unsigned int, unsigned int> p) {
     name = n;
     position = p;
 }
-void Chest::fill(std::vector <std::shared_ptr<Obj>> _store) {
+void Chest::fill(std::vector <std::shared_ptr<Obj<GameTypeSystem>>> _store) {
     // for (size_t i = 0, l = _store.size(); i < l; ++i)
     //     store.push_back(std::move(_store[i]));
     store = std::move(_store);
@@ -41,14 +41,14 @@ void Chest::read(std::ifstream & file) {
     std::pair <unsigned int, unsigned int> p_in = std::make_pair(x_in, y_in);
     std::pair <unsigned int, unsigned int> scale = std::make_pair(width, height);
 
-    std::vector <std::shared_ptr<Obj>> store;
+    std::vector <std::shared_ptr<Obj<GameTypeSystem>>> store;
     
     for (size_t i = 0; i < number; ++i) {
         std::string type;
         file >> type;
         // file >> n;
 
-        std::shared_ptr<Obj> obj = World::load_object(type, file);
+        std::shared_ptr<Obj<GameTypeSystem>> obj = World<GameTypeSystem>::load_object(type, file);
         store.push_back(std::move(obj));
     }
 

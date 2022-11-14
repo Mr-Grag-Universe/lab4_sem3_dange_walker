@@ -6,13 +6,13 @@
 
 #include "../Object.hpp"
 
-class Alive : public Obj {
+class Alive : public Obj<GameTypeSystem> {
 protected:
     std::string name;
     double health = 100;
     size_t visibility_radius = 400;
 public:
-    ObjectType get_type();
+    GameTypeSystem get_type();
     double get_helth()
     { return health; }
     size_t get_visability_radius()

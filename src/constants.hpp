@@ -19,8 +19,8 @@
 
 namespace fs = std::filesystem;
 
-template <typename T>
-double distance(const std::pair <T, T> & p1, const std::pair <T, T> & p2) {
+template <typename T, typename U>
+double distance(const std::pair <T, T> & p1, const std::pair <U, U> & p2) {
     return std::sqrt(pow((double)p1.first-(double)p2.first, 2) + pow((double)p1.second-(double)p2.second, 2));
 }
 
@@ -127,5 +127,57 @@ class MyObjectTypes {
 
 
 };
+
+enum GameTypeSystem {
+    WALL,
+    FLOOR,
+    DOOR,
+    ALIVE,
+    CHEST,
+    BACKPACK,
+    SWARD,
+
+    CHARACTER,
+    SLIME,
+
+    WEAPON,
+
+    MW_WAVE,
+};
+enum BackPackTypeSystem {
+    SKIN,
+    WEAPON_IN_ARMS,
+};
+
+
+enum EffectType {
+    MW_Wawe_effect,
+};
+
+#ifndef MY_TYPES
+#define MY_TYPES
+static std::map <std::string, enum GameTypeSystem> types = {
+    { "floor",      FLOOR     },
+    { "door" ,      DOOR      },
+    { "wall" ,      WALL      },
+    { "chest",      CHEST     },
+    { "sward",      SWARD     },
+    { "backpack",   BACKPACK  },
+
+    { "hero",       CHARACTER },
+    { "slime",      SLIME     },
+
+
+    { "weapon",     WEAPON    },
+
+    { "mw_wave",    MW_WAVE   },
+};
+static std::map <std::string, BackPackTypeSystem> bp_menu_types = {
+    { "skin",        SKIN      },
+    { "weapon", WEAPON_IN_ARMS },
+};
+#endif
+
+using pair_ui64_t = std::pair<uint64_t, uint64_t>;
 
 #endif

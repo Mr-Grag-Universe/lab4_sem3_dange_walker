@@ -5,7 +5,7 @@
 
 class Wall : public Environment {
 public:
-    ObjectType get_type() {
+    GameTypeSystem get_type() {
         return WALL;
     }
 

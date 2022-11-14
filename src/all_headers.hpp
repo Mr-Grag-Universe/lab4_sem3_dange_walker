@@ -1,4 +1,4 @@
 #include "constants.hpp"
 #include "draw/Draw.hpp"
-#include "World.hpp"
+#include "GameWorld.hpp"
 #include "Map.hpp"
