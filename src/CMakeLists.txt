@@ -41,6 +41,7 @@ set(SOURCES
    menu.cpp
    backpack_menu/backpack_menu.cpp
    backpack_menu/draw_backpack_menu.cpp
+   backpack_menu/BackPackMenu.cpp
    interraction.cpp
    Object.cpp
    Object.hpp

@@ -22,7 +22,7 @@ public:
     { return true; }
     const Alive & get_originator_ptr() const
     { return originator; }
-    GameTypeSystem get_type()
+    GameTypeSystem get_type() const
     { return MW_WAVE; }
     void read(std::ifstream & file) {
     }

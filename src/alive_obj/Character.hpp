@@ -19,10 +19,13 @@ protected:
     World & world;
 public:
     void fill_backpack();
-    GameTypeSystem get_type() override
+    GameTypeSystem get_type() const override
     { return CHARACTER; }
-    const World & get_world()
+    const World & get_world() const 
     { return world; }
+    const BackPack & get_backpack() const 
+    { return backpack; }
+
     Character(World & w) : world(w) {}
     ~Character() {}
 

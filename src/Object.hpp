@@ -36,7 +36,7 @@ public:
 
     unsigned char get_layer();
 
-    virtual TypeSystem get_type() = 0;
+    virtual TypeSystem get_type() const = 0;
     virtual void read(std::ifstream & ) = 0;
     void set_texture(fs::path file_path, pair_ui64_t p_in, pair_ui64_t scale, pair_ui64_t n_repeat);
     // void set_sprite_position(pair_ui64_t p);

@@ -45,6 +45,9 @@ struct TextureStore {
     sf::Time period;
     sf::Time life_time;
 };
+struct MenuTextureStore {
+    std::vector <std::shared_ptr<sf::Texture>> textures;
+};
 
 /// @brief convert string like ..._xxx_xxx_xxx_._xxx_xxx_... to time in sfml format
 /// @param s 

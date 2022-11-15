@@ -5,7 +5,7 @@
 
 class Floor : public Environment {
 public:
-    GameTypeSystem get_type() {
+    GameTypeSystem get_type() const {
         return FLOOR;
     }
     // void set_texture(std::string , std::pair<unsigned int, unsigned int> , std::pair<unsigned int, unsigned int> p);

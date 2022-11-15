@@ -5,7 +5,7 @@
 
 class Door : public Environment {
 public:
-    GameTypeSystem get_type()
+    GameTypeSystem get_type() const 
     { return DOOR; }
 
     Door() {}

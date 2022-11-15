@@ -4,10 +4,11 @@
 #include <SFML/Window.hpp>
 
 #include "../World.hpp"
+#include "BackPackMenu.hpp"
 
 namespace Draw {
-    void draw_char_backpack(sf::RenderWindow & window, const Character & );
-    void draw_container(sf::RenderWindow & window, const Container & container);
+    void draw_char_backpack(sf::RenderWindow & window, const BackPackMenu & BPMenu);
+    void draw_container(sf::RenderWindow & window, const BackPackMenu & BPMenu);
 }
 
 #endif // DRAW_BACKPACK_MENU_HPP

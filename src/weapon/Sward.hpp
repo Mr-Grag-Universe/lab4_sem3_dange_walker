@@ -11,7 +11,7 @@ class Sward : public MeleeWeapon {
 private:
     /* data */
 public:
-    GameTypeSystem get_type()
+    GameTypeSystem get_type() const override
     { return SWARD; }
     // constructors
     Sward() {}

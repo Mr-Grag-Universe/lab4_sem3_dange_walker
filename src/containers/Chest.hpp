@@ -17,7 +17,7 @@ public:
 
     void fill(std::vector <std::shared_ptr<Obj<GameTypeSystem>>> store) override;
     void read(std::ifstream & file) override;
-    GameTypeSystem get_type() override
+    GameTypeSystem get_type() const override
     { return CHEST; }
 };
 

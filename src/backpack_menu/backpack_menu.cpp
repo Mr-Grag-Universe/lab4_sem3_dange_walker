@@ -12,10 +12,11 @@
 #include "all_headers.hpp"
 #include "draw_backpack_menu.hpp"
 #include "../World.hpp"
+#include "BackPackMenu.hpp"
 
 
 void backpack_menu(sf::RenderWindow & window, World & world) {
-    World w;
+    BackPackMenu BPMenu = BackPackMenu(world.get_hero().get_backpack());
     while (window.isOpen() && world.get_game_mode() == World::BACKPACK_MENU) {
         // Map map(world);
         // проверить все события окна, которые были вызваны с последней итерации цикла
@@ -45,7 +46,7 @@ void backpack_menu(sf::RenderWindow & window, World & world) {
         // std::cout << "hero position: (" << map.get_hero().get_sprite().getPosition().x << ", " << map.get_hero().get_position().second << ")\n";
 
         // отрисовываем карту
-        Draw::draw_char_backpack(window, world.get_hero());
+        Draw::draw_char_backpack(window, world.get_hero().get_backpack());
 
         // конец текущего кадра - отображаем
         window.display();
