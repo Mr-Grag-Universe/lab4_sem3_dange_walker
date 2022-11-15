@@ -11,11 +11,27 @@ public:
         position = p;
         name = n;
     }
+    Skin(const Skin && s) {
+        position = s.position;
+        name = s.name;
+        texture = s.texture;
+        sprite = s.sprite;
+        layer = s.layer;
+    }
+    Skin(const Skin & s) {
+        position = s.position;
+        name = s.name;
+        texture = s.texture;
+        sprite = s.sprite;
+        layer = s.layer;
+    }
     BackPackTypeSystem get_type() const override
     { return SKIN; }
     void read(std::ifstream & ) override {
     }
     void draw(sf::RenderWindow & window) {}
+private:
+    BackPackTypeSystem type = SKIN;
 };
 
 #endif

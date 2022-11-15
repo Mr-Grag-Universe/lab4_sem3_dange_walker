@@ -92,6 +92,10 @@ public:
             sprite.setTextureRect(sf::IntRect(sf::Vector2(0, 0), size_r));
         }
     }
+    void set_texture(std::shared_ptr<sf::Texture> texture, pair_ui64_t size) {
+        sprite.setTexture(*texture);
+        sprite.setScale(sf::Vector2f(size.first/texture->getSize().x, size.second/texture->getSize().y));
+    }
 
     void set_position(const pair_ui64_t & p) {
         position = p;

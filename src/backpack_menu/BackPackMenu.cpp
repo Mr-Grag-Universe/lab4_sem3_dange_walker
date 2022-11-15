@@ -2,11 +2,51 @@
 #include "../constants.hpp"
 #include <SFML/Graphics.hpp>
 
-BackPackMenu::BackPackMenu(const Container & c) : container(c) {
+std::shared_ptr<BPMObj> use_constructor(BackPackTypeSystem type, std::string name, pair_ui64_t p) {
+    switch (type) {
+    case SKIN:
+        return std::make_shared<Skin>(name, p);
+        break;
+    
+    default:
+        break;
+    }
+    return nullptr;
+} 
 
+BackPackMenu::BackPackMenu(const Container & c) : container(c) {
+    textures = load_textures("bp_menu_textures.txt");
+
+    std::ifstream file(static_path / fs::path("bp_menu.txt"));
+    
+    std::string type;
+    pair_ui64_t p;
+    pair_ui64_t size;
+    while(file >> type) {
+        file >> p.first >> p.second;
+        file >> size.first >> size.second;
+        std::shared_ptr<BPMObj> field = use_constructor(bp_menu_types[type], type, p);
+        field->set_texture(textures[bp_menu_types[type]].textures[0], size);
+        field->set_sprite_position(p);
+
+        all_menu_fields.push_back(field);
+        switch (bp_menu_types[type]) {
+        case SKIN: {
+            // BPMObj o = *field;
+            // Skin s(reinterpret_cast<Skin>(o));
+            skin = std::dynamic_pointer_cast<Skin>(field);
+            break;
+        }
+        case WEAPON_IN_ARMS:
+            break;
+        default:
+            break;
+        }
+    }
+    // skin = std::make_shared<Skin>("hero profile", );
 }
 
-std::map <BackPackTypeSystem, MenuTextureStore> load_textures(fs::path path_to_file) {
+std::map <BackPackTypeSystem, MenuTextureStore> BackPackMenu::load_textures(fs::path path_to_file) {
     std::map <BackPackTypeSystem, MenuTextureStore> T;
     std::cout << "#=#=#=#=# opening fstream with \"" << path_to_file << "\" file..." << std::endl;
     std::ifstream file(path_to_file);

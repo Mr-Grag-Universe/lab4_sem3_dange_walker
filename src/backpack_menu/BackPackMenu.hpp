@@ -16,9 +16,9 @@ class BackPackMenu {
 protected:
     const Container & container;
     std::vector <std::shared_ptr<BPMObj>> all_menu_fields;
-    std::map <BackPackTypeSystem, std::vector <sf::Texture>> textures;
+    std::map <BackPackTypeSystem, MenuTextureStore> textures;
 
-    std::shared_ptr<Skin> skin;
+    std::shared_ptr<Skin> skin = std::make_shared<Skin>();
     // std::shared_ptr<>
 public:
     const std::vector <std::shared_ptr<BPMObj>> & get_all_menu_fields() const 
