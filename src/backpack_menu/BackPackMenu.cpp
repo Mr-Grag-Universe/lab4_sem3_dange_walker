@@ -7,14 +7,17 @@ std::shared_ptr<BPMObj> use_constructor(BackPackTypeSystem type, std::string nam
     case SKIN:
         return std::make_shared<Skin>(name, p);
         break;
-    
+    case WEAPON_IN_ARMS:
+        return std::make_shared<WeaponInArm>(name, p);
     default:
         break;
     }
     return nullptr;
 } 
 
-BackPackMenu::BackPackMenu(const Container & c) : container(c) {
+// sf::Texture choose() {}
+
+BackPackMenu::BackPackMenu(const Character & c) : container(c.get_backpack()) {
     textures = load_textures(static_path / "bp_menu_textures.txt");
 
     std::ifstream file(static_path / fs::path("bp_menu.txt"));
@@ -37,6 +40,7 @@ BackPackMenu::BackPackMenu(const Container & c) : container(c) {
             break;
         }
         case WEAPON_IN_ARMS:
+            weapon = std::dynamic_pointer_cast<WeaponInArm>(field);
             break;
         default:
             break;

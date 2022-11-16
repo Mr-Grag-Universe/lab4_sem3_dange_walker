@@ -53,7 +53,6 @@ set(SOURCES
    environment/Door.cpp
    environment/Wall.cpp
    
-   alive_obj/Alive.cpp
    alive_obj/Character.cpp
    alive_obj/Slime.cpp
 

@@ -10,7 +10,8 @@
 #include "../Effect.hpp"
 #include "../containers/BackPack.hpp"
 #include "../weapon/Weapon.hpp"
-#include "../World.hpp"
+
+class World;
 
 class Character : public Alive {
 protected:

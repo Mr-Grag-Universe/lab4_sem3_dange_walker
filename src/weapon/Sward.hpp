@@ -20,9 +20,9 @@ public:
     Sward(const Sward & s) = default;
     ~Sward() {}
 
-    void read(std::ifstream &);
-    std::shared_ptr<Effect> use(World & w, Alive & o);
-    std::shared_ptr<MW_Wave> wave(World & w, double r, Alive & o);
+    void read(std::ifstream &) override;
+    std::shared_ptr<Effect> use(World & w, Alive & o) override;
+    std::shared_ptr<MW_Wave> wave(World & w, double r, Alive & o) override;
 };
 
 

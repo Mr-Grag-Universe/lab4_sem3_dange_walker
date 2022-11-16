@@ -21,6 +21,29 @@ namespace fs = std::filesystem;
 
 using pair_ui64_t = std::pair <u_int64_t, u_int64_t>;
 
+
+enum GameTypeSystem {
+    WALL,
+    FLOOR,
+    DOOR,
+    ALIVE,
+    CHEST,
+    BACKPACK,
+    SWARD,
+
+    CHARACTER,
+    SLIME,
+
+    WEAPON,
+
+    MW_WAVE,
+};
+enum BackPackTypeSystem {
+    SKIN,
+    WEAPON_IN_ARMS,
+};
+
+
 template <typename T, typename U>
 double distance(const std::pair <T, T> & p1, const std::pair <U, U> & p2) {
     return std::sqrt(pow((double)p1.first-(double)p2.first, 2) + pow((double)p1.second-(double)p2.second, 2));
@@ -132,28 +155,6 @@ class MyObjectTypes {
 
 
 };
-
-enum GameTypeSystem {
-    WALL,
-    FLOOR,
-    DOOR,
-    ALIVE,
-    CHEST,
-    BACKPACK,
-    SWARD,
-
-    CHARACTER,
-    SLIME,
-
-    WEAPON,
-
-    MW_WAVE,
-};
-enum BackPackTypeSystem {
-    SKIN,
-    WEAPON_IN_ARMS,
-};
-
 
 enum EffectType {
     MW_Wawe_effect,

@@ -18,6 +18,7 @@
 #include "alive_obj/Character.hpp"
 #include "alive_obj/NPC.hpp"
 #include "constants.hpp"
+#include "alive_obj/Character.hpp"
 
 #include "vector.hpp"
 
@@ -61,7 +62,8 @@ public:
 
     size_t get_W() const { return W; }
     size_t get_H() const { return H; }
-    const Character & get_hero() const { return hero; }
+    const Character & get_hero() const
+    { return hero; }
     const std::vector <std::shared_ptr<Obj<GameTypeSystem>>> & get_all_things() const { return all_things; }
     const std::vector <std::shared_ptr<NPC>> & get_all_npcs() const { return all_npc; }
     const std::vector <std::shared_ptr<Effect>> & get_all_effects() const { return all_effects; }

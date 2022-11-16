@@ -11,6 +11,8 @@ namespace fs = std::filesystem;
 #include "../containers/BackPack.hpp"
 #include "../constants.hpp"
 #include "Skin.hpp"
+#include "WeaponInArm.hpp"
+#include "../alive_obj/Character.hpp"
 
 class BackPackMenu {
 protected:
@@ -19,11 +21,12 @@ protected:
     std::map <BackPackTypeSystem, MenuTextureStore> textures;
 
     std::shared_ptr<Skin> skin = std::make_shared<Skin>();
+    std::shared_ptr<WeaponInArm> weapon = std::make_shared<WeaponInArm>();
     // std::shared_ptr<>
 public:
     const std::vector <std::shared_ptr<BPMObj>> & get_all_menu_fields() const 
     { return all_menu_fields; }
-    BackPackMenu(const Container & c);
+    BackPackMenu(const Character & c);
     ~BackPackMenu() = default;
 
     std::map <BackPackTypeSystem, MenuTextureStore> load_textures(fs::path path);

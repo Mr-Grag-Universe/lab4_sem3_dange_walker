@@ -12,7 +12,8 @@ protected:
     double health = 100;
     size_t visibility_radius = 400;
 public:
-    GameTypeSystem get_type();
+    GameTypeSystem get_type() const override
+    { return ALIVE; }
     double get_helth()
     { return health; }
     size_t get_visability_radius()
