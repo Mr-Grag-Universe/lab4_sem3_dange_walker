@@ -352,7 +352,6 @@ void World::add_things_from_file(const std::string & file_name) {
     }
 }
 
-
 void World::add_npcs_from_file(const std::string & file_name) {
     std::vector <std::shared_ptr<NPC>> npcs = load_npcs_from_file(file_name);
 
@@ -362,8 +361,6 @@ void World::add_npcs_from_file(const std::string & file_name) {
         std::make_move_iterator(npcs.end())
     );
 }
-
-
 
 void World::add_effects_from_file(const std::string & file_name) {
     try {

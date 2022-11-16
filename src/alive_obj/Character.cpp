@@ -41,6 +41,9 @@ void Character::read(std::ifstream & file) {
             case SWARD: {
                 weapon = std::make_shared<Sward>();
                 weapon->read(file);
+                if (!weapon->is_it_using())
+                    weapon->switch_usage();
+                backpack.push(weapon);
                 break;
             }
             

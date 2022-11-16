@@ -9,7 +9,13 @@
 class Weapon : public Obj<GameTypeSystem> {
 protected:
     size_t recharge_time = 0;
+    bool is_using = false;
 public:
+    void switch_usage()
+    { is_using = !is_using; }
+    virtual bool is_it_using() const
+    { return is_using; }
+
     Weapon() {}
     ~Weapon() {}
 
