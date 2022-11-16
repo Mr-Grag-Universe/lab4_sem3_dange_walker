@@ -15,7 +15,7 @@ std::shared_ptr<BPMObj> use_constructor(BackPackTypeSystem type, std::string nam
 } 
 
 BackPackMenu::BackPackMenu(const Container & c) : container(c) {
-    textures = load_textures("bp_menu_textures.txt");
+    textures = load_textures(static_path / "bp_menu_textures.txt");
 
     std::ifstream file(static_path / fs::path("bp_menu.txt"));
     
@@ -26,14 +26,13 @@ BackPackMenu::BackPackMenu(const Container & c) : container(c) {
         file >> p.first >> p.second;
         file >> size.first >> size.second;
         std::shared_ptr<BPMObj> field = use_constructor(bp_menu_types[type], type, p);
-        field->set_texture(textures[bp_menu_types[type]].textures[0], size);
-        field->set_sprite_position(p);
+        std::shared_ptr <sf::Texture> t = textures[bp_menu_types[type]].textures[0];
+        field->set_texture(t, size);
+        field->set_sprite_position(calculate_sprite_position(size, p));
 
         all_menu_fields.push_back(field);
         switch (bp_menu_types[type]) {
         case SKIN: {
-            // BPMObj o = *field;
-            // Skin s(reinterpret_cast<Skin>(o));
             skin = std::dynamic_pointer_cast<Skin>(field);
             break;
         }

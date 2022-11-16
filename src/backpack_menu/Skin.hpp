@@ -29,7 +29,9 @@ public:
     { return SKIN; }
     void read(std::ifstream & ) override {
     }
-    void draw(sf::RenderWindow & window) {}
+    void draw(sf::RenderWindow & window) {
+        window.draw(sprite);
+    }
 private:
     BackPackTypeSystem type = SKIN;
 };

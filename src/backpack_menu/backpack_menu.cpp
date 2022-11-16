@@ -36,7 +36,6 @@ void backpack_menu(sf::RenderWindow & window, World & world) {
             }
         }
 
-
         // очищаем окно и заливаем черным цветом
         window.clear(sf::Color::Cyan);
 
@@ -46,12 +45,9 @@ void backpack_menu(sf::RenderWindow & window, World & world) {
         // std::cout << "hero position: (" << map.get_hero().get_sprite().getPosition().x << ", " << map.get_hero().get_position().second << ")\n";
 
         // отрисовываем карту
-        Draw::draw_char_backpack(window, world.get_hero().get_backpack());
+        Draw::draw_char_backpack(window, BPMenu);
 
         // конец текущего кадра - отображаем
         window.display();
-
-        // int a = 0;
-        // std::cin >> a;
     }
 }

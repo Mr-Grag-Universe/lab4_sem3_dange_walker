@@ -94,7 +94,7 @@ public:
     }
     void set_texture(std::shared_ptr<sf::Texture> texture, pair_ui64_t size) {
         sprite.setTexture(*texture);
-        sprite.setScale(sf::Vector2f(size.first/texture->getSize().x, size.second/texture->getSize().y));
+        sprite.scale(sf::Vector2f((double)size.first/(double)texture->getSize().x, (double)size.second/(double)texture->getSize().y));
     }
 
     void set_position(const pair_ui64_t & p) {

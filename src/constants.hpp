@@ -19,6 +19,8 @@
 
 namespace fs = std::filesystem;
 
+using pair_ui64_t = std::pair <u_int64_t, u_int64_t>;
+
 template <typename T, typename U>
 double distance(const std::pair <T, T> & p1, const std::pair <U, U> & p2) {
     return std::sqrt(pow((double)p1.first-(double)p2.first, 2) + pow((double)p1.second-(double)p2.second, 2));
@@ -101,9 +103,9 @@ static std::map <MyRGBColors, std::tuple<uint8_t, uint8_t, uint8_t>> color_colle
     { DarkSlateBlue, std::make_tuple(72, 61, 139) },
 };
 
-// static std::pair <size_t, size_t> calculate_sprite_position(const sf::Texture & t, std::pair<size_t, size_t> p) {
-//     return std::make_pair((p.first-t.getSize().x)/2, (p.second-t.getSize().y)/2);
-//}
+inline pair_ui64_t calculate_sprite_position(pair_ui64_t size, pair_ui64_t p) {
+    return std::make_pair((u_int64_t) (p.first-size.first/2), (u_int64_t) (p.second-size.second/2));
+}
 
 class MyObjectTypes {
     [[maybe_unused]] enum GameObjectType {
