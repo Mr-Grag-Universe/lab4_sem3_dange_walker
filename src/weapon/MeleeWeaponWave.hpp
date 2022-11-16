@@ -42,7 +42,7 @@ public:
     }
 
     MW_Wave(World & w, double r, Alive & o, double d) : Effect(w.get_effect_texture(MW_WAVE)), radius(r), originator(o), damage(d) {
-        texture = w.get_effect_texture(MW_WAVE).textures[0];
+        textures.current_texture = w.get_effect_texture(MW_WAVE).textures[0];
     }
     MW_Wave(const MW_Wave & w) = default;
     ~MW_Wave() {}

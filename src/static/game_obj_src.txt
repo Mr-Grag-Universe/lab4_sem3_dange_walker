@@ -1,0 +1,6 @@
+sward
+    preview
+        0 0
+        1920 1920
+        1 1
+        sward.jpg

@@ -31,6 +31,7 @@ int main(int argc, char *argv[]) {
     world.add_things_from_file(static_path / containers);
     world.add_npcs_from_file(static_path / npc_file);
     world.add_effects_from_file(static_path / effect_file);
+    world.add_game_obj_textures_from_file(static_path / game_obj_file);
     world.add_character(static_path / hero_file);
 
     window.clear(sf::Color::Black);

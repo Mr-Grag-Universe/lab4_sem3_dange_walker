@@ -28,13 +28,14 @@ BackPackMenu::BackPackMenu(const Character & c) : container(c.get_backpack()) {
     while(file >> type) {
         file >> p.first >> p.second;
         file >> size.first >> size.second;
-        std::shared_ptr<BPMObj> field = use_constructor(bp_menu_types[type], type, p);
-        std::shared_ptr <sf::Texture> t = textures[bp_menu_types[type]].textures[0];
+        BackPackTypeSystem r_type = bp_menu_types[type];
+        std::shared_ptr<BPMObj> field = use_constructor(r_type, type, p);
+        std::shared_ptr <sf::Texture> t = textures[r_type].textures[0];
         field->set_texture(t, size);
         field->set_sprite_position(calculate_sprite_position(size, p));
 
         all_menu_fields.push_back(field);
-        switch (bp_menu_types[type]) {
+        switch (r_type) {
         case SKIN: {
             skin = std::dynamic_pointer_cast<Skin>(field);
             break;
@@ -78,12 +79,14 @@ std::map <BackPackTypeSystem, MenuTextureStore> BackPackMenu::load_textures(fs::
                 file >> n_repeat_x >> n_repeat_y;
                 //std::(file, file_path);
                 file >> file_path;
-                T[bp_menu_types[type]].textures.push_back(std::make_shared<sf::Texture>());
+
+                BackPackTypeSystem r_type = bp_menu_types[type];
+                T[r_type].textures.push_back(std::make_shared<sf::Texture>());
                 sf::Vector2 position_in((int) x_in, (int) y_in);
                 sf::Vector2 size_f((float) (width * n_repeat_x), (float) (height * n_repeat_y));
                 sf::Vector2 size_i((int) (width), (int) (height));
                 sf::Vector2 size_r((int) (width * n_repeat_x), (int) (height * n_repeat_y));
-                if (!T[bp_menu_types[type]].textures[i]->loadFromFile(static_path / file_path, sf::IntRect(position_in, size_i))) {
+                if (!T[r_type].textures[T[r_type].textures.size()-1]->loadFromFile(static_path / file_path, sf::IntRect(position_in, size_i))) {
                     std::cout << "cannot read texture from file : " << file_path << std::endl;
                     throw std::invalid_argument("there is not such file with texture");
                 }

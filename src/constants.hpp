@@ -58,6 +58,7 @@ static fs::path containers("containers.txt");
 static fs::path npc_file("npc.txt");
 static fs::path hero_file("hero.txt");
 static fs::path effect_file("effects_src.txt");
+static fs::path game_obj_file("game_obj_src.txt");
 
 static bool is_number(const std::string& s) {
     std::string::const_iterator it = s.begin();

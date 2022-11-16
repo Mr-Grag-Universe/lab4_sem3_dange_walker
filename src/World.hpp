@@ -49,6 +49,7 @@ private:
     std::vector <std::shared_ptr<NPC>> all_npc;
     std::vector <std::shared_ptr<Effect>> all_effects;
     std::map<GameTypeSystem, TextureStore> effects_textures;
+    std::map<GameTypeSystem, ObjTextureStore> game_obj_textures;
 
     GameMode mode = RUN;
 public:
@@ -56,6 +57,8 @@ public:
     static std::shared_ptr<NPC> load_npc(std::string type, std::ifstream & file);
     TextureStore & get_effect_texture(GameTypeSystem type)
     { return effects_textures[type]; }
+    ObjTextureStore & get_obj_textures(GameTypeSystem type)
+    { return game_obj_textures[type]; }
     const std::map<GameTypeSystem, TextureStore> & get_texture_store() const {
         return effects_textures;
     }
@@ -73,6 +76,7 @@ public:
     static std::vector <std::shared_ptr<Obj<GameTypeSystem>>> load_things_from_file(const std::string & file_name);
     static std::vector <std::shared_ptr<NPC>> load_npcs_from_file(const std::string & file_name);
     static std::map<GameTypeSystem, TextureStore> load_effects_from_file(const std::string & file_name);
+    static std::map<GameTypeSystem, ObjTextureStore> load_game_obj_textures_from_file(const std::string & file_name);
 
     World() : W(sf::VideoMode::getDesktopMode().size.x), H(sf::VideoMode::getDesktopMode().size.y) {}
     World(std::vector <std::shared_ptr<Obj<GameTypeSystem>>> things);
@@ -82,6 +86,7 @@ public:
     void add_things_from_file(const std::string & file_name);
     void add_npcs_from_file(const std::string & file_name);
     void add_effects_from_file(const std::string & file_name);
+    void add_game_obj_textures_from_file(const std::string & file_name);
     void add_character(const std::string & file_name);
     void add_effect(std::shared_ptr<Effect> effect) {
         all_effects.push_back(effect);

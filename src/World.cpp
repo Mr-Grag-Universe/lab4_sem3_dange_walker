@@ -211,6 +211,89 @@ std::map<GameTypeSystem, TextureStore> World::load_effects_from_file(const std::
     return effects;
 }
 
+std::map<GameTypeSystem, ObjTextureStore> World::load_game_obj_textures_from_file(const std::string & file_name) {
+    std::cout << "#=#=#=#=# opening fstream with \"" << file_name << "\" file..." << std::endl;
+    std::ifstream file(file_name);
+    if (!file) {
+        std::cout << "cannot find this file: " << file_name << std::endl;
+        throw std::invalid_argument("cannot find stream file");
+    }
+
+    std::string type;
+    std::map<GameTypeSystem, ObjTextureStore> T;
+    fs::path file_path;
+    size_t number{};
+    size_t x_in{}, y_in{};
+    size_t width{}, height{};
+    double n_repeat_x{}, n_repeat_y{};
+    while (file >> type) {
+        file >> type;
+        if (type.substr(0, 2) == "//") {
+            std::cout << type << "\n";
+            continue;
+        }
+        if (type == "textures") {
+            file >> number;
+            std::cout << "game obj type: " << type << "\n";
+            if (effect_types.find(types[type]) == effect_types.end()) {
+                for (size_t i = 0; i < number; ++i) {
+                    file >> x_in >> y_in;
+                    file >> width >> height;
+                    file >> n_repeat_x >> n_repeat_y;
+                    //std::(file, file_path);
+                    file >> file_path;
+                    T[types[type]].textures.push_back(std::make_shared<sf::Texture>());
+                    sf::Vector2 position_in((int) x_in, (int) y_in);
+                    sf::Vector2 size_f((float) (width * n_repeat_x), (float) (height * n_repeat_y));
+                    sf::Vector2 size_i((int) (width), (int) (height));
+                    sf::Vector2 size_r((int) (width * n_repeat_x), (int) (height * n_repeat_y));
+                    if (!T[types[type]].textures[i]->loadFromFile(static_path / file_path, sf::IntRect(position_in, size_i))) {
+                        std::cout << "cannot read texture from file : " << file_path << std::endl;
+                        throw std::invalid_argument("there is not such file with texture");
+                    }
+                }
+            }
+            else
+                throw std::runtime_error("this is not game obj in file: " + file_name);
+        } else if (type == "preview") {
+            file >> x_in >> y_in;
+            file >> width >> height;
+            file >> n_repeat_x >> n_repeat_y;
+            //std::(file, file_path);
+            file >> file_path;
+            T[types[type]].preview = std::make_shared<sf::Texture>();
+            sf::Vector2 position_in((int) x_in, (int) y_in);
+            sf::Vector2 size_f((float) (width * n_repeat_x), (float) (height * n_repeat_y));
+            sf::Vector2 size_i((int) (width), (int) (height));
+            sf::Vector2 size_r((int) (width * n_repeat_x), (int) (height * n_repeat_y));
+            if (!T[types[type]].preview->loadFromFile(static_path / file_path, sf::IntRect(position_in, size_i))) {
+                std::cout << "cannot read texture from file : " << file_path << std::endl;
+                throw std::invalid_argument("there is not such file with texture");
+            }
+        } else if (type == "backpack") {
+            file >> x_in >> y_in;
+            file >> width >> height;
+            file >> n_repeat_x >> n_repeat_y;
+            //std::(file, file_path);
+            file >> file_path;
+            T[types[type]].bp_texture = std::make_shared<sf::Texture>();
+            sf::Vector2 position_in((int) x_in, (int) y_in);
+            sf::Vector2 size_f((float) (width * n_repeat_x), (float) (height * n_repeat_y));
+            sf::Vector2 size_i((int) (width), (int) (height));
+            sf::Vector2 size_r((int) (width * n_repeat_x), (int) (height * n_repeat_y));
+            if (!T[types[type]].bp_texture->loadFromFile(static_path / file_path, sf::IntRect(position_in, size_i))) {
+                std::cout << "cannot read texture from file : " << file_path << std::endl;
+                throw std::invalid_argument("there is not such file with texture");
+            }
+        } else {
+            throw std::runtime_error("cannot initializate this tipe of textures");
+        }
+    }
+
+    file.close();
+
+    return T;
+}
 
 void World::add_character(const std::string & file_name) {
     if (file_name.empty()) {
@@ -365,6 +448,15 @@ void World::add_npcs_from_file(const std::string & file_name) {
 void World::add_effects_from_file(const std::string & file_name) {
     try {
         effects_textures = load_effects_from_file(file_name);
+    } catch (...) {
+        std::cout << "cannot read effects from " << file_name << std::endl;
+        throw std::runtime_error("cannot read effects from this file");
+    }
+}
+
+void World::add_game_obj_textures_from_file(const std::string & file_name) {
+    try {
+        game_obj_textures = load_game_obj_textures_from_file(file_name);
     } catch (...) {
         std::cout << "cannot read effects from " << file_name << std::endl;
         throw std::runtime_error("cannot read effects from this file");

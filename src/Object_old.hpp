@@ -55,12 +55,6 @@ inline std::map <std::string, enum ObjectType> types = {
 };
 #endif
 
-struct ObjTextureStore {
-    std::vector <std::shared_ptr<sf::Texture>> textures;
-    std::shared_ptr<sf::Texture> preview;
-    std::shared_ptr<sf::Texture> bp_texture;
-};
-
 class Obj;
 class Obj {
 protected:
@@ -92,9 +86,6 @@ protected:
     Collider collider;
     sf::Sprite sprite;
     std::shared_ptr<sf::Texture> texture = nullptr;
-    // std::shared_ptr<sf::Texture> bp_texture = nullptr;
-    // std::shared_ptr<sf::Texture> preview_texture = nullptr;
-    // ObjTextureStore textures;
     unsigned char layer = 0;
     std::string name;
 public:

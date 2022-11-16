@@ -4,7 +4,7 @@ skin 1
     1 1
     hero_profile.jpg
 
-sward 1
+weapon 1
     0 0
     1920 1920
     1 1
