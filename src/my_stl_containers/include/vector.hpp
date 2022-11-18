@@ -6,8 +6,18 @@
 #include <string>
 #include <iterator>
 #include <vector>
+#include <functional>
 
+/// пространство имён моей stl
+/**
+ * my first doxygen comment
+*/
 namespace my_stl {
+    /// класс вектора
+    /// 
+    /**
+     * @brief my class
+    */
     template <typename Type>
     class vector {
     private:
@@ -42,9 +52,9 @@ namespace my_stl {
             Iterator operator++(int)
             { return *this++; }
             
-            bool operator==(const Iterator & i)
+            bool operator==(const Iterator & i) const 
             { return this->ptr == i.ptr; }
-            bool operator!=(const Iterator & i)
+            bool operator!=(const Iterator & i) const 
             { return this->ptr != i.ptr; }
         };
     public:
@@ -169,7 +179,7 @@ namespace my_stl {
         /// @param f 
         /// @return 
         template <typename T>
-        T aggregate(T seed, T (*f)(T, Type&)) {
+        T aggregate(T seed, std::function<T (T, Type&)> f) {
             T res = seed;
             for (auto el: *this)
                 res = f(res, el);

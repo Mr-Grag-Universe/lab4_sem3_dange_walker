@@ -1,9 +1,4 @@
-project(my_stl)
+cmake_minimum_required(VERSION 3.16)
+project(my_stl_project)
 
-include_directories(vector)
-
-add_subdirectory(vector)
-add_subdirectory(tests)
-add_subdirectory(doc)
-
-add_subdirectory(doxygen)
+add_subdirectory(src)

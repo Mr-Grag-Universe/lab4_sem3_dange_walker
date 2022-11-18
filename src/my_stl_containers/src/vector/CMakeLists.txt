@@ -8,7 +8,7 @@ set(SRC_FILES
 add_library(vector ${SRC_FILES})
 target_include_directories(vector
     PRIVATE
-        ${PROJECT_SOURCE_DIR}/../include
+        ${PROJECT_SOURCE_DIR}/../../include
 )
 
 # add_executable(${PROJECT_NAME} ${SRC_FILES})

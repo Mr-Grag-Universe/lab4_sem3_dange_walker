@@ -86,18 +86,20 @@ TEST(operators, assignment) {
 }
 
 TEST(iterators, for_auto) {
-    my_stl::vector <int> v = {1, 2, 3, 6};
-    for (auto el: v) {
+    const my_stl::vector <int> v = {1, 2, 3, 6};
+    for (const auto& el: v) {
         std::cout << el;
     }
 }
 
-int f(int x, int & y) { return x * y; }
+std::string f(std::string x, int & y) { return x + std::to_string(y); }
 
 TEST(iterators, aggregate) {
     my_stl::vector <int> v = {1, 2, 3, 4};
-    ASSERT_EQ(v.aggregate(0, f), 0);
-    ASSERT_EQ(v.aggregate(1, f), 24);
+    std::function<std::string(std::string x, int & y)> lambda = [](std::string x, int & y) { return x + std::to_string(y); };
+    std::function<std::string(std::string x, int & y)> ff = f;
+    ASSERT_EQ(v.aggregate(std::string("0"), lambda), std::string("01234"));
+    ASSERT_EQ(v.aggregate(std::string("1"), ff), "11234");
 }
 
 int main(int argc, char **argv) {

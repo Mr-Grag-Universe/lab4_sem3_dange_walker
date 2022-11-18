@@ -4,7 +4,7 @@ project(game)
 set(CMAKE_CXX_STANDARD 20)
 # set(CMAKE_PREFIX_PATH C:/Users/Stephan/Desktop/vs_code_game/SFML-2.5.1)
 
-set(STATIC_FILES_SRC_PATH "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/static/")
+set(STATIC_FILES_SRC_PATH "/home/stepan/Рабочий стол/vs_code_game/src/static/")
 # Detect and add SFML
 set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake_modules" ${CMAKE_MODULE_PATH})
 # # set(SFML_DIR C:/Users/Stephan/Desktop/vs_code_game/SFML-2.5.1/lib/cmake/SFML)
@@ -112,3 +112,28 @@ endif(MSVC)
 
 # ==================================
 # ================================
+
+option(BUILD_DOC "Build documentation" ON)
+
+# check if Doxygen is installed
+find_package(Doxygen)
+if (DOXYGEN_FOUND)
+    # set input and output files
+    # set(RECU)
+    set(DOXYGEN_IN /home/stepan/Desktop/vs_code_game/src/docs/Doxyfile.in)
+    set(DOXYGEN_OUT /home/stepan/Desktop/vs_code_game/src/Doxyfile)
+    set(INPUT ./)
+
+    # request to configure the file
+    configure_file(${DOXYGEN_IN} ${DOXYGEN_OUT} @ONLY)
+    message("Doxygen build started")
+
+    # note the option ALL which allows to build the docs together with the application
+    add_custom_target(all_doc_doxygen ALL
+        COMMAND ${DOXYGEN_EXECUTABLE} ${DOXYGEN_OUT}
+        WORKING_DIRECTORY "/home/stepan/Desktop/vs_code_game/src/"
+        COMMENT "Generating API documentation with Doxygen"
+        VERBATIM )
+else (DOXYGEN_FOUND)
+  message("Doxygen need to be installed to generate the doxygen documentation")
+endif (DOXYGEN_FOUND)
