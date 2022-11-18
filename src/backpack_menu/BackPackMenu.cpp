@@ -1,14 +1,17 @@
 #include "BackPackMenu.hpp"
+#include "BackPackStore.hpp"
 #include "../constants.hpp"
 #include <SFML/Graphics.hpp>
 
-std::shared_ptr<BPMObj> use_constructor(BackPackTypeSystem type, std::string name, pair_ui64_t p) {
+std::shared_ptr<BPMObj> use_constructor(BackPackTypeSystem type, std::string name, pair_ui64_t p, Container & c) {
     switch (type) {
     case SKIN:
         return std::make_shared<Skin>(name, p);
         break;
     case WEAPON_IN_ARMS:
         return std::make_shared<WeaponInArm>(name, p);
+    case BACK_PACK_STORE:
+        return std::make_shared<BackPackStore>(c);
     default:
         break;
     }
@@ -17,7 +20,7 @@ std::shared_ptr<BPMObj> use_constructor(BackPackTypeSystem type, std::string nam
 
 // sf::Texture choose() {}
 
-BackPackMenu::BackPackMenu(const Character & c) : container(c.get_backpack()) {
+BackPackMenu::BackPackMenu(Character & c) : container(c.get_backpack()) {
     textures = load_textures(static_path / "bp_menu_textures.txt");
 
     std::ifstream file(static_path / fs::path("bp_menu.txt"));
@@ -25,14 +28,18 @@ BackPackMenu::BackPackMenu(const Character & c) : container(c.get_backpack()) {
     std::string type;
     pair_ui64_t p;
     pair_ui64_t size;
+    bool need_texture = false;
     while(file >> type) {
         file >> p.first >> p.second;
         file >> size.first >> size.second;
+        file >> need_texture;
         BackPackTypeSystem r_type = bp_menu_types[type];
-        std::shared_ptr<BPMObj> field = use_constructor(r_type, type, p);
-        std::shared_ptr <sf::Texture> t = textures[r_type].textures[0];
-        field->set_texture(t, size);
-        field->set_sprite_position(calculate_sprite_position(size, p));
+        std::shared_ptr<BPMObj> field = use_constructor(r_type, type, p, c.get_backpack());
+        if (need_texture) {
+            std::shared_ptr <sf::Texture> t = textures[r_type].textures[0];
+            field->set_texture(t, size);
+            field->set_sprite_position(calculate_sprite_position(size, p));
+        }
 
         all_menu_fields.push_back(field);
         switch (r_type) {
@@ -42,6 +49,11 @@ BackPackMenu::BackPackMenu(const Character & c) : container(c.get_backpack()) {
         }
         case WEAPON_IN_ARMS:
             weapon = std::dynamic_pointer_cast<WeaponInArm>(field);
+            break;
+        case BACK_PACK_STORE:
+            bp_store = std::dynamic_pointer_cast<BackPackStore>(field);
+            bp_store->set_size(size);
+            bp_store->set_position(calculate_sprite_position(size, p));
             break;
         default:
             break;

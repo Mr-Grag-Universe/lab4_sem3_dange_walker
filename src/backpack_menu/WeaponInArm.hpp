@@ -18,6 +18,14 @@ public:
     void draw(sf::RenderWindow & window) const override {
         window.draw(sprite);
     }
+    void edit(const Alive & a) override {
+        try {
+            [[maybe_unused]] const Character & hero = dynamic_cast<const Character &>(a);
+        } catch(...) {
+            throw;
+        }
+        [[maybe_unused]] const Character & hero = dynamic_cast<const Character &>(a);
+    }
 private:
     [[maybe_unused]] BackPackTypeSystem type = WEAPON_IN_ARMS;
 };

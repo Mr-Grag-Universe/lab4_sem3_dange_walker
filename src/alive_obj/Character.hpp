@@ -18,6 +18,8 @@ protected:
     BackPack backpack;
     std::shared_ptr<Weapon> weapon;
     World & world;
+    size_t level = 0;
+    size_t experience = 0;
 public:
     void fill_backpack();
     GameTypeSystem get_type() const override
@@ -26,6 +28,16 @@ public:
     { return world; }
     const BackPack & get_backpack() const 
     { return backpack; }
+    BackPack & get_backpack() 
+    { return backpack; }
+    size_t get_level() const
+    { return level; }
+    void level_up()
+    { ++level; }
+    size_t get_exp() const
+    { return experience; }
+    void exp_restart()
+    { experience = 0; }
 
     Character(World & w) : world(w) {}
     ~Character() {}

@@ -4,8 +4,6 @@
 #define WIDTH 600
 #define HEIGHT 800
 
-//#define SCRINE_WIDTH 1080
-
 #include <algorithm>
 #include <cmath>
 #include <map>
@@ -41,6 +39,7 @@ enum GameTypeSystem {
 enum BackPackTypeSystem {
     SKIN,
     WEAPON_IN_ARMS,
+    BACK_PACK_STORE,
 };
 
 
@@ -50,7 +49,7 @@ double distance(const std::pair <T, T> & p1, const std::pair <U, U> & p2) {
 }
 
 
-#define STATIC_FILES_SRC_PATH "/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/static/"
+#define STATIC_FILES_SRC_PATH "/home/stepan/Desktop/vs_code_game/src/static/"
 
 static fs::path static_path(fs::canonical(STATIC_FILES_SRC_PATH));
 static fs::path first_room("first_room.txt");
@@ -116,6 +115,7 @@ struct MenuTextureStore {
 
 static sf::Color MyDarkSlateGray = sf::Color(47, 79, 79);
 static sf::Color MyGrey11 = sf::Color(28, 28, 28);
+static sf::Color MyDarkSlateBlue = sf::Color(72, 61, 139);
 
 enum MyRGBColors {
     DarkSlateGray,
@@ -152,6 +152,7 @@ class MyObjectTypes {
     [[maybe_unused]] enum BPMenuObjectType {
         SKIN,
         WEAPON_IN_ARMS,
+        BACK_PACK_STORE,
     } BPMenuType;
 
 
@@ -182,9 +183,20 @@ static std::map <std::string, enum GameTypeSystem> types = {
 static std::map <std::string, BackPackTypeSystem> bp_menu_types = {
     { "skin",        SKIN      },
     { "weapon", WEAPON_IN_ARMS },
+    { "bp_store", BACK_PACK_STORE },
 };
 #endif
 
 using pair_ui64_t = std::pair<uint64_t, uint64_t>;
+
+inline sf::Vector2f middle_rect_pos(const sf::RectangleShape & r, const sf::Vector2f & size) {
+    sf::Vector2f res;
+    sf::Vector2f r_pos = r.getPosition();
+    sf::Vector2f r_size = r.getSize();
+    res.x = r_pos.x + (r_size.x - size.x)/2;
+    res.y = r_pos.y + (r_size.y - size.y)/2;
+
+    return res;
+}
 
 #endif

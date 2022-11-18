@@ -11,6 +11,7 @@
 namespace fs = std::filesystem;
 
 #include <SFML/Graphics.hpp>
+#include <SFML/Window.hpp>
 
 #include "Collider.hpp"
 #include "constants.hpp"
@@ -124,4 +125,29 @@ private:
     TypeSystem type;
 };
 
+/*
+#include <SFML/Window.hpp>
+
+class BPMObj : public Obj<BackPackTypeSystem> {
+public:
+    BPMObj() {}
+    BPMObj(std::string n, pair_ui64_t p) {
+        position = p;
+        name = n;
+    }
+    virtual void draw(sf::RenderWindow & window) const = 0;
+};
+
+
+class GameObj : public Obj<GameTypeSystem> {
+public:
+    GameObj() {}
+    GameObj(std::string n, pair_ui64_t p) {
+        position = p;
+        name = n;
+    }
+    virtual void draw(sf::RenderWindow & window) const = 0;
+    virtual void load_information();
+};
+*/
 #endif

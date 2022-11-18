@@ -4,7 +4,7 @@
 #include "Object.hpp"
 #include "constants.hpp"
 
-// интерфейс эффекта
+/// интерфейс эффекта
 class Effect;
 class Effect : public Obj<GameTypeSystem> {
 protected:
