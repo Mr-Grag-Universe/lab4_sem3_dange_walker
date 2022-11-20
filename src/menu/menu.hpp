@@ -5,8 +5,8 @@
 #include <SFML/System.hpp>
 #include <SFML/Graphics.hpp>
 
-#include "World.hpp"
-#include "constants.hpp"
+#include "../World.hpp"
+#include "../constants.hpp"
 
 void menu(sf::RenderWindow & window, World & world);
 

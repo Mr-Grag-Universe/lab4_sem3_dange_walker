@@ -7,7 +7,7 @@ set(SRC_FILES
 
 add_library(vector ${SRC_FILES})
 target_include_directories(vector
-    PRIVATE
+    PUBLIC
         ${PROJECT_SOURCE_DIR}/../../include
 )
 

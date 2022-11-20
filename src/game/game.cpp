@@ -9,7 +9,7 @@
 #include <SFML/System.hpp>
 #include <SFML/Graphics.hpp>
 
-#include "all_headers.hpp"
+#include "../all_headers.hpp"
 #include "game.hpp"
 
 

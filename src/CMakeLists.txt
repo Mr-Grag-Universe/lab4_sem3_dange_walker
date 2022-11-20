@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
-project(game)
+project(Game_finall)
 
 set(CMAKE_CXX_STANDARD 20)
 # set(CMAKE_PREFIX_PATH C:/Users/Stephan/Desktop/vs_code_game/SFML-2.5.1)
@@ -37,11 +37,6 @@ set(SOURCES
    static/first_room.txt
 
    main.cpp
-   game.cpp
-   menu.cpp
-   backpack_menu/backpack_menu.cpp
-   backpack_menu/draw_backpack_menu.cpp
-   backpack_menu/BackPackMenu.cpp
    interraction.cpp
    Object.cpp
    Object.hpp
@@ -64,27 +59,42 @@ set(SOURCES
    containers/BackPack.cpp
 
    weapon/Sward.cpp
+
+   my_stl_containers/include/vector.hpp
    )
 
-add_executable(game ${SOURCES})
+add_executable(${PROJECT_NAME} ${SOURCES})
 
 add_subdirectory(my_stl_containers)
+add_subdirectory(game)
+add_subdirectory(menu)
+add_subdirectory(backpack_menu)
+message("SUCCESSFULL adding directories")
 # target_link_libraries(game my_stl)
 # # target_include_directories(sfml_game PUBLIC SFML-2.5.1/include)
 
 # # target_compile_definitions(sfml_game PRIVATE SFML_STATIC)
 
 # # target_link_libraries(game glfw glad)
-target_link_libraries(game ${OPENGL_gl_LIBRARY})
+target_link_libraries(${PROJECT_NAME} ${OPENGL_gl_LIBRARY})
 
 # # find_package(SFML COMPONENTS graphics REQUIRED)
 find_package(OpenGL REQUIRED)
-target_link_libraries(game sfml-system sfml-window sfml-graphics ${SFML_DEPENDENCIES} vector)
-target_include_directories(game
+target_include_directories(${PROJECT_NAME}
    PRIVATE
-   my_stl_containers/include
+   my_stl_containers
+
+   game
+   menu
    backpack_menu
 )
+target_link_libraries(${PROJECT_NAME} sfml-system sfml-window sfml-graphics ${SFML_DEPENDENCIES} vector)
+target_link_libraries(${PROJECT_NAME} game menu backpack_menu)
+target_link_libraries(game sfml-system sfml-window sfml-graphics ${SFML_DEPENDENCIES})
+target_link_libraries(menu sfml-system sfml-window sfml-graphics ${SFML_DEPENDENCIES})
+target_link_libraries(backpack_menu sfml-system sfml-window sfml-graphics ${SFML_DEPENDENCIES})
+
+message("SUCCESSFULL linking")
 
 # target_link_libraries(sfml_game ${GLFW})
 # target_link_libraries(sfml_game ${SFML_LIBRARIES} ${SFML_DEPENDENCIES})

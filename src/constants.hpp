@@ -42,6 +42,31 @@ enum BackPackTypeSystem {
     BACK_PACK_STORE,
 };
 
+#ifndef MY_TYPES
+#define MY_TYPES
+static std::map <std::string, enum GameTypeSystem> types = {
+    { "floor",      FLOOR     },
+    { "door" ,      DOOR      },
+    { "wall" ,      WALL      },
+    { "chest",      CHEST     },
+    { "sward",      SWARD     },
+    { "backpack",   BACKPACK  },
+
+    { "hero",       CHARACTER },
+    { "slime",      SLIME     },
+
+
+    { "weapon",     WEAPON    },
+
+    { "mw_wave",    MW_WAVE   },
+};
+static std::map <std::string, BackPackTypeSystem> bp_menu_types = {
+    { "skin",        SKIN      },
+    { "weapon", WEAPON_IN_ARMS },
+    { "bp_store", BACK_PACK_STORE },
+};
+#endif
+
 
 template <typename T, typename U>
 double distance(const std::pair <T, T> & p1, const std::pair <U, U> & p2) {
@@ -154,40 +179,11 @@ class MyObjectTypes {
         WEAPON_IN_ARMS,
         BACK_PACK_STORE,
     } BPMenuType;
-
-
 };
 
 enum EffectType {
     MW_Wawe_effect,
 };
-
-#ifndef MY_TYPES
-#define MY_TYPES
-static std::map <std::string, enum GameTypeSystem> types = {
-    { "floor",      FLOOR     },
-    { "door" ,      DOOR      },
-    { "wall" ,      WALL      },
-    { "chest",      CHEST     },
-    { "sward",      SWARD     },
-    { "backpack",   BACKPACK  },
-
-    { "hero",       CHARACTER },
-    { "slime",      SLIME     },
-
-
-    { "weapon",     WEAPON    },
-
-    { "mw_wave",    MW_WAVE   },
-};
-static std::map <std::string, BackPackTypeSystem> bp_menu_types = {
-    { "skin",        SKIN      },
-    { "weapon", WEAPON_IN_ARMS },
-    { "bp_store", BACK_PACK_STORE },
-};
-#endif
-
-using pair_ui64_t = std::pair<uint64_t, uint64_t>;
 
 inline sf::Vector2f middle_rect_pos(const sf::RectangleShape & r, const sf::Vector2f & size) {
     sf::Vector2f res;
