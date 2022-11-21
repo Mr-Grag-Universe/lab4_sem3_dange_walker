@@ -1,9 +1,6 @@
 #ifndef CONSTS
 #define CONSTS
 
-#define WIDTH 600
-#define HEIGHT 800
-
 #include <algorithm>
 #include <cmath>
 #include <map>
