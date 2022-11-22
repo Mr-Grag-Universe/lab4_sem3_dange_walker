@@ -38,8 +38,8 @@ set(SOURCES
 
    main.cpp
    interraction.cpp
-   Object.cpp
-   Object.hpp
+   objects/Object.cpp
+   objects/Object.hpp
    World.cpp
    Map.cpp
 
@@ -88,6 +88,8 @@ target_include_directories(${PROJECT_NAME}
    game
    menu
    backpack_menu
+
+   objects
 )
 target_link_libraries(${PROJECT_NAME} sfml-system sfml-window sfml-graphics ${SFML_DEPENDENCIES} vector)
 target_link_libraries(${PROJECT_NAME} game menu backpack_menu SFML_graphic)

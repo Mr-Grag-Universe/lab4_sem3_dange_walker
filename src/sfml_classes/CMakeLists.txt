@@ -21,7 +21,7 @@ message("SUCCESSFULL linking")
 
 # =========================
 
-target_include_directories(${PROJECT_NAME} PRIVATE "include" "lib")
+target_include_directories(${PROJECT_NAME} PRIVATE "../include" "../lib" "../objects")
 target_link_libraries(${PROJECT_NAME} sfml-system sfml-window sfml-graphics sfml-audio)
 if (UNIX)
    target_link_libraries(${PROJECT_NAME} pthread)

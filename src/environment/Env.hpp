@@ -1,11 +1,11 @@
 #ifndef ENV_CLASS
 #define ENV_CLASS
 
-#include "../Object.hpp"
+#include "../objects/GameObject.hpp"
 
 class Environment;
 
-class Environment : public Obj<GameTypeSystem> {
+class Environment : public GameObj {
 private:
     /* data */
 public:

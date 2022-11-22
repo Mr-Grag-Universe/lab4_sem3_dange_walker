@@ -5,7 +5,7 @@
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
 
-#include "../Object.hpp"
+#include "Object.hpp"
 #include "../containers/BackPack.hpp"
 #include "../constants.hpp"
 #include "../alive_obj/Alive.hpp"

@@ -4,9 +4,9 @@
 #include <string>
 #include <iostream>
 
-#include "../Object.hpp"
+#include "../objects/GameObject.hpp"
 
-class Alive : public Obj<GameTypeSystem> {
+class Alive : public GameObj {
 protected:
     std::string name;
     double health = 100;

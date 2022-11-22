@@ -15,7 +15,7 @@ public:
     Chest(std::string n, std::pair<unsigned int, unsigned int> p);
     ~Chest() {}
 
-    void fill(std::vector <std::shared_ptr<Obj<GameTypeSystem>>> store) override;
+    void fill(std::vector <std::shared_ptr<GameObj>> store) override;
     void read(std::ifstream & file) override;
     GameTypeSystem get_type() const override
     { return CHEST; }

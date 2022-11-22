@@ -7,7 +7,7 @@
 #include <vector>
 
 #include "../alive_obj/Alive.hpp"
-#include "../Object.hpp"
+#include "GameObject.hpp"
 #include "../Effect.hpp"
 #include "../World.hpp"
 #include "../constants.hpp"

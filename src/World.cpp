@@ -42,13 +42,13 @@ World::World(const std::string & file_name) : World() {
     }
 }
 
-World::World(std::vector <std::shared_ptr<Obj<GameTypeSystem>>> things) : World() {
+World::World(std::vector <std::shared_ptr<GameObj>> things) : World() {
     all_things = std::move(things);
 }
 
 
-std::shared_ptr<Obj<GameTypeSystem>> World::load_object(std::string type, std::ifstream & file) {
-    std::shared_ptr<Obj<GameTypeSystem>> obj;
+std::shared_ptr<GameObj> World::load_object(std::string type, std::ifstream & file) {
+    std::shared_ptr<GameObj> obj;
     switch (types[type]) {
         case FLOOR: {
             obj = std::make_shared<Floor>();
@@ -91,7 +91,7 @@ std::shared_ptr<NPC> World::load_npc(std::string type, std::ifstream & file) {
 }
 
 
-std::vector <std::shared_ptr<Obj<GameTypeSystem>>> World::load_things_from_file(const std::string & file_name) {
+std::vector <std::shared_ptr<GameObj>> World::load_things_from_file(const std::string & file_name) {
     std::cout << "#=#=#=#=# opening fstream with \"" << file_name << "\" file..." << std::endl;
     std::ifstream file(file_name);
     if (!file) {
@@ -100,7 +100,7 @@ std::vector <std::shared_ptr<Obj<GameTypeSystem>>> World::load_things_from_file(
     }
 
     std::string type;
-    std::vector <std::shared_ptr<Obj<GameTypeSystem>>> v;
+    std::vector <std::shared_ptr<GameObj>> v;
     while (file >> type) {
         if (type.substr(0, 2) == "//") {
             std::cout << type << "\n";
@@ -407,7 +407,7 @@ void World::iterate() {
 
 
 void World::add_things_from_file(const std::string & file_name) {
-    std::vector <std::shared_ptr<Obj<GameTypeSystem>>> things = load_things_from_file(file_name);
+    std::vector <std::shared_ptr<GameObj>> things = load_things_from_file(file_name);
 
     size_t old_len = all_things.size();
     all_things.insert(

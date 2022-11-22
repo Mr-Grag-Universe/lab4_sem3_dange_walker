@@ -1,13 +1,13 @@
 #include "Map.hpp"
 
 Map::Map(const World & w) : hero(w.get_hero()), W(w.get_W()), H(w.get_H()) {
-    const std::vector <std::shared_ptr<Obj<GameTypeSystem>>> & at = w.get_all_things();
+    const std::vector <std::shared_ptr<GameObj>> & at = w.get_all_things();
     // std::cout << "map_hero_position: (" << hero.get_position().first << ", " << hero.get_position().second << ")\n";
     const pair_ui64_t h_p = hero.get_position();
     for (size_t i = 0, l = at.size(); i < l; ++i) {
         pair_ui64_t p = at[i]->get_position();
         if (distance(p, h_p) <= 1900) {
-            all_things.push_back((std::shared_ptr<Obj<GameTypeSystem>> *) &at[i]);
+            all_things.push_back((std::shared_ptr<GameObj> *) &at[i]);
             // const sf::Sprite & hero_s = hero.get_sprite();
             const sf::Vector2f hero_pos = sf::Vector2f((float) h_p.first, (float) h_p.second);
             sf::Vector2f s_window_pos = sf::Vector2f((float)p.first, (float)p.second);

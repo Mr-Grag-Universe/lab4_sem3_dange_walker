@@ -6,3 +6,7 @@ add_library( backpack_menu
     BackPackMenu.cpp
     draw_backpack_menu.cpp
 )
+target_include_directories(backpack_menu
+    PRIVATE
+    ../objects
+)

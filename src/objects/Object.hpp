@@ -29,8 +29,6 @@ public:
 protected:
     pair_ui64_t position = std::make_pair(0, 0);
 public:
-    pair_ui64_t w_position = std::make_pair(0, 0);
-    // void set_position(const pair_ui64_t & p);
     pair_ui64_t get_position() const
     { return position; }
 
@@ -50,10 +48,6 @@ public:
 
 protected:
     Collider collider;
-    sf::Sprite sprite;
-    ObjTextureStore textures;
-    // std::shared_ptr<sf::Texture> texture = nullptr;
-    unsigned char layer = 0;
     std::string name;
 public:
     const sf::Sprite & get_sprite() const
@@ -125,29 +119,4 @@ private:
     TypeSystem type;
 };
 
-/*
-#include <SFML/Window.hpp>
-
-class BPMObj : public Obj<BackPackTypeSystem> {
-public:
-    BPMObj() {}
-    BPMObj(std::string n, pair_ui64_t p) {
-        position = p;
-        name = n;
-    }
-    virtual void draw(sf::RenderWindow & window) const = 0;
-};
-
-
-class GameObj : public Obj<GameTypeSystem> {
-public:
-    GameObj() {}
-    GameObj(std::string n, pair_ui64_t p) {
-        position = p;
-        name = n;
-    }
-    virtual void draw(sf::RenderWindow & window) const = 0;
-    virtual void load_information();
-};
-*/
 #endif

@@ -45,7 +45,7 @@ private:
 
     size_t W, H;
 
-    std::vector <std::shared_ptr<Obj<GameTypeSystem>>> all_things;
+    std::vector <std::shared_ptr<GameObj>> all_things;
     std::vector <std::shared_ptr<NPC>> all_npc;
     std::vector <std::shared_ptr<Effect>> all_effects;
     std::map<GameTypeSystem, TextureStore> effects_textures;
@@ -53,7 +53,7 @@ private:
 
     GameMode mode = RUN;
 public:
-    static std::shared_ptr<Obj<GameTypeSystem>> load_object(std::string name, std::ifstream & file);
+    static std::shared_ptr<GameObj> load_object(std::string name, std::ifstream & file);
     static std::shared_ptr<NPC> load_npc(std::string type, std::ifstream & file);
     TextureStore & get_effect_texture(GameTypeSystem type)
     { return effects_textures[type]; }
@@ -69,19 +69,19 @@ public:
     { return hero; }
     Character & get_hero()
     { return hero; }
-    const std::vector <std::shared_ptr<Obj<GameTypeSystem>>> & get_all_things() const { return all_things; }
+    const std::vector <std::shared_ptr<GameObj>> & get_all_things() const { return all_things; }
     const std::vector <std::shared_ptr<NPC>> & get_all_npcs() const { return all_npc; }
     const std::vector <std::shared_ptr<Effect>> & get_all_effects() const { return all_effects; }
     
     const Env & get_env() const { return env; }
 
-    static std::vector <std::shared_ptr<Obj<GameTypeSystem>>> load_things_from_file(const std::string & file_name);
+    static std::vector <std::shared_ptr<GameObj>> load_things_from_file(const std::string & file_name);
     static std::vector <std::shared_ptr<NPC>> load_npcs_from_file(const std::string & file_name);
     static std::map<GameTypeSystem, TextureStore> load_effects_from_file(const std::string & file_name);
     static std::map<GameTypeSystem, ObjTextureStore> load_game_obj_textures_from_file(const std::string & file_name);
 
     World() : W(sf::VideoMode::getDesktopMode().size.x), H(sf::VideoMode::getDesktopMode().size.y) {}
-    World(std::vector <std::shared_ptr<Obj<GameTypeSystem>>> things);
+    World(std::vector <std::shared_ptr<GameObj>> things);
     World(const std::string & file_name);
     ~World() = default;
 

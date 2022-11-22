@@ -16,13 +16,13 @@ class Map {
 private:
     const Character & hero;
     const size_t W, H;
-    std::vector <std::shared_ptr<Obj<GameTypeSystem>> *> all_things;
+    std::vector <std::shared_ptr<GameObj> *> all_things;
     std::vector <std::shared_ptr<NPC>> all_npc;
     std::vector <std::shared_ptr<Effect>> all_effects;
 public:
     size_t get_W() const { return W; }
     size_t get_H() const { return H; }
-    const std::vector <std::shared_ptr<Obj<GameTypeSystem>> *> & get_all_things() const 
+    const std::vector <std::shared_ptr<GameObj> *> & get_all_things() const 
     { return all_things; }
     const std::vector <std::shared_ptr<NPC>> & get_all_npcs() const 
     { return all_npc; }

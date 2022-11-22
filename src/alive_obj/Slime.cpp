@@ -1,6 +1,6 @@
 #include <SFML/Graphics.hpp>
 
-#include "../Object.hpp"
+#include "GameObject.hpp"
 #include "Slime.hpp"
 
 void Slime::read(std::ifstream & file) {

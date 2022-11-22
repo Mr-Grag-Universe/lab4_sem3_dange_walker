@@ -3,7 +3,7 @@
 #include "../weapon/Sward.hpp"
 #include "../constants.hpp"
 
-#include "../Object.hpp"
+#include "GameObject.hpp"
 #include "../world.hpp"
 #include "Character.hpp"
 
