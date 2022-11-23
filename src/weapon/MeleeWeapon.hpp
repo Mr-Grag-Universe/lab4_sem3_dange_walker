@@ -2,8 +2,8 @@
 #define MELEE_WEAPON
 
 #include "Weapon.hpp"
-#include "World.hpp"
 #include "MeleeWeaponWave.hpp"
+// #include "../sfml_classes/sfml_object.hpp"
 
 class MeleeWeapon : public Weapon {
 protected:
@@ -14,7 +14,7 @@ public:
     { return damage; }
     MeleeWeapon() {}
     ~MeleeWeapon() {}
-    virtual std::shared_ptr<MW_Wave> wave(World & w, double r, Alive& o) = 0;
+    virtual std::shared_ptr<MW_Wave> wave(double r, Alive& o) = 0;
 };
 
 

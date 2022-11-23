@@ -90,6 +90,7 @@ target_include_directories(${PROJECT_NAME}
    backpack_menu
 
    objects
+   sfml_classes
 )
 target_link_libraries(${PROJECT_NAME} sfml-system sfml-window sfml-graphics ${SFML_DEPENDENCIES} vector)
 target_link_libraries(${PROJECT_NAME} game menu backpack_menu SFML_graphic)

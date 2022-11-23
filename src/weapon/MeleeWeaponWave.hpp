@@ -41,10 +41,13 @@ public:
     void update_texture() {
     }
 
-    MW_Wave(World & w, double r, Alive & o, double d) : Effect(w.get_effect_texture(MW_WAVE)), radius(r), originator(o), damage(d) {
-        textures.current_texture = w.get_effect_texture(MW_WAVE).textures[0];
+    MW_Wave(double r, Alive & o, double d) : originator(o) {
+        // textures.current_texture = w.get_effect_texture(MW_WAVE).textures[0];
+        radius = r;
+        originator = o;
+        damage = d;
     }
-    MW_Wave(const MW_Wave & w) = default;
+    MW_Wave(Alive & o) : originator(o) {}
     ~MW_Wave() {}
 };
 

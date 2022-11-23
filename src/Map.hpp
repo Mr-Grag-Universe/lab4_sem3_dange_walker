@@ -11,6 +11,7 @@
 #include "World.hpp"
 #include "constants.hpp"
 #include "alive_obj/Character.hpp"
+#include "sfml_classes/sfml_object.hpp"
 
 class Map {
 private:
@@ -19,6 +20,7 @@ private:
     std::vector <std::shared_ptr<GameObj> *> all_things;
     std::vector <std::shared_ptr<NPC>> all_npc;
     std::vector <std::shared_ptr<Effect>> all_effects;
+    std::vector <std::shared_ptr<SFMLObject>> all_objs;
 public:
     size_t get_W() const { return W; }
     size_t get_H() const { return H; }
@@ -30,8 +32,10 @@ public:
     { return all_effects; }
     const Character & get_hero() const
     { return hero; }
+    const std::vector <std::shared_ptr<SFMLObject>> & get_all_objs() const
+    {return all_objs; }
 
-    Map(const World & w);
+    Map(World & w);
     Map(const Map & m) = default;
     ~Map() = default;
 protected:

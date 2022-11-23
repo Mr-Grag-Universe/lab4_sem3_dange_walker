@@ -2,9 +2,9 @@
 #define WEAPON_CLASS
 
 #include "../objects/GameObject.hpp"
-#include "../world.hpp"
 #include "../alive_obj/Alive.hpp"
 #include "../constants.hpp"
+#include "../Effect.hpp"
 
 class Weapon : public GameObj {
 protected:
@@ -19,7 +19,7 @@ public:
     Weapon() {}
     ~Weapon() {}
 
-    virtual std::shared_ptr<Effect> use(World & w, Alive & o) = 0;
+    virtual std::shared_ptr<Effect> use(Alive & o) = 0;
 };
 
 #endif // WEAPON

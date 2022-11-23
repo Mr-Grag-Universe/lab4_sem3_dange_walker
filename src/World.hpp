@@ -59,7 +59,7 @@ public:
     { return effects_textures[type]; }
     ObjTextureStore & get_obj_textures(GameTypeSystem type)
     { return game_obj_textures[type]; }
-    const std::map<GameTypeSystem, TextureStore> & get_texture_store() const {
+    std::map<GameTypeSystem, TextureStore> & get_texture_store() {
         return effects_textures;
     }
 

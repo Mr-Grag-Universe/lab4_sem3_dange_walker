@@ -21,8 +21,8 @@ public:
     ~Sward() {}
 
     void read(std::ifstream &) override;
-    std::shared_ptr<Effect> use(World & w, Alive & o) override;
-    std::shared_ptr<MW_Wave> wave(World & w, double r, Alive & o) override;
+    std::shared_ptr<Effect> use(Alive & o) override;
+    std::shared_ptr<MW_Wave> wave(double r, Alive & o) override;
 };
 
 

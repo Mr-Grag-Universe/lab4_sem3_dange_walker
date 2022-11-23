@@ -303,12 +303,12 @@ void World::add_character(const std::string & file_name) {
     std::ifstream file;
     file.open(file_name);
     hero.read(file);
-    hero.set_position(std::make_pair(W/2, H/2));
-    size_t width = hero.get_texture()->getSize().x;
-    size_t height = hero.get_texture()->getSize().y;
-    hero.set_sprite_position(std::make_pair((W - width)/2, (H - height)/2));
+    // hero.set_position(std::make_pair(W/2, H/2));
+    // size_t width = hero.get_texture()->getSize().x;
+    // size_t height = hero.get_texture()->getSize().y;
+    // hero.set_sprite_position(std::make_pair((W - width)/2, (H - height)/2));
     std::cout << "initial hero position: (" << hero.get_position().first << ", " << hero.get_position().second << ")\n";
-    std::cout << "initial hero sprite position: (" << hero.get_sprite().getPosition().x << ", " << hero.get_sprite().getPosition().y << ")\n";
+    // std::cout << "initial hero sprite position: (" << hero.get_sprite().getPosition().x << ", " << hero.get_sprite().getPosition().y << ")\n";
 
     file.close();
 }
@@ -330,7 +330,7 @@ void World::interraction(sf::Event & event, sf::RenderWindow & window) {
     case sf::Event::Resized: {
         W = event.size.width;
         H = event.size.height;
-        hero.set_sprite_position(std::make_pair((W-hero.get_texture()->getSize().x)/2, (H-hero.get_texture()->getSize().y)/2));
+        // hero.set_sprite_position(std::make_pair((W-hero.get_texture()->getSize().x)/2, (H-hero.get_texture()->getSize().y)/2));
         std::cout << "new width: " << event.size.width << std::endl;
         std::cout << "new height: " << event.size.height << std::endl;
         break;
@@ -395,11 +395,11 @@ void World::iterate() {
                 }
             }
         }
-        if (all_effects[i]->get_time() > all_effects[i]->get_life_time()) {
-            all_effects.erase(all_effects.begin() + i);
-            i--;
-        } else
-            all_effects[i]->update_texture();
+        // if (all_effects[i]->get_time() > all_effects[i]->get_life_time()) {
+        //     all_effects.erase(all_effects.begin() + i);
+        //     i--;
+        // } else
+        //     all_effects[i]->update_texture();
     }
 
     return;
