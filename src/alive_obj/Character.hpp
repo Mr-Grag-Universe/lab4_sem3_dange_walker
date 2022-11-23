@@ -41,6 +41,21 @@ public:
 
     Character(World & w) : world(w) {}
     ~Character() {}
+    Character(const Character & c) = default;
+    Character & operator=(const Character & c) {
+        name = c.name;
+        collider = c.collider;
+        backpack = c.backpack;
+        experience = c.experience;
+        health = c.health;
+        // world = c.world;
+        weapon = c.weapon;
+        visibility_radius = c.visibility_radius;
+        position = c.position;
+        level = c.level;
+        layer = c.layer;
+        return *this;
+    }
 
     void read(std::ifstream & file) override;
     void draw(sf::RenderWindow & window);

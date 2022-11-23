@@ -28,6 +28,7 @@ public:
     using pair_ui64_t = std::pair<uint64_t, uint64_t>;
 protected:
     pair_ui64_t position = std::make_pair(0, 0);
+    char layer = 0;
 public:
     pair_ui64_t get_position() const
     { return position; }
@@ -66,8 +67,8 @@ public:
     { collider.velocity = v; }
     void set_v_angle(double a)
     { collider.moving_angle = a; }
-
-public:
+    char get_layer() const
+    { return layer; }
 
     void move(int x, int y) {
         position.first += x;

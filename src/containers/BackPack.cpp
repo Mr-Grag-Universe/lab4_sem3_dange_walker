@@ -39,8 +39,8 @@ void BackPack::read(std::ifstream & file) {
     file >> number;
 
     std::pair<unsigned int, unsigned int> p = std::make_pair(x, y);
-    std::pair <unsigned int, unsigned int> p_in = std::make_pair(x_in, y_in);
-    std::pair <unsigned int, unsigned int> scale = std::make_pair(width, height);
+    // std::pair <unsigned int, unsigned int> p_in = std::make_pair(x_in, y_in);
+    // std::pair <unsigned int, unsigned int> scale = std::make_pair(width, height);
 
     std::vector <std::shared_ptr<GameObj>> store;
     
@@ -54,6 +54,6 @@ void BackPack::read(std::ifstream & file) {
     }
 
     this->fill(std::move(store));
-    this->set_texture(source_file_name, p_in, scale, std::make_pair(1, 1));
+    // this->set_texture(source_file_name, p_in, scale, std::make_pair(1, 1));
     position = p;
 }

@@ -41,8 +41,14 @@ public:
     { return clock.getElapsedTime(); }
     void restart_clock()
     { clock.restart(); }
+    char get_layer() const
+    { return layer; }
+    ObjTextureStore & get_ts()
+    { return textures; }
 
-    SFMLObject(std::shared_ptr<GameObj> o, ObjTextureStore & t, char l = 0) : obj(o), layer(l), textures(t) {}
+    SFMLObject(std::shared_ptr<GameObj> o, ObjTextureStore & t, char l = 0) : obj(o), layer(l), textures(t) {
+
+    }
     ~SFMLObject() {}
 
     std::shared_ptr<GameObj> get_obj()
@@ -92,6 +98,9 @@ public:
         sf::Vector2 p_v((float) p.first, (float) p.second);
         sprite.setPosition(p_v);
     }
+
+    void draw(sf::RenderWindow & w) const
+    { w.draw(sprite); }
 };
 
 #endif // SFML_OBJECTS_CLASS
