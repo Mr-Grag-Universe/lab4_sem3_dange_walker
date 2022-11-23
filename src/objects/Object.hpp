@@ -27,11 +27,14 @@ class Obj {
 public:
     using pair_ui64_t = std::pair<uint64_t, uint64_t>;
 protected:
+    pair_ui64_t size = std::make_pair(0, 0);
     pair_ui64_t position = std::make_pair(0, 0);
     char layer = 0;
 public:
     pair_ui64_t get_position() const
     { return position; }
+    pair_ui64_t get_size() const
+    { return size; }
     void set_position(pair_ui64_t p)
     { position = p; }
 

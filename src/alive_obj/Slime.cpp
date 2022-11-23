@@ -15,6 +15,7 @@ void Slime::read(std::ifstream & file) {
     file >> width >> height;
     file >> source_file_name;
     file >> x_rep >> y_rep;
+    size = std::make_pair(width, height);
 
     // std::pair <unsigned int, unsigned int> p_in = std::make_pair(x_in, y_in);
     // std::pair <unsigned int, unsigned int> scale = std::make_pair(width, height);

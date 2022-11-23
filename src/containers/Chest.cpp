@@ -37,6 +37,7 @@ void Chest::read(std::ifstream & file) {
     file >> source_file_name;
     file >> number;
 
+    size = std::make_pair(width, height);
     std::pair<unsigned int, unsigned int> p = std::make_pair(x, y);
     // std::pair <unsigned int, unsigned int> p_in = std::make_pair(x_in, y_in);
     // std::pair <unsigned int, unsigned int> scale = std::make_pair(width, height);

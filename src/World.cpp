@@ -220,6 +220,7 @@ std::map<GameTypeSystem, ObjTextureStore> World::load_game_obj_textures_from_fil
     }
 
     std::string type;
+    std::string texture_type;
     std::map<GameTypeSystem, ObjTextureStore> T;
     fs::path file_path;
     size_t number{};
@@ -227,15 +228,15 @@ std::map<GameTypeSystem, ObjTextureStore> World::load_game_obj_textures_from_fil
     size_t width{}, height{};
     double n_repeat_x{}, n_repeat_y{};
     while (file >> type) {
-        file >> type;
-        if (type.substr(0, 2) == "//") {
-            std::cout << type << "\n";
+        file >> texture_type;
+        if (texture_type.substr(0, 2) == "//") {
+            std::cout << texture_type << "\n";
             continue;
         }
-        if (type == "textures") {
+        if (texture_type == "textures") {
             file >> number;
             std::cout << "game obj type: " << type << "\n";
-            if (effect_types.find(types[type]) == effect_types.end()) {
+            if (true || effect_types.find(types[type]) == effect_types.end()) {
                 for (size_t i = 0; i < number; ++i) {
                     file >> x_in >> y_in;
                     file >> width >> height;
@@ -255,7 +256,7 @@ std::map<GameTypeSystem, ObjTextureStore> World::load_game_obj_textures_from_fil
             }
             else
                 throw std::runtime_error("this is not game obj in file: " + file_name);
-        } else if (type == "preview") {
+        } else if (texture_type == "preview") {
             file >> x_in >> y_in;
             file >> width >> height;
             file >> n_repeat_x >> n_repeat_y;
@@ -270,7 +271,7 @@ std::map<GameTypeSystem, ObjTextureStore> World::load_game_obj_textures_from_fil
                 std::cout << "cannot read texture from file : " << file_path << std::endl;
                 throw std::invalid_argument("there is not such file with texture");
             }
-        } else if (type == "backpack") {
+        } else if (texture_type == "backpack") {
             file >> x_in >> y_in;
             file >> width >> height;
             file >> n_repeat_x >> n_repeat_y;
@@ -303,7 +304,7 @@ void World::add_character(const std::string & file_name) {
     std::ifstream file;
     file.open(file_name);
     hero.read(file);
-    // hero.set_position(std::make_pair(W/2, H/2));
+    hero.set_position(std::make_pair(W/2, H/2));
     // size_t width = hero.get_texture()->getSize().x;
     // size_t height = hero.get_texture()->getSize().y;
     // hero.set_sprite_position(std::make_pair((W - width)/2, (H - height)/2));
@@ -457,8 +458,9 @@ void World::add_effects_from_file(const std::string & file_name) {
 void World::add_game_obj_textures_from_file(const std::string & file_name) {
     try {
         game_obj_textures = load_game_obj_textures_from_file(file_name);
-    } catch (...) {
-        std::cout << "cannot read effects from " << file_name << std::endl;
-        throw std::runtime_error("cannot read effects from this file");
+    } catch (const std::runtime_error & re) {
+        std::cout << re.what() << std::endl;
+        std::cout << "cannot read obj textures from " << file_name << std::endl;
+        throw std::runtime_error("cannot read obj textures from this file");
     }
 }

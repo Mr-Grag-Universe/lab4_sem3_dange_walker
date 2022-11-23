@@ -16,7 +16,7 @@ void Sward::read(std::ifstream & file) {
     file >> name;
     file >> damage;
     file >> radius;
-
+    size = std::make_pair(20, 20);
     // std::shared_ptr<Obj> res = std::make_shared<Sward>(name, damage, radius);
     // return res;
 }

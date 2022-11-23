@@ -33,7 +33,6 @@ void game(sf::RenderWindow & window, World & world) {
             }
         }
 
-
         // очищаем окно и заливаем черным цветом
         window.clear(sf::Color::Black);
 

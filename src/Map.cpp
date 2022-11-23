@@ -11,7 +11,8 @@ Map::Map(World & w) : hero(w.get_hero()), W(w.get_W()), H(w.get_H()) {
         if (distance(p, h_p) <= 1900) {
             all_things.push_back((std::shared_ptr<GameObj> *) &at[i]);
             all_objs.push_back(std::make_shared<SFMLObject>(at[i], ts[at[i]->get_type()], at[i]->get_layer()));
-            all_objs[all_objs.size()-1]->set_texture(ts[at[i]->get_type()].textures[0], std::make_pair(1, 1));
+            std::shared_ptr<sf::Texture> t = ts[at[i]->get_type()].textures[0];
+            all_objs[all_objs.size()-1]->set_texture(t, at[i]->get_size());
             // const sf::Sprite & hero_s = hero.get_sprite();
             const sf::Vector2f hero_pos = sf::Vector2f((float) h_p.first, (float) h_p.second);
             sf::Vector2f s_window_pos = sf::Vector2f((float)p.first, (float)p.second);
@@ -19,10 +20,6 @@ Map::Map(World & w) : hero(w.get_hero()), W(w.get_W()), H(w.get_H()) {
             s_window_pos.y = H/2 - (hero_pos.y - s_window_pos.y);
             // at[i]->set_sprite_position((pair_ui64_t) std::make_pair(s_window_pos.x, s_window_pos.y));
             all_objs[all_objs.size()-1]->set_sprite_position((pair_ui64_t) std::make_pair(s_window_pos.x, s_window_pos.y));
-
-            // std::cout << "hero: (" << hero_pos.x << "; " << hero_pos.y << "); ";
-            // std::cout << "map: (" << W << "; " << H << "); ";
-            // std::cout << "s_w: (" << s_window_pos.x << "; " << s_window_pos.y << ");\n";
             
             switch (at[i]->get_type()) {
                 case FLOOR:
@@ -46,7 +43,7 @@ Map::Map(World & w) : hero(w.get_hero()), W(w.get_W()), H(w.get_H()) {
         if (distance(p, h_p) <= 1900) {
             all_npc.push_back((std::shared_ptr<NPC>) npc[i]);
             all_objs.push_back(std::make_shared<SFMLObject>(npc[i], ts[npc[i]->get_type()], npc[i]->get_layer()));
-            all_objs[all_objs.size()-1]->set_texture(ts[npc[i]->get_type()].textures[0], std::make_pair(1, 1));
+            all_objs[all_objs.size()-1]->set_texture(ts[npc[i]->get_type()].textures[0], npc[i]->get_size());
             // const sf::Sprite & hero_s = hero.get_sprite();
             const sf::Vector2f hero_pos = sf::Vector2f((float) h_p.first, (float) h_p.second);
             sf::Vector2f s_window_pos = sf::Vector2f((float)p.first, (float)p.second);
@@ -62,7 +59,7 @@ Map::Map(World & w) : hero(w.get_hero()), W(w.get_W()), H(w.get_H()) {
         pair_ui64_t p = eff[i]->get_position();
         if (distance(p, h_p) <= 1900) {
             all_objs.push_back(std::make_shared<SFMLObject>(eff[i], ts[eff[i]->get_type()], eff[i]->get_layer()));
-            /// all_objs[all_objs.size()-1]->set_texture(ts[eff[i]->get_type()].textures[0], std::make_pair(1, 1));
+            all_objs[all_objs.size()-1]->set_texture(ts[eff[i]->get_type()].textures[0], eff[i]->get_size());
             // const sf::Vector2f hero_pos = sf::Vector2f((float) h_p.first, (float) h_p.second);
             sf::Vector2 s_window_pos = sf::Vector2(p.first, p.second);
             s_window_pos.x = (W - all_objs[all_objs.size()-1]->get_texture()->getSize().x)/2; // - (hero_pos.x - s_window_pos.x);
@@ -75,7 +72,7 @@ Map::Map(World & w) : hero(w.get_hero()), W(w.get_W()), H(w.get_H()) {
         }
     }
 
-    for (auto o: all_objs) {
-        
-    }
+    all_objs.push_back(std::make_shared<SFMLObject>(std::dynamic_pointer_cast<GameObj>(std::make_shared<Character>(hero)), ts[CHARACTER], 0));
+    all_objs[all_objs.size()-1]->set_texture(ts[CHARACTER].textures[0], hero.get_size());
+    all_objs[all_objs.size()-1]->set_sprite_position(calculate_sprite_position(hero.get_size(), std::make_pair(w.get_W()/2, w.get_H()/2)));
 }

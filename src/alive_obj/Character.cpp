@@ -16,6 +16,7 @@ void Character::read(std::ifstream & file) {
         file >> src;
         file >> x_in >> y_in;
         file >> width >> height;
+        size = std::make_pair(width, height);
     } catch (...) {
         std::cout << "cannot read data about char" << std::endl;
         throw std::runtime_error("file reading error");

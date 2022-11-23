@@ -29,8 +29,9 @@ void Draw::draw_map(sf::RenderWindow & window, const Map & map) {
     //     window.draw(s);
     // }
     const std::vector <std::shared_ptr<SFMLObject>> & ao = map.get_all_objs();
-    for (auto o: ao)
+    for (auto o: ao) {
         o->draw(window);
+    }
 
     // window.draw(hero_s);
 }

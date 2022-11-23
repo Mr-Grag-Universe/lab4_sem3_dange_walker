@@ -4,3 +4,33 @@ sward
         1920 1920
         1 1
         sward.jpg
+floor
+    textures 1
+        0 0
+        16 16
+        1 1
+        cobbles2.png
+chest
+    textures 1
+        0 0                         
+        56 64
+        1 1
+        chest_and_key.png
+mw_wave
+    textures 1
+        0 0
+        128 152
+        0.5 0.5
+        weapon_effects_sprites/Alternative_1/1/Alternative_1_01.png
+slime
+    textures 1
+        0 4
+        32 32
+        2 2
+        slime.png
+hero
+    textures 1
+        32 64
+        32 32
+        1 1
+        char.png

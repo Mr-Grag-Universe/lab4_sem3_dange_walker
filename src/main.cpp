@@ -28,14 +28,14 @@ int main(int argc, char *argv[]) {
     // std::vector <std::unique_ptr<Obj>> things = World::load_things_from_file("/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/static/first_room.txt");
     // std::cout << static_path;
     World world(static_path / first_room);
+    world.add_game_obj_textures_from_file(static_path / game_obj_file);
     world.add_things_from_file(static_path / containers);
     world.add_npcs_from_file(static_path / npc_file);
     world.add_effects_from_file(static_path / effect_file);
-    world.add_game_obj_textures_from_file(static_path / game_obj_file);
     world.add_character(static_path / hero_file);
 
     window.clear(sf::Color::Black);
-    std::shared_ptr<sf::Texture> texture = (world.get_effect_texture(MW_WAVE)).textures[0];
+    // std::shared_ptr<sf::Texture> texture = (world.get_effect_texture(MW_WAVE)).textures[0];
     // sf::Vector2 position_in((int) 0, (int) 0);
     std::pair <unsigned int, unsigned int> scale(100, 100);
     fs::path file_path("weapon_effects_sprites/Big_Preview.png");
@@ -47,13 +47,13 @@ int main(int argc, char *argv[]) {
     //    throw std::invalid_argument("there is not such file with texture");
     //}
 
-    sf::Sprite sprite;
-    sprite.setTexture(*texture);
-    sf::Vector2 p_v((float) 1910/2, (float) 1080/2);
-    sprite.setPosition(p_v);
-    window.draw(sprite);
-    window.display();
-    window.draw(sprite);
+    // sf::Sprite sprite;
+    // sprite.setTexture(*texture);
+    // sf::Vector2 p_v((float) 1910/2, (float) 1080/2);
+    // sprite.setPosition(p_v);
+    // window.draw(sprite);
+    // window.display();
+    // window.draw(sprite);
 
     while (window.isOpen()) {
         switch (world.get_game_mode())

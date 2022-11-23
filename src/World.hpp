@@ -62,9 +62,8 @@ public:
     std::map<GameTypeSystem, TextureStore> & get_effect_texture_store() {
         return effects_textures;
     }
-    std::map<GameTypeSystem, ObjTextureStore> & get_texture_store() {
-        return game_obj_textures;
-    }
+    std::map<GameTypeSystem, ObjTextureStore> & get_texture_store()
+    { return game_obj_textures; }
 
     size_t get_W() const { return W; }
     size_t get_H() const { return H; }
