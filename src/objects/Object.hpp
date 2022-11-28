@@ -33,10 +33,15 @@ public:
     using pair_ui64_t = std::pair<uint64_t, uint64_t>;
 protected:
     pair_ui64_t size = std::make_pair(0, 0);
+    pair_ui64_t repeate = std::make_pair(1, 1);
     pair_ui64_t position = std::make_pair(0, 0);
     char layer = 0;
     bool is_static = true;
 public:
+    size_t x_rep()
+    { return repeate.first; }
+    size_t y_rep()
+    { return repeate.second; }
     pair_ui64_t get_position() const
     { return position; }
     pair_ui64_t get_size() const

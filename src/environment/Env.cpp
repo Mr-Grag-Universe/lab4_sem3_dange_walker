@@ -22,6 +22,7 @@ void Environment::read(std::ifstream & file) {
     file >> source_file_name;
     file >> x_rep >> y_rep;
     size = std::make_pair(width, height);
+    repeate = std::make_pair(x_rep, y_rep);
 
     // std::pair <unsigned int, unsigned int> p_in = std::make_pair(x_in, y_in);
     // std::pair <unsigned int, unsigned int> scale = std::make_pair(width, height);

@@ -50,18 +50,20 @@ Map::Map(World & w) : hero(w.get_hero()), W(w.get_W()), H(w.get_H()) {
             sf::Vector2f s_window_pos = sf::Vector2f((float)p.first, (float)p.second);
             s_window_pos.x = W/2 - (hero_pos.x - s_window_pos.x);
             s_window_pos.y = H/2 - (hero_pos.y - s_window_pos.y);
-            // npc[i]->set_sprite_position((pair_ui64_t) std::make_pair(s_window_pos.x, s_window_pos.y));
-            all_objs[g_ind]->set_sprite_position((pair_ui64_t) std::make_pair(s_window_pos.x, s_window_pos.y));
+            all_objs[g_ind]->set_sprite_position(calculate_sprite_position(npc[i]->get_size(), (pair_ui64_t) std::make_pair(s_window_pos.x, s_window_pos.y)));
         }
     }
     
+    std::shared_ptr<SFMLObject> obj;
     const std::vector <std::shared_ptr<Effect>> & eff = w.get_all_effects();
     for (size_t i = 0, l = eff.size(); i < l; ++i, ++g_ind) {
         pair_ui64_t p = eff[i]->get_position();
         if (distance(p, h_p) <= 1900) {
-            all_objs.push_back(std::make_shared<SFMLObject>(eff[i], ts[eff[i]->get_type()], eff[i]->get_layer()));
+            obj = std::make_shared<SFMLObject>(eff[i], ts[eff[i]->get_type()], eff[i]->get_layer());
+            all_objs.push_back(obj);
             all_objs[g_ind]->set_life_time(ts[eff[i]->get_type()].standard_life_time);
             all_objs[g_ind]->set_period(ts[eff[i]->get_type()].standard_period);
+            all_objs[g_ind]->correct_phase();
 
             all_objs[g_ind]->update_texture();
             // std::cout << eff[i]->get_size().first << " " << eff[i]->get_size().second << std::endl;
