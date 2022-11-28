@@ -23,8 +23,11 @@ void Sward::read(std::ifstream & file) {
 
 std::shared_ptr<MW_Wave> Sward::wave(double r, Alive & o) {
     MW_Wave wave(r, o, damage);
+    wave.set_position(o.get_position());
+    wave.set_static(false);
+    wave.set_size(std::make_pair(2*r, 2*r));
+    wave.set_exist(true);
     // TextureStore & ts = w.get_effect_texture(MW_WAVE);
-    // wave.set_position(o.get_position());
     // wave.set_texture(ts.textures[0]);
     // wave.set_period(ts.period);
     // wave.set_life_time(ts.life_time);

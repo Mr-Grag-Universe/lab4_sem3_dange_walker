@@ -2,6 +2,7 @@
 #define SFML_OBJECTS_CLASS
 
 #include <algorithm>
+#include <ctime>
 
 #include "../objects/GameObject.hpp"
 
@@ -21,11 +22,24 @@ public:
     // void set_texture(fs::path file_path, std::pair<unsigned int, unsigned int> p_in, std::pair<unsigned int, unsigned int> scale, std::pair<unsigned int, unsigned int> n_repeat);
     // void set_texture(std::shared_ptr<sf::Texture> t, pair_ui64_t size);
     void update_texture() {
-        sf::Time ex_time = clock.getElapsedTime();
+        sf::Time ex_time = sf::milliseconds((double) (std::clock() - obj->get_born())*30 / CLOCKS_PER_SEC * 1000);
+        std::cout << ex_time.asMilliseconds() << "ms\n";
+        std::cout << (double)std::clock() / CLOCKS_PER_SEC << "s\n";
         size_t n_o_states = textures.textures.size();
-        if (ex_time.asMilliseconds() % period.asMilliseconds() > period.asMilliseconds() / sf::Time(ex_time).asMilliseconds()) {
-            this->set_texture(textures.textures[(ex_time.asMilliseconds() % period.asMilliseconds())/(period.asMilliseconds()/n_o_states)], std::make_pair(1, 1));
+        // if (ex_time.asMilliseconds() % period.asMilliseconds() > period.asMilliseconds() / sf::Time(ex_time).asMilliseconds()) {
+        //     this->set_texture(textures.textures[(ex_time.asMilliseconds() % period.asMilliseconds())/(period.asMilliseconds()/n_o_states)], std::make_pair(1, 1));
+        // }
+        if (ex_time.asMilliseconds() > life_time.asMilliseconds()) {
+            obj->set_exist(false);
+            return;
         }
+        //if () { // (ex_time.asMicroseconds() % period.asMicroseconds() > period.asMicroseconds() / (ex_time.asMicroseconds())) {
+            size_t p = (ex_time.asMicroseconds() % period.asMicroseconds())/(period.asMicroseconds()/n_o_states);
+            if (p != obj->get_phase()) {
+                obj->set_phase(p);
+                textures.current_texture = textures.textures[obj->get_phase()];
+            }
+        // }
     }
     void set_period(sf::Time t)
     { period = t; }
@@ -47,7 +61,7 @@ public:
     { return textures; }
 
     SFMLObject(std::shared_ptr<GameObj> o, ObjTextureStore & t, char l = 0) : obj(o), layer(l), textures(t) {
-
+        current_texture = textures.textures[0];
     }
     ~SFMLObject() {}
 

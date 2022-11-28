@@ -228,67 +228,89 @@ std::map<GameTypeSystem, ObjTextureStore> World::load_game_obj_textures_from_fil
     size_t width{}, height{};
     double n_repeat_x{}, n_repeat_y{};
     while (file >> type) {
-        file >> texture_type;
-        if (texture_type.substr(0, 2) == "//") {
-            std::cout << texture_type << "\n";
-            continue;
-        }
-        if (texture_type == "textures") {
-            file >> number;
-            std::cout << "game obj type: " << type << "\n";
-            if (true || effect_types.find(types[type]) == effect_types.end()) {
-                for (size_t i = 0; i < number; ++i) {
-                    file >> x_in >> y_in;
-                    file >> width >> height;
-                    file >> n_repeat_x >> n_repeat_y;
-                    //std::(file, file_path);
-                    file >> file_path;
-                    T[types[type]].textures.push_back(std::make_shared<sf::Texture>());
-                    sf::Vector2 position_in((int) x_in, (int) y_in);
-                    sf::Vector2 size_f((float) (width * n_repeat_x), (float) (height * n_repeat_y));
-                    sf::Vector2 size_i((int) (width), (int) (height));
-                    sf::Vector2 size_r((int) (width * n_repeat_x), (int) (height * n_repeat_y));
-                    if (!T[types[type]].textures[i]->loadFromFile(static_path / file_path, sf::IntRect(position_in, size_i))) {
-                        std::cout << "cannot read texture from file : " << file_path << std::endl;
-                        throw std::invalid_argument("there is not such file with texture");
+        for (short i = 0; i < 4; ++i) {
+            file >> texture_type;
+            if (texture_type == "//")
+                continue;
+            if (texture_type.substr(0, 2) == "//") {
+                std::cout << texture_type << "\n";
+                continue;
+            }
+            if (texture_type == "textures") {
+                file >> number;
+                std::cout << "game obj type: " << type << "\n";
+                if (true || effect_types.find(types[type]) == effect_types.end()) {
+                    for (size_t i = 0; i < number; ++i) {
+                        file >> x_in >> y_in;
+                        file >> width >> height;
+                        file >> n_repeat_x >> n_repeat_y;
+                        //std::(file, file_path);
+                        file >> file_path;
+                        T[types[type]].textures.push_back(std::make_shared<sf::Texture>());
+                        sf::Vector2 position_in((int) x_in, (int) y_in);
+                        sf::Vector2 size_f((float) (width * n_repeat_x), (float) (height * n_repeat_y));
+                        sf::Vector2 size_i((int) (width), (int) (height));
+                        sf::Vector2 size_r((int) (width * n_repeat_x), (int) (height * n_repeat_y));
+                        if (!T[types[type]].textures[i]->loadFromFile(static_path / file_path, sf::IntRect(position_in, size_i))) {
+                            std::cout << "cannot read texture from file : " << file_path << std::endl;
+                            throw std::invalid_argument("there is not such file with texture");
+                        }
                     }
                 }
+                else
+                    throw std::runtime_error("this is not game obj in file: " + file_name);
+            } else if (texture_type == "preview") {
+                file >> x_in >> y_in;
+                file >> width >> height;
+                file >> n_repeat_x >> n_repeat_y;
+                //std::(file, file_path);
+                file >> file_path;
+                T[types[type]].preview = std::make_shared<sf::Texture>();
+                sf::Vector2 position_in((int) x_in, (int) y_in);
+                sf::Vector2 size_f((float) (width * n_repeat_x), (float) (height * n_repeat_y));
+                sf::Vector2 size_i((int) (width), (int) (height));
+                sf::Vector2 size_r((int) (width * n_repeat_x), (int) (height * n_repeat_y));
+                if (!T[types[type]].preview->loadFromFile(static_path / file_path, sf::IntRect(position_in, size_i))) {
+                    std::cout << "cannot read texture from file : " << file_path << std::endl;
+                    throw std::invalid_argument("there is not such file with texture");
+                }
+            } else if (texture_type == "backpack") {
+                file >> x_in >> y_in;
+                file >> width >> height;
+                file >> n_repeat_x >> n_repeat_y;
+                //std::(file, file_path);
+                file >> file_path;
+                T[types[type]].bp_texture = std::make_shared<sf::Texture>();
+                sf::Vector2 position_in((int) x_in, (int) y_in);
+                sf::Vector2 size_f((float) (width * n_repeat_x), (float) (height * n_repeat_y));
+                sf::Vector2 size_i((int) (width), (int) (height));
+                sf::Vector2 size_r((int) (width * n_repeat_x), (int) (height * n_repeat_y));
+                if (!T[types[type]].bp_texture->loadFromFile(static_path / file_path, sf::IntRect(position_in, size_i))) {
+                    std::cout << "cannot read texture from file : " << file_path << std::endl;
+                    throw std::invalid_argument("there is not such file with texture");
+                }
+            } else if (texture_type == "timing") {
+                std::string period_s, life_time_s;
+                file >> period_s >> life_time_s;
+                sf::Time period;
+                sf::Time life_time;
+                try {
+                    period = stotime(period_s);
+                    life_time = stotime(life_time_s);
+                } catch(std::invalid_argument & ia) {
+                    std::cout << ia.what();
+                    throw;
+                } catch(...) {
+                    std::cout << "invalid time format may be occured";
+                    throw std::runtime_error("invalid time format may be occured");
+                }
+                T[types[type]].standard_life_time = life_time;
+                T[types[type]].standard_period = period;
+            } else {
+                throw std::runtime_error("cannot initializate this tipe of textures");
             }
-            else
-                throw std::runtime_error("this is not game obj in file: " + file_name);
-        } else if (texture_type == "preview") {
-            file >> x_in >> y_in;
-            file >> width >> height;
-            file >> n_repeat_x >> n_repeat_y;
-            //std::(file, file_path);
-            file >> file_path;
-            T[types[type]].preview = std::make_shared<sf::Texture>();
-            sf::Vector2 position_in((int) x_in, (int) y_in);
-            sf::Vector2 size_f((float) (width * n_repeat_x), (float) (height * n_repeat_y));
-            sf::Vector2 size_i((int) (width), (int) (height));
-            sf::Vector2 size_r((int) (width * n_repeat_x), (int) (height * n_repeat_y));
-            if (!T[types[type]].preview->loadFromFile(static_path / file_path, sf::IntRect(position_in, size_i))) {
-                std::cout << "cannot read texture from file : " << file_path << std::endl;
-                throw std::invalid_argument("there is not such file with texture");
-            }
-        } else if (texture_type == "backpack") {
-            file >> x_in >> y_in;
-            file >> width >> height;
-            file >> n_repeat_x >> n_repeat_y;
-            //std::(file, file_path);
-            file >> file_path;
-            T[types[type]].bp_texture = std::make_shared<sf::Texture>();
-            sf::Vector2 position_in((int) x_in, (int) y_in);
-            sf::Vector2 size_f((float) (width * n_repeat_x), (float) (height * n_repeat_y));
-            sf::Vector2 size_i((int) (width), (int) (height));
-            sf::Vector2 size_r((int) (width * n_repeat_x), (int) (height * n_repeat_y));
-            if (!T[types[type]].bp_texture->loadFromFile(static_path / file_path, sf::IntRect(position_in, size_i))) {
-                std::cout << "cannot read texture from file : " << file_path << std::endl;
-                throw std::invalid_argument("there is not such file with texture");
-            }
-        } else {
-            throw std::runtime_error("cannot initializate this tipe of textures");
         }
+        
     }
 
     file.close();
@@ -396,11 +418,10 @@ void World::iterate() {
                 }
             }
         }
-        // if (all_effects[i]->get_time() > all_effects[i]->get_life_time()) {
-        //     all_effects.erase(all_effects.begin() + i);
-        //     i--;
-        // } else
-        //     all_effects[i]->update_texture();
+        if (!all_effects[i]->exist()) {
+            all_effects.erase(all_effects.begin() + i);
+            i--;
+        }
     }
 
     return;

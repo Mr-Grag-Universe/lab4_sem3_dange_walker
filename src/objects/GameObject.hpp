@@ -8,6 +8,7 @@
 #include <set>
 #include <string>
 #include <filesystem>
+#include <ctime>
 namespace fs = std::filesystem;
 
 #include "Object.hpp"
@@ -18,14 +19,35 @@ class GameObj : public Obj<GameTypeSystem> {
 public:
     using pair_ui64_t = std::pair<uint64_t, uint64_t>;
 protected:
-    pair_ui64_t position = std::make_pair(0, 0);
+    // pair_ui64_t position = std::make_pair(0, 0);
     char layer = 0;
+    std::time_t life_time = 0;
+    std::clock_t born = clock();
+    std::time_t period = 0;
+    uint64_t phase = 0;
+    uint64_t number_of_phases = 0;
 public:
+    std::clock_t get_born()
+    { return born; }
     pair_ui64_t get_position() const
     { return position; }
-    void set_position(pair_ui64_t p)
-    { position = p; }
+    // void set_position(pair_ui64_t p)
+    // { position = p; }
 
+    std::time_t get_time() const
+    { return period; }
+    void set_time(std::time_t p)
+    { period = p; }
+    uint64_t get_phase() const
+    { return phase; }
+    void set_phase(uint64_t p)
+    { phase = p; }
+    void next_phase()
+    { phase = (phase+1)%number_of_phases; }
+    uint64_t get_number_of_phases() const
+    { return number_of_phases; }
+    void set_number_of_phases(uint64_t n)
+    { number_of_phases = n; }
 
     GameObj() = default;
     GameObj(const pair_ui64_t & position, const sf::Sprite & sprite);
