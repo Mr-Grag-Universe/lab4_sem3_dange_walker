@@ -202,9 +202,8 @@ namespace DrawFunctions {
         int numLines = rows+cols+2;
         sf::VertexArray grid(sf::Lines, 2*(numLines));
         // win.setView(win.getDefaultView());
-        // auto size = win.getView().getSize();
-        float rowH = r_size.y/rows; // size.y/rows;
-        float colW = r_size.x/cols; // size.x/cols;
+        float rowH = r_size.y/rows;
+        float colW = r_size.x/cols;
         // row separators
         for(int i=0; i < rows+1; ++i) {
             int r = i;

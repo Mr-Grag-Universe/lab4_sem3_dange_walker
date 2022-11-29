@@ -26,6 +26,8 @@ public:
     { return CHARACTER; }
     const World & get_world() const 
     { return world; }
+    World & get_world() 
+    { return world; }
     const BackPack & get_backpack() const 
     { return backpack; }
     BackPack & get_backpack() 

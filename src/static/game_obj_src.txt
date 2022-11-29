@@ -5,8 +5,8 @@ sward
         1 1
         sward.jpg
     backpack
-        100 100
-        100 100
+        0 0
+        1000 1000
         1 1
         sward.jpg
     // //
