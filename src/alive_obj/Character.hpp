@@ -20,6 +20,7 @@ protected:
     World & world;
     size_t level = 0;
     size_t experience = 0;
+    size_t max_exp = 0;
 public:
     void fill_backpack();
     GameTypeSystem get_type() const override
@@ -38,8 +39,12 @@ public:
     { ++level; }
     size_t get_exp() const
     { return experience; }
+    size_t get_max_exp() const
+    { return max_exp; }
     void exp_restart()
     { experience = 0; }
+    void set_max_exp(size_t m_exp)
+    { max_exp = m_exp; }
 
     Character(World & w) : world(w) {}
     ~Character() {}

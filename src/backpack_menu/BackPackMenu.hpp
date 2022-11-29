@@ -13,6 +13,7 @@ namespace fs = std::filesystem;
 #include "Skin.hpp"
 #include "WeaponInArm.hpp"
 #include "BackPackStore.hpp"
+#include "CharBar.hpp"
 #include "../alive_obj/Character.hpp"
 
 class BackPackMenu {
@@ -24,6 +25,7 @@ protected:
     std::shared_ptr<Skin> skin = std::make_shared<Skin>();
     std::shared_ptr<WeaponInArm> weapon = std::make_shared<WeaponInArm>();
     std::shared_ptr<BackPackStore> bp_store;
+    std::shared_ptr<CharBar<Character>> char_bar; 
     // std::shared_ptr<>
 public:
     const std::vector <std::shared_ptr<BPMObj>> & get_all_menu_fields() const 

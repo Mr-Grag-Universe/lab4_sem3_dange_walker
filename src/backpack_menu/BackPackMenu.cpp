@@ -3,7 +3,7 @@
 #include "../constants.hpp"
 #include <SFML/Graphics.hpp>
 
-std::shared_ptr<BPMObj> use_constructor(BackPackTypeSystem type, std::string name, pair_ui64_t p, Container & c) {
+std::shared_ptr<BPMObj> use_constructor(BackPackTypeSystem type, std::string name, pair_ui64_t p, Character & c) {
     switch (type) {
     case SKIN:
         return std::make_shared<Skin>(name, p);
@@ -11,7 +11,9 @@ std::shared_ptr<BPMObj> use_constructor(BackPackTypeSystem type, std::string nam
     case WEAPON_IN_ARMS:
         return std::make_shared<WeaponInArm>(name, p);
     case BACK_PACK_STORE:
-        return std::make_shared<BackPackStore>(c);
+        return std::make_shared<BackPackStore>(c.get_backpack());
+    case CHAR_BAR:
+        return std::make_shared<CharBar<Character>>(c);
     default:
         break;
     }
@@ -34,7 +36,9 @@ BackPackMenu::BackPackMenu(Character & c) : container(c.get_backpack()) {
         file >> size.first >> size.second;
         file >> need_texture;
         BackPackTypeSystem r_type = bp_menu_types[type];
-        std::shared_ptr<BPMObj> field = use_constructor(r_type, type, p, c.get_backpack());
+        std::shared_ptr<BPMObj> field = use_constructor(r_type, type, p, c);
+        field->set_size(size);
+        field->set_position(p);
         if (need_texture) {
             std::shared_ptr <sf::Texture> t = textures[r_type].textures[0];
             field->set_texture(t, size);
@@ -57,6 +61,14 @@ BackPackMenu::BackPackMenu(Character & c) : container(c.get_backpack()) {
             bp_store->set_position(calculate_sprite_position(size, p));
             bp_store->edit(c);
             break;
+        case CHAR_BAR: {
+            std::cout << "char_bar created" << std::endl;
+            char_bar = std::dynamic_pointer_cast<CharBar<Character>>(field);
+            char_bar->set_size(size);
+            char_bar->set_position(calculate_sprite_position(size, p));
+            char_bar->edit(c);
+            break;
+        }
         default:
             break;
         }
