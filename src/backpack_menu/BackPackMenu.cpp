@@ -54,6 +54,7 @@ BackPackMenu::BackPackMenu(Character & c) : container(c.get_backpack()) {
             bp_store = std::dynamic_pointer_cast<BackPackStore>(field);
             bp_store->set_size(size);
             bp_store->set_position(calculate_sprite_position(size, p));
+            bp_store->edit(c);
             break;
         default:
             break;

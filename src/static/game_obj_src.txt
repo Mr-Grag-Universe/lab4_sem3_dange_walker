@@ -4,7 +4,12 @@ sward
         1920 1920
         1 1
         sward.jpg
-    // // //
+    backpack
+        100 100
+        100 100
+        1 1
+        sward.jpg
+    // //
 floor
     textures 1
         0 0

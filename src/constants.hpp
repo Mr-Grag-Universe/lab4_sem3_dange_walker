@@ -37,6 +37,7 @@ enum BackPackTypeSystem {
     SKIN,
     WEAPON_IN_ARMS,
     BACK_PACK_STORE,
+    CELL,
 };
 
 #ifndef MY_TYPES
@@ -61,6 +62,7 @@ static std::map <std::string, BackPackTypeSystem> bp_menu_types = {
     { "skin",        SKIN      },
     { "weapon", WEAPON_IN_ARMS },
     { "bp_store", BACK_PACK_STORE },
+    { "cell",       CELL },
 };
 #endif
 
@@ -191,5 +193,35 @@ inline sf::Vector2f middle_rect_pos(const sf::RectangleShape & r, const sf::Vect
 
     return res;
 }
+
+namespace DrawFunctions {
+    inline void drawGrid(sf::RenderWindow& win, int rows, int cols, const sf::FloatRect & f_rect){
+        sf::Vector2f r_pos = f_rect.getPosition();
+        sf::Vector2f r_size = f_rect.getSize();
+        // initialize values
+        int numLines = rows+cols+2;
+        sf::VertexArray grid(sf::Lines, 2*(numLines));
+        // win.setView(win.getDefaultView());
+        // auto size = win.getView().getSize();
+        float rowH = r_size.y/rows; // size.y/rows;
+        float colW = r_size.x/cols; // size.x/cols;
+        // row separators
+        for(int i=0; i < rows+1; ++i) {
+            int r = i;
+            float rowY = rowH*r + r_pos.y;
+            grid[i*2].position = {r_pos.x, rowY};
+            grid[i*2+1].position = {r_pos.x+r_size.x, rowY};
+        }
+        // column separators
+        for(int i=rows+1; i < numLines; ++i) {
+            int c = i-(rows+1);
+            float colX = colW*c + r_pos.x;
+            grid[i*2].position = {colX, r_pos.y};
+            grid[i*2+1].position = {colX, r_pos.y+r_size.y};
+        }
+        // draw it
+        win.draw(grid);
+    }
+};
 
 #endif

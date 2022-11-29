@@ -18,6 +18,8 @@ public:
     }
     // virtual ~Box() = 0;
     void push(std::shared_ptr<GameObj> obj);
+    const std::vector <std::shared_ptr<GameObj>> & get_things() const
+    { return store; }
 };
 
 #endif

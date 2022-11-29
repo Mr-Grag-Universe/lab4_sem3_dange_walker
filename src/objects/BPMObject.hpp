@@ -22,6 +22,12 @@ public:
         position = p;
         name = n;
     }
+    BPMObj(const Obj & o) {
+        position = o.get_position();
+        layer = o.get_layer();
+        name = o.get_name();
+        size = o.get_size();
+    }
     virtual void draw(sf::RenderWindow & window) const = 0;
     virtual void edit(const Alive &) = 0;
 
