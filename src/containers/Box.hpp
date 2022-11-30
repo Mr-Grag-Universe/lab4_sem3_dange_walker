@@ -20,6 +20,7 @@ public:
     void push(std::shared_ptr<GameObj> obj);
     const std::vector <std::shared_ptr<GameObj>> & get_things() const
     { return store; }
+    std::vector <std::shared_ptr<GameObj>> extract_all();
 };
 
 #endif

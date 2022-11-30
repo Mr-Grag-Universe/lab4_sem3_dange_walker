@@ -32,6 +32,10 @@ void World::game_interraction(sf::Event & event, sf::RenderWindow & window) {
             hero.move(0, 10);
             break;
         }
+        case sf::Keyboard::F : {
+            use_the_nearest_thing();
+            break;
+        }
         case sf::Keyboard::Escape: {
             this->mode = MENU;
             std::cout << "menu has been opened" << std::endl;

@@ -72,6 +72,14 @@ static std::map <std::string, BackPackTypeSystem> bp_menu_types = {
 };
 #endif
 
+static std::vector <GameTypeSystem> interractive_objs = {
+    CHEST,
+    SLIME,
+    SWARD,
+};
+static std::vector <GameTypeSystem> i_containers = {
+    CHEST,
+};
 
 template <typename T, typename U>
 double distance(const std::pair <T, T> & p1, const std::pair <U, U> & p2) {

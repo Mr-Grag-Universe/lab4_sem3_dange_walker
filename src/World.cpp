@@ -485,3 +485,29 @@ void World::add_game_obj_textures_from_file(const std::string & file_name) {
         throw std::runtime_error("cannot read obj textures from this file");
     }
 }
+
+void World::use_the_nearest_thing() {
+    std::cout << "thing interraction detected" << std::endl;
+    std::shared_ptr<GameObj> nearest_obj;
+    double min_dist = W;
+    for (size_t i = 0, l = all_things.size(); i < l; ++i) {
+        if (std::find(interractive_objs.begin(), interractive_objs.end(), all_things[i]->get_type()) != interractive_objs.end()) {
+            double d = distance(all_things[i]->get_position(), hero.get_position());
+            if (d < min_dist) {
+                min_dist = d;
+                nearest_obj = all_things[i];
+            }
+        }
+    }
+    std::cout << "nearest obg name: " << nearest_obj->get_name() << std::endl;
+    if (min_dist < 100) {
+        std::cout << "we can interract with this object!" << std::endl;
+        if (std::find(i_containers.begin(), i_containers.end(), nearest_obj->get_type()) != i_containers.end()) {
+            std::shared_ptr<Box> box = std::dynamic_pointer_cast<Box>(nearest_obj);
+            hero.get_backpack().add(box->extract_all());
+            std::cout << "all things from this container have been put to char's backpack" << std::endl;
+        }
+    } else {
+        std::cout << "there is not interraction objects near enough" << std::endl;
+    }
+}

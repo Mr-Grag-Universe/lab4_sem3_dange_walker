@@ -104,6 +104,8 @@ public:
     void game_interraction(sf::Event & event, sf::RenderWindow & window);
     void menu_interraction(sf::Event & event, sf::RenderWindow & window);
     void backpack_menu_interraction(sf::Event & event, sf::RenderWindow & window);
+
+    void use_the_nearest_thing();
 };
 
 #endif

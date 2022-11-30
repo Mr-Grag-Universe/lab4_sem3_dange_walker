@@ -13,6 +13,7 @@ public:
     ~BackPack() {}
 
     void fill(std::vector <std::shared_ptr<GameObj>> store) override;
+    void add(std::vector <std::shared_ptr<GameObj>> store);
     void read(std::ifstream & file) override;
     GameTypeSystem get_type() const override
     { return BACKPACK; }

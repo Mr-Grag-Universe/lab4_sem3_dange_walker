@@ -19,6 +19,10 @@ void BackPack::fill(std::vector <std::shared_ptr<GameObj>> _store) {
     store = std::move(_store);
 }
 
+void BackPack::add(std::vector <std::shared_ptr<GameObj>> _store) {
+    std::copy(_store.begin(), _store.end(), std::back_inserter(store));
+}
+
 void BackPack::read(std::ifstream & file) {
     unsigned int x{}, y{};
     unsigned int x_in{}, y_in{};
