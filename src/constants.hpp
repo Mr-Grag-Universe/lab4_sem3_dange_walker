@@ -39,6 +39,8 @@ enum BackPackTypeSystem {
     BACK_PACK_STORE,
     CELL,
     CHAR_BAR,
+    STATUS_BAR,
+    LABEL,
 };
 
 #ifndef MY_TYPES
@@ -65,6 +67,8 @@ static std::map <std::string, BackPackTypeSystem> bp_menu_types = {
     { "bp_store", BACK_PACK_STORE },
     { "cell",       CELL },
     { "char_bar",   CHAR_BAR },
+    { "status_bar", STATUS_BAR },
+    { "label",      LABEL },
 };
 #endif
 

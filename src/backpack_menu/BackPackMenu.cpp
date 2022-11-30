@@ -64,9 +64,9 @@ BackPackMenu::BackPackMenu(Character & c) : container(c.get_backpack()) {
         case CHAR_BAR: {
             std::cout << "char_bar created" << std::endl;
             char_bar = std::dynamic_pointer_cast<CharBar<Character>>(field);
+            char_bar->edit(c);
             char_bar->set_size(size);
             char_bar->set_position(calculate_sprite_position(size, p));
-            char_bar->edit(c);
             break;
         }
         default:
