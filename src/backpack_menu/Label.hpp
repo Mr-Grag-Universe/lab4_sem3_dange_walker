@@ -36,6 +36,7 @@ public:
     void set_label_size(pair_ui64_t s) {
         size = s;
         field.setSize(sf::Vector2f(s.first, s.second));
+        // text.setSize(sf::Vector2f(s.first, s.second));
     }
     void set_text_size(size_t s)
     { text.setCharacterSize(s); }
@@ -51,7 +52,7 @@ public:
     void set_position(pair_ui64_t p) {
         position = p;
         field.setPosition(sf::Vector2f(p.first, p.second));
-        text.setPosition(sf::Vector2f(p.first, p.second));
+        text.setPosition(middle_rect_pos(field, sf::Vector2f(p.first, p.second)));
     }
 };
 

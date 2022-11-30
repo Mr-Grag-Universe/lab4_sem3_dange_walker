@@ -52,8 +52,10 @@ public:
         rect_field.setFillColor(MyDarkSlateBlue);
         status_bars.push_back(StatusBar<double>(max_health, health));
         status_bars[0].set_label("health");
+        status_bars[0].set_scale_color(sf::Color::Green);
         status_bars.push_back(StatusBar<double>(max_exp, exp));
         status_bars[1].set_label("exp");
+        status_bars[1].set_scale_color(sf::Color::Blue);
     }
     ~CharBar() {}
     BackPackTypeSystem get_type() const override
@@ -61,8 +63,9 @@ public:
     void read(std::ifstream & ) override {}
     void draw(sf::RenderWindow & window) const override {
         window.draw(rect_field);
-        status_bars[0].draw(window);
-        status_bars[1].draw(window);
+        for (auto sb: status_bars)
+            sb.draw(window);
+        // status_bars[1].draw(window);
         // window.draw(rect_health_field);
         // window.draw(rect_exp_field);
     }
@@ -84,7 +87,7 @@ public:
     void set_size(pair_ui64_t size) {
         this->size = size;
         rect_field.setSize(sf::Vector2f(size.first, size.second));
-        for (auto sb: status_bars)
+        for (auto & sb: status_bars)
             sb.set_size(std::make_pair(size.first-20, size.second/4-20));
         // rect_health_field.setSize(sf::Vector2f(size.first-20, size.second/4-20));
         // rect_exp_field.setSize(sf::Vector2f(size.first-20, size.second/4-20));
@@ -93,8 +96,9 @@ public:
     }
     void set_position(const pair_ui64_t & p) {
         rect_field.setPosition(sf::Vector2f(p.first, p.second));
-        status_bars[0].set_position(std::make_pair(p.first+10, p.second+10));
-        status_bars[1].set_position(std::make_pair(p.first+10, p.second+status_bars[0].get_size().second+20));
+        for (size_t i = 0; i < status_bars.size(); ++i)
+            status_bars[i].set_position(std::make_pair(p.first+10, p.second+10*(i+1) + i*H/4));
+        // status_bars[1].set_position(std::make_pair(p.first+10, p.second+status_bars[0].get_size().second+20));
         //rect_health_field.setPosition(sf::Vector2f(p.first+10, p.second+10));
         //rect_exp_field.setPosition(sf::Vector2f(p.first+10, p.second+rect_health_field.getSize().y+20));
         position = p;

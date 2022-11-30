@@ -27,6 +27,7 @@ public:
     void set_size(pair_ui64_t s) {
         field.setSize(sf::Vector2f(s.first, s.second));
         scale.setSize(sf::Vector2f(s.first*((double) value / (double) max_value), s.second));
+        label.set_size(std::make_pair(s.first/10, s.second));
     }
     void set_position(pair_ui64_t p) {
         field.setPosition(sf::Vector2f(p.first, p.second));
@@ -54,7 +55,7 @@ public:
     void draw(sf::RenderWindow & window) const override {
         window.draw(field);
         window.draw(scale);
-        label.draw(window);
+        // label.draw(window);
     }
     void edit(const Alive & a) override {}
 };

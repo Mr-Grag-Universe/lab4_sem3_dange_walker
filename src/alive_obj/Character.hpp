@@ -19,8 +19,8 @@ protected:
     std::shared_ptr<Weapon> weapon;
     World & world;
     size_t level = 0;
-    size_t experience = 0;
-    size_t max_exp = 0;
+    size_t experience = 1;
+    size_t max_exp = 100;
 public:
     void fill_backpack();
     GameTypeSystem get_type() const override
