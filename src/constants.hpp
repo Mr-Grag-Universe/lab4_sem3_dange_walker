@@ -87,15 +87,25 @@ double distance(const std::pair <T, T> & p1, const std::pair <U, U> & p2) {
 }
 
 
-#define STATIC_FILES_SRC_PATH "/home/stepan/Desktop/vs_code_game/src/static/"
+namespace my_pathes {
 
-static fs::path static_path(fs::canonical(STATIC_FILES_SRC_PATH));
-static fs::path first_room("first_room.txt");
-static fs::path containers("containers.txt");
-static fs::path npc_file("npc.txt");
-static fs::path hero_file("hero.txt");
-static fs::path effect_file("effects_src.txt");
-static fs::path game_obj_file("game_obj_src.txt");
+    #define STATIC_FILES_SRC_PATH "/home/stepan/Desktop/vs_code_game/src/static/"
+
+    static fs::path static_path(fs::canonical(STATIC_FILES_SRC_PATH));
+    static fs::path font = static_path / fs::path("font");
+    static fs::path img = static_path / fs::path("img");
+    static fs::path logs = static_path / fs::path("logs");
+    static fs::path sound = static_path / fs::path("sound");
+
+    static fs::path first_room("first_room.txt");
+    static fs::path containers("containers.txt");
+    static fs::path npc_file("npc.txt");
+    static fs::path hero_file("hero.txt");
+    static fs::path effect_file("effects_src.txt");
+    static fs::path game_obj_file("game_obj_src.txt");
+
+}
+namespace mp = my_pathes;
 
 static bool is_number(const std::string& s) {
     std::string::const_iterator it = s.begin();

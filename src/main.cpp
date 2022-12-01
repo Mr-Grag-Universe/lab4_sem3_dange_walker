@@ -8,6 +8,7 @@
 #include <SFML/Window.hpp>
 #include <SFML/System.hpp>
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 
 #include "all_headers.hpp"
 #include "game.hpp"
@@ -27,12 +28,12 @@ int main(int argc, char *argv[]) {
 
     // std::vector <std::unique_ptr<Obj>> things = World::load_things_from_file("/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/static/first_room.txt");
     // std::cout << static_path;
-    World world(static_path / first_room);
-    world.add_game_obj_textures_from_file(static_path / game_obj_file);
-    world.add_things_from_file(static_path / containers);
-    world.add_npcs_from_file(static_path / npc_file);
-    world.add_effects_from_file(static_path / effect_file);
-    world.add_character(static_path / hero_file);
+    World world(mp::logs / mp::first_room);
+    world.add_game_obj_textures_from_file(mp::logs / mp::game_obj_file);
+    world.add_things_from_file(mp::logs / mp::containers);
+    world.add_npcs_from_file(mp::logs / mp::npc_file);
+    world.add_effects_from_file(mp::logs / mp::effect_file);
+    world.add_character(mp::logs / mp::hero_file);
 
     window.clear(sf::Color::Black);
     // std::shared_ptr<sf::Texture> texture = (world.get_effect_texture(MW_WAVE)).textures[0];
@@ -54,6 +55,14 @@ int main(int argc, char *argv[]) {
     // window.draw(sprite);
     // window.display();
     // window.draw(sprite);
+
+    sf::Music my_sound;
+    if (!my_sound.openFromFile(mp::sound / "low_roar_-_Bones_OST_Death_Stranding_(musportal.org).mp3")) {
+        std::cout << "cannot open music file" << std::endl;
+        return 1;
+    }
+    my_sound.play();
+    my_sound.setVolume(0);
 
     while (window.isOpen()) {
         switch (world.get_game_mode())

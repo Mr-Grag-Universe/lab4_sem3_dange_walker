@@ -23,9 +23,9 @@ std::shared_ptr<BPMObj> use_constructor(BackPackTypeSystem type, std::string nam
 // sf::Texture choose() {}
 
 BackPackMenu::BackPackMenu(Character & c) : container(c.get_backpack()) {
-    textures = load_textures(static_path / "bp_menu_textures.txt");
+    textures = load_textures(mp::logs / "bp_menu_textures.txt");
 
-    std::ifstream file(static_path / fs::path("bp_menu.txt"));
+    std::ifstream file(mp::logs / fs::path("bp_menu.txt"));
     
     std::string type;
     pair_ui64_t p;
@@ -112,7 +112,7 @@ std::map <BackPackTypeSystem, MenuTextureStore> BackPackMenu::load_textures(fs::
                 sf::Vector2 size_f((float) (width * n_repeat_x), (float) (height * n_repeat_y));
                 sf::Vector2 size_i((int) (width), (int) (height));
                 sf::Vector2 size_r((int) (width * n_repeat_x), (int) (height * n_repeat_y));
-                if (!T[r_type].textures[T[r_type].textures.size()-1]->loadFromFile(static_path / file_path, sf::IntRect(position_in, size_i))) {
+                if (!T[r_type].textures[T[r_type].textures.size()-1]->loadFromFile(mp::img / file_path, sf::IntRect(position_in, size_i))) {
                     std::cout << "cannot read texture from file : " << file_path << std::endl;
                     throw std::invalid_argument("there is not such file with texture");
                 }

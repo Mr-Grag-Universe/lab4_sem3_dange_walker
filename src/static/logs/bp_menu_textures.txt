@@ -1,0 +1,11 @@
+skin 1
+    0 0
+    1920 1790
+    1 1
+    hero_profile.jpg
+
+weapon 1
+    0 0
+    1920 1920
+    1 1
+    sward.jpg

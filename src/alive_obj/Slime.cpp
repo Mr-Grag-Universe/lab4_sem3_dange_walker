@@ -22,6 +22,7 @@ void Slime::read(std::ifstream & file) {
 
     // std::shared_ptr<Obj> res = std::make_shared<Wall>();
     // this->set_texture(source_file_name, p_in, scale, std::make_pair(x_rep, y_rep));
+    this->set_size(std::make_pair(100, 100));
     position = std::make_pair(x, y);
 
     double h{};

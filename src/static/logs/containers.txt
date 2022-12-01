@@ -1,0 +1,17 @@
+//data__format:
+//container__container_type__id__max_weight
+//____weapon_name__damage
+
+chest
+    chest_1                     
+    0                           
+    10                          
+    300 300                     
+    0 0                         
+    56 64                       
+    chest_and_key.png    
+    1                           
+        sward
+            sward_1
+            100
+            10

@@ -6,13 +6,15 @@ Map::Map(World & w) : hero(w.get_hero()), W(w.get_W()), H(w.get_H()) {
     // const std::vector <std::shared_ptr<SFML_Object> & ao = w.get_all
     // std::cout << "map_hero_position: (" << hero.get_position().first << ", " << hero.get_position().second << ")\n";
     size_t g_ind = 0;
+    std::shared_ptr<SFMLObject> obj;
+
     const pair_ui64_t h_p = hero.get_position();
     for (size_t i = 0, l = at.size(); i < l; ++i, ++g_ind) {
         pair_ui64_t p = at[i]->get_position();
         if (distance(p, h_p) <= 1900) {
             all_things.push_back((std::shared_ptr<GameObj> *) &at[i]);
             all_objs.push_back(std::make_shared<SFMLObject>(at[i], ts[at[i]->get_type()], at[i]->get_layer()));
-            std::shared_ptr<sf::Texture> t = ts[at[i]->get_type()].textures[0];
+            std::shared_ptr<sf::Texture> t = ts[at[i]->get_type()].textures[at[i]->get_phase()];
             all_objs[g_ind]->set_texture(t, at[i]->get_size());
             // const sf::Sprite & hero_s = hero.get_sprite();
             const sf::Vector2f hero_pos = sf::Vector2f((float) h_p.first, (float) h_p.second);
@@ -42,9 +44,19 @@ Map::Map(World & w) : hero(w.get_hero()), W(w.get_W()), H(w.get_H()) {
     for (size_t i = 0, l = npc.size(); i < l; ++i, ++g_ind) {
         pair_ui64_t p = npc[i]->get_position();
         if (distance(p, h_p) <= 1900) {
+            GameTypeSystem obj_type = npc[i]->get_type();
             all_npc.push_back((std::shared_ptr<NPC>) npc[i]);
-            all_objs.push_back(std::make_shared<SFMLObject>(npc[i], ts[npc[i]->get_type()], npc[i]->get_layer()));
-            all_objs[g_ind]->set_texture(ts[npc[i]->get_type()].textures[0], npc[i]->get_size());
+            obj = std::make_shared<SFMLObject>(npc[i], ts[obj_type], npc[i]->get_layer());
+            obj->get_obj()->set_number_of_phases(ts[obj_type].textures.size());
+
+            all_objs.push_back(obj);
+            all_objs[g_ind]->set_period(ts[obj_type].standard_period);
+            all_objs[g_ind]->correct_phase();
+            all_objs[g_ind]->update_texture();
+            [[maybe_unused]]size_t ph = all_objs[g_ind]->get_obj()->get_phase();
+            std::shared_ptr<SFMLObject> o = all_objs[g_ind];
+
+            all_objs[g_ind]->set_texture(ts[obj_type].textures[npc[i]->get_phase()], npc[i]->get_size());
             // const sf::Sprite & hero_s = hero.get_sprite();
             const sf::Vector2f hero_pos = sf::Vector2f((float) h_p.first, (float) h_p.second);
             sf::Vector2f s_window_pos = sf::Vector2f((float)p.first, (float)p.second);
@@ -54,7 +66,6 @@ Map::Map(World & w) : hero(w.get_hero()), W(w.get_W()), H(w.get_H()) {
         }
     }
     
-    std::shared_ptr<SFMLObject> obj;
     const std::vector <std::shared_ptr<Effect>> & eff = w.get_all_effects();
     for (size_t i = 0, l = eff.size(); i < l; ++i, ++g_ind) {
         pair_ui64_t p = eff[i]->get_position();

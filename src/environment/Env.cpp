@@ -11,16 +11,17 @@
 
 void Environment::read(std::ifstream & file) {
     unsigned int x{}, y{};
-    unsigned int x_in{}, y_in{};
+    // unsigned int x_in{}, y_in{};
     unsigned int width{}, height{};
     unsigned int x_rep{}, y_rep{};
-    std::string source_file_name;
+    // std::string source_file_name;
 
     file >> x >> y;
-    file >> x_in >> y_in;
+    // file >> x_in >> y_in;
     file >> width >> height;
-    file >> source_file_name;
+    // file >> source_file_name;
     file >> x_rep >> y_rep;
+    file >> phase;
     size = std::make_pair(width, height);
     repeate = std::make_pair(x_rep, y_rep);
 

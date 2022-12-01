@@ -194,7 +194,7 @@ std::map<GameTypeSystem, TextureStore> World::load_effects_from_file(const std::
                 sf::Vector2 size_f((float) (width * n_repeat_x), (float) (height * n_repeat_y));
                 sf::Vector2 size_i((int) (width), (int) (height));
                 sf::Vector2 size_r((int) (width * n_repeat_x), (int) (height * n_repeat_y));
-                if (!effects[types[type]].textures[i]->loadFromFile(static_path / file_path, sf::IntRect(position_in, size_i))) {
+                if (!effects[types[type]].textures[i]->loadFromFile(mp::img / file_path, sf::IntRect(position_in, size_i))) {
                     std::cout << "cannot read texture from file : " << file_path << std::endl;
                     throw std::invalid_argument("there is not such file with texture");
                 }
@@ -251,7 +251,7 @@ std::map<GameTypeSystem, ObjTextureStore> World::load_game_obj_textures_from_fil
                         sf::Vector2 size_f((float) (width * n_repeat_x), (float) (height * n_repeat_y));
                         sf::Vector2 size_i((int) (width), (int) (height));
                         sf::Vector2 size_r((int) (width * n_repeat_x), (int) (height * n_repeat_y));
-                        if (!T[types[type]].textures[i]->loadFromFile(static_path / file_path, sf::IntRect(position_in, size_i))) {
+                        if (!T[types[type]].textures[i]->loadFromFile(mp::img / file_path, sf::IntRect(position_in, size_i))) {
                             std::cout << "cannot read texture from file : " << file_path << std::endl;
                             throw std::invalid_argument("there is not such file with texture");
                         }
@@ -270,7 +270,7 @@ std::map<GameTypeSystem, ObjTextureStore> World::load_game_obj_textures_from_fil
                 sf::Vector2 size_f((float) (width * n_repeat_x), (float) (height * n_repeat_y));
                 sf::Vector2 size_i((int) (width), (int) (height));
                 sf::Vector2 size_r((int) (width * n_repeat_x), (int) (height * n_repeat_y));
-                if (!T[types[type]].preview->loadFromFile(static_path / file_path, sf::IntRect(position_in, size_i))) {
+                if (!T[types[type]].preview->loadFromFile(mp::img / file_path, sf::IntRect(position_in, size_i))) {
                     std::cout << "cannot read texture from file : " << file_path << std::endl;
                     throw std::invalid_argument("there is not such file with texture");
                 }
@@ -285,7 +285,7 @@ std::map<GameTypeSystem, ObjTextureStore> World::load_game_obj_textures_from_fil
                 sf::Vector2 size_f((float) (width * n_repeat_x), (float) (height * n_repeat_y));
                 sf::Vector2 size_i((int) (width), (int) (height));
                 sf::Vector2 size_r((int) (width * n_repeat_x), (int) (height * n_repeat_y));
-                if (!T[types[type]].bp_texture->loadFromFile(static_path / file_path, sf::IntRect(position_in, size_i))) {
+                if (!T[types[type]].bp_texture->loadFromFile(mp::img / file_path, sf::IntRect(position_in, size_i))) {
                     std::cout << "cannot read texture from file : " << file_path << std::endl;
                     throw std::invalid_argument("there is not such file with texture");
                 }

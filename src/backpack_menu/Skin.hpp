@@ -48,7 +48,7 @@ public:
         rectangle.setPosition(p);
 
         sf::Font font;
-        if (!font.loadFromFile(static_path / "ArialRegular.ttf")) {
+        if (!font.loadFromFile(mp::font / "ArialRegular.ttf")) {
             throw std::runtime_error("we cannot load arial");
         }
         sf::Text text;

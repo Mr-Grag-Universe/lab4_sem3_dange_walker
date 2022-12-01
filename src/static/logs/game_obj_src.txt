@@ -1,0 +1,87 @@
+sward
+    preview
+        0 0
+        1920 1920
+        1 1
+        sward.jpg
+    backpack
+        0 0
+        1000 1000
+        1 1
+        sward.jpg
+    // //
+floor
+    textures 1
+        0 0
+        16 16
+        1 1
+        cobbles2.png
+    // // //
+wall
+    textures 5
+        0 0     16 16   1 1     walls.png
+        32 0    16 16   1 1     walls.png
+        0 16    5 16    1 1     walls.png
+        0 32    16 16   1 1     walls.png
+        0 48    16 16   1 1     walls.png
+    // // //
+chest
+    textures 1
+        0 0                         
+        56 64
+        1 1
+        chest_and_key.png
+    // // //
+mw_wave
+    textures 6
+        0 0
+        128 152
+        1 1
+        weapon_effects_sprites/Alternative_1/1/Alternative_1_01.png
+        0 0
+        128 152
+        1 1
+        weapon_effects_sprites/Alternative_1/1/Alternative_1_02.png
+        0 0
+        128 152
+        1 1
+        weapon_effects_sprites/Alternative_1/1/Alternative_1_03.png
+        0 0
+        128 152
+        1 1
+        weapon_effects_sprites/Alternative_1/1/Alternative_1_04.png
+        0 0
+        128 152
+        1 1
+        weapon_effects_sprites/Alternative_1/1/Alternative_1_05.png
+        0 0
+        128 152
+        1 1
+        weapon_effects_sprites/Alternative_1/1/Alternative_1_06.png
+    timing
+        200_ms
+        200_ms
+    // //
+slime
+    textures 10
+        0 4     32 32   2 2     slime.png
+        32 4    32 32   2 2     slime.png
+        64 4    32 32   2 2     slime.png
+        96 4    32 32   2 2     slime.png
+        128 4   32 32   2 2     slime.png
+        160 4   32 32   2 2     slime.png
+        192 4   32 32   2 2     slime.png
+        224 4   32 32   2 2     slime.png
+        256 4   32 32   2 2     slime.png
+        288 4   32 32   2 2     slime.png
+    timing
+        40_ms
+        40_ms
+    // //
+hero
+    textures 1
+        32 64
+        32 32
+        1 1
+        char.png
+    // // //

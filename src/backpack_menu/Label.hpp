@@ -14,7 +14,7 @@ protected:
     sf::Text text;
 public:
     Label(std::string t, pair_ui64_t size = std::make_pair(120, 30), size_t t_size=24) {
-        if (!font.loadFromFile(static_path / "ArialRegular.ttf")) {
+        if (!font.loadFromFile(mp::font / "ArialRegular.ttf")) {
             throw std::runtime_error("we cannot load arial");
         }
         s_text = std::string(t);

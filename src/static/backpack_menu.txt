@@ -1,4 +1,0 @@
-skin
-    200 200
-    300 300
-    hero_profile.jpg

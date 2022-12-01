@@ -23,8 +23,8 @@ public:
     // void set_texture(std::shared_ptr<sf::Texture> t, pair_ui64_t size);
     void update_texture() {
         sf::Time ex_time = sf::milliseconds((double) (std::clock() - obj->get_born()) * 30 / CLOCKS_PER_SEC * 1000);
-        std::cout << ex_time.asMilliseconds() << "ms\n";
-        std::cout << (double)std::clock() / CLOCKS_PER_SEC << "s; " << obj->get_phase() << "\n";
+        // std::cout << ex_time.asMilliseconds() << "ms\n";
+        // std::cout << (double)std::clock() / CLOCKS_PER_SEC << "s; " << obj->get_phase() << "\n";
         size_t n_o_states = textures.textures.size();
         // if (ex_time.asMilliseconds() % period.asMilliseconds() > period.asMilliseconds() / sf::Time(ex_time).asMilliseconds()) {
         //     this->set_texture(textures.textures[(ex_time.asMilliseconds() % period.asMilliseconds())/(period.asMilliseconds()/n_o_states)], std::make_pair(1, 1));
@@ -36,7 +36,7 @@ public:
         //if () { // (ex_time.asMicroseconds() % period.asMicroseconds() > period.asMicroseconds() / (ex_time.asMicroseconds())) {
             size_t p = (ex_time.asMicroseconds() % period.asMicroseconds())/(period.asMicroseconds()/n_o_states);
             if (p != obj->get_phase()) {
-                std::cout << "=========================================" << obj->get_phase() << "\n";
+                // std::cout << "=========================================" << obj->get_phase() << "\n";
                 obj->set_phase(p);
                 current_texture = textures.textures[obj->get_phase()];
             }
@@ -65,8 +65,12 @@ public:
         current_texture = textures.textures[0];
         // obj->set_phase((size_t) sf::seconds((double) (std::clock()-obj->get_born()) / CLOCKS_PER_SEC).asMilliseconds() * obj->get_number_of_phases() / (size_t) period.asMilliseconds());
     }
-    void correct_phase()
-    { obj->set_phase((size_t) sf::seconds((double) (std::clock()-obj->get_born()) / CLOCKS_PER_SEC).asMilliseconds() * obj->get_number_of_phases() / (size_t) period.asMilliseconds()); }
+    void correct_phase() {
+        size_t p = (size_t) period.asMilliseconds();
+        size_t n_o_ph = obj->get_number_of_phases();
+        size_t ex_time = (size_t) sf::seconds((double) (std::clock() - obj->get_born()) / CLOCKS_PER_SEC).asMilliseconds();
+        obj->set_phase(((ex_time % p) * n_o_ph) / p);
+    }
     ~SFMLObject() {}
 
     std::shared_ptr<GameObj> get_obj()
@@ -91,7 +95,7 @@ public:
         sf::Vector2 size_f((float) (scale.first * n_repeat.first), (float) (scale.second * n_repeat.second));
         sf::Vector2 size_i((int) (scale.first), (int) (scale.second));
         sf::Vector2 size_r((int) (scale.first * n_repeat.first), (int) (scale.second * n_repeat.second));
-        if (!current_texture->loadFromFile(static_path / file_path, sf::IntRect(position_in, size_i))) {
+        if (!current_texture->loadFromFile(mp::img / file_path, sf::IntRect(position_in, size_i))) {
             std::cout << "cannot read texture from file : " << file_path << std::endl;
             throw std::invalid_argument("there is not such file with texture");
         }

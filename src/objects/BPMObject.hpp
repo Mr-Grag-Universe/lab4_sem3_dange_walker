@@ -50,7 +50,7 @@ public:
         sf::Vector2 size_f((float) (scale.first * n_repeat.first), (float) (scale.second * n_repeat.second));
         sf::Vector2 size_i((int) (scale.first), (int) (scale.second));
         sf::Vector2 size_r((int) (scale.first * n_repeat.first), (int) (scale.second * n_repeat.second));
-        if (!textures.current_texture->loadFromFile(static_path / file_path, sf::IntRect(position_in, size_i))) {
+        if (!textures.current_texture->loadFromFile(mp::img / file_path, sf::IntRect(position_in, size_i))) {
             std::cout << "cannot read texture from file : " << file_path << std::endl;
             throw std::invalid_argument("there is not such file with texture");
         }
