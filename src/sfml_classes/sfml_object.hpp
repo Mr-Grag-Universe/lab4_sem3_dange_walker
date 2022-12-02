@@ -5,6 +5,7 @@
 #include <ctime>
 
 #include "../objects/GameObject.hpp"
+#include "sfml_sound.hpp"
 
 class SFMLObject {
 protected:
@@ -18,17 +19,44 @@ protected:
     sf::Clock clock;
     sf::Time period;
     sf::Time life_time;
+
+    SFMLSound sound;
 public:
-    // void set_texture(fs::path file_path, std::pair<unsigned int, unsigned int> p_in, std::pair<unsigned int, unsigned int> scale, std::pair<unsigned int, unsigned int> n_repeat);
-    // void set_texture(std::shared_ptr<sf::Texture> t, pair_ui64_t size);
+    void process_sound_queue() {
+        std::queue q = obj->extract_sound_queue();
+        if (q.size()) {
+            while (q.size()) {
+                size_t ind = q.front();
+                sound.play(ind);
+                q.pop();
+            }
+        }
+    }
+    void set_sounds(std::vector<std::shared_ptr<sf::SoundBuffer>> & sb) {
+        if (sb.empty())
+            throw std::invalid_argument("emty vector of sound buffers have been passed");
+        sound = SFMLSound(sb);
+        std::cout << "souns've been loaded to sfml object" << std::endl;
+    }
+    std::vector <std::shared_ptr<sf::Sound>> create_sounds(std::vector<std::shared_ptr<sf::SoundBuffer>> & sb) {
+        std::queue q = obj->extract_sound_queue();
+        std::vector <std::shared_ptr<sf::Sound>> s;
+        if (q.size()) {
+            while (q.size()) {
+                size_t ind = q.front();
+                s.push_back(std::make_shared<sf::Sound>(*sb[ind]));
+                // s.front()->setBuffer(*sb[ind]);
+                q.pop();
+            }
+        }
+        return s;
+    }
+
     void update_texture() {
         sf::Time ex_time = sf::milliseconds((double) (std::clock() - obj->get_born()) * 30 / CLOCKS_PER_SEC * 1000);
         // std::cout << ex_time.asMilliseconds() << "ms\n";
         // std::cout << (double)std::clock() / CLOCKS_PER_SEC << "s; " << obj->get_phase() << "\n";
         size_t n_o_states = textures.textures.size();
-        // if (ex_time.asMilliseconds() % period.asMilliseconds() > period.asMilliseconds() / sf::Time(ex_time).asMilliseconds()) {
-        //     this->set_texture(textures.textures[(ex_time.asMilliseconds() % period.asMilliseconds())/(period.asMilliseconds()/n_o_states)], std::make_pair(1, 1));
-        // }
         if (ex_time.asMilliseconds() > life_time.asMilliseconds()) {
             obj->set_exist(false);
             return;

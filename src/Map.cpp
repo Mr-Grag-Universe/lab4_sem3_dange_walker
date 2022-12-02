@@ -57,7 +57,6 @@ Map::Map(World & w) : hero(w.get_hero()), W(w.get_W()), H(w.get_H()) {
             std::shared_ptr<SFMLObject> o = all_objs[g_ind];
 
             all_objs[g_ind]->set_texture(ts[obj_type].textures[npc[i]->get_phase()], npc[i]->get_size());
-            // const sf::Sprite & hero_s = hero.get_sprite();
             const sf::Vector2f hero_pos = sf::Vector2f((float) h_p.first, (float) h_p.second);
             sf::Vector2f s_window_pos = sf::Vector2f((float)p.first, (float)p.second);
             s_window_pos.x = W/2 - (hero_pos.x - s_window_pos.x);
@@ -77,14 +76,8 @@ Map::Map(World & w) : hero(w.get_hero()), W(w.get_W()), H(w.get_H()) {
             all_objs[g_ind]->correct_phase();
 
             all_objs[g_ind]->update_texture();
-            // std::cout << eff[i]->get_size().first << " " << eff[i]->get_size().second << std::endl;
             all_objs[g_ind]->set_texture(ts[eff[i]->get_type()].textures[eff[i]->get_phase()], eff[i]->get_size());
-            // const sf::Vector2f hero_pos = sf::Vector2f((float) h_p.first, (float) h_p.second);
             sf::Vector2 s_window_pos = sf::Vector2(p.first, p.second);
-            // s_window_pos.x = (W - all_objs[g_ind]->get_texture()->getSize().x)/2; // - (hero_pos.x - s_window_pos.x);
-            // s_window_pos.y = (H - all_objs[g_ind]->get_texture()->getSize().y)/2; // - (hero_pos.y - s_window_pos.y);
-            // eff[i]->set_sprite_position((pair_ui64_t) std::make_pair(s_window_pos.x, s_window_pos.y));
-            // std::cout << "effect sprite position: (" << eff[i]->get_sprite().getPosition().x << ", " << eff[i]->get_sprite().getPosition().y << ")\n";
             all_objs[g_ind]->set_sprite_position(calculate_sprite_position(eff[i]->get_size(), (pair_ui64_t) std::make_pair(W/2, H/2)));
     
             all_effects.push_back(eff[i]);
@@ -94,4 +87,20 @@ Map::Map(World & w) : hero(w.get_hero()), W(w.get_W()), H(w.get_H()) {
     all_objs.push_back(std::make_shared<SFMLObject>(std::dynamic_pointer_cast<GameObj>(std::make_shared<Character>(hero)), ts[CHARACTER], 0));
     all_objs[all_objs.size()-1]->set_texture(ts[CHARACTER].textures[0], hero.get_size());
     all_objs[all_objs.size()-1]->set_sprite_position(calculate_sprite_position(hero.get_size(), std::make_pair(w.get_W()/2, w.get_H()/2)));
+
+    // обработка звуковых очередей
+    for (size_t i = 0; i < g_ind; ++i) {
+        obj = all_objs[i];
+        GameTypeSystem o_t = obj->get_obj()->get_type();
+        std::vector <std::shared_ptr<sf::SoundBuffer>> sb = ts[o_t].sounds;
+        if (sb.size()) {
+            std::vector <std::shared_ptr<sf::Sound>> s = all_objs[i]->create_sounds(sb);
+            for (const auto & _s: s) {
+                w.push_sound(_s);
+                _s->play();
+            }
+            // all_objs[i]->set_sounds(sb);
+            // all_objs[i]->process_sound_queue();
+        }
+    }
 }

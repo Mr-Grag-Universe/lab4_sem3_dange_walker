@@ -12,6 +12,7 @@ namespace fs = std::filesystem;
 
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
+#include <SFML/Audio.hpp>
 
 #include "Collider.hpp"
 #include "constants.hpp"
@@ -25,6 +26,8 @@ struct ObjTextureStore {
     sf::Clock standard_clock;
     sf::Time standard_period;
     sf::Time standard_life_time;
+
+    std::vector<std::shared_ptr<sf::SoundBuffer>> sounds; 
 };
 
 template <typename TypeSystem>

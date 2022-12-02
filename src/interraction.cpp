@@ -56,6 +56,7 @@ void World::game_interraction(sf::Event & event, sf::RenderWindow & window) {
         if (event.mouseButton.button == sf::Mouse::Left) {
             std::cout << "LBM pressed" << std::endl;
             std::shared_ptr<Effect> eff = hero.use_weapon();
+            eff->push_sound(0);
             all_effects.push_back(eff);
         }
     }

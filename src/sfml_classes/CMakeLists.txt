@@ -16,7 +16,7 @@ add_library(${PROJECT_NAME}
 find_package(OpenGL REQUIRED)
 
 target_link_libraries(${PROJECT_NAME} ${OPENGL_gl_LIBRARY})
-target_link_libraries(${PROJECT_NAME} sfml-system sfml-window sfml-graphics ${SFML_DEPENDENCIES})
+target_link_libraries(${PROJECT_NAME} sfml-system sfml-window sfml-graphics sfml-audio ${SFML_DEPENDENCIES})
 message("SUCCESSFULL linking")
 
 # =========================

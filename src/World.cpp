@@ -228,7 +228,7 @@ std::map<GameTypeSystem, ObjTextureStore> World::load_game_obj_textures_from_fil
     size_t width{}, height{};
     double n_repeat_x{}, n_repeat_y{};
     while (file >> type) {
-        for (short i = 0; i < 4; ++i) {
+        for (short i = 0; i < 5; ++i) {
             file >> texture_type;
             if (texture_type == "//")
                 continue;
@@ -306,6 +306,15 @@ std::map<GameTypeSystem, ObjTextureStore> World::load_game_obj_textures_from_fil
                 }
                 T[types[type]].standard_life_time = life_time;
                 T[types[type]].standard_period = period;
+            } else if (texture_type == "sounds") {
+                std::string src_file;
+                file >> src_file;
+                T[types[type]].sounds.push_back(std::make_shared<sf::SoundBuffer>());
+                // возможно не с той стороны смотрю
+                if (!T[types[type]].sounds.front()->loadFromFile(mp::sound / src_file)) {
+                    std::cout << "cannot load this sound" << std::endl;
+                    throw std::runtime_error("cannot read sound from file");
+                }
             } else {
                 throw std::runtime_error("cannot initializate this tipe of textures");
             }

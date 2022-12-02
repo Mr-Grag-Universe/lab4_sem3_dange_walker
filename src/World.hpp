@@ -51,6 +51,8 @@ private:
     std::map<GameTypeSystem, TextureStore> effects_textures;
     std::map<GameTypeSystem, ObjTextureStore> game_obj_textures;
 
+    std::vector <std::shared_ptr<sf::Sound>> all_sounds;
+
     GameMode mode = RUN;
 public:
     static std::shared_ptr<GameObj> load_object(std::string name, std::ifstream & file);
@@ -106,6 +108,10 @@ public:
     void backpack_menu_interraction(sf::Event & event, sf::RenderWindow & window);
 
     void use_the_nearest_thing();
+
+    void push_sound(std::shared_ptr<sf:: Sound> sound) {
+        all_sounds.push_back(sound);
+    }
 };
 
 #endif
