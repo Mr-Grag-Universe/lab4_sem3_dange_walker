@@ -1,8 +1,6 @@
 #ifndef CHARACTER_CLASS
 #define CHARACTER_CLASS
 
-#include <SFML/Graphics.hpp>
-
 #include <iostream>
 #include <algorithm>
 
@@ -13,14 +11,16 @@
 
 class World;
 
+static std::vector <size_t> exp_levels = {0, 10, 20, 50, 100, 200, 500, 1000};
+
 class Character : public Alive {
 protected:
     BackPack backpack;
     std::shared_ptr<Weapon> weapon;
     World & world;
     size_t level = 0;
-    size_t experience = 1;
-    size_t max_exp = 100;
+    int experience = 1;
+    size_t max_exp = 10;
 public:
     void fill_backpack();
     GameTypeSystem get_type() const override
@@ -45,6 +45,23 @@ public:
     { experience = 0; }
     void set_max_exp(size_t m_exp)
     { max_exp = m_exp; }
+    void plus_exp(int exp) {
+        experience += exp;
+        if (exp < 0) {
+            std::cerr << "negative exp" << std::endl;
+            throw std::invalid_argument("i'm too lazy to write this logic");
+        }
+        while (exp >= max_exp) {
+            exp -= max_exp;
+            ++level;
+            if (level+1 > exp_levels.size()) {
+                exp = max_exp;
+                throw std::invalid_argument("hero level is too big");
+            }
+            max_exp = exp_levels[level+1];
+            std::cout << "congratulations! you achived a new " << level << " level" << std::endl;
+        }
+    }
 
     Character(World & w) : world(w) {}
     ~Character() {}

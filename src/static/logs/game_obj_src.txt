@@ -80,6 +80,16 @@ slime
         40_ms
         40_ms
     // // //
+skeleton
+    textures 4
+        0 192   64 64   1 1     skeleton.png
+        64 192  64 64   1 1     skeleton.png
+        128 192 64 64   1 1     skeleton.png
+        192 192 64 64   1 1     skeleton.png
+    timing
+        50_ms
+        50_ms
+    // // //
 hero
     textures 1
         32 64

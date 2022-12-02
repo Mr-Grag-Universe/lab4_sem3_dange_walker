@@ -1,5 +1,3 @@
-#include <SFML/Graphics.hpp>
-
 #include "../weapon/Sward.hpp"
 #include "../constants.hpp"
 

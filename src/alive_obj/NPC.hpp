@@ -18,6 +18,8 @@ public:
     { return attitude; }
     NPC() {}
     ~NPC() {}
+
+    virtual int get_exp_for_kill() const = 0;
 };
 
 #endif

@@ -18,6 +18,7 @@
 #include "environment/Wall.hpp"
 #include "alive_obj/Character.hpp"
 #include "alive_obj/Slime.hpp"
+#include "Skeleton.hpp"
 #include "containers/Box.hpp"
 #include "containers/Chest.hpp"
 #include "weapon/Sward.hpp"
@@ -70,6 +71,9 @@ std::shared_ptr<GameObj> World::load_object(std::string type, std::ifstream & fi
             break;
         case SLIME:
             obj = std::make_shared<Slime>();
+            break;
+        case SKELETON:
+            obj = std::make_shared<Skeleton>();
         default:
             break;
     }
@@ -83,6 +87,10 @@ std::shared_ptr<NPC> World::load_npc(std::string type, std::ifstream & file) {
     switch (types[type]) {
         case SLIME:
             obj = std::make_shared<Slime>();
+            break;
+        case SKELETON:
+            obj = std::make_shared<Skeleton>();
+            break;
         default:
             break;
     }
@@ -417,10 +425,13 @@ void World::iterate() {
     for (size_t i = 0; i < all_effects.size(); ++i) {
         if (all_effects[i]->makes_damage()) {
             for (size_t j = 0; j < all_npc.size(); ++j) {
-                if (&all_effects[j]->get_originator_ptr() != &(*all_npc[i])) {
+                if (&all_effects[i]->get_originator_ptr() != &(*all_npc[j])) {
                     all_effects[i]->make_damage(*(all_npc[j]));
                     if (all_npc[j]->get_helth() == 0) {
                         std::cout << all_npc[j]->get_name() << "has been killed" << std::endl;
+                        int exp = all_npc[j]->get_exp_for_kill();
+                        std::cout << "+ " << exp << " exp points have been collected" << std::endl;
+                        hero.plus_exp(exp);
                         all_npc.erase(all_npc.begin() + j);
                         j--;
                     }

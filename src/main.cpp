@@ -57,7 +57,7 @@ int main(int argc, char *argv[]) {
     // window.draw(sprite);
 
     sf::Music my_sound;
-    if (!my_sound.openFromFile(mp::sound / "low_roar_-_Bones_OST_Death_Stranding_(musportal.org).mp3")) {
+    if (!my_sound.openFromFile(mp::sound / "neheart_Reidenshi_-_snowfall_73879469.mp3")) {
         std::cout << "cannot open music file" << std::endl;
         return 1;
     }

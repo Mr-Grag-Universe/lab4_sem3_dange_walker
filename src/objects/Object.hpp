@@ -10,25 +10,8 @@
 #include <filesystem>
 namespace fs = std::filesystem;
 
-#include <SFML/Graphics.hpp>
-#include <SFML/Window.hpp>
-#include <SFML/Audio.hpp>
-
 #include "Collider.hpp"
 #include "constants.hpp"
-
-struct ObjTextureStore {
-    std::vector <std::shared_ptr<sf::Texture>> textures;
-    std::shared_ptr<sf::Texture> current_texture;
-    std::shared_ptr<sf::Texture> preview;
-    std::shared_ptr<sf::Texture> bp_texture;
-
-    sf::Clock standard_clock;
-    sf::Time standard_period;
-    sf::Time standard_life_time;
-
-    std::vector<std::shared_ptr<sf::SoundBuffer>> sounds; 
-};
 
 template <typename TypeSystem>
 class Obj {
