@@ -56,9 +56,12 @@ public:
     // а. класс
     // по сути прослойка
     void update_texture() {
-        sf::Time ex_time = sf::milliseconds((double) (std::clock() - obj->get_born()) * 30 / CLOCKS_PER_SEC * 1000);
-        // std::cout << ex_time.asMilliseconds() << "ms\n";
-        // std::cout << (double)std::clock() / CLOCKS_PER_SEC << "s; " << obj->get_phase() << "\n";
+        // sf::Time ex_time = sf::milliseconds((double) (std::clock() - obj->get_born()) * 30 / CLOCKS_PER_SEC * 1000);
+        auto ex_time_ = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::steady_clock::now() - obj->get_born());
+        std::cout << ex_time_;
+        sf::Time ex_time = sf::milliseconds(ex_time_.count());
+        std::cout << ex_time.asMilliseconds() << "ms\n";
+        std::cout << (double)std::clock() / CLOCKS_PER_SEC << "s; " << obj->get_phase() << "\n";
         size_t n_o_states = textures.textures.size();
         if (ex_time.asMilliseconds() > life_time.asMilliseconds()) {
             obj->set_exist(false);
@@ -67,7 +70,7 @@ public:
         //if () { // (ex_time.asMicroseconds() % period.asMicroseconds() > period.asMicroseconds() / (ex_time.asMicroseconds())) {
             size_t p = (ex_time.asMicroseconds() % period.asMicroseconds())/(period.asMicroseconds()/n_o_states);
             if (p != obj->get_phase()) {
-                // std::cout << "=========================================" << obj->get_phase() << "\n";
+                std::cout << "=========================================" << obj->get_phase() << "\n";
                 obj->set_phase(p);
                 current_texture = textures.textures[obj->get_phase()];
             }
@@ -99,7 +102,9 @@ public:
     void correct_phase() {
         size_t p = (size_t) period.asMilliseconds();
         size_t n_o_ph = obj->get_number_of_phases();
-        size_t ex_time = (size_t) sf::seconds((double) (std::clock() - obj->get_born()) / CLOCKS_PER_SEC).asMilliseconds();
+        // size_t ex_time = (size_t) sf::seconds((double) (std::clock() - obj->get_born()) / CLOCKS_PER_SEC).asMilliseconds();
+        auto ex_time_ = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::steady_clock::now() - obj->get_born());
+        size_t ex_time = (size_t) sf::milliseconds(ex_time_.count()).asMilliseconds();// sf::microseconds((std::chrono::steady_clock::now() - obj->get_born()).count()).asMilliseconds();
         obj->set_phase(((ex_time % p) * n_o_ph) / p);
     }
     ~SFMLObject() {}

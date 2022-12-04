@@ -8,8 +8,8 @@
 #include <set>
 #include <string>
 #include <filesystem>
-#include <ctime>
 #include <queue>
+#include <chrono>
 namespace fs = std::filesystem;
 
 #include "Object.hpp"
@@ -22,22 +22,23 @@ public:
 protected:
     // pair_ui64_t position = std::make_pair(0, 0);
     char layer = 0;
-    std::time_t life_time = 0;
-    std::clock_t born = clock();
-    std::time_t period = 0;
+    using chrono_time_point = std::chrono::time_point<std::chrono::steady_clock>;
+    chrono_time_point life_time;
+    chrono_time_point born = std::chrono::steady_clock::now();
+    chrono_time_point period;
     uint64_t phase = 0;
     uint64_t number_of_phases = 0;
 public:
-    std::clock_t get_born()
+    chrono_time_point get_born()
     { return born; }
     pair_ui64_t get_position() const
     { return position; }
     // void set_position(pair_ui64_t p)
     // { position = p; }
 
-    std::time_t get_time() const
+    chrono_time_point get_time() const
     { return period; }
-    void set_time(std::time_t p)
+    void set_time(chrono_time_point p)
     { period = p; }
     uint64_t get_phase() const
     { return phase; }
