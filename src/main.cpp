@@ -62,7 +62,7 @@ int main(int argc, char *argv[]) {
         return 1;
     }
     my_sound.play();
-    my_sound.setVolume(50);
+    my_sound.setVolume(10);
 
     while (window.isOpen()) {
         switch (world.get_game_mode())

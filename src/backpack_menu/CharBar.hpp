@@ -85,6 +85,10 @@ public:
         max_exp = hero.get_max_exp();
         health = hero.get_helth();
         level = hero.get_level();
+
+        statistic[0].set_text(std::to_string(level));
+        statistic[0].get_text().setFillColor(sf::Color::Magenta);
+
         std::cout << "char bar eddition completed" << std::endl;
     }
     void set_size(pair_ui64_t size) {
@@ -101,8 +105,8 @@ public:
         rect_field.setPosition(sf::Vector2f(p.first, p.second));
         for (size_t i = 0; i < status_bars.size(); ++i)
             status_bars[i].set_position(std::make_pair(p.first+10, p.second+10*(i+1) + i*H/4));
-        for (size_t i = 0; i < status_bars.size(); ++i)
-            status_bars[i].set_position(std::make_pair(p.first+10, p.second+10*(status_bars.size()+i+1) + i*H/4));
+        for (size_t i = 0; i < statistic.size(); ++i)
+            statistic[i].set_position(std::make_pair(p.first+10, p.second+10*(status_bars.size()+i+1) + (status_bars.size()+i)*H/4));
         position = p;
     }
 };

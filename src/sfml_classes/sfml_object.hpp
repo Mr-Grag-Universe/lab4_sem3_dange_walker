@@ -52,6 +52,9 @@ public:
         return s;
     }
 
+    // инверсия зависимостей
+    // а. класс
+    // по сути прослойка
     void update_texture() {
         sf::Time ex_time = sf::milliseconds((double) (std::clock() - obj->get_born()) * 30 / CLOCKS_PER_SEC * 1000);
         // std::cout << ex_time.asMilliseconds() << "ms\n";
