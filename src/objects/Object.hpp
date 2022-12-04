@@ -42,7 +42,6 @@ public:
     { is_static = st; }
 
     Obj() = default;
-    Obj(const pair_ui64_t & position, const sf::Sprite & sprite);
     Obj(std::string name, pair_ui64_t position);
     Obj(const Obj &) = default;
     virtual ~Obj() {}

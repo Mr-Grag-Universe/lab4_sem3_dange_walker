@@ -19,6 +19,7 @@
 #include "alive_obj/NPC.hpp"
 #include "constants.hpp"
 #include "alive_obj/Character.hpp"
+#include "sfml_classes/sfml_common.hpp"
 
 #include "my_stl_containers/include/vector.hpp"
 
@@ -48,7 +49,6 @@ private:
     std::vector <std::shared_ptr<GameObj>> all_things;
     std::vector <std::shared_ptr<NPC>> all_npc;
     std::vector <std::shared_ptr<Effect>> all_effects;
-    std::map<GameTypeSystem, TextureStore> effects_textures;
     std::map<GameTypeSystem, ObjTextureStore> game_obj_textures;
 
     std::vector <std::shared_ptr<sf::Sound>> all_sounds;
@@ -57,13 +57,8 @@ private:
 public:
     static std::shared_ptr<GameObj> load_object(std::string name, std::ifstream & file);
     static std::shared_ptr<NPC> load_npc(std::string type, std::ifstream & file);
-    TextureStore & get_effect_texture(GameTypeSystem type)
-    { return effects_textures[type]; }
     ObjTextureStore & get_obj_textures(GameTypeSystem type)
     { return game_obj_textures[type]; }
-    std::map<GameTypeSystem, TextureStore> & get_effect_texture_store() {
-        return effects_textures;
-    }
     std::map<GameTypeSystem, ObjTextureStore> & get_texture_store()
     { return game_obj_textures; }
 
@@ -81,7 +76,6 @@ public:
 
     static std::vector <std::shared_ptr<GameObj>> load_things_from_file(const std::string & file_name);
     static std::vector <std::shared_ptr<NPC>> load_npcs_from_file(const std::string & file_name);
-    static std::map<GameTypeSystem, TextureStore> load_effects_from_file(const std::string & file_name);
     static std::map<GameTypeSystem, ObjTextureStore> load_game_obj_textures_from_file(const std::string & file_name);
 
     World() : W(sf::VideoMode::getDesktopMode().size.x), H(sf::VideoMode::getDesktopMode().size.y) {}

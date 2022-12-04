@@ -11,6 +11,9 @@ include_directories(../libs/SFML)
 
 add_library(${PROJECT_NAME}
     sfml_object.cpp
+    sfml_common.hpp
+    sfml_object.hpp
+    sfml_sound.hpp
 )
 
 find_package(OpenGL REQUIRED)

@@ -51,7 +51,6 @@ public:
     { number_of_phases = n; }
 
     GameObj() = default;
-    GameObj(const pair_ui64_t & position, const sf::Sprite & sprite);
     GameObj(std::string name, pair_ui64_t position);
     GameObj(const GameObj &) = default;
     virtual ~GameObj() {}

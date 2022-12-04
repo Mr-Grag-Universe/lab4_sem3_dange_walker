@@ -24,7 +24,7 @@ public:
     size_t get_W() const { return W; }
     size_t get_H() const { return H; }
     BackPackStore(Container & c) : container(c) {
-        rect_field.setFillColor(MyDarkSlateBlue);
+        rect_field.setFillColor(msc::MyDarkSlateBlue);
     }
     BackPackStore(std::string n, pair_ui64_t p, Container & c) : container(c) {
         position = p;

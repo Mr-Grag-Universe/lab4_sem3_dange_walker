@@ -38,7 +38,7 @@ public:
         window.draw(sprite);
         sf::RectangleShape rectangle(sf::Vector2f(120, 30));
         rectangle.setSize(sf::Vector2f(200, 50));
-        rectangle.setFillColor(MyDarkSlateBlue);
+        rectangle.setFillColor(msc::MyDarkSlateBlue);
         sf::FloatRect rect = sprite.getGlobalBounds();
         sf::Vector2 p = rect.getPosition();
         sf::Vector2f ss = rect.getSize();

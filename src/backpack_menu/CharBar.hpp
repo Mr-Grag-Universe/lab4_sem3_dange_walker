@@ -48,7 +48,7 @@ public:
         name = c.get_name();
 
         std::cout << "alive char bar created" << alive.get_name() << "\n";
-        rect_field.setFillColor(MyDarkSlateBlue);
+        rect_field.setFillColor(msc::MyDarkSlateBlue);
         status_bars.push_back(StatusBar<double>(max_health, health));
         status_bars[0].set_label("health");
         status_bars[0].set_scale_color(sf::Color::Green);

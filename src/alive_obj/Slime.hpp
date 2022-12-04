@@ -19,7 +19,6 @@ public:
     { return 5; }
     GameTypeSystem get_type() const override
     { return SLIME; }
-    void draw(sf::RenderWindow & window);
 };
 
 #endif

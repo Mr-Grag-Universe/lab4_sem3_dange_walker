@@ -10,7 +10,7 @@
 
 
 void Draw::draw_char_backpack(sf::RenderWindow & window, const BackPackMenu & BPMenu) {
-    window.clear(MyDarkSlateGray);
+    window.clear(msc::MyDarkSlateGray);
     sf::RectangleShape rectangle(sf::Vector2f(120, 50));
     rectangle.setPosition(sf::Vector2f(120, 50));
     window.draw(rectangle);

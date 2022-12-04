@@ -59,14 +59,6 @@ void Character::read(std::ifstream & file) {
     }
 }
 
-// void Character::draw(sf::RenderWindow & window) {
-//     window.draw(sprite);
-// }
-
-void Character::draw_backpack_menu(sf::RenderWindow & window) {
-    
-}
-
 std::shared_ptr<Effect> Character::use_weapon() {
     std::cout << "character used weapon" << std::endl;
     return weapon->use(*this);

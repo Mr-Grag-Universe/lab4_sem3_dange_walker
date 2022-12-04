@@ -8,6 +8,7 @@
 #include "Object.hpp"
 #include "../containers/BackPack.hpp"
 #include "../constants.hpp"
+#include "../sfml_classes/sfml_common.hpp"
 #include "../alive_obj/Alive.hpp"
 
 class BPMObj : public Obj<BackPackTypeSystem> {
