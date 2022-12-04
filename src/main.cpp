@@ -32,7 +32,6 @@ int main(int argc, char *argv[]) {
     world.add_game_obj_textures_from_file(mp::logs / mp::game_obj_file);
     world.add_things_from_file(mp::logs / mp::containers);
     world.add_npcs_from_file(mp::logs / mp::npc_file);
-    world.add_effects_from_file(mp::logs / mp::effect_file);
     world.add_character(mp::logs / mp::hero_file);
 
     window.clear(sf::Color::Black);
