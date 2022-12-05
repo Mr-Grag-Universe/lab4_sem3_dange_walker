@@ -18,15 +18,15 @@ protected:
     Alive & originator;
     double damage = 0;
 public:
-    bool makes_damage() const
+    bool makes_damage() const override
     { return true; }
-    const Alive & get_originator_ptr() const
+    const Alive & get_originator_ptr() const override
     { return originator; }
-    GameTypeSystem get_type() const
+    GameTypeSystem get_type() const override
     { return MW_WAVE; }
-    void read(std::ifstream & file) {
+    void read(std::ifstream & file) override {
     }
-    void make_damage(Alive & a) {
+    void make_damage(Alive & a) override {
         if (distance((pair_ui64_t) a.get_position(), (pair_ui64_t) position) <= radius) {
             if (a.get_helth() <= damage) {
                 a.set_health(0);
@@ -49,6 +49,10 @@ public:
     }
     MW_Wave(Alive & o) : originator(o) {}
     ~MW_Wave() {}
+
+    void iterate() override {
+        position = originator.get_position();
+    }
 };
 
 #endif

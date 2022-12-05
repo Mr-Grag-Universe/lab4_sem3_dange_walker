@@ -14,8 +14,12 @@
 
 
 void game(sf::RenderWindow & window, World & world) {
+    Map map(world);
+    Draw::draw_map(window, map);
     while (window.isOpen() && world.get_game_mode() == World::RUN) {
-        Map map(world);
+        // Map map(world);
+        map.update();
+        
         // проверить все события окна, которые были вызваны с последней итерации цикла
         sf::Event event;
         if (window.pollEvent(event)) {

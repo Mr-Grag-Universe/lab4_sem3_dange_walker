@@ -15,12 +15,14 @@
 
 class Map {
 private:
-    const Character & hero;
+    std::shared_ptr<Character> hero;
     const size_t W, H;
     std::vector <std::shared_ptr<GameObj> *> all_things;
     std::vector <std::shared_ptr<NPC>> all_npc;
     std::vector <std::shared_ptr<Effect>> all_effects;
     std::vector <std::shared_ptr<SFMLObject>> all_objs;
+    std::map<GameTypeSystem, ObjTextureStore> ts;
+    std::vector <std::shared_ptr<sf::Sound>> all_sounds;
 public:
     size_t get_W() const { return W; }
     size_t get_H() const { return H; }
@@ -30,14 +32,16 @@ public:
     { return all_npc; }
     const std::vector <std::shared_ptr<Effect>> & get_all_effects() const 
     { return all_effects; }
-    const Character & get_hero() const
+    std::shared_ptr<Character> get_hero()
     { return hero; }
     const std::vector <std::shared_ptr<SFMLObject>> & get_all_objs() const
     {return all_objs; }
 
     Map(World & w);
-    Map(const Map & m) = default;
+    Map(Map & m);
     ~Map() = default;
+
+    void update();
 protected:
     struct Env {
         std::vector <std::shared_ptr<Wall> *> walls;

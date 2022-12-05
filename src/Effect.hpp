@@ -20,6 +20,7 @@ public:
     // }
 
     virtual void make_damage(Alive &) = 0;
+    virtual void iterate() = 0;
 };
 
 #endif

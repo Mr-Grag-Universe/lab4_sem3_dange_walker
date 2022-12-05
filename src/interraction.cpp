@@ -17,19 +17,19 @@ void World::game_interraction(sf::Event & event, sf::RenderWindow & window) {
     if (event.type == sf::Event::KeyPressed) {
         switch (event.key.code) {
         case sf::Keyboard::A : {
-            hero.move(-10, 0);
+            hero->move(-10, 0);
             break;
         }
         case sf::Keyboard::D : {
-            hero.move(10, 0);
+            hero->move(10, 0);
             break;
         }
         case sf::Keyboard::W : {
-            hero.move(0, -10);
+            hero->move(0, -10);
             break;
         }
         case sf::Keyboard::S : {
-            hero.move(0, 10);
+            hero->move(0, 10);
             break;
         }
         case sf::Keyboard::F : {
@@ -55,7 +55,7 @@ void World::game_interraction(sf::Event & event, sf::RenderWindow & window) {
     } else if (event.type == sf::Event::MouseButtonPressed) {
         if (event.mouseButton.button == sf::Mouse::Left) {
             std::cout << "LBM pressed" << std::endl;
-            std::shared_ptr<Effect> eff = hero.use_weapon();
+            std::shared_ptr<Effect> eff = hero->use_weapon();
             eff->push_sound(0);
             all_effects.push_back(eff);
         }

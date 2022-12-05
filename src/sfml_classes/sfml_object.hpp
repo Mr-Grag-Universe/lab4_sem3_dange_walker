@@ -20,8 +20,14 @@ protected:
     sf::Time period;
     sf::Time life_time;
 
+    bool is_static = true;
+
     SFMLSound sound;
 public:
+    bool isstatic() const
+    { return is_static; }
+    void set_static(bool s)
+    { is_static = s; }
     void process_sound_queue() {
         std::queue q = obj->extract_sound_queue();
         if (q.size()) {
@@ -52,29 +58,39 @@ public:
         return s;
     }
 
+    static size_t calculate_phase(sf::Time period, std::chrono::time_point<std::chrono::steady_clock> was_born, size_t n_o_ph) {
+        size_t p = (size_t) period.asMilliseconds();
+        auto ex_time_ = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::steady_clock::now() - was_born);
+        size_t ex_time = (size_t) sf::milliseconds(ex_time_.count()).asMilliseconds();// sf::microseconds((std::chrono::steady_clock::now() - obj->get_born()).count()).asMilliseconds();
+        return ((ex_time % p) * n_o_ph) / p;
+    }
+
     // инверсия зависимостей
     // а. класс
     // по сути прослойка
     void update_texture() {
+        if (is_static)
+            return;
         // sf::Time ex_time = sf::milliseconds((double) (std::clock() - obj->get_born()) * 30 / CLOCKS_PER_SEC * 1000);
         auto ex_time_ = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::steady_clock::now() - obj->get_born());
-        std::cout << ex_time_;
+        // std::cout << ex_time_;
         sf::Time ex_time = sf::milliseconds(ex_time_.count());
-        std::cout << ex_time.asMilliseconds() << "ms\n";
-        std::cout << (double)std::clock() / CLOCKS_PER_SEC << "s; " << obj->get_phase() << "\n";
+        // std::cout << life_time.asMilliseconds() << "ms; " << ex_time.asMilliseconds() << "ms\n";
+        // std::cout << (double)std::clock() / CLOCKS_PER_SEC << "s; " << obj->get_phase() << "\n";
         size_t n_o_states = textures.textures.size();
-        if (ex_time.asMilliseconds() > life_time.asMilliseconds()) {
+        if (ex_time.asMilliseconds() > life_time.asMilliseconds() && life_time.asMilliseconds() != sf::seconds(0).asMilliseconds()) {
             obj->set_exist(false);
             return;
         }
-        //if () { // (ex_time.asMicroseconds() % period.asMicroseconds() > period.asMicroseconds() / (ex_time.asMicroseconds())) {
-            size_t p = (ex_time.asMicroseconds() % period.asMicroseconds())/(period.asMicroseconds()/n_o_states);
+        if (n_o_states > 1 && period.asMilliseconds() != sf::seconds(0).asMilliseconds()) { // (ex_time.asMicroseconds() % period.asMicroseconds() > period.asMicroseconds() / (ex_time.asMicroseconds())) {
+            size_t p = calculate_phase(period, obj->get_born(), n_o_states); // ((ex_time.asMicroseconds() % period.asMicroseconds()) * n_o_states)/(period.asMicroseconds());
+            [[maybe_unused]] GameTypeSystem type = obj->get_type();
             if (p != obj->get_phase()) {
-                std::cout << "=========================================" << obj->get_phase() << "\n";
-                obj->set_phase(p);
-                current_texture = textures.textures[obj->get_phase()];
+                this->correct_phase();
+                // std::cout << "=========================================" << obj->get_phase() << "\n";
+                current_texture = textures.textures[p];
             }
-        // }
+        }
     }
     void set_period(sf::Time t)
     { period = t; }
@@ -143,6 +159,7 @@ public:
     }
     void set_texture(std::shared_ptr<sf::Texture> t, pair_ui64_t size) {
         current_texture = t;
+        sprite = sf::Sprite();
         if (obj->x_rep() != 1 || obj->y_rep() != 1) {
             // current_texture = std::make_shared<sf::Texture>();
             // // *current_texture = t->(sf::Vector2u(size.first*obj->x_rep(), size.second*obj->y_rep()));
@@ -157,7 +174,8 @@ public:
             sprite.setTexture(*current_texture);
         }
         // std::cout << obj->x_rep() << " " << obj->y_rep() << "\n";
-        sprite.scale(sf::Vector2f((double)size.first/(double)t->getSize().x, (double)size.second/(double)t->getSize().y));
+        pair_ui64_t scale = std::make_pair((double)size.first/(double)t->getSize().x, (double)size.second/(double)t->getSize().y);
+        sprite.scale(sf::Vector2f(scale.first, scale.second));
     }
 
     void set_position(const pair_ui64_t & p) {

@@ -32,6 +32,12 @@ void Draw::draw_map(sf::RenderWindow & window, const Map & map) {
     for (auto o: ao) {
         o->draw(window);
     }
+    sf::Vertex line[] =
+        {
+            sf::Vertex(sf::Vector2f(map.get_W()/2, 0)),
+            sf::Vertex(sf::Vector2f(map.get_W()/2, map.get_H()))
+        };
+    window.draw(line, 2, sf::Lines);
 
     // window.draw(hero_s);
 }

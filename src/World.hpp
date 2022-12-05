@@ -41,7 +41,7 @@ private:
         my_stl::vector <std::shared_ptr<Door>*>  doors;
     };
 
-    Character hero = Character(*this);
+    std::shared_ptr<Character> hero = std::make_shared<Character>(*this);
     Env env;
 
     size_t W, H;
@@ -61,12 +61,16 @@ public:
     { return game_obj_textures[type]; }
     std::map<GameTypeSystem, ObjTextureStore> & get_texture_store()
     { return game_obj_textures; }
+    std::map<GameTypeSystem, ObjTextureStore> get_texture_store() const
+    { return game_obj_textures; }
 
     size_t get_W() const { return W; }
     size_t get_H() const { return H; }
     const Character & get_hero() const
-    { return hero; }
+    { return *hero; }
     Character & get_hero()
+    { return *hero; }
+    std::shared_ptr<Character> get_hero_ptr()
     { return hero; }
     const std::vector <std::shared_ptr<GameObj>> & get_all_things() const { return all_things; }
     const std::vector <std::shared_ptr<NPC>> & get_all_npcs() const { return all_npc; }

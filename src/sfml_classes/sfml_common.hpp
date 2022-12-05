@@ -30,7 +30,9 @@ struct ObjTextureStore {
     sf::Time standard_period;
     sf::Time standard_life_time;
 
-    std::vector<std::shared_ptr<sf::SoundBuffer>> sounds; 
+    std::vector<std::shared_ptr<sf::SoundBuffer>> sounds;
+
+    bool is_static = true;
 };
 struct MenuTextureStore {
     std::vector <std::shared_ptr<sf::Texture>> textures;
