@@ -167,14 +167,14 @@ public:
             // if (!current_texture->loadFromImage(t->copyToImage())) {
             //     std::cout << "someting bad in coping of imagine" << std::endl;
             // }
-            sf::Vector2 size_r((int) (size.first * obj->x_rep()), (int) (size.second * obj->y_rep()));
-            sprite.setTexture(*current_texture);
-            sprite.setTextureRect(sf::IntRect(sf::Vector2(0, 0), size_r));
         } else {
             sprite.setTexture(*current_texture);
         }
+        sf::Vector2 size_r((int) (size.first * obj->x_rep()), (int) (size.second * obj->y_rep()));
+        sprite.setTexture(*current_texture);
+        sprite.setTextureRect(sf::IntRect(sf::Vector2(0, 0), size_r));
         // std::cout << obj->x_rep() << " " << obj->y_rep() << "\n";
-        pair_ui64_t scale = std::make_pair((double)size.first/(double)t->getSize().x, (double)size.second/(double)t->getSize().y);
+        std::pair<double, double> scale = std::make_pair((double)size.first/(double)t->getSize().x, (double)size.second/(double)t->getSize().y);
         sprite.scale(sf::Vector2f(scale.first, scale.second));
     }
 
