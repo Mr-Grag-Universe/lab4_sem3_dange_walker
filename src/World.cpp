@@ -412,13 +412,22 @@ void World::iterate()
     {
         if (all_npc[i]->get_attitude() == NPC::BAD)
         {
-            if (distance(all_npc[i]->get_position(), p_h) < all_npc[i]->get_visability_radius())
+            double d = distance(all_npc[i]->get_position(), p_h);
+            if (d < all_npc[i]->get_visability_radius())
             {
+                // std::cout << "distance: " << d << "\n";
+                if (d < 1) {
+                    all_npc[i]->set_velocity(0);
+                    continue;
+                }
                 all_npc[i]->set_velocity(3);
                 std::pair<unsigned int, unsigned int> p_o = all_npc[i]->get_position();
                 double d_x = (long long)p_h.first - (long long)p_o.first;
                 double d_y = (long long)p_h.second - (long long)p_o.second;
-                double a = atan(d_y / d_x);
+                double a{};
+                a = (d_x == 0) ? (d_y > 0) ? M_PI/2 : -M_PI/2 : atan(d_y / d_x);
+                if (d_x < 0)
+                    a += M_PI;
                 all_npc[i]->set_v_angle(a);
             }
             else

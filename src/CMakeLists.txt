@@ -127,7 +127,6 @@ endif(MSVC)
 
 
 # ==================================
-# ================================
 
 option(BUILD_DOC "Build documentation" ON)
 
