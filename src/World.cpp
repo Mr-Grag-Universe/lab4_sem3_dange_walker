@@ -356,6 +356,23 @@ void World::interraction(sf::Event &event, sf::RenderWindow &window)
 
         break;
     }
+    case sf::Event::KeyReleased:
+    {
+        if (this->mode == RUN)
+        {
+            game_interraction(event, window);
+        }
+        else if (this->mode == MENU)
+        {
+            menu_interraction(event, window);
+        }
+        else if (this->mode == BACKPACK_MENU)
+        {
+            backpack_menu_interraction(event, window);
+        }
+
+        break;
+    }
     case sf::Event::Resized:
     {
         W = event.size.width;
@@ -454,6 +471,26 @@ void World::iterate()
         {
             all_effects.erase(all_effects.begin() + i);
             i--;
+        }
+    }
+    for (auto & key : wasd) {
+        if (key.second == PRESSED) {
+            if (key.first == "A") {
+                hero->move(-3, 0);
+                std::cout << "A-moving\n";
+            } else if (key.first == "D") {
+                hero->move(3, 0);
+                std::cout << "D-moving\n";
+            } else if (key.first == "S") {
+                hero->move(0, 3);
+                std::cout << "S-moving\n";
+            } else if (key.first == "W") {
+                hero->move(0, -3);
+                std::cout << "W-moving\n";
+            } else {
+                std::cout << "unnown command\n";
+                throw std::invalid_argument("unnown key has been pressed");
+            }
         }
     }
 

@@ -67,8 +67,8 @@ mw_wave
         1 1
         weapon_effects_sprites/Alternative_1/1/Alternative_1_06.png
     timing
-        2000_ms
-        2000_ms
+        200_ms
+        200_ms
     sounds
         sward_wave.wav
     // //

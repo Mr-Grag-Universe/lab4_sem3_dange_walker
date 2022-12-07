@@ -34,6 +34,10 @@ public:
         MENU,
         BACKPACK_MENU,
     };
+    enum KeyCondition {
+        PRESSED,
+        RELEASED,
+    };
 private:
     struct Env {
         std::vector <std::shared_ptr<Wall>*>  walls;
@@ -55,6 +59,12 @@ private:
 
     GameMode mode = RUN;
 public:
+    std::map<std::string, KeyCondition> wasd = {
+        {"W", RELEASED},
+        {"S", RELEASED},
+        {"A", RELEASED},
+        {"D", RELEASED},
+    };
     static std::shared_ptr<GameObj> load_object(std::string name, std::ifstream & file);
     static std::shared_ptr<NPC> load_npc(std::string type, std::ifstream & file);
     ObjTextureStore & get_obj_textures(GameTypeSystem type)

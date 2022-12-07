@@ -17,19 +17,23 @@ void World::game_interraction(sf::Event & event, sf::RenderWindow & window) {
     if (event.type == sf::Event::KeyPressed) {
         switch (event.key.code) {
         case sf::Keyboard::A : {
-            hero->move(-10, 0);
+            //hero->move(-10, 0);
+            wasd["A"] = PRESSED;
             break;
         }
         case sf::Keyboard::D : {
-            hero->move(10, 0);
+            // hero->move(10, 0);
+            wasd["D"] = PRESSED;
             break;
         }
         case sf::Keyboard::W : {
-            hero->move(0, -10);
+            // hero->move(0, -10);
+            wasd["W"] = PRESSED;
             break;
         }
         case sf::Keyboard::S : {
-            hero->move(0, 10);
+            // hero->move(0, 10);
+            wasd["S"] = PRESSED;
             break;
         }
         case sf::Keyboard::F : {
@@ -59,6 +63,28 @@ void World::game_interraction(sf::Event & event, sf::RenderWindow & window) {
             eff->push_sound(0);
             all_effects.push_back(eff);
         }
+    } else if (event.type == sf::Event::KeyReleased) {
+        switch (event.key.code) {
+        case sf::Keyboard::A : {
+            wasd["A"] = RELEASED;
+            break;
+        }
+        case sf::Keyboard::D : {
+            wasd["D"] = RELEASED;
+            break;
+        }
+        case sf::Keyboard::S : {
+            wasd["S"] = RELEASED;
+            break;
+        }
+        case sf::Keyboard::W : {
+            wasd["W"] = RELEASED;
+            break;
+        }
+        default:
+            std::cout << "other event" << std::endl;
+            break;
+        }
     }
     // if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
     //     std::cout << "LBM pressed" << std::endl;
@@ -79,14 +105,16 @@ void World::menu_interraction(sf::Event & event, sf::RenderWindow & window) {
     }
 }
 void World::backpack_menu_interraction(sf::Event & event, sf::RenderWindow & window) {
-    switch (event.key.code) {
-    case sf::Keyboard::Tab: {
-        this->mode = RUN;
-        std::cout << "backpack menu has been closed" << std::endl;
-        break;
-    }
-    
-    default:
-        break;
+    if (event.type == sf::Event::KeyPressed) {
+        switch (event.key.code) {
+        case sf::Keyboard::Tab: {
+            this->mode = RUN;
+            std::cout << "backpack menu has been closed" << std::endl;
+            break;
+        }
+        
+        default:
+            break;
+        }
     }
 }
