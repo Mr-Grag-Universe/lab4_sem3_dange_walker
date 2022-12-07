@@ -5,7 +5,7 @@
 
 class Slime : public NPC {
 protected:
-    
+    int damage{10};
 public:
     Slime() {
         health = 10;
@@ -19,6 +19,7 @@ public:
     { return 5; }
     GameTypeSystem get_type() const override
     { return SLIME; }
+    void iterate(World & w) override;
 };
 
 #endif

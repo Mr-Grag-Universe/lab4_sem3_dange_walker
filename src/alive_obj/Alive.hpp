@@ -25,6 +25,7 @@ public:
     { max_health = m_h; }
 
     void set_health(double new_h) { health = new_h; }
+    void damage(int damage) { health -= damage; }
 
     Alive() {
 

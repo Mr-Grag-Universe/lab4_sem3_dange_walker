@@ -2,6 +2,7 @@
 #define NPC_CLASS_HPP
 
 #include "Alive.hpp"
+class World;
 
 class NPC;
 
@@ -20,6 +21,7 @@ public:
     ~NPC() {}
 
     virtual int get_exp_for_kill() const = 0;
+    virtual void iterate(World & w) = 0;
 };
 
 #endif

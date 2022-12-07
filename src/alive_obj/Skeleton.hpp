@@ -19,6 +19,7 @@ public:
     { return 80; }
     GameTypeSystem get_type() const override
     { return SKELETON; }
+    void iterate(World & w) override;
 };
 
 #endif

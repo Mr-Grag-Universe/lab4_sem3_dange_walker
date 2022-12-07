@@ -63,6 +63,7 @@ void game(sf::RenderWindow & window, World & world) {
             // проверить все события окна, которые были вызваны с последней итерации цикла
             // if (window.pollEvent(event)) {
                 // "запрос закрытия" событие: мы закрываем окно
+                mutex.lock();
                 sf::Event &event = events.front();
                 if (event.type == sf::Event::Closed)
                     window.close();
@@ -72,7 +73,6 @@ void game(sf::RenderWindow & window, World & world) {
                     sf::FloatRect visibleArea(sf::Vector2f(0.f, 0.f), sf::Vector2f((float)event.size.width, (float)event.size.height));
                     window.setView(sf::View(visibleArea));
                 }
-                mutex.lock();
                 events.pop();
                 mutex.unlock();
                 // обработываем полученное действие и движения всех объектов

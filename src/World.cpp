@@ -405,42 +405,14 @@ void World::interraction(sf::Event &event, sf::RenderWindow &window)
     return;
 }
 
-void World::iterate()
-{
-    std::pair<unsigned int, unsigned int> p_h = hero->get_position();
-    for (size_t i = 0; i < all_npc.size(); ++i)
-    {
-        if (all_npc[i]->get_attitude() == NPC::BAD)
-        {
-            double d = distance(all_npc[i]->get_position(), p_h);
-            if (d < all_npc[i]->get_visability_radius())
-            {
-                // std::cout << "distance: " << d << "\n";
-                if (d < 1) {
-                    all_npc[i]->set_velocity(0);
-                    continue;
-                }
-                all_npc[i]->set_velocity(3);
-                std::pair<unsigned int, unsigned int> p_o = all_npc[i]->get_position();
-                double d_x = (long long)p_h.first - (long long)p_o.first;
-                double d_y = (long long)p_h.second - (long long)p_o.second;
-                double a{};
-                a = (d_x == 0) ? (d_y > 0) ? M_PI/2 : -M_PI/2 : atan(d_y / d_x);
-                if (d_x < 0)
-                    a += M_PI;
-                all_npc[i]->set_v_angle(a);
-            }
-            else
-            {
-                all_npc[i]->set_velocity(0);
-            }
-        }
+void World::iterate() {
+    // std::pair<unsigned int, unsigned int> p_h = hero->get_position();
+    for (size_t i = 0; i < all_npc.size(); ++i) {
+        all_npc[i]->iterate(*this);
     }
 
-    for (size_t i = 0; i < all_npc.size(); ++i)
-    {
-        if (all_npc[i]->is_mobile())
-        {
+    for (size_t i = 0; i < all_npc.size(); ++i) {
+        if (all_npc[i]->is_mobile()) {
             double v = all_npc[i]->get_velocity();
             if (v == 0)
                 continue;
@@ -476,8 +448,7 @@ void World::iterate()
                 }
             }
         }
-        if (!all_effects[i]->exist())
-        {
+        if (!all_effects[i]->exist()) {
             all_effects.erase(all_effects.begin() + i);
             i--;
         }
@@ -486,21 +457,26 @@ void World::iterate()
         if (key.second == PRESSED) {
             if (key.first == "A") {
                 hero->move(-3, 0);
-                std::cout << "A-moving\n";
+                // std::cout << "A-moving\n";
             } else if (key.first == "D") {
                 hero->move(3, 0);
-                std::cout << "D-moving\n";
+                // std::cout << "D-moving\n";
             } else if (key.first == "S") {
                 hero->move(0, 3);
-                std::cout << "S-moving\n";
+                // std::cout << "S-moving\n";
             } else if (key.first == "W") {
                 hero->move(0, -3);
-                std::cout << "W-moving\n";
+                // std::cout << "W-moving\n";
             } else {
                 std::cout << "unnown command\n";
                 throw std::invalid_argument("unnown key has been pressed");
             }
         }
+    }
+
+    if (hero->get_helth() <= 0) {
+        std::cout << "you dead!" << std::endl;
+        hero->set_health(100);
     }
 
     return;
