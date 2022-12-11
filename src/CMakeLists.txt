@@ -4,7 +4,7 @@ project(Game_finall)
 set(CMAKE_CXX_STANDARD 20)
 # set(CMAKE_PREFIX_PATH C:/Users/Stephan/Desktop/vs_code_game/SFML-2.5.1)
 
-set(STATIC_FILES_SRC_PATH "/home/stepan/Рабочий стол/vs_code_game/src/static/")
+# set(STATIC_FILES_SRC_PATH "/home/stepan/Рабочий стол/vs_code_game/src/static/")
 # Detect and add SFML
 set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake_modules" ${CMAKE_MODULE_PATH})
 # # set(SFML_DIR C:/Users/Stephan/Desktop/vs_code_game/SFML-2.5.1/lib/cmake/SFML)
@@ -20,7 +20,7 @@ add_subdirectory(libs/SFML)
 
 # =========================
 
-include_directories(alive_obj loot physics)
+include_directories(alive_obj physics environment)
 
 set(SOURCES
    # static/first_room.txt
@@ -77,6 +77,7 @@ target_include_directories(${PROJECT_NAME}
    alive_obj
    objects
    sfml_classes
+   environment
 )
 target_link_libraries(${PROJECT_NAME} sfml-system sfml-window sfml-graphics ${SFML_DEPENDENCIES} vector environment)
 target_link_libraries(alive_objects sfml-system sfml-window sfml-graphics ${SFML_DEPENDENCIES})
@@ -125,7 +126,7 @@ if (DOXYGEN_FOUND)
     # note the option ALL which allows to build the docs together with the application
     add_custom_target(all_doc_doxygen ALL
         COMMAND ${DOXYGEN_EXECUTABLE} ${DOXYGEN_OUT}
-        WORKING_DIRECTORY "/home/stepan/Desktop/vs_code_game/src/"
+        WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
         COMMENT "Generating API documentation with Doxygen"
         VERBATIM )
 else (DOXYGEN_FOUND)

@@ -15,7 +15,9 @@ namespace fs = std::filesystem;
 #include "Object.hpp"
 #include "../constants.hpp"
 
-
+/// @brief класс игровых объектов с соответствующими элементами логики
+/// пример с логикой времени от Андрея Ивановича взят отсюда.
+/// но я выкрутился через chrono. делать больше было лень
 class GameObj : public Obj<GameTypeSystem> {
 public:
     using pair_ui64_t = std::pair<uint64_t, uint64_t>;

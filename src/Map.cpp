@@ -80,7 +80,7 @@ Map::Map(World & w) : hero(w.get_hero_ptr()), W(w.get_W()), H(w.get_H()) {
 
             all_objs[g_ind]->update_texture();
             all_objs[g_ind]->set_texture(ts[eff[i]->get_type()].textures[eff[i]->get_phase()], eff[i]->get_size());
-            sf::Vector2 s_window_pos = sf::Vector2(p.first, p.second);
+            // sf::Vector2 s_window_pos = sf::Vector2(p.first, p.second);
             all_objs[g_ind]->set_sprite_position(calculate_sprite_position(eff[i]->get_size(), (pair_ui64_t) std::make_pair(W/2, H/2)));
     
             all_effects.push_back(eff[i]);

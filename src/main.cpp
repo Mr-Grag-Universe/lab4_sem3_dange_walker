@@ -1,10 +1,5 @@
 #include <string>
 #include <iostream>
-// GLFW
-// #include <GLFW/glfw3.h>
-// #include <GLFW/glfw3native.h>
-// #include <glad/gl.h>
-// SFML
 #include <SFML/Window.hpp>
 #include <SFML/System.hpp>
 #include <SFML/Graphics.hpp>
@@ -26,8 +21,6 @@ int main(int argc, char *argv[]) {
     // window.setVerticalSyncEnabled(true);
     window.setFramerateLimit(60);
 
-    // std::vector <std::unique_ptr<Obj>> things = World::load_things_from_file("/media/stepan/Windows 10 Compact/Users/Stephan/Desktop/vs_code_game/src/static/first_room.txt");
-    // std::cout << static_path;
     World world(mp::logs / mp::first_room);
     world.add_game_obj_textures_from_file(mp::logs / mp::game_obj_file);
     world.add_things_from_file(mp::logs / mp::containers);
@@ -35,25 +28,6 @@ int main(int argc, char *argv[]) {
     world.add_character(mp::logs / mp::hero_file);
 
     window.clear(sf::Color::Black);
-    // std::shared_ptr<sf::Texture> texture = (world.get_effect_texture(MW_WAVE)).textures[0];
-    // sf::Vector2 position_in((int) 0, (int) 0);
-    std::pair <unsigned int, unsigned int> scale(100, 100);
-    fs::path file_path("weapon_effects_sprites/Big_Preview.png");
-    sf::Vector2 size_f((float) (scale.first), (float) (scale.second));
-    sf::Vector2 size_i((int) (scale.first), (int) (scale.second));
-    sf::Vector2 size_r((int) (scale.first), (int) (scale.second));
-    // if (!texture->loadFromFile(static_path / file_path, sf::IntRect(position_in, size_i))) {
-    //     std::cout << "cannot read texture from file : " << file_path << std::endl;
-    //    throw std::invalid_argument("there is not such file with texture");
-    //}
-
-    // sf::Sprite sprite;
-    // sprite.setTexture(*texture);
-    // sf::Vector2 p_v((float) 1910/2, (float) 1080/2);
-    // sprite.setPosition(p_v);
-    // window.draw(sprite);
-    // window.display();
-    // window.draw(sprite);
 
     sf::Music my_sound;
     if (!my_sound.openFromFile(mp::sound / "neheart_Reidenshi_-_snowfall_73879469.mp3")) {

@@ -13,6 +13,8 @@ namespace fs = std::filesystem;
 #include "Collider.hpp"
 #include "constants.hpp"
 
+/// @brief корневой класс ВСЕХ объектов. от него начледуются почти все логические элементы (косвенно или напрямую)
+/// @tparam TypeSystem - система типов, к которой будет принадлежать объект (типы игрового процесса или объекты меню например)
 template <typename TypeSystem>
 class Obj {
 public:

@@ -88,6 +88,7 @@ double distance(const std::pair <T, T> & p1, const std::pair <U, U> & p2) {
 
 namespace my_pathes {
 
+    // change to work in your system
     #define STATIC_FILES_SRC_PATH "/home/stepan/Desktop/vs_code_game/src/static/"
 
     static fs::path static_path(fs::canonical(STATIC_FILES_SRC_PATH));

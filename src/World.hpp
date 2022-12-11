@@ -12,13 +12,9 @@
 
 // #include "Map.hpp"
 #include "containers/Chest.hpp"
-#include "environment/Wall.hpp"
-#include "environment/Door.hpp"
-#include "environment/Floor.hpp"
-#include "alive_obj/Character.hpp"
-#include "alive_obj/NPC.hpp"
+#include "environment.hpp"
+#include "alive.hpp"
 #include "constants.hpp"
-#include "alive_obj/Character.hpp"
 #include "sfml_classes/sfml_common.hpp"
 
 #include "my_stl_containers/include/vector.hpp"
@@ -26,19 +22,27 @@
 static const std::set<GameTypeSystem> alive_types = { CHARACTER, SLIME, SKELETON };
 static const std::set<GameTypeSystem> effect_types = { MW_WAVE };
 
+/// @brief главный класс всей игры. здесь собраны все игровые объекты, загрузчики, обработчики и итераторы
+/// фактически это сердце программы. возможно стоило разгрузить этот склад, но я не усел бы. да и по хорошему много чего изначально надо было делать подругому
+/// так что имеем что имеем
 class World {
 public:
+    /// @brief состояние игры
     enum GameMode {
         RUN,
         STOP,
         MENU,
         BACKPACK_MENU,
     };
+    /// @brief состояние клавиши
+    /// создавался изначально для плавного движения в нескольких направлениях разом
+    /// у sfml проблемки какие-то с потоком событий 
     enum KeyCondition {
         PRESSED,
         RELEASED,
     };
 private:
+    /// @brief  склад объектов окружения (карты) - пол, стены, двери. по сути бесполезна
     struct Env {
         std::vector <std::shared_ptr<Wall>*>  walls;
         std::vector <std::shared_ptr<Floor>*> floor;
@@ -53,12 +57,15 @@ private:
     std::vector <std::shared_ptr<GameObj>> all_things;
     std::vector <std::shared_ptr<NPC>> all_npc;
     std::vector <std::shared_ptr<Effect>> all_effects;
+
+    // хранилище всех тектур и стандартных таймингов для каждого типа объекта
     std::map<GameTypeSystem, ObjTextureStore> game_obj_textures;
 
     std::vector <std::shared_ptr<sf::Sound>> all_sounds;
 
     GameMode mode = RUN;
 public:
+    // для движения персонажа в нескольких направлениях одновременно
     std::map<std::string, KeyCondition> wasd = {
         {"W", RELEASED},
         {"S", RELEASED},

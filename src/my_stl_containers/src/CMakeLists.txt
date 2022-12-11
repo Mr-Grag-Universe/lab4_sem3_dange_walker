@@ -24,7 +24,7 @@ if (DOXYGEN_FOUND)
     # note the option ALL which allows to build the docs together with the application
     add_custom_target( doc_doxygen ALL
         COMMAND ${DOXYGEN_EXECUTABLE} ${DOXYGEN_OUT}
-        WORKING_DIRECTORY "/home/stepan/Desktop/vs_code_game/src/my_stl_containers/src"
+        WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
         COMMENT "Generating API documentation with Doxygen"
         VERBATIM )
 else (DOXYGEN_FOUND)

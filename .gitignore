@@ -2,3 +2,5 @@
 build
 test/lib/
 password
+doc_doxygen
+plans.txt

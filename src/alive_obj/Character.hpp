@@ -51,7 +51,7 @@ public:
             std::cerr << "negative exp" << std::endl;
             throw std::invalid_argument("i'm too lazy to write this logic");
         }
-        while (exp >= max_exp) {
+        while ((size_t) exp >= max_exp) {
             exp -= max_exp;
             ++level;
             if (level+1 > exp_levels.size()) {

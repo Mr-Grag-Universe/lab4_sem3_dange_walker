@@ -11,6 +11,9 @@
 #include "../sfml_classes/sfml_common.hpp"
 #include "../alive_obj/Alive.hpp"
 
+/// @brief класс объектов меню рюкзака/персонажа
+/// мне было лень писать аккуратнее, так что здесь содержатся элементы sfml.
+/// по идее это не правильно, но как есть
 class BPMObj : public Obj<BackPackTypeSystem> {
 protected:
     char layer = 0;

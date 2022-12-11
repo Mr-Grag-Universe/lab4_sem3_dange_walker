@@ -7,6 +7,7 @@
 #include "../objects/GameObject.hpp"
 #include "sfml_sound.hpp"
 
+/// @brief класс для отрисовки. прослойка между логикой и отрисовкой
 class SFMLObject {
 protected:
     std::shared_ptr<GameObj> obj;
