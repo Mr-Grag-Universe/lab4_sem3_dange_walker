@@ -15,17 +15,6 @@ include_directories(OpenGL)
 include_directories(OpenGL/include) # OpenGL/include has to contain the required OpenGL's .h files
 include_directories(OpenGL/lib) # OpenGL/lib has to contain the required OpenGL's .lib files
 
-# include_directories(SYSTEM "C:/Users/Stephan/Desktop/vs_code_game/src/include/")
-
-# set(SFML_STATIC_LIBRARIES TRUE)
-# # include_directories(libs/glfw-3.3.8/include libs/glfw-3.3.8/deps)
-# # add_subdirectory(libs/glfw-3.3.8)
-
-# set(UDEV_PATH_INCLUDES "/opt/udev/include")
-# set(SFML_DIR "C:/prog_libs/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML-2.5.1")
-# set(CMAKE_PREFIX_PATH "C:/prog_libs/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit/SFML-2.5.1")
-# find_package(SFML REQUIRED COMPONENTS audio graphics window system)
-
 include_directories(libs/SFML)
 add_subdirectory(libs/SFML)
 
@@ -134,7 +123,6 @@ option(BUILD_DOC "Build documentation" ON)
 find_package(Doxygen)
 if (DOXYGEN_FOUND)
     # set input and output files
-    # set(RECU)
     set(DOXYGEN_IN /home/stepan/Desktop/vs_code_game/src/docs/Doxyfile.in)
     set(DOXYGEN_OUT /home/stepan/Desktop/vs_code_game/src/Doxyfile)
     set(INPUT ./)

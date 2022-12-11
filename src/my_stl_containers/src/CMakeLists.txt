@@ -5,9 +5,6 @@ include_directories(vector)
 
 add_subdirectory(vector)
 add_subdirectory(tests)
-# add_subdirectory(doc)
-
-# add_subdirectory(doxygen)
 
 # first we can indicate the documentation build as an option and set it to ON by default
 option(BUILD_DOC "Build documentation" ON)

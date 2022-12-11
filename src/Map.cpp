@@ -273,6 +273,7 @@ void Map::update() {
             std::vector <std::shared_ptr<sf::Sound>> s = all_objs[i]->create_sounds(sb);
             for (auto & _s: s) {
                 all_sounds.push_back(_s);
+                _s->setVolume(20);
                 _s->play();
             }
         }

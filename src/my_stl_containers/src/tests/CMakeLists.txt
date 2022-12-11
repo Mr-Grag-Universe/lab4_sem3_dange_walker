@@ -1,7 +1,5 @@
 project(g_tests)
 
-# set(gtest_SOURCE_DIR ../../../test/googletest-main/gtest)
-
 set(VECTOR_SRC
     vector_tests.cpp
 )
