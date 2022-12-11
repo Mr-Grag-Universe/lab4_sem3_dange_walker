@@ -1,6 +1,8 @@
 # lab4_sem3_dange_walker
 My first game with SFML engine.
 This game is about hero, who walks through a dangerous dangen and has fiteings with different monsters.
+## *_Gameplay demonstration_*
+    https://youtu.be/QkKNZsThOO8
 
 # Correct project structure
 * _vs_code_game_
