@@ -22,7 +22,8 @@ void Slime::read(std::ifstream & file) {
 }
 
 void Slime::iterate(World & w) {
-    pair_ui64_t p_h = w.get_hero().get_position();
+    Character & hero = w.get_hero();
+    pair_ui64_t p_h = hero.get_position();
     double d = distance(position, p_h);
     if (d < visibility_radius) {
         if (d < 1) {
@@ -45,7 +46,7 @@ void Slime::iterate(World & w) {
 
     if (d < 10) {
         std::cout << "make damage\n";
-        w.get_hero().damage(damage);
-        std::cout << "hero health: " << w.get_hero().get_helth() << std::endl;
+        hero.damage(damage);
+        std::cout << "hero health: " << hero.get_helth() << std::endl;
     }
 }

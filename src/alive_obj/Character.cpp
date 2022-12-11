@@ -1,9 +1,8 @@
-#include "../weapon/Sward.hpp"
 #include "../constants.hpp"
 
 #include "GameObject.hpp"
-#include "../world.hpp"
 #include "Character.hpp"
+#include "../weapon/Sward.hpp"
 
 void Character::read(std::ifstream & file) {
     std::string src;

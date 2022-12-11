@@ -32,11 +32,6 @@ set(SOURCES
    World.cpp
    Map.cpp
 
-   environment/Env.cpp
-   environment/Floor.cpp
-   environment/Door.cpp
-   environment/Wall.cpp
-
    physics/Hitbox.cpp
    draw/Draw.cpp
 
@@ -59,6 +54,7 @@ add_subdirectory(menu)
 add_subdirectory(backpack_menu)
 add_subdirectory(sfml_classes)
 add_subdirectory(alive_obj)
+add_subdirectory(environment)
 message("SUCCESSFULL adding directories")
 # target_link_libraries(game my_stl)
 # # target_include_directories(sfml_game PUBLIC SFML-2.5.1/include)
@@ -82,19 +78,14 @@ target_include_directories(${PROJECT_NAME}
    objects
    sfml_classes
 )
-target_link_libraries(${PROJECT_NAME} sfml-system sfml-window sfml-graphics ${SFML_DEPENDENCIES} vector)
+target_link_libraries(${PROJECT_NAME} sfml-system sfml-window sfml-graphics ${SFML_DEPENDENCIES} vector environment)
 target_link_libraries(alive_objects sfml-system sfml-window sfml-graphics ${SFML_DEPENDENCIES})
-target_link_libraries(${PROJECT_NAME} game menu backpack_menu SFML_graphic alive_objects)
+target_link_libraries(${PROJECT_NAME} game menu backpack_menu SFML_graphic ${SFML_DEPENDENCIES} alive_objects)
 target_link_libraries(game sfml-system sfml-window sfml-graphics alive_objects ${SFML_DEPENDENCIES})
 target_link_libraries(menu sfml-system sfml-window sfml-graphics alive_objects ${SFML_DEPENDENCIES})
 target_link_libraries(backpack_menu sfml-system sfml-window sfml-graphics alive_objects ${SFML_DEPENDENCIES})
 
 message("SUCCESSFULL linking")
-
-# target_link_libraries(sfml_game ${GLFW})
-# target_link_libraries(sfml_game ${SFML_LIBRARIES} ${SFML_DEPENDENCIES})
-# target_link_libraries(sfml_game sfml-graphics sfml-audio)
-
 
 # =========================
 

@@ -3,7 +3,6 @@
 
 #include "Weapon.hpp"
 #include "MeleeWeaponWave.hpp"
-// #include "../sfml_classes/sfml_object.hpp"
 
 class MeleeWeapon : public Weapon {
 protected:

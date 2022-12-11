@@ -3,10 +3,6 @@
 #include <fstream>
 #include <map>
 
-#include <SFML/Graphics.hpp>
-#include <SFML/System.hpp>
-#include <SFML/Window.hpp>
-
 #include "Env.hpp"
 
 void Environment::read(std::ifstream & file) {

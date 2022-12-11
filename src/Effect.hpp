@@ -14,11 +14,7 @@ public:
     Effect() {}
     ~Effect() {};
     Effect(const Effect &) = default;
-
-    // void set_texture(std::shared_ptr<sf::Texture> t) {
-    //     sprite.setTexture(*t);
-    // }
-
+    
     virtual void make_damage(Alive &) = 0;
     virtual void iterate() = 0;
 };

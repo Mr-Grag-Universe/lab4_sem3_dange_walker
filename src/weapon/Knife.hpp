@@ -3,16 +3,9 @@
 
 class Knife {
 private:
-    /* data */
 public:
-    Knife(/* args */);
-    ~Knife();
+    Knife() = default;
+    ~Knife() = default;
 };
-
-Knife::Knife(/* args */) {
-}
-
-Knife::~Knife() {
-}
 
 #endif
