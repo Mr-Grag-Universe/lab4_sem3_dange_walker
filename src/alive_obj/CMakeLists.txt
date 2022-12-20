@@ -4,6 +4,7 @@ project(alive_objects)
 include_directories(
     ../objects
     ./dialog
+    ./quest
 )
 
 set(CPP_SOURCES
@@ -25,6 +26,7 @@ set(HPP_SOURCES
 )
 
 add_subdirectory(dialog)
+add_subdirectory(quest)
 
 add_library(${PROJECT_NAME}
     ${CPP_SOURCES}
@@ -34,7 +36,9 @@ target_include_directories(${PROJECT_NAME} PRIVATE
     "../objects"
     "../weapon"
     "./dialog"
+    "./quest"
 )
 target_link_libraries(${PROJECT_NAME}
     dialog
+    quest
 )

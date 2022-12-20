@@ -7,10 +7,12 @@ include_directories(
 
 set(CPP_SOURCES
     Quest.cpp
+    QuestKiller.cpp
 )
 
 set(HPP_SOURCES
     Quest.hpp
+    QuestKiller.hpp
 )
 
 

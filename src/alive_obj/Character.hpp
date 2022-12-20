@@ -3,11 +3,13 @@
 
 #include <iostream>
 #include <algorithm>
+#include <vector>
 
 #include "Alive.hpp"
 #include "../Effect.hpp"
 #include "../containers/BackPack.hpp"
 #include "../weapon/Weapon.hpp"
+#include "./quest/Quest.hpp"
 
 class World;
 
@@ -21,26 +23,11 @@ protected:
     size_t level = 0;
     int experience = 1;
     size_t max_exp = 10;
+    std::vector <Quest> quests;
 public:
     void fill_backpack();
-    GameTypeSystem get_type() const override
-    { return CHARACTER; }
-    const World & get_world() const 
-    { return world; }
-    World & get_world() 
-    { return world; }
-    const BackPack & get_backpack() const 
-    { return backpack; }
-    BackPack & get_backpack() 
-    { return backpack; }
-    size_t get_level() const
-    { return level; }
     void level_up()
     { ++level; }
-    size_t get_exp() const
-    { return experience; }
-    size_t get_max_exp() const
-    { return max_exp; }
     void exp_restart()
     { experience = 0; }
     void set_max_exp(size_t m_exp)
@@ -83,6 +70,30 @@ public:
 
     void read(std::ifstream & file) override;
     std::shared_ptr<Effect> use_weapon();
+
+    //============ getters =============//
+
+    GameTypeSystem get_type() const override
+    { return CHARACTER; }
+
+    const World & get_world() const 
+    { return world; }
+    World & get_world() 
+    { return world; }
+
+    const BackPack & get_backpack() const 
+    { return backpack; }
+    BackPack & get_backpack() 
+    { return backpack; }
+
+    size_t get_level() const
+    { return level; }
+
+    size_t get_exp() const
+    { return experience; }
+    
+    size_t get_max_exp() const
+    { return max_exp; }
 };
 
 #endif

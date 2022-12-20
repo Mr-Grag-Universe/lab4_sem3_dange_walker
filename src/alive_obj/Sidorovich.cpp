@@ -45,3 +45,7 @@ void Sidorovich::iterate(World & w) {
 void Sidorovich::dialog(World & w) {
     this->next_phase();
 }
+
+void Sidorovich::give_quest(World & w) {
+
+}

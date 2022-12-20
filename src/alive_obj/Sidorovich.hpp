@@ -2,6 +2,7 @@
 #define SIDOROVICH_CLASS
 
 #include "Trader.hpp"
+#include "Character.hpp"
 
 class Sidorovich : public Trader {
 protected:
@@ -32,6 +33,7 @@ public:
     void read(std::ifstream & file) override;
     void iterate(World & w) override;
     void dialog(World & w) override;
+    void give_quest(World & w) override;
 };
 
 #endif // SIDOROVICH_CLASS
