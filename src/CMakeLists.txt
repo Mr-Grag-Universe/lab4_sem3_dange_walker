@@ -25,6 +25,8 @@ include_directories(alive_obj physics environment)
 set(SOURCES
    # static/first_room.txt
 
+   boot_menu.cpp
+   
    main.cpp
    interraction.cpp
    objects/Object.cpp

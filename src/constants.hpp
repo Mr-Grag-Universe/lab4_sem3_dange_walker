@@ -28,6 +28,8 @@ enum GameTypeSystem {
     SLIME,
     SKELETON,
 
+    SIDOROVICH,
+
     WEAPON,
 
     MW_WAVE,
@@ -52,9 +54,10 @@ static std::map <std::string, enum GameTypeSystem> types = {
     { "sward",      SWARD     },
     { "backpack",   BACKPACK  },
 
-    { "hero",       CHARACTER },
-    { "slime",      SLIME     },
-    { "skeleton",   SKELETON  },
+    { "hero",       CHARACTER  },
+    { "slime",      SLIME      },
+    { "skeleton",   SKELETON   },
+    { "Sidorovich", SIDOROVICH },
 
 
     { "weapon",     WEAPON    },

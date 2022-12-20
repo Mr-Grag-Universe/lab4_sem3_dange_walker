@@ -1,12 +1,16 @@
 cmake_minimum_required(VERSION 3.16)
 project(alive_objects)
 
-include_directories(../objects)
+include_directories(
+    ../objects
+    ./dialog
+)
 
 set(CPP_SOURCES
     Character.cpp
     Skeleton.cpp
     Slime.cpp
+    Sidorovich.cpp
 )
 
 set(HPP_SOURCES
@@ -16,7 +20,11 @@ set(HPP_SOURCES
     NPC.hpp
     Skeleton.hpp
     Slime.hpp
+    Trader.hpp
+    Sidorovich.hpp
 )
+
+add_subdirectory(dialog)
 
 add_library(${PROJECT_NAME}
     ${CPP_SOURCES}
@@ -25,4 +33,8 @@ add_library(${PROJECT_NAME}
 target_include_directories(${PROJECT_NAME} PRIVATE
     "../objects"
     "../weapon"
+    "./dialog"
+)
+target_link_libraries(${PROJECT_NAME}
+    dialog
 )

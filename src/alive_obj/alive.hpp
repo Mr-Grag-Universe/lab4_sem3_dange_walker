@@ -6,5 +6,7 @@
 #include "Character.hpp"
 #include "Skeleton.hpp"
 #include "Slime.hpp"
+#include "Trader.hpp"
+#include "Sidorovich.hpp"
 
 #endif

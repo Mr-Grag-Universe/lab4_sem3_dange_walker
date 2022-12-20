@@ -20,11 +20,6 @@ void Character::read(std::ifstream & file) {
     }
 
     this->set_position((pair_ui64_t) std::make_pair(800, 600));
-    // std::pair <unsigned int, unsigned int> position_in = std::make_pair(x_in, y_in);
-    // std::pair <unsigned int, unsigned int> scale = std::make_pair(width, height);
-    // 
-    // this->set_texture(src, position_in, scale, std::make_pair(1, 1));
-    // this->set_sprite_position(std::make_pair(WIDTH, HEIGHT));
     
     std::string type;
     while (file >> type) {

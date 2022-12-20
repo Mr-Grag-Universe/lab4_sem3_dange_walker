@@ -214,7 +214,6 @@ void Map::update() {
         eff.end(),
         std::back_inserter(all_w_objs)
     );
-    // all_w_objs.push_back(std::make_shared<Character>(hero));
 
     for (auto & o: all_w_objs) {
         if (distance(p, h_p) <= 1900) {
@@ -258,9 +257,6 @@ void Map::update() {
         sf::Vector2f s_window_pos = sf::Vector2f((float)p.first, (float)p.second);
         s_window_pos.x = W/2 - (hero_pos.x - s_window_pos.x);
         s_window_pos.y = H/2 - (hero_pos.y - s_window_pos.y);
-        if (obj_type == MW_WAVE) {
-            // std::cout << "(" << p.first << "; " << p.second << ") mw\n";
-        }
         all_objs[i]->set_sprite_position(calculate_sprite_position(s, (pair_ui64_t) std::make_pair(s_window_pos.x, s_window_pos.y)));
     }
 

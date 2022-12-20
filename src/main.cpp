@@ -9,10 +9,13 @@
 #include "game.hpp"
 #include "menu.hpp"
 #include "backpack_menu.hpp"
+#include "boot_menu.hpp"
 
 
 int main(int argc, char *argv[]) {
-    
+    Settings settings;
+    if (!boot_menu(settings))
+        return 0;
 
     sf::VideoMode mode = sf::VideoMode::getDesktopMode();
     std::cout << "desktop: (" << mode.size.x << "; " << mode.size.y << ")\n";

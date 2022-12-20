@@ -78,6 +78,8 @@ std::shared_ptr<GameObj> World::load_object(std::string type, std::ifstream &fil
         break;
     case SKELETON:
         obj = std::make_shared<Skeleton>();
+    case SIDOROVICH:
+        obj = std::make_shared<Sidorovich>();
     default:
         break;
     }
@@ -95,6 +97,9 @@ std::shared_ptr<NPC> World::load_npc(std::string type, std::ifstream &file)
         break;
     case SKELETON:
         obj = std::make_shared<Skeleton>();
+        break;
+    case SIDOROVICH:
+        obj = std::make_shared<Sidorovich>();
         break;
     default:
         break;
@@ -486,9 +491,8 @@ void World::add_things_from_file(const std::string &file_name)
     all_things.insert(
         all_things.end(),
         std::make_move_iterator(things.begin()),
-        std::make_move_iterator(things.end()));
-    [[maybe_unused]] size_t new_len = all_things.size();
-    [[maybe_unused]] size_t th_len = things.size();
+        std::make_move_iterator(things.end())
+    );
 
     for (size_t i = 0, l = things.size(); i < l; ++i)
     {

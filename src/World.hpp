@@ -20,7 +20,7 @@
 
 #include "my_stl_containers/include/vector.hpp"
 
-static const std::set<GameTypeSystem> alive_types = { CHARACTER, SLIME, SKELETON };
+static const std::set<GameTypeSystem> alive_types = { CHARACTER, SLIME, SKELETON, SIDOROVICH };
 static const std::set<GameTypeSystem> effect_types = { MW_WAVE };
 
 /**

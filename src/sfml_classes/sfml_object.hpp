@@ -117,6 +117,8 @@ public:
         // obj->set_phase((size_t) sf::seconds((double) (std::clock()-obj->get_born()) / CLOCKS_PER_SEC).asMilliseconds() * obj->get_number_of_phases() / (size_t) period.asMilliseconds());
     }
     void correct_phase() {
+        if (is_static)
+            return;
         size_t p = (size_t) period.asMilliseconds();
         size_t n_o_ph = obj->get_number_of_phases();
         // size_t ex_time = (size_t) sf::seconds((double) (std::clock() - obj->get_born()) / CLOCKS_PER_SEC).asMilliseconds();
