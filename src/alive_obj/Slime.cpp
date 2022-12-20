@@ -50,3 +50,7 @@ void Slime::iterate(World & w) {
         std::cout << "hero health: " << hero.get_helth() << std::endl;
     }
 }
+
+void Slime::dialog(World & w) {
+
+}

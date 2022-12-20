@@ -520,7 +520,8 @@ void World::add_npcs_from_file(const std::string &file_name)
     all_npc.insert(
         all_npc.end(),
         std::make_move_iterator(npcs.begin()),
-        std::make_move_iterator(npcs.end()));
+        std::make_move_iterator(npcs.end())
+    );
 }
 
 void World::add_game_obj_textures_from_file(const std::string &file_name)
@@ -554,15 +555,31 @@ void World::use_the_nearest_thing()
             }
         }
     }
-    std::cout << "nearest obg name: " << nearest_obj->get_name() << std::endl;
+    for (size_t i = 0, l = all_npc.size(); i < l; ++i)
+    {
+        double d = distance(all_npc[i]->get_position(), hero->get_position());
+        if (d < min_dist)
+        {
+            min_dist = d;
+            nearest_obj = all_npc[i];
+        }
+    }
+    
+    std::cout << "nearest obj name: " << nearest_obj->get_name() << std::endl;
     if (min_dist < 100)
     {
         std::cout << "we can interract with this object!" << std::endl;
-        if (std::find(i_containers.begin(), i_containers.end(), nearest_obj->get_type()) != i_containers.end())
+        GameTypeSystem type = nearest_obj->get_type();
+        if (std::find(i_containers.begin(), i_containers.end(), type) != i_containers.end())
         {
             std::shared_ptr<Box> box = std::dynamic_pointer_cast<Box>(nearest_obj);
             hero->get_backpack().add(box->extract_all());
             std::cout << "all things from this container have been put to char's backpack" << std::endl;
+        } else if (std::find(alive_types.begin(), alive_types.end(), type) != alive_types.end())
+        {
+            std::shared_ptr<NPC> npc = std::dynamic_pointer_cast<NPC>(nearest_obj);
+            npc->dialog(*this);
+            std::cout << "dialog finished" << std::endl;
         }
     }
     else

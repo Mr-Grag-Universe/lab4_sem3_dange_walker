@@ -1,5 +1,6 @@
 #include "Sidorovich.hpp"
 #include "World.hpp"
+#include "constants.hpp"
 
 
 void Sidorovich::read(std::ifstream & file) {
@@ -12,6 +13,10 @@ void Sidorovich::read(std::ifstream & file) {
     file >> width >> height;
     size = std::make_pair(width, height);
     position = std::make_pair(x, y);
+
+    fs::path path_to_dialogs;
+    file >> path_to_dialogs;
+    this->load_dialogs(mp::dialogs / path_to_dialogs);
 }
 
 void Sidorovich::iterate(World & w) {
@@ -35,4 +40,8 @@ void Sidorovich::iterate(World & w) {
     else {
         collider.velocity = 0;
     }
+}
+
+void Sidorovich::dialog(World & w) {
+    this->next_phase();
 }

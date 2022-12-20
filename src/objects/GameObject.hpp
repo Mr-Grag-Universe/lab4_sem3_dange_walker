@@ -67,7 +67,7 @@ protected:
     Collider collider;
     std::string name;
 public:
-    const std::string & get_name() const
+    virtual const std::string & get_name() const
     { return name; }
     // void move(int x, int y);
 

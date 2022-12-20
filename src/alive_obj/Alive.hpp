@@ -14,7 +14,7 @@ protected:
     double max_health = 100;
     double visibility_radius = 400;
 
-    DialogTree dialog_tree;
+    DialogTree dialog_tree = DialogTree();
 public:
 
     Alive() {}
@@ -45,8 +45,11 @@ public:
 
     //============ other methods ==============//
 
-    void damage(int damage) { health -= damage; }
+    void damage(int damage)
+    { health -= damage; }
 
+    void load_dialogs(fs::path path)
+    { dialog_tree.load_from_file(path); }
 };
 
 

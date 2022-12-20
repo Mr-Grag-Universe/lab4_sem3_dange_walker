@@ -79,6 +79,7 @@ static std::vector <GameTypeSystem> interractive_objs = {
     CHEST,
     SLIME,
     SWARD,
+    SIDOROVICH,
 };
 static std::vector <GameTypeSystem> i_containers = {
     CHEST,
@@ -99,6 +100,7 @@ namespace my_pathes {
     static fs::path img = static_path / fs::path("img");
     static fs::path logs = static_path / fs::path("logs");
     static fs::path sound = static_path / fs::path("sound");
+    static fs::path dialogs = logs / fs::path("dialogs");
 
     static fs::path first_room("first_room.txt");
     static fs::path containers("containers.txt");

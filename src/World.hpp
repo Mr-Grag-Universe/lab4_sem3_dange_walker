@@ -61,7 +61,7 @@ private:
 
     size_t W, H;
 
-    std::vector <std::shared_ptr<GameObj>> all_things;
+    std::vector <std::shared_ptr<GameObj>> all_things = {};
     std::vector <std::shared_ptr<NPC>> all_npc;
     std::vector <std::shared_ptr<Effect>> all_effects;
 

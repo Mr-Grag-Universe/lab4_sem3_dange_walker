@@ -20,6 +20,7 @@ public:
     GameTypeSystem get_type() const override
     { return SKELETON; }
     void iterate(World & w) override;
+    void dialog(World & w) override;
 };
 
 #endif

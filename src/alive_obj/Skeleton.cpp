@@ -36,3 +36,7 @@ void Skeleton::iterate(World & w) {
         collider.velocity = 0;
     }
 }
+
+void Skeleton::dialog(World & w) {
+
+}
