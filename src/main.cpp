@@ -12,6 +12,8 @@
 
 
 int main(int argc, char *argv[]) {
+    
+
     sf::VideoMode mode = sf::VideoMode::getDesktopMode();
     std::cout << "desktop: (" << mode.size.x << "; " << mode.size.y << ")\n";
     sf::Vector2u size((int) mode.size.x, (int) mode.size.y);

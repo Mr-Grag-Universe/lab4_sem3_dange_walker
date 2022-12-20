@@ -13,6 +13,10 @@
 #include "alive_obj/Character.hpp"
 #include "sfml_classes/sfml_object.hpp"
 
+/**
+ * @brief фактически объект сборщик для рендеринга. выбирает объекты из мира, которые в поле видимости
+ *        и пережёвывает их в графические объекты для отрисовки
+ */
 class Map {
 private:
     std::shared_ptr<Character> hero;

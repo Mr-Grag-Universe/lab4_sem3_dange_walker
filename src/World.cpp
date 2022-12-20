@@ -69,8 +69,10 @@ std::shared_ptr<GameObj> World::load_object(std::string type, std::ifstream &fil
         break;
     }
     case SWARD:
+    {
         obj = std::make_shared<Sward>();
         break;
+    }
     case SLIME:
         obj = std::make_shared<Slime>();
         break;
