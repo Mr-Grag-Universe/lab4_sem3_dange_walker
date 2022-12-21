@@ -33,6 +33,8 @@ enum GameTypeSystem {
     WEAPON,
 
     MW_WAVE,
+
+    MONEY,
 };
 enum BackPackTypeSystem {
     SKIN,
@@ -63,6 +65,8 @@ static std::map <std::string, enum GameTypeSystem> types = {
     { "weapon",     WEAPON    },
 
     { "mw_wave",    MW_WAVE   },
+
+    { "money",      MONEY     },
 };
 static std::map <std::string, BackPackTypeSystem> bp_menu_types = {
     { "skin",        SKIN      },

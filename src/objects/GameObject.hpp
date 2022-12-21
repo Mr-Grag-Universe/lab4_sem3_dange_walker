@@ -97,10 +97,13 @@ protected:
 public:
     std::queue<size_t> & get_sounds_queue()
     { return sounds_queue; }
+
     const std::queue<size_t> & get_sounds_queue() const
     { return sounds_queue; }
+
     std::queue<size_t> extract_sound_queue()
     { return std::move(sounds_queue); }
+    
     void push_sound(size_t i)
     { sounds_queue.push(i); }
 };
