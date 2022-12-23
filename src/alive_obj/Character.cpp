@@ -61,3 +61,9 @@ std::shared_ptr<Effect> Character::use_weapon() {
 void fill_backpack() {
     // backpack.read();
 }
+
+//=============== other methods ==============//
+
+void Character::push_quest(std::shared_ptr<Quest> quest) {
+    quests.push_back(quest);
+}

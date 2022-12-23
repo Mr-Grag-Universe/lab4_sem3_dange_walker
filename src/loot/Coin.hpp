@@ -4,19 +4,11 @@
 class Coin
 {
 private:
-    /* data */
+protected:
 public:
-    Coin(/* args */);
-    ~Coin();
+    virtual ~Coin() = 0;
+
+    //=========== getters ==========//
 };
-
-Coin::Coin(/* args */)
-{
-}
-
-Coin::~Coin()
-{
-}
-
 
 #endif // COIN_INTERFACE_CLASS

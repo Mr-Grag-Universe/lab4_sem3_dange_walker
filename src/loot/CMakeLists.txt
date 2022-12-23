@@ -3,6 +3,7 @@ project(loot)
 
 set(CPP_SOURCES
     Money.cpp
+    Coins.cpp
 )
 
 set(HPP_SOURCES

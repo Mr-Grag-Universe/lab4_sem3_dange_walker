@@ -59,6 +59,7 @@ add_subdirectory(alive_obj)
 add_subdirectory(environment)
 add_subdirectory(texture_engine)
 add_subdirectory(loot)
+add_subdirectory(events)
 message("SUCCESSFULL adding directories")
 # target_link_libraries(game my_stl)
 # # target_include_directories(sfml_game PUBLIC SFML-2.5.1/include)
@@ -82,8 +83,10 @@ target_include_directories(${PROJECT_NAME}
    objects
    sfml_classes
    environment
+
+   events
 )
-target_link_libraries(${PROJECT_NAME} sfml-system sfml-window sfml-graphics ${SFML_DEPENDENCIES} vector environment)
+target_link_libraries(${PROJECT_NAME} sfml-system sfml-window sfml-graphics ${SFML_DEPENDENCIES} vector environment events)
 target_link_libraries(alive_objects sfml-system sfml-window sfml-graphics ${SFML_DEPENDENCIES} loot)
 target_link_libraries(${PROJECT_NAME} game menu backpack_menu SFML_graphic ${SFML_DEPENDENCIES} alive_objects)
 target_link_libraries(game sfml-system sfml-window sfml-graphics alive_objects ${SFML_DEPENDENCIES})

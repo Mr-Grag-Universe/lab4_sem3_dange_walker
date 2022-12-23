@@ -3,6 +3,7 @@ project(alive_objects)
 
 include_directories(
     ../objects
+    ../loot
     ./dialog
     ./quest
 )
@@ -35,10 +36,12 @@ add_library(${PROJECT_NAME}
 target_include_directories(${PROJECT_NAME} PRIVATE
     "../objects"
     "../weapon"
+    "../loot"
     "./dialog"
     "./quest"
 )
 target_link_libraries(${PROJECT_NAME}
     dialog
     quest
+    loot
 )

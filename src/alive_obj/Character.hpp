@@ -9,7 +9,8 @@
 #include "../Effect.hpp"
 #include "../containers/BackPack.hpp"
 #include "../weapon/Weapon.hpp"
-#include "./quest/Quest.hpp"
+#include "./quest/quest.hpp"
+#include "../loot/Money.hpp"
 
 class World;
 
@@ -23,7 +24,9 @@ protected:
     size_t level = 0;
     int experience = 1;
     size_t max_exp = 10;
-    std::vector <Quest> quests;
+
+    std::vector <std::shared_ptr<Quest>> quests;
+    Money money = Money();
 public:
     void fill_backpack();
     void level_up()
@@ -94,6 +97,18 @@ public:
     
     size_t get_max_exp() const
     { return max_exp; }
+
+    const std::vector <std::shared_ptr<Quest>> & get_quests() const
+    { return quests; }
+    std::vector <std::shared_ptr<Quest>> & get_quests()
+    { return quests; }
+
+    //========== other methods =========//
+
+    void push_quest(std::shared_ptr<Quest> quest);
+    
+    void receave_money(Money m)
+    { money = money + m; }
 };
 
 #endif

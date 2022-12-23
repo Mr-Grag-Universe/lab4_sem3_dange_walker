@@ -6,9 +6,10 @@
 
 #include "Loot.hpp"
 #include "../enums/Money.hpp"
+#include "Coin.hpp"
 
 
-class Gold {
+class Gold : public Coin {
 private:
     long long _count = 0;
 public:
@@ -31,7 +32,7 @@ public:
     operator long long() const;
 };
 
-class Silver {
+class Silver : public Coin {
 private:
     long long _count = 0;
 public:
@@ -55,7 +56,7 @@ public:
 };
 
 
-class Copper {
+class Copper : public Coin {
 private:
     long long _count = 0;
 public:
@@ -90,7 +91,6 @@ private:
 
     std::vector <double> coeff = {1 , 10, 100 };
 public:
-    Money();
     Money(long long);
     Money(std::vector <double> coeff = {1 , 10, 100 });
     ~Money();
@@ -120,26 +120,5 @@ public:
 
     void read(std::ifstream & ) override {}
 };
-
-Money::Money(/* args */)
-{
-}
-Money::Money(long long count) : _count(count) {
-    gold = count / coeff[2];
-    count /= coeff[2];
-
-    silver = count / coeff[1];
-    count /= coeff[1];
-
-    copper = count / coeff[0];
-    count /= coeff[0];
-}
-Money::Money(std::vector <double> coeff) : coeff(coeff) {
-
-}
-
-Money::~Money()
-{
-}
 
 #endif // MONEY_CLASS

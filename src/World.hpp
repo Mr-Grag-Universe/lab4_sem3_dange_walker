@@ -7,6 +7,7 @@
 #include <string>
 #include <map>
 #include <set>
+#include <queue>
 
 #include <SFML/System.hpp>
 
@@ -17,6 +18,7 @@
 #include "constants.hpp"
 #include "sfml_classes/sfml_common.hpp"
 #include "enums/Keys.hpp"
+#include "events/event.hpp"
 
 #include "my_stl_containers/include/vector.hpp"
 
@@ -69,6 +71,8 @@ private:
     std::map<GameTypeSystem, ObjTextureStore> game_obj_textures;
 
     std::vector <std::shared_ptr<sf::Sound>> all_sounds;
+
+    std::queue <std::shared_ptr<Event>> events;
 
     GameMode mode = RUN;
 public:
@@ -134,6 +138,13 @@ public:
     void push_sound(std::shared_ptr<sf:: Sound> sound) {
         all_sounds.push_back(sound);
     }
+
+    //============== getters =============//
+
+    const std::queue <std::shared_ptr<Event>> & get_events() const
+    { return events; }
+    std::queue <std::shared_ptr<Event>> & get_events()
+    { return events; }
 };
 
 #endif

@@ -30,6 +30,6 @@ void DialogTree::load_from_file(fs::path path) {
 
 std::string DialogTree::next_phrase() {
     std::string str = dialog_list.front();
-    dialog_list.pop_front();
+    // dialog_list.pop_front();
     return str;
 }

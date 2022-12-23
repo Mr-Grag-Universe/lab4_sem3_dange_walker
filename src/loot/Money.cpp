@@ -2,6 +2,25 @@
 
 //=========== Money ==========//
 
+Money::Money(long long count) : _count(count) {
+    gold = count / coeff[2];
+    count /= coeff[2];
+
+    silver = count / coeff[1];
+    count /= coeff[1];
+
+    copper = count / coeff[0];
+    count /= coeff[0];
+}
+Money::Money(std::vector <double> coeff) : coeff(coeff) {
+
+}
+
+Money::~Money()
+{
+}
+
+
 void Money::set_gold(Gold & g) {
     _count += g.count()*coeff[2] - gold.count();
     gold = g;

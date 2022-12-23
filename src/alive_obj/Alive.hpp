@@ -50,6 +50,9 @@ public:
 
     void load_dialogs(fs::path path)
     { dialog_tree.load_from_file(path); }
+
+    std::string next_phrase()
+    { return dialog_tree.next_phrase(); }
 };
 
 

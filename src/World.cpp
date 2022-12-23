@@ -428,6 +428,7 @@ void World::iterate() {
         all_effects[i]->iterate();
     }
 
+    // effecsts processing
     for (size_t i = 0; i < all_effects.size(); ++i)
     {
         if (all_effects[i]->makes_damage())
@@ -439,10 +440,16 @@ void World::iterate() {
                     all_effects[i]->make_damage(*(all_npc[j]));
                     if (all_npc[j]->get_helth() == 0)
                     {
+                        // push kill event into events' queue
+                        events.push(std::make_shared<Kill>());
                         std::cout << all_npc[j]->get_name() << "has been killed" << std::endl;
+
+                        // generete loot and exp for char
                         int exp = all_npc[j]->get_exp_for_kill();
                         std::cout << "+ " << exp << " exp points have been collected" << std::endl;
                         hero->plus_exp(exp);
+
+                        // delete npc
                         all_npc.erase(all_npc.begin() + j);
                         j--;
                     }
@@ -454,25 +461,47 @@ void World::iterate() {
             i--;
         }
     }
+
+    // hero's moving
     for (auto & key : wasd) {
         if (key.second == PRESSED) {
             if (key.first == "A") {
                 hero->move(-3, 0);
-                // std::cout << "A-moving\n";
             } else if (key.first == "D") {
                 hero->move(3, 0);
-                // std::cout << "D-moving\n";
             } else if (key.first == "S") {
                 hero->move(0, 3);
-                // std::cout << "S-moving\n";
             } else if (key.first == "W") {
                 hero->move(0, -3);
-                // std::cout << "W-moving\n";
             } else {
                 std::cout << "unnown command\n";
                 throw std::invalid_argument("unnown key has been pressed");
             }
         }
+    }
+
+    // quests processing
+    std::vector<std::shared_ptr<Quest>> & quests = hero->get_quests();
+    for (size_t i = 0; i < quests.size(); ++i) {
+        if (quests[i]->passed()) {
+            std::cout << "this quest is passed!" << std::endl;
+            quests.erase(quests.begin() + i);
+        }
+    }
+
+    // events' processing
+    while (!events.empty()) {
+        std::shared_ptr<Event> ev = events.front();
+        std::cout << ev->what() << std::endl;
+        if (ev->get_type() == KILL) {
+            for (auto & q : hero->get_quests()) {
+                q->update_completion(ev);
+                if (q->complete()) {
+                    std::cout << "quest's been compleated" << std::endl;
+                }
+            }
+        }
+        events.pop();
     }
 
     if (hero->get_helth() <= 0) {

@@ -27,7 +27,7 @@ void Sidorovich::iterate(World & w) {
             collider.velocity = 0;
             return;
         }
-        collider.velocity = 3;
+        collider.velocity = 0; // 3;
         pair_ui64_t p_o = position;
         double d_x = (long long)p_h.first - (long long)p_o.first;
         double d_y = (long long)p_h.second - (long long)p_o.second;
@@ -43,9 +43,22 @@ void Sidorovich::iterate(World & w) {
 }
 
 void Sidorovich::dialog(World & w) {
-    this->next_phase();
+    Character hero = w.get_hero();
+    if (hero.get_quests().empty()) {
+        std::cout << this->next_phrase() << std::endl;
+        this->give_quest(w);
+    } else {
+        for (auto & q : hero.get_quests()) {
+            if (q->complete()) {
+                hero.receave_money(Money(1000));
+                q->pass();
+                std::cout << "you've got 1000 money units!" << std::endl;
+                std::cout << "quets passed." << std::endl;
+            }
+        }
+    }
 }
 
 void Sidorovich::give_quest(World & w) {
-
+    w.get_hero().push_quest(std::make_shared<QuestKiller>(QuestKiller()));
 }
