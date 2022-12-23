@@ -18,7 +18,19 @@
 
 void message(sf::RenderWindow & window, World & world) {
     Map map(world);
+
+    std::shared_ptr<sf::Texture> field_texture = std::make_shared<sf::Texture>();
+    if (!field_texture->loadFromFile(mp::img / fs::path("message_field.jpg"))) {
+        throw std::runtime_error("we cannot load message background texture");
+    }
+
     SFML_Message message = SFML_Message(world.get_messages().front());
+    message.set_label_size(std::make_pair(world.get_W()/4, world.get_H()/4));
+    message.set_position(std::make_pair(world.get_W()/2, world.get_H()/2));
+    message.set_text_size(24);
+    message.set_field_color(sf::Color::Cyan);
+    message.set_field_texture(field_texture);
+    message.set_text_color(sf::Color::Green);
 
     while (window.isOpen() && world.get_game_mode() == World::MESSAGE) {
         // проверить все события окна, которые были вызваны с последней итерации цикла
@@ -55,4 +67,5 @@ void message(sf::RenderWindow & window, World & world) {
         // конец текущего кадра - отображаем
         window.display();
     }
+    world.set_GameOver();
 }

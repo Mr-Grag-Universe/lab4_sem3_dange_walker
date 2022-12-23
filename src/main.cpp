@@ -60,7 +60,11 @@ int main(int argc, char *argv[]) {
         default:
             break;
         }
+
+        if (world.GameOver())
+            break;
     }
+    window.close();
 
     return 0;
 }

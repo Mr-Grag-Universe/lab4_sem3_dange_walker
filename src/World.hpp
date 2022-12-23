@@ -42,6 +42,7 @@ public:
         MESSAGE,
     };
 private:
+    bool GameOver_flag = false;
     /// @brief  склад объектов окружения (карты) - пол, стены, двери. по сути бесполезна
     struct Env {
         std::vector <std::shared_ptr<Wall>*>  walls;
@@ -144,6 +145,13 @@ public:
     const std::queue<std::string> & get_messages() const { return messages; }
           std::queue<std::string> & get_messages()       { return messages; }
     
+    bool GameOver() const
+    { return GameOver_flag; }
+
+    //================= setters ================//
+
+    void set_GameOver()
+    { GameOver_flag = true; }
 };
 
 #endif
