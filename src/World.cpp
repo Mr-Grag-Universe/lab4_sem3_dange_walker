@@ -338,72 +338,33 @@ void World::add_character(const std::string &file_name)
 
 void World::interraction(sf::Event &event, sf::RenderWindow &window)
 {
-    switch (event.type)
-    {
-    case sf::Event::KeyPressed:
-    {
-        if (this->mode == RUN)
-        {
-            game_interraction(event, window);
-        }
-        else if (this->mode == MENU)
-        {
-            menu_interraction(event, window);
-        }
-        else if (this->mode == BACKPACK_MENU)
-        {
-            backpack_menu_interraction(event, window);
-        }
-
-        break;
-    }
-    case sf::Event::KeyReleased:
-    {
-        if (this->mode == RUN)
-        {
-            game_interraction(event, window);
-        }
-        else if (this->mode == MENU)
-        {
-            menu_interraction(event, window);
-        }
-        else if (this->mode == BACKPACK_MENU)
-        {
-            backpack_menu_interraction(event, window);
-        }
-
-        break;
-    }
-    case sf::Event::Resized:
+    
+    if (event.type == sf::Event::Resized)
     {
         W = event.size.width;
         H = event.size.height;
         // hero.set_sprite_position(std::make_pair((W-hero.get_texture()->getSize().x)/2, (H-hero.get_texture()->getSize().y)/2));
         std::cout << "new width: " << event.size.width << std::endl;
         std::cout << "new height: " << event.size.height << std::endl;
-        break;
+        return;
     }
-    case sf::Event::MouseButtonPressed:
+    if (this->mode == RUN)
     {
-        if (this->mode == RUN)
-        {
-            game_interraction(event, window);
-        }
-        else if (this->mode == MENU)
-        {
-            menu_interraction(event, window);
-        }
-        else if (this->mode == BACKPACK_MENU)
-        {
-            backpack_menu_interraction(event, window);
-        }
+        game_interraction(event, window);
+    }
+    else if (this->mode == MENU)
+    {
+        menu_interraction(event, window);
+    }
+    else if (this->mode == BACKPACK_MENU)
+    {
+        backpack_menu_interraction(event, window);
+    }
+    else if (this->mode == MESSAGE)
+    {
+        message_menu_interraction(event, window);
+    }
 
-        break;
-    }
-    default:
-        break;
-    }
-    return;
 }
 
 void World::iterate() {
@@ -487,6 +448,7 @@ void World::iterate() {
             std::cout << "this quest is passed!" << std::endl;
             quests.erase(quests.begin() + i);
             mode = MESSAGE;
+            messages.push("ALL QUESTS'VE BEEN COMPLETED!\nCONGRATULATIONS!!!");
         }
     }
 

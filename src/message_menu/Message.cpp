@@ -9,12 +9,18 @@
 #include <SFML/System.hpp>
 #include <SFML/Graphics.hpp>
 
+
+#include "../Map.hpp"
+#include "../draw/Draw.hpp"
 #include "message.hpp"
+#include "sfml_message_window.hpp"
 
 
 void message(sf::RenderWindow & window, World & world) {
+    Map map(world);
+    SFML_Message message = SFML_Message(world.get_messages().front());
+
     while (window.isOpen() && world.get_game_mode() == World::MESSAGE) {
-        // Map map(world);
         // проверить все события окна, которые были вызваны с последней итерации цикла
         sf::Event event;
         if (window.pollEvent(event)) {
@@ -24,6 +30,9 @@ void message(sf::RenderWindow & window, World & world) {
 
             // обработываем полученное действие и движения всех объектов
             world.interraction(event, window);
+
+            // update message
+            message.set_text(world.get_messages().front());
             
             if (event.type == sf::Event::Resized) {
                 // update the view to the new size of the window
@@ -34,15 +43,14 @@ void message(sf::RenderWindow & window, World & world) {
 
 
         // очищаем окно и заливаем черным цветом
-        window.clear(sf::Color::Cyan);
+        window.clear(sf::Color::Black);
 
         // создаём карту объектов, которые видны герою
         // map = Map(world);
 
-        // std::cout << "hero position: (" << map.get_hero().get_sprite().getPosition().x << ", " << map.get_hero().get_position().second << ")\n";
-
         // отрисовываем карту
-        // Draw::draw_backpack_menu(window, world);
+        Draw::draw_map(window, map);
+        message.draw(window);
 
         // конец текущего кадра - отображаем
         window.display();

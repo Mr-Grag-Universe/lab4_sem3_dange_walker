@@ -66,6 +66,8 @@ private:
     std::queue <std::shared_ptr<Event>> events;
 
     GameMode mode = RUN;
+
+    std::queue<std::string> messages;
 public:
     // для движения персонажа в нескольких направлениях одновременно
     std::map<std::string, KeyCondition> wasd = {
@@ -109,6 +111,8 @@ public:
     void push_sound(std::shared_ptr<sf:: Sound> sound) {
         all_sounds.push_back(sound);
     }
+    void push_message(std::string message)
+    { messages.push(message); }
 
     //============== getters =============//
 
@@ -136,6 +140,9 @@ public:
     std::map<GameTypeSystem, ObjTextureStore>   get_texture_store() const { return game_obj_textures; }
 
     const Env & get_env() const { return env; }
+
+    const std::queue<std::string> & get_messages() const { return messages; }
+          std::queue<std::string> & get_messages()       { return messages; }
     
 };
 

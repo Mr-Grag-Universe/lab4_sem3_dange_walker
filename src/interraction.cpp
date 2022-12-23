@@ -120,14 +120,21 @@ void World::backpack_menu_interraction(sf::Event & event, sf::RenderWindow & win
 }
 
 void World::message_menu_interraction(sf::Event & event, sf::RenderWindow & window) {
-    switch (event.key.code) {
-    case sf::Keyboard::Space: {
-        this->mode = RUN;
-        std::cout << "menu has been closed" << std::endl;
-        break;
-    }
-    
-    default:
-        break;
+    if (event.type == sf::Event::KeyPressed) {
+        switch (event.key.code) {
+        case sf::Keyboard::Space: {
+            if (!messages.empty()) {
+                messages.pop();
+            }
+            if (messages.empty()) {
+                this->mode = RUN;
+                std::cout << "message has been closed" << std::endl;
+                break;
+            }
+        }
+        
+        default:
+            break;
+        }
     }
 }

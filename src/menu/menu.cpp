@@ -39,15 +39,10 @@ void menu(sf::RenderWindow & window, World & world) {
         // создаём карту объектов, которые видны герою
         // map = Map(world);
 
-        // std::cout << "hero position: (" << map.get_hero().get_sprite().getPosition().x << ", " << map.get_hero().get_position().second << ")\n";
-
         // отрисовываем карту
-        // Draw::draw_backpack_menu(window, world);
+        // Draw::draw_map(window, map);
 
         // конец текущего кадра - отображаем
         window.display();
-
-        // int a = 0;
-        // std::cin >> a;
     }
 }

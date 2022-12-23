@@ -10,6 +10,7 @@
 #include "menu.hpp"
 #include "backpack_menu.hpp"
 #include "boot_menu.hpp"
+#include "message.hpp"
 
 
 int main(int argc, char *argv[]) {
@@ -54,6 +55,8 @@ int main(int argc, char *argv[]) {
         case World::BACKPACK_MENU:
             backpack_menu(window, world);
             break;
+        case World::MESSAGE:
+            message(window, world);
         default:
             break;
         }
