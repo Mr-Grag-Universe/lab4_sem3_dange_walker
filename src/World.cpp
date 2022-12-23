@@ -486,6 +486,7 @@ void World::iterate() {
         if (quests[i]->passed()) {
             std::cout << "this quest is passed!" << std::endl;
             quests.erase(quests.begin() + i);
+            mode = MESSAGE;
         }
     }
 

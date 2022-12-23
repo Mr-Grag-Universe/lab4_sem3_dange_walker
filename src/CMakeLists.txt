@@ -54,6 +54,7 @@ add_subdirectory(my_stl_containers)
 add_subdirectory(game)
 add_subdirectory(menu)
 add_subdirectory(backpack_menu)
+add_subdirectory(message_menu)
 add_subdirectory(sfml_classes)
 add_subdirectory(alive_obj)
 add_subdirectory(environment)
@@ -78,6 +79,7 @@ target_include_directories(${PROJECT_NAME}
    game
    menu
    backpack_menu
+   message_menu
 
    alive_obj
    objects
@@ -88,9 +90,10 @@ target_include_directories(${PROJECT_NAME}
 )
 target_link_libraries(${PROJECT_NAME} sfml-system sfml-window sfml-graphics ${SFML_DEPENDENCIES} vector environment events)
 target_link_libraries(alive_objects sfml-system sfml-window sfml-graphics ${SFML_DEPENDENCIES} loot)
-target_link_libraries(${PROJECT_NAME} game menu backpack_menu SFML_graphic ${SFML_DEPENDENCIES} alive_objects)
+target_link_libraries(${PROJECT_NAME} game menu backpack_menu messages SFML_graphic ${SFML_DEPENDENCIES} alive_objects)
 target_link_libraries(game sfml-system sfml-window sfml-graphics alive_objects ${SFML_DEPENDENCIES})
 target_link_libraries(menu sfml-system sfml-window sfml-graphics alive_objects ${SFML_DEPENDENCIES})
+target_link_libraries(messages sfml-system sfml-window sfml-graphics alive_objects ${SFML_DEPENDENCIES})
 target_link_libraries(backpack_menu sfml-system sfml-window sfml-graphics alive_objects ${SFML_DEPENDENCIES})
 target_link_libraries(quest sfml-system sfml-window sfml-graphics ${SFML_DEPENDENCIES})
 

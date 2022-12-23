@@ -118,3 +118,16 @@ void World::backpack_menu_interraction(sf::Event & event, sf::RenderWindow & win
         }
     }
 }
+
+void World::message_menu_interraction(sf::Event & event, sf::RenderWindow & window) {
+    switch (event.key.code) {
+    case sf::Keyboard::Space: {
+        this->mode = RUN;
+        std::cout << "menu has been closed" << std::endl;
+        break;
+    }
+    
+    default:
+        break;
+    }
+}

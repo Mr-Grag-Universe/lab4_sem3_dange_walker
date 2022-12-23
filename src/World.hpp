@@ -39,16 +39,7 @@ public:
         STOP,
         MENU,
         BACKPACK_MENU,
-    };
-    /**
-     * @brief состояние клавиши
-     *  создавался изначально для плавного движения в нескольких направлениях разом
-     *  у sfml проблемки какие-то с потоком событий 
-     * 
-     */
-    enum KeyCondition {
-        PRESSED,
-        RELEASED,
+        MESSAGE,
     };
 private:
     /// @brief  склад объектов окружения (карты) - пол, стены, двери. по сути бесполезна
@@ -85,26 +76,6 @@ public:
     };
     static std::shared_ptr<GameObj> load_object(std::string name, std::ifstream & file);
     static std::shared_ptr<NPC> load_npc(std::string type, std::ifstream & file);
-    ObjTextureStore & get_obj_textures(GameTypeSystem type)
-    { return game_obj_textures[type]; }
-    std::map<GameTypeSystem, ObjTextureStore> & get_texture_store()
-    { return game_obj_textures; }
-    std::map<GameTypeSystem, ObjTextureStore> get_texture_store() const
-    { return game_obj_textures; }
-
-    size_t get_W() const { return W; }
-    size_t get_H() const { return H; }
-    const Character & get_hero() const
-    { return *hero; }
-    Character & get_hero()
-    { return *hero; }
-    std::shared_ptr<Character> get_hero_ptr()
-    { return hero; }
-    const std::vector <std::shared_ptr<GameObj>> & get_all_things() const { return all_things; }
-    const std::vector <std::shared_ptr<NPC>> & get_all_npcs() const { return all_npc; }
-    const std::vector <std::shared_ptr<Effect>> & get_all_effects() const { return all_effects; }
-    
-    const Env & get_env() const { return env; }
 
     static std::vector <std::shared_ptr<GameObj>> load_things_from_file(const std::string & file_name);
     static std::vector <std::shared_ptr<NPC>> load_npcs_from_file(const std::string & file_name);
@@ -126,12 +97,12 @@ public:
 
     void interraction(sf::Event & event, sf::RenderWindow & window);
     void iterate();
-    GameMode get_game_mode()
-    { return mode; }
 
+    // interraction
     void game_interraction(sf::Event & event, sf::RenderWindow & window);
     void menu_interraction(sf::Event & event, sf::RenderWindow & window);
     void backpack_menu_interraction(sf::Event & event, sf::RenderWindow & window);
+    void message_menu_interraction(sf::Event & event, sf::RenderWindow & window);
 
     void use_the_nearest_thing();
 
@@ -141,10 +112,31 @@ public:
 
     //============== getters =============//
 
-    const std::queue <std::shared_ptr<Event>> & get_events() const
-    { return events; }
-    std::queue <std::shared_ptr<Event>> & get_events()
-    { return events; }
+    GameMode get_game_mode()
+    { return mode; }
+
+    const std::queue <std::shared_ptr<Event>> & get_events() const { return events; }
+          std::queue <std::shared_ptr<Event>> & get_events()       { return events; }
+
+    size_t get_W() const { return W; }
+    size_t get_H() const { return H; }
+
+    const Character &           get_hero() const    { return *hero; }
+    Character &                 get_hero()          { return *hero; }
+    std::shared_ptr<Character>  get_hero_ptr()      { return hero;  }
+    
+    const std::vector <std::shared_ptr<GameObj>> &  get_all_things()    const { return all_things;  }
+    const std::vector <std::shared_ptr<NPC>>     &  get_all_npcs()      const { return all_npc;     }
+    const std::vector <std::shared_ptr<Effect>>  &  get_all_effects()   const { return all_effects; }
+
+    ObjTextureStore & get_obj_textures(GameTypeSystem type)
+    { return game_obj_textures[type]; }
+
+    std::map<GameTypeSystem, ObjTextureStore> & get_texture_store()       { return game_obj_textures; }
+    std::map<GameTypeSystem, ObjTextureStore>   get_texture_store() const { return game_obj_textures; }
+
+    const Env & get_env() const { return env; }
+    
 };
 
 #endif
