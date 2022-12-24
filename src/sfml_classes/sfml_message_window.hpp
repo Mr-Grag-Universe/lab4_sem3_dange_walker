@@ -8,6 +8,8 @@
 #include "../constants.hpp"
 #include "../sfml_classes/sfml_object.hpp"
 
+
+/// @brief message object for drawing. contains Rect-field and text. You can edit this all as you want
 class SFML_Message
 {
 private:
@@ -19,6 +21,7 @@ protected:
     std::shared_ptr<sf::Texture> field_texture = nullptr;
 public:
     // SFML_Message(std::string message) : s_text(message) {}
+    
     SFML_Message(std::string t, pair_ui64_t size = std::make_pair(120, 30), size_t t_size=24) {
         if (!font->loadFromFile(mp::font / "ArialRegular.ttf")) {
             throw std::runtime_error("we cannot load arial");
@@ -27,13 +30,6 @@ public:
         field.setSize(sf::Vector2f((float) size.first, (float) size.second));
         text.setPosition(middle_rect_pos(field, sf::Vector2f(0.0, 0.0)));
     }
-
-    void read(std::ifstream & ) {}
-    void draw(sf::RenderWindow & window) const {
-        window.draw(field);
-        window.draw(text);
-    }
-    void edit(const Alive & a) {}
 
     //============ getters ============//
 
@@ -64,7 +60,7 @@ public:
 
     void set_text(std::string t) {
         s_text = t;
-        text.setFont(*font);  //?
+        text.setFont(*font);
         text.setString(s_text);
     }
     void set_position(pair_ui64_t p) {
@@ -84,6 +80,17 @@ public:
 
     void set_field_texture(std::shared_ptr<sf::Texture> t)
     { field_texture = t; field.setTexture(&(*field_texture)); }
+
+    //========= other methods ===========//
+
+    void read(std::ifstream & ) {}
+
+    void draw(sf::RenderWindow & window) const {
+        window.draw(field);
+        window.draw(text);
+    }
+
+    void edit(const Alive & a) {}
 };
 
 #endif // SFML_MESSAGE_CLASS

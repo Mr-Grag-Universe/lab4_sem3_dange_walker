@@ -4,46 +4,24 @@
 
 Map::Map(World & w) : hero(w.get_hero_ptr()), W(w.get_W()), H(w.get_H()) {
     ts = w.get_texture_store();
+
     const std::vector <std::shared_ptr<GameObj>> & at = w.get_all_things();
+    const std::vector <std::shared_ptr<NPC>> & npc = w.get_all_npcs();
+    const std::vector <std::shared_ptr<Effect>> & eff = w.get_all_effects();
+
     std::map<GameTypeSystem, ObjTextureStore> & ts = w.get_texture_store();
-    // const std::vector <std::shared_ptr<SFML_Object> & ao = w.get_all
-    // std::cout << "map_hero_position: (" << hero.get_position().first << ", " << hero.get_position().second << ")\n";
     const pair_ui64_t h_p = hero->get_position();
+    const sf::Vector2f hero_pos = sf::Vector2f(h_p.first, h_p.second);
     size_t g_ind = 0;
     std::shared_ptr<SFMLObject> obj;
     
     for (size_t i = 0, l = at.size(); i < l; ++i, ++g_ind) {
         pair_ui64_t p = at[i]->get_position();
         if (distance(p, h_p) <= 1900) {
-            all_things.push_back((std::shared_ptr<GameObj> *) &at[i]);
-            all_objs.push_back(std::make_shared<SFMLObject>(at[i], ts[at[i]->get_type()], at[i]->get_layer()));
-            std::shared_ptr<sf::Texture> t = ts[at[i]->get_type()].textures[at[i]->get_phase()];
-            all_objs[g_ind]->set_texture(t, at[i]->get_size());
-            // const sf::Sprite & hero_s = hero.get_sprite();
-            const sf::Vector2f hero_pos = sf::Vector2f((float) h_p.first, (float) h_p.second);
-            sf::Vector2f s_window_pos = sf::Vector2f((float)p.first, (float)p.second);
-            s_window_pos.x = W/2 - (hero_pos.x - s_window_pos.x);
-            s_window_pos.y = H/2 - (hero_pos.y - s_window_pos.y);
-            // at[i]->set_sprite_position((pair_ui64_t) std::make_pair(s_window_pos.x, s_window_pos.y));
-            all_objs[g_ind]->set_sprite_position((pair_ui64_t) std::make_pair(s_window_pos.x, s_window_pos.y));
-            
-            switch (at[i]->get_type()) {
-                case FLOOR:
-                    env.floor.push_back((std::shared_ptr<Floor> *) &at[i]);
-                    break;
-                case DOOR:
-                    env.doors.push_back((std::shared_ptr<Door> *) &at[i]);
-                    break;
-                case WALL:
-                    env.walls.push_back((std::shared_ptr<Wall> *) &at[i]);
-                    break;
-                default:
-                    break;
-            }
+            this->process<GameObj>(at[i], ts, hero_pos, p);
         }
     }
     
-    const std::vector <std::shared_ptr<NPC>> & npc = w.get_all_npcs();
     for (size_t i = 0, l = npc.size(); i < l; ++i, ++g_ind) {
         pair_ui64_t p = npc[i]->get_position();
         if (distance(p, h_p) <= 1900) {
@@ -68,7 +46,6 @@ Map::Map(World & w) : hero(w.get_hero_ptr()), W(w.get_W()), H(w.get_H()) {
         }
     }
     
-    const std::vector <std::shared_ptr<Effect>> & eff = w.get_all_effects();
     for (size_t i = 0, l = eff.size(); i < l; ++i, ++g_ind) {
         pair_ui64_t p = eff[i]->get_position();
         if (distance(p, h_p) <= 1900) {

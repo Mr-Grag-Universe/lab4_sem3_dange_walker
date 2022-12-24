@@ -25,65 +25,63 @@ protected:
     pair_ui64_t position = std::make_pair(0, 0);
     char layer = 0;
     bool is_static = true;
-public:
-    size_t x_rep()
-    { return repeate.first; }
-    size_t y_rep()
-    { return repeate.second; }
-    pair_ui64_t get_position() const
-    { return position; }
-    pair_ui64_t get_size() const
-    { return size; }
-    void set_size(pair_ui64_t s)
-    { size = s; }
-    void set_position(pair_ui64_t p)
-    { position = p; }
-    bool get_static()
-    { return is_static; }
-    void set_static(bool st)
-    { is_static = st; }
 
+    Collider collider;
+    std::string name;
+    bool obj_exist = true;
+public:
     Obj() = default;
     Obj(std::string name, pair_ui64_t position);
     Obj(const Obj &) = default;
     virtual ~Obj() {}
 
-    unsigned char get_layer();
-
-    virtual TypeSystem get_type() const = 0;
     virtual void read(std::ifstream & ) = 0;
-    // void set_texture(fs::path file_path, pair_ui64_t p_in, pair_ui64_t scale, pair_ui64_t n_repeat);
-    // void set_sprite_position(pair_ui64_t p);
-protected:
-    Collider collider;
-    std::string name;
-    bool obj_exist = true;
 public:
     bool exist()
     { return obj_exist; }
-    void set_exist(bool ex)
-    { obj_exist = ex; }
-    const std::string & get_name() const
-    { return name; }
     // void move(int x, int y);
 
-    double get_velocity() const
-    { return collider.velocity; }
-    double get_v_angle() const
-    { return collider.moving_angle; }
     bool is_mobile()
     { return collider.mobility; }
-    void set_velocity(double v) 
-    { collider.velocity = v; }
-    void set_v_angle(double a)
-    { collider.moving_angle = a; }
-    char get_layer() const
-    { return layer; }
-
     void move(int x, int y) {
         position.first += x;
         position.second += y;
     }
+
+    //============= getters =============//
+
+    char get_layer() const { return layer; }
+
+    const std::string & get_name() const { return name; }
+    
+    bool get_static() { return is_static; }
+
+    double get_v_angle() const { return collider.moving_angle; }
+
+    double get_velocity() const { return collider.velocity; }
+
+    size_t x_rep() { return repeate.first;  }
+    size_t y_rep() { return repeate.second; }
+
+    pair_ui64_t get_position() const { return position; }
+
+    pair_ui64_t get_size() const { return size; }
+
+    virtual TypeSystem get_type() const = 0;
+
+    //============= setters ==============//
+
+    void set_velocity(double v) { collider.velocity = v; }
+
+    void set_v_angle(double a) { collider.moving_angle = a; }
+
+    void set_exist(bool ex) { obj_exist = ex; }
+
+    void set_size(pair_ui64_t s) { size = s; }
+
+    void set_position(pair_ui64_t p) { position = p; }
+    
+    void set_static(bool st) { is_static = st; }
 
 private:
     TypeSystem type;

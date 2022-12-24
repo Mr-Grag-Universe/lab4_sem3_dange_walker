@@ -11,7 +11,6 @@
 
 #include <SFML/System.hpp>
 
-// #include "Map.hpp"
 #include "containers/Chest.hpp"
 #include "environment.hpp"
 #include "alive.hpp"

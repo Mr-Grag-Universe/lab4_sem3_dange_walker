@@ -5,9 +5,7 @@
 #include <algorithm>
 #include <vector>
 
-#include "environment/Wall.hpp"
-#include "environment/Floor.hpp"
-#include "environment/Door.hpp"
+#include "environment/environment.hpp"
 #include "World.hpp"
 #include "constants.hpp"
 #include "alive_obj/Character.hpp"
@@ -55,6 +53,10 @@ public:
     //=========== other methods ===========//
 
     void update();
+
+    template <typename Type>
+    void process(std::shared_ptr<Type> obj, std::map<GameTypeSystem, ObjTextureStore> & ts, const sf::Vector2f h_p, pair_ui64_t p);
+
 protected:
     struct Env {
         std::vector <std::shared_ptr<Wall> *> walls;
@@ -63,7 +65,31 @@ protected:
     };    
 
 private:
-    Env env;
+    // Env env;
 };
+
+
+template <typename Type>
+void Map::process(std::shared_ptr<Type> obj, std::map<GameTypeSystem, ObjTextureStore> & ts, const sf::Vector2f hero_pos, pair_ui64_t p) {
+    // all_things.push_back((std::shared_ptr<Type> *) &obj[i]);
+
+    auto type = obj->get_type();
+    size_t phase = obj->get_phase();
+    std::shared_ptr<sf::Texture> t = ts[type].textures[phase];
+
+    all_objs.push_back(std::make_shared<SFMLObject>(obj, ts[type], obj->get_layer()));
+    all_objs.back()->set_texture(t, obj->get_size());
+    
+    sf::Vector2f window_pos = sf::Vector2f((float)p.first, (float)p.second);
+    window_pos.x = W/2 - (hero_pos.x - window_pos.x);
+    window_pos.y = H/2 - (hero_pos.y - window_pos.y);
+    all_objs.back()->set_sprite_position((pair_ui64_t) std::make_pair(window_pos.x, window_pos.y));
+
+    // all_objs.back()->set_life_time(ts[type].standard_life_time);
+    // all_objs.back()->set_period(ts[type].standard_period);
+    // all_objs.back()->correct_phase();
+    // all_objs.back()->update_texture();
+    // all_objs.back()->set_texture(ts[type].textures[obj->get_phase()], obj->get_size());
+}
 
 #endif

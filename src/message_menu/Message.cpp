@@ -13,7 +13,7 @@
 #include "../Map.hpp"
 #include "../draw/Draw.hpp"
 #include "message.hpp"
-#include "sfml_message_window.hpp"
+#include "../sfml_classes/sfml_message_window.hpp"
 
 
 void message(sf::RenderWindow & window, World & world) {
@@ -56,9 +56,6 @@ void message(sf::RenderWindow & window, World & world) {
 
         // очищаем окно и заливаем черным цветом
         window.clear(sf::Color::Black);
-
-        // создаём карту объектов, которые видны герою
-        // map = Map(world);
 
         // отрисовываем карту
         Draw::draw_map(window, map);

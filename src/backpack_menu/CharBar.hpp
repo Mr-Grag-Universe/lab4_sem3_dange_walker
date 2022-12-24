@@ -7,6 +7,8 @@
 #include "Label.hpp"
 #include "StatusBar.hpp"
 
+/// @brief  scale of something: visualisation of percents ([########################------------65%])
+/// @tparam AliveType - type of the Creature, which characteristics we show
 template <typename AliveType = Alive>
 class CharBar : public BPMObj {
 private:
